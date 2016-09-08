@@ -1,6 +1,5 @@
 import os
 
-split_token = "||"
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sen_maxlen = 100
@@ -26,12 +25,12 @@ def ngram_generator(n, content):
 
     if n == 1:
         _sum = sum(counter.values())
-        ngram = dict((combine, num * 1.0 / _sum) for combine, num in counter_n.items())
+        ngram = dict((key, num * 1.0 / _sum) for key, num in counter_n.items())
     elif n > 1:
         counter_nminus1 = ntoken_count(n - 1, content)
-        for combine, num_n in counter_n.items():
-            num_nminus1 = counter_nminus1[combine[(combine.find(split_token) + len(split_token)):]]
-            ngram[combine] = 1.0 * num_n / num_nminus1
+        for key, num_n in counter_n.items():
+            num_nminus1 = counter_nminus1[key[1:]]
+            ngram[key] = 1.0 * num_n / num_nminus1
 
     return ngram
 
@@ -41,15 +40,19 @@ def ntoken_count(n, content):
     tokens = content.split()
     _len = len(tokens)
     for i in xrange(_len - n + 1):
-        combine = split_token.join(tokens[i:(i + n)])
-        counter[combine] = counter.get(combine, 0) + 1
+        key = tuple(tokens[i:(i + n)])
+        counter[key] = counter.get(key, 0) + 1
 
     return counter
 
 
-def sentence_generator(pre_sent, prob):
+def sentence_generator(pre_sent = ""):
     # TODO:
     _len = len(pre_sent)
+
+
+
+
 
 
 def main():
@@ -62,6 +65,7 @@ def main():
         and int(argv[1]) >= 1 else 1
 
     indir, outdir = indir_pre + topic, outdir_pre + topic
+
     if not os.path.isdir(indir):
         print "Sorry, the topic does not exist!"
         return
@@ -73,4 +77,5 @@ def main():
     print ngram
 
 
-main()
+if __name__ == "__main__":
+    main()
