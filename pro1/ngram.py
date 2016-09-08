@@ -2,7 +2,7 @@ import os
 
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
-sen_maxlen = 100
+sentence_maxlen = 100
 
 
 def preprocess(indir):
@@ -20,38 +20,39 @@ def preprocess(indir):
 
 
 def ngram_generator(n, content):
+    def ntoken_count(n, content):
+        counter = {}
+        tokens = content.split()
+        _len = len(tokens)
+        for i in xrange(_len - n + 1):
+            key = tuple(tokens[i:(i + n)])
+            counter[key] = counter.get(key, 0) + 1
+
+        return counter
+
     counter_n = ntoken_count(n, content)
-    ngram = {}
+    prob_dic, hash_dic = {}, {}
 
     if n == 1:
-        _sum = sum(counter.values())
-        ngram = dict((key, num * 1.0 / _sum) for key, num in counter_n.items())
+        _sum = sum(counter_n.values())
+        prob_dic = dict((key, num * 1.0 / _sum) for key, num in counter_n.items())
     elif n > 1:
         counter_nminus1 = ntoken_count(n - 1, content)
-        for key, num_n in counter_n.items():
-            num_nminus1 = counter_nminus1[key[1:]]
-            ngram[key] = 1.0 * num_n / num_nminus1
+        for key_n, num_n in counter_n.items():
+            key_nminus1 = key_n[:-1]
 
-    return ngram
+            hash_dic[key_nminus1] = hash_dic.get(key_nminus1, [])
+            hash_dic[key_nminus1].append(key_n)
 
+            num_nminus1 = counter_nminus1[key_nminus1]
+            prob_dic[key_n] = 1.0 * num_n / num_nminus1
 
-def ntoken_count(n, content):
-    counter = {}
-    tokens = content.split()
-    _len = len(tokens)
-    for i in xrange(_len - n + 1):
-        key = tuple(tokens[i:(i + n)])
-        counter[key] = counter.get(key, 0) + 1
-
-    return counter
+    return prob_dic, hash_dic
 
 
-def sentence_generator(pre_sent = ""):
+def sentence_generator(prob_dic, hash_dic, pre_sent = ""):
     # TODO:
-    _len = len(pre_sent)
-
-
-
+    pass
 
 
 
@@ -73,8 +74,9 @@ def main():
         os.makedirs(outdir)
 
     content = preprocess(indir)
-    ngram = ngram_generator(n, content)
-    print ngram
+    prob_dic, hash_dic = ngram_generator(n, content)
+    print prob_dic
+    print hash_dic
 
 
 if __name__ == "__main__":
