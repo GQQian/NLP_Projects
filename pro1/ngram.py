@@ -2,6 +2,7 @@ import os
 import nltk
 import random
 import re
+import operator
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 indir_pre = os.getcwd() + "/"
@@ -32,8 +33,43 @@ def preprocess(indir):
     temp = sent_tokenize(buffer)
 
     for sent in temp:
-        output += "<s> "+sent+" </s> "
+        output += "<s> " + sent + " </s> "
     # final = remove_punctuation(output)
+    final = output
+    return final
+
+def preprocess_jiao(indir):
+    buffer, output = "", ""
+    for root, dirs, filenames in os.walk(indir):
+        for f in filenames:
+            raw_content = open(os.path.join(root, f),'r').read()
+            buffer += raw_content
+
+    # normalize
+    buffer = buffer.lower()
+    buffer = buffer.replace('-', '')
+    buffer = buffer.replace('\\', '')
+    buffer = buffer.replace('/', '')
+    buffer = buffer.replace('_', '')
+    buffer = buffer.replace('|', '')
+    buffer = buffer.replace('(', '')
+    buffer = buffer.replace(')', '')
+    buffer = buffer.replace('<', '')
+    buffer = buffer.replace('>', '')
+    buffer = buffer.replace('|', '')
+    buffer = buffer.replace('\"', '')
+    buffer = buffer.replace(',', '')
+    buffer = buffer.replace('=', '')
+    buffer = buffer.replace('#', '')
+    buffer = buffer.replace(' i ', ' I ')
+    buffer = buffer.replace(' i\' ', ' I\' ')
+
+
+    temp = sent_tokenize(buffer)
+
+    for sent in temp:
+        output += " <s> " + sent + " </s> "
+
     final = output
     return final
 
@@ -82,14 +118,14 @@ def sentence_generator(n, content, sentence = '<s>'):
                     sentence_list.append(token[0])
                     break
         else:
-            key = tuple(sentence_list[-n:])
+            key = tuple(sentence_list[-n+1:])
             if key not in nhash_dic[n]:
                 sentence_list = produce_next_token(n - 1, content, sentence_list)
             else:
                 for token in nhash_dic[n][key]:
                     prob_sum += nprob_dic[n][tuple(token)]
                     if prob_sum > rand_prob:
-                        sentence_list.append(token[0])
+                        sentence_list.append(token[-1])
                         break
 
         return sentence_list
@@ -115,8 +151,7 @@ def sentence_generator(n, content, sentence = '<s>'):
 
 
 def main():
-    argv = ["data/autos/train_docs", "3"] # TODO: input
-    # argv = ["test", "2"] # TODO: input
+    argv = ["data/autos/train_docs", "5"] # TODO: input
     if (len(argv) == 0):
         print "Please input a topic"
 
@@ -132,11 +167,13 @@ def main():
     if not os.path.isdir(outdir):
         os.makedirs(outdir)
 
-    content = preprocess(indir)
+    # content = preprocess(indir)
+    content = preprocess_jiao(indir)
+
 
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
-        for i in xrange(2):
+        for i in xrange(3):
             print sentence_generator(n, content) + "\n"
 
 
