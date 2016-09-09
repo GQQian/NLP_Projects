@@ -1,5 +1,5 @@
 import os
-
+import nltk
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
@@ -9,15 +9,27 @@ def preprocess(indir):
     # TODO
     # email, Upper-lower case
     # sentence boundary
+#     temp = sent_tokenize(indir)
+#     output = ""
 
-    pro_content = ""
+    buffer,output = "",""
     for root, dirs, filenames in os.walk(indir):
         for f in filenames:
             raw_content = open(os.path.join(root, f),'r').read()
-            pro_content += raw_content
+            buffer += raw_content
+    temp = sent_tokenize(buffer)
+    
+    for sent in temp:
+        output += "<s> "+sent+" </s> "
+    final = remove_punctuation(output)
+    return final
 
-    return pro_content
-
+#######################################
+def remove_punctuation(text):
+#     pat = re.compile(r"\p{P}+")
+    result = re.findall(r'[\w]+',text)
+    delim = " "
+    return delim.join(result)
 
 def ngram_generator(n, content):
     def ntoken_count(n, content):
