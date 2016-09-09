@@ -1,45 +1,42 @@
 import os
-<<<<<<< HEAD
 import nltk
-=======
 import random
+import re
+from nltk.tokenize import sent_tokenize, word_tokenize
 
->>>>>>> d04b960d90b09bf2cf831ee127853524289dfea6
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
 sentence_minlen = 3
-nprob_dic, nhash_dic, ncounter = {}, {}, {}
+nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
 
 def preprocess(indir):
     # TODO
     # email, Upper-lower case
     # sentence boundary
-<<<<<<< HEAD
-#     temp = sent_tokenize(indir)
-#     output = ""
-=======
+    # temp = sent_tokenize(indir)
+    # output = ""
+    # delete email ?
     # ...
->>>>>>> d04b960d90b09bf2cf831ee127853524289dfea6
+    def remove_punctuation(text):
+    #     pat = re.compile(r"\p{P}+")
+        result = re.findall(r'[\w]+',text)
+        delim = " "
+        return delim.join(result)
 
-    buffer,output = "",""
+    buffer, output = "", ""
     for root, dirs, filenames in os.walk(indir):
         for f in filenames:
             raw_content = open(os.path.join(root, f),'r').read()
             buffer += raw_content
     temp = sent_tokenize(buffer)
-    
+
     for sent in temp:
         output += "<s> "+sent+" </s> "
-    final = remove_punctuation(output)
+    # final = remove_punctuation(output)
+    final = output
     return final
 
-#######################################
-def remove_punctuation(text):
-#     pat = re.compile(r"\p{P}+")
-    result = re.findall(r'[\w]+',text)
-    delim = " "
-    return delim.join(result)
 
 def ntoken_count(n, content):
     counter = {}
@@ -53,21 +50,21 @@ def ntoken_count(n, content):
 
 
 def ngram_generator(n, content):
-    ncounter[n] = ncounter[n] if n in ncounter else ntoken_count(n, content)
+    ncounter_dic[n] = ncounter_dic[n] if n in ncounter_dic else ntoken_count(n, content)
     nhash_dic[n], nprob_dic[n] = {}, {}
 
     if n == 1:
-        _sum = sum(ncounter[n].values())
-        nprob_dic[n] = dict((key, num * 1.0 / _sum) for key, num in ncounter[n].items())
+        _sum = sum(ncounter_dic[n].values())
+        nprob_dic[n] = dict((key, num * 1.0 / _sum) for key, num in ncounter_dic[n].items())
     elif n > 1:
-        ncounter[n - 1] = ncounter[n - 1] if n - 1 in ncounter else ntoken_count(n - 1, content)
-        for key_n, num_n in ncounter[n].items():
+        ncounter_dic[n - 1] = ncounter_dic[n - 1] if n - 1 in ncounter_dic else ntoken_count(n - 1, content)
+        for key_n, num_n in ncounter_dic[n].items():
             key_nminus1 = key_n[:-1]
 
             nhash_dic[n][key_nminus1] = nhash_dic[n].get(key_nminus1, [])
             nhash_dic[n][key_nminus1].append(key_n)
 
-            num_nminus1 = ncounter[n - 1][key_nminus1]
+            num_nminus1 = ncounter_dic[n - 1][key_nminus1]
             nprob_dic[n][key_n] = 1.0 * num_n / num_nminus1
     return nprob_dic[n]
 
