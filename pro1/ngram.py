@@ -177,11 +177,11 @@ def main():
 
         print "Empty sentence"
         for i in xrange(3):
-            print "[{}]  ".format(i) + sentence_generator(n, content)
+            print "[{}]  ".format(i + 1) + sentence_generator(n, content)
 
         print "\nWith incompelete sentence: " + "\"{}\"".format(sent_pre)
         for i in xrange(3):
-            print "[{}]  ".format(i) + sentence_generator(n, content, sent_pre)
+            print "[{}]  ".format(i + 1) + sentence_generator(n, content, sent_pre)
 
 
 if __name__ == "__main__":
