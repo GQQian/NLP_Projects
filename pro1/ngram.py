@@ -8,13 +8,12 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
-sentence_minlen = 3
+sentence_minlen = 5
 nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
 
 def preprocess(indir):
     # TODO
-    # email, Upper-lower case
-    # sentence boundary
+    # Upper-lower case
     # temp = sent_tokenize(indir)
     # output = ""
     # delete email ?
@@ -102,6 +101,7 @@ def ngram_generator(n, content):
 
             num_nminus1 = ncounter_dic[n - 1][key_nminus1]
             nprob_dic[n][key_n] = 1.0 * num_n / num_nminus1
+
     return nprob_dic[n]
 
 
@@ -134,16 +134,15 @@ def sentence_generator(n, content, sentence = '<s>'):
     if not sentence.startswith('<s> '):
         sentence = '<s> ' + sentence
 
-    while not len(normalized_sentence):
+    while len(normalized_sentence) < sentence_minlen:
         sentence_list = sentence.split()
         while len(sentence_list) < sentence_minlen or \
             (len(sentence_list) < sentence_maxlen and sentence_list[-1] != '</s>'):
             sentence_list = produce_next_token(min(len(sentence_list) + 1, n), content, sentence_list)
 
-        # normalize the sentence
+        # normalize: remove '<s>', '<\s>', multiple white spaces
         normalized_sentence = ' '.join(sentence_list).replace('<s>', '').replace('</s>', '')
         normalized_sentence = ' '.join(normalized_sentence.split())
-
 
     normalized_sentence = normalized_sentence[0].upper() + normalized_sentence[1:]
 
