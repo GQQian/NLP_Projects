@@ -106,30 +106,6 @@ def ngram_generator(n, content):
 
 
 def sentence_generator(n, content, sentence = '<s>'):
-    def produce_next_token(n, content, sentence_list):
-        nprob_dic[n] = nprob_dic[n] if n in nprob_dic else ngram_generator(n, content)
-        rand_prob = random.uniform(0.0, 1.0)
-        prob_sum = 0
-
-        if n == 1:
-            for token in nprob_dic[1]:
-                prob_sum += nprob_dic[1][token]
-                if prob_sum > rand_prob:
-                    sentence_list.append(token[0])
-                    break
-        else:
-            key = tuple(sentence_list[-n+1:])
-            if key not in nhash_dic[n]:
-                sentence_list = produce_next_token(n - 1, content, sentence_list)
-            else:
-                for token in nhash_dic[n][key]:
-                    prob_sum += nprob_dic[n][tuple(token)]
-                    if prob_sum > rand_prob:
-                        sentence_list.append(token[-1])
-                        break
-
-        return sentence_list
-
     normalized_sentence = ""
     if not sentence.startswith('<s> '):
         sentence = '<s> ' + sentence
@@ -138,7 +114,7 @@ def sentence_generator(n, content, sentence = '<s>'):
         sentence_list = sentence.split()
         while len(sentence_list) < sentence_minlen or \
             (len(sentence_list) < sentence_maxlen and sentence_list[-1] != '</s>'):
-            sentence_list = produce_next_token(min(len(sentence_list) + 1, n), content, sentence_list)
+            sentence_list = backoff_produce_next(min(len(sentence_list) + 1, n), content, sentence_list)
 
         # normalize: remove '<s>', '<\s>', multiple white spaces
         normalized_sentence = ' '.join(sentence_list).replace('<s>', '').replace('</s>', '')
@@ -149,14 +125,40 @@ def sentence_generator(n, content, sentence = '<s>'):
     return normalized_sentence
 
 
+def backoff_produce_next(n, content, sentence_list):
+    nprob_dic[n] = nprob_dic[n] if n in nprob_dic else ngram_generator(n, content)
+    rand_prob = random.uniform(0.0, 1.0)
+    prob_sum = 0
+
+    if n == 1:
+        for token in nprob_dic[1]:
+            prob_sum += nprob_dic[1][token]
+            if prob_sum > rand_prob:
+                sentence_list.append(token[0])
+                break
+    else:
+        key = tuple(sentence_list[-n+1:])
+        if key not in nhash_dic[n]:
+            sentence_list = backoff_produce_next(n - 1, content, sentence_list)
+        else:
+            for token in nhash_dic[n][key]:
+                prob_sum += nprob_dic[n][tuple(token)]
+                if prob_sum > rand_prob:
+                    sentence_list.append(token[-1])
+                    break
+
+    return sentence_list
+
+
 def main():
-    argv = ["data/autos/train_docs", "5"] # TODO: input
+    argv = ["data/autos/train_docs", "5", "I have"] # TODO: input
     if (len(argv) == 0):
         print "Please input a topic"
 
     topic = argv[0]
     n = int(argv[1]) if len(argv) > 1 and argv[1].isdigit() \
         and int(argv[1]) >= 1 else 1
+    sent_pre = argv[2] if len(argv) > 2 else ""
 
     indir, outdir = indir_pre + topic, outdir_pre + topic
 
@@ -172,8 +174,14 @@ def main():
 
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
+
+        print "Empty sentence"
         for i in xrange(3):
-            print sentence_generator(n, content) + "\n"
+            print "[{}]  ".format(i) + sentence_generator(n, content)
+
+        print "\nWith incompelete sentence: " + "\"{}\"".format(sent_pre)
+        for i in xrange(3):
+            print "[{}]  ".format(i) + sentence_generator(n, content, sent_pre)
 
 
 if __name__ == "__main__":
