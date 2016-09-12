@@ -1,3 +1,10 @@
+import os
+import nltk
+import random
+import re
+import operator
+from nltk.tokenize import sent_tokenize, word_tokenize
+
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
@@ -5,44 +12,16 @@ sentence_minlen = 5
 nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
 
 def preprocess(indir):
-    # TODO
-    # Upper-lower case done
-    # temp = sent_tokenize(indir) done
-    # output = ""
-    # delete email done
-    # ...
+    def remove_punctuation(text):
+        text = text.replace('_', '')
+        result = re.findall(r'[\w\,\.\!\?]+',text)
+        return ' '.join(result)
 
-# def remove_punctuation(text):
-# #     pat = re.compile(r"\p{P}+")
-#     result = re.findall(r'[\w]+',text)
-#     delim = " "
-#     return delim.join(result)
-
-    buffer, output = "", ""
-    for root, dirs, filenames in os.walk(indir):
-        for f in filenames:
-            raw_content = open(os.path.join(root, f),'r').read()
-            buffer += raw_content
-    temp = sent_tokenize(buffer)
-
-    for sent in temp:
-        output += "<s> " + sent + " </s> "
-    # final = remove_punctuation(output)
-    final = output
-    return final
+    def remove_email(text):
+        result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)
+        return result
 
 
-def remove_punctuation(text):
-#     pat = re.compile(r"\p{P}+")
-    result = re.findall(r'[\w]+',text)
-    delim = " "
-    return delim.join(result)
-
-def remove_email(text):
-    result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)    
-    return result
-
-def preprocess_jiao(indir):
     buffer, output = "", ""
     for root, dirs, filenames in os.walk(indir):
         for f in filenames:
@@ -52,34 +31,17 @@ def preprocess_jiao(indir):
     # normalize
     buffer = buffer.lower()
     buffer = remove_email(buffer)
-#     buffer = buffer.replace('-', '')
-#     buffer = buffer.replace('\\', '')
-#     buffer = buffer.replace('/', '')
-    buffer = buffer.replace('_', '')
-#     buffer = buffer.replace('|', '')
-    buffer = buffer.replace("From : ",'')
-    buffer = buffer.replace("Subject : ",'')
-#     buffer = buffer.replace('(', '')
-#     buffer = buffer.replace(')', '')
-#     buffer = buffer.replace('<', '')
-#     buffer = buffer.replace('>', '')
-#     buffer = buffer.replace('|', '')
-#     buffer = buffer.replace('\"', '')
-#     buffer = buffer.replace(',', '')
-#     buffer = buffer.replace('=', '')
-#     buffer = buffer.replace('#', '')
+    buffer = remove_punctuation(buffer)
+
+    # corner case
     buffer = buffer.replace(' i ', ' I ')
     buffer = buffer.replace(' i\' ', ' I\' ')
 
-    temp = sent_tokenize(buffer)
-
-    for sent in temp:
-        sent = remove_punctuation(sent)
-
+    sent_list = sent_tokenize(buffer)
+    for sent in sent_list:
         output += " <s> " + sent + " </s> "
 
-    final = output
-    return final
+    return output
 
 
 def ntoken_count(n, content):
@@ -159,7 +121,10 @@ def backoff_produce_next(n, content, sentence_list):
 
 
 def main():
-    argv = ["data/autos/train_docs", "5", "I have"] # TODO: input
+    # TODO: input
+    argv = ["data/autos/train_docs", "5", "I have"]
+
+    # check input
     if (len(argv) == 0):
         print "Please input a topic"
 
@@ -176,20 +141,20 @@ def main():
     if not os.path.isdir(outdir):
         os.makedirs(outdir)
 
-    # content = preprocess(indir)
-    content = preprocess_jiao(indir)
+    # preprocess
+    content = preprocess(indir)
 
-
+    # print sentence generator
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
 
         print "Empty sentence"
         for i in xrange(3):
-            print "[{}]  ".format(i + 1) + sentence_generator(n, content)
+            print "[{}]  ".format(i + 1) + sentence_generator(k, content)
 
-        print "\nWith incompelete sentence: " + "\"{}\"".format(sent_pre)
+        print "\nWith incomplete sentence: " + "\"{}\"".format(sent_pre)
         for i in xrange(3):
-            print "[{}]  ".format(i + 1) + sentence_generator(n, content, sent_pre)
+            print "[{}]  ".format(i + 1) + sentence_generator(k, content, sent_pre)
 
 
 if __name__ == "__main__":
