@@ -1,10 +1,3 @@
-import os
-import nltk
-import random
-import re
-import operator
-from nltk.tokenize import sent_tokenize, word_tokenize
-
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
@@ -13,16 +6,17 @@ nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
 
 def preprocess(indir):
     # TODO
-    # Upper-lower case
-    # temp = sent_tokenize(indir)
+    # Upper-lower case done
+    # temp = sent_tokenize(indir) done
     # output = ""
-    # delete email ?
+    # delete email done
     # ...
-    def remove_punctuation(text):
-    #     pat = re.compile(r"\p{P}+")
-        result = re.findall(r'[\w]+',text)
-        delim = " "
-        return delim.join(result)
+
+# def remove_punctuation(text):
+# #     pat = re.compile(r"\p{P}+")
+#     result = re.findall(r'[\w]+',text)
+#     delim = " "
+#     return delim.join(result)
 
     buffer, output = "", ""
     for root, dirs, filenames in os.walk(indir):
@@ -37,6 +31,17 @@ def preprocess(indir):
     final = output
     return final
 
+
+def remove_punctuation(text):
+#     pat = re.compile(r"\p{P}+")
+    result = re.findall(r'[\w]+',text)
+    delim = " "
+    return delim.join(result)
+
+def remove_email(text):
+    result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)    
+    return result
+
 def preprocess_jiao(indir):
     buffer, output = "", ""
     for root, dirs, filenames in os.walk(indir):
@@ -46,27 +51,31 @@ def preprocess_jiao(indir):
 
     # normalize
     buffer = buffer.lower()
-    buffer = buffer.replace('-', '')
-    buffer = buffer.replace('\\', '')
-    buffer = buffer.replace('/', '')
+    buffer = remove_email(buffer)
+#     buffer = buffer.replace('-', '')
+#     buffer = buffer.replace('\\', '')
+#     buffer = buffer.replace('/', '')
     buffer = buffer.replace('_', '')
-    buffer = buffer.replace('|', '')
-    buffer = buffer.replace('(', '')
-    buffer = buffer.replace(')', '')
-    buffer = buffer.replace('<', '')
-    buffer = buffer.replace('>', '')
-    buffer = buffer.replace('|', '')
-    buffer = buffer.replace('\"', '')
-    buffer = buffer.replace(',', '')
-    buffer = buffer.replace('=', '')
-    buffer = buffer.replace('#', '')
+#     buffer = buffer.replace('|', '')
+    buffer = buffer.replace("From : ",'')
+    buffer = buffer.replace("Subject : ",'')
+#     buffer = buffer.replace('(', '')
+#     buffer = buffer.replace(')', '')
+#     buffer = buffer.replace('<', '')
+#     buffer = buffer.replace('>', '')
+#     buffer = buffer.replace('|', '')
+#     buffer = buffer.replace('\"', '')
+#     buffer = buffer.replace(',', '')
+#     buffer = buffer.replace('=', '')
+#     buffer = buffer.replace('#', '')
     buffer = buffer.replace(' i ', ' I ')
     buffer = buffer.replace(' i\' ', ' I\' ')
-
 
     temp = sent_tokenize(buffer)
 
     for sent in temp:
+        sent = remove_punctuation(sent)
+
         output += " <s> " + sent + " </s> "
 
     final = output
@@ -80,7 +89,6 @@ def ntoken_count(n, content):
     for i in xrange(_len - n + 1):
         key = tuple(tokens[i:(i + n)])
         counter[key] = counter.get(key, 0) + 1
-
     return counter
 
 
