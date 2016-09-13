@@ -3,13 +3,15 @@ import nltk
 import random
 import re
 import operator
+import itertools
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
 sentence_minlen = 5
-nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
+gt_max = 5
+nprob_dic, nhash_dic, ncounter_dic, gt_ncounter_dic = {}, {}, {}, {}
 
 def preprocess(indir):
     def remove_punctuation(text):
@@ -45,13 +47,49 @@ def preprocess(indir):
 
 
 def ntoken_count(n, content):
-    counter = {}
+    ncounter_dic[n] = {}
     tokens = content.split()
     _len = len(tokens)
     for i in xrange(_len - n + 1):
         key = tuple(tokens[i:(i + n)])
-        counter[key] = counter.get(key, 0) + 1
-    return counter
+        ncounter_dic[n][key] = ncounter_dic[n].get(key, 0) + 1
+    return ncounter_dic[n]
+
+
+def gt_ntoken_count(n, content):
+    if n == 1:
+        return ncounter_dic[1] if 1 in ncounter_dic else ntoken_count(1, content)
+
+    gt_ncounter_dic[n] = {}
+    ncounter_dic[n] = ncounter_dic[n] if n in ncounter_dic else ntoken_count(n, content)
+    ncounter_dic[1] = ncounter_dic[1] if n in ncounter_dic else ntoken_count(1, content)
+
+    for tokens in itertools.product(ncounter_dic[1].keys(), repeat = n)):
+        tokens = tuple(tokens)
+
+        # copy ncounter_dic into gt_ncounter_dic, add 0 count tokens
+        if tokens not in ncounter_dic[n]:
+            gt_ncounter_dic[n][tokens] = 0
+        else:
+            gt_ncounter_dic[n][tokens] = ncounter_dic[n][tokens]
+
+        num = gt_ncounter_dic[n][tokens]
+        if num < gt_max:
+            if num in c_dict:
+                c_dict[num].append(tokens)
+            else
+                c_dict[num] = [tokens]
+
+
+
+    for num, _list in c_dict.items():
+        if num + 1 not in c_dict:
+            gt_ncounter_dic[n].update(dict(tokens, num) for tokens in _list)
+        else:
+            _sum = sum(_list)
+            _sum1 = sum(c_dict(num + 1))
+
+
 
 
 def ngram_generator(n, content):

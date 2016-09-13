@@ -36,6 +36,9 @@ def preprocess(indir):
     # corner case
     buffer = buffer.replace(' i ', ' I ')
     buffer = buffer.replace(' i\' ', ' I\' ')
+    buffer = buffer.replace(' From :', ' ')
+    buffer = buffer.replace(' Subject :', ' ')
+    buffer = buffer.replace(' Re :', ' ')
 
     sent_list = sent_tokenize(buffer)
     for sent in sent_list:
@@ -122,7 +125,7 @@ def backoff_produce_next(n, content, sentence_list):
 
 def main():
     # TODO: input
-    argv = ["data/autos/train_docs", "5", "I have"]
+    argv = ["data/classification_task/test_for_classification", "5", "I have"]
 
     # check input
     if (len(argv) == 0):
@@ -134,7 +137,7 @@ def main():
     sent_pre = argv[2] if len(argv) > 2 else ""
 
     indir, outdir = indir_pre + topic, outdir_pre + topic
-
+    print indir
     if not os.path.isdir(indir):
         print "Sorry, the topic does not exist!"
         return
@@ -144,7 +147,6 @@ def main():
     # preprocess
     content = preprocess(indir)
 
-    # print sentence generator
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
 
