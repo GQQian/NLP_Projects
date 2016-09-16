@@ -11,7 +11,8 @@ outdir_pre = os.getcwd() + "/"
 sentence_maxlen = 100
 sentence_minlen = 5
 gt_max = 5
-nprob_dic, nhash_dic, ncounter_dic, gt_ncounter_dic = {}, {}, {}, {}
+nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
+gt_nprob_dic, gt_nhash_dic, gt_ncounter_dic = {}, {}, {}
 
 def preprocess(indir):
     def remove_punctuation(text):
@@ -73,26 +74,45 @@ def gt_ntoken_count(n, content):
         else:
             gt_ncounter_dic[n][tokens] = ncounter_dic[n][tokens]
 
+        # get dict: key is the count, value is the list of tokens with such count
         num = gt_ncounter_dic[n][tokens]
-        if num < gt_max:
+        if num <= gt_max + 1:
             if num in c_dict:
                 c_dict[num].append(tokens)
             else
                 c_dict[num] = [tokens]
 
+    for num in xrange(1, gt_max + 1):
+        sum1 = sum(c_dict[num])
+        sum2 = sum(c_dict[num + 1])
+        new_num = (num + 1) * sum2 / sum1
+        gt_ncounter_dic[n].update(dict(tokens, new_num) for tokens in c_dict[num])
 
-
-    for num, _list in c_dict.items():
-        if num + 1 not in c_dict:
-            gt_ncounter_dic[n].update(dict(tokens, num) for tokens in _list)
-        else:
-            _sum = sum(_list)
-            _sum1 = sum(c_dict(num + 1))
-
-
+    return gt_ncounter_dic[n]
 
 
 def ngram_generator(n, content):
+    ncounter_dic[n] = ncounter_dic[n] if n in ncounter_dic else ntoken_count(n, content)
+    nhash_dic[n], nprob_dic[n] = {}, {}
+
+    if n == 1:
+        _sum = sum(ncounter_dic[n].values())
+        nprob_dic[n] = dict((key, num * 1.0 / _sum) for key, num in ncounter_dic[n].items())
+    elif n > 1:
+        ncounter_dic[n - 1] = ncounter_dic[n - 1] if n - 1 in ncounter_dic else ntoken_count(n - 1, content)
+        for key_n, num_n in ncounter_dic[n].items():
+            key_nminus1 = key_n[:-1]
+
+            nhash_dic[n][key_nminus1] = nhash_dic[n].get(key_nminus1, [])
+            nhash_dic[n][key_nminus1].append(key_n)
+
+            num_nminus1 = ncounter_dic[n - 1][key_nminus1]
+            nprob_dic[n][key_n] = 1.0 * num_n / num_nminus1
+
+    return nprob_dic[n]
+
+
+def gt_ngram_generator(n, content):
     ncounter_dic[n] = ncounter_dic[n] if n in ncounter_dic else ntoken_count(n, content)
     nhash_dic[n], nprob_dic[n] = {}, {}
 
