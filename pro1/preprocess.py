@@ -41,3 +41,4 @@ def preprocess(indir):
         output += " <s> " + sent + " </s> "
 
     return output
+    

@@ -1,13 +1,13 @@
 import ngram
 import os
-import config
+import preprocess
 
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 
 def random_sentence_ngram(n = 2, sent_pre = "I have"):
     indir = indir_pre + "data/classification_task/test_for_classification"
-    content = config.preprocess(indir)
+    content = preprocess.preprocess(indir)
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
 
@@ -22,7 +22,7 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
 
 
 def main():
-    random_sentence()
+    random_sentence_ngram()
 
 
 
