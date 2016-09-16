@@ -3,6 +3,7 @@ import os
 import random
 import operator
 
+# TODO lili: convert to class
 nprob_dic, nhash_dic, ncounter_dic = {}, {}, {}
 def ntoken_count(n, content):
     counter = {}
