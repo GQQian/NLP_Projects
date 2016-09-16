@@ -2,6 +2,18 @@ import nltk
 import re
 import os
 from nltk.tokenize import sent_tokenize, word_tokenize
+class preprocess(self):
+    def __init__():
+
+
+    def remove_punctuation(text):
+        text = text.replace('_', '')
+        result = re.findall(r'[\w\,\.\!\?]+',text)
+        return ' '.join(result)
+
+    def remove_email(text):
+        result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)
+        return result
 
 def preprocess(indir):
     """
