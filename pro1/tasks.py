@@ -21,6 +21,14 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
             print "[{}]  ".format(i + 1) + ngram.sentence_generator(k, content, sent_pre)
 
 
+def topic_classification():
+    pass
+
+
+def spell_checker():
+    pass
+
+
 
 def main():
     random_sentence_ngram()
