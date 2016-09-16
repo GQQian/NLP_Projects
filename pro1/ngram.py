@@ -7,7 +7,7 @@ class ngram_Generator(object):
     def __init__(self):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
 
-    def ntoken_count(n, content):
+    def ntoken_count(self,n, content):
         counter = {}
         tokens = content.split()
         _len = len(tokens)
@@ -16,7 +16,7 @@ class ngram_Generator(object):
             counter[key] = counter.get(key, 0) + 1
         return counter
 
-    def generate(n, content):
+    def generate(self,n, content):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n, content)
         self.nhash_dic[n], self.nprob_dic[n] = {}, {}
 
@@ -36,7 +36,7 @@ class ngram_Generator(object):
 
         return self.nprob_dic[n]
 
-    def generate_sentence(n, content, sentence = '<s>'):
+    def generate_sentence(self,n, content, sentence = '<s>'):
         sentence_minlen = 5
         sentence_maxlen = 100
 #         ngram_gen = ngram_Generator()
@@ -55,10 +55,10 @@ class ngram_Generator(object):
                         break
             else:
                 key = tuple(sentence_list[-n+1:])
-                if key not in nhash_dic[n]:
+                if key not in self.nhash_dic[n]:
                     sentence_list = produce_next(n - 1, content, sentence_list)
                 else:
-                    for token in nhash_dic[n][key]:
+                    for token in self.nhash_dic[n][key]:
                         prob_sum += self.nprob_dic[n][tuple(token)]
                         if prob_sum > rand_prob:
                             sentence_list.append(token[-1])
