@@ -8,7 +8,7 @@ outdir_pre = os.getcwd() + "/"
 def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
     indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
     content = preprocess.preprocess_dir(indir)
-    ngrams = ngram.ngram_Generator()
+    ngrams = ngram.ngram()
 
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)

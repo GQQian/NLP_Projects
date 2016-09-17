@@ -18,9 +18,9 @@ class ngram(object):
 
     def ntoken_count(self,n, content):
         """ 
-            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
-                       content: list of input sentences
-            Output counter: dictionary, with key, value indicates n-gram tuples, counts respectively
+        Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+                   content: list of input sentences
+        Output counter: dictionary, with key, value indicates n-gram tuples, counts respectively
         """
 
         counter = {}
@@ -34,9 +34,9 @@ class ngram(object):
 
     def generate_ngram(self,n, content):
         """ 
-            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
-                   content: list of input sentences
-            Output self.nprob_dic[n]: dictionary, with key, value indicates n-gram tuples, probability respectively
+        Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+               content: list of input sentences
+        Output self.nprob_dic[n]: dictionary, with key, value indicates n-gram tuples, probability respectively
         """
 
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n, content)
@@ -61,16 +61,15 @@ class ngram(object):
 
     def generate_sentence(self,n, content, sentence = '<s>'):
         """ 
-            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
-                   content: list of input sentences
+        Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+               content: list of input sentences
 
-            Output: normalized_sentence: random sentence when sentence is not set, complete the sentence if
-                    sentence is set to some starting words
+        Output: normalized_sentence: random sentence when sentence is not set, complete the sentence if
+                sentence is set to some starting words
         """
 
         sentence_minlen = 5
         sentence_maxlen = 100
-#         ngram_gen = ngram_Generator()
  
         # if do not have n-gram result, then choose (n-1)-gram
         def produce_next(n, content, sentence_list):
