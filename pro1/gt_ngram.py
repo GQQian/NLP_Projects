@@ -13,35 +13,35 @@ class gt_ngram(object):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
         self.content = content
 
+
     def ntoken_count(self, n):
         tokens = self.content.split()
-        counter = {}
 
-        if n == 1:
+
+        if n == 1 or 1 not in self.ncounter_dic:
+            counter = {}
             unk_set = set()
-            # count tokens and put token only apears once into unk_set
+            # count tokens and put token apears for the first time into unk_set
             for key in tokens:
                 key = tuple([key])
-                if key in unk_set:
-                    counter[key] = 2
-                    unk_set.remove(key)
-                elif key in counter:
+                if key in counter:
                     counter[key] += 1
+                elif key in unk_set:
+                    counter[key] = 1
                 else:
                     unk_set.add(key)
             counter[tuple(['<unk_1>'])] = len(unk_set)
 
-            # update content: replace token only apears once to 'unk'
+            # update content: replace token apears for the first time to '<unk_1>'
             for i in xrange(len(tokens)):
-                if tuple(tokens[i]) in unk_set:
-                    print tokens[i]
+                if tuple([tokens[i]]) in unk_set:
+                    unk_set.remove(tuple([tokens[i]]))
                     tokens[i] = '<unk_1>'
-                    print tokens[i]
             self.content = ' '.join(tokens)
-            print 'theoretical' in tokens
-            print 'theoretical' in self.content
+            self.ncounter_dic[1] = counter
 
-        else:
+        if n > 1:
+            counter = {}
             # initialize the counter with keys and value = 0
             _len = len(tokens)
             for i in xrange(_len - n + 1):
@@ -50,7 +50,7 @@ class gt_ngram(object):
 
             # Good-Turing counts
 
-            # if a bigram not exists, we use ['<unk>'] to replace it,
+            # if a ngram not exists, we use ['<unk_n>'] to replace it,
             # and the initial count for it is 0
             c_dict = {0: [tuple(['<unk_{}>'.format(n)])]}
             for key, c in counter.items():
@@ -76,8 +76,10 @@ class gt_ngram(object):
                 c_new = 1.0 * (c + 1) * num2 / num1
                 counter.update(dict((tokens, c_new) for tokens in _list))
 
-        self.ncounter_dic[n] = counter
+            self.ncounter_dic[n] = counter
+
         return counter
+
 
     def prob_generator(self, n):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
@@ -103,10 +105,12 @@ class gt_ngram(object):
                 key_nminus1 = key_n[:-1]
                 self.nhash_dic[n][key_nminus1] = self.nhash_dic[n].get(key_nminus1, [])
                 self.nhash_dic[n][key_nminus1].append(key_n)
+
                 num_nminus1 = self.ncounter_dic[n - 1][key_nminus1]
                 self.nprob_dic[n][key_n] = 1.0 * num_n / num_nminus1
 
         return self.nprob_dic[n]
+
 
     def perplexity(self, n, sentences):
         pass
@@ -115,7 +119,7 @@ def main():
     indir = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/atheism/train_docs"
     content = preprocess.preprocess(indir)
     atheism = gt_ngram(content)
-    print atheism.prob_generator(1)
+    print atheism.prob_generator(3)
 
 if __name__ == "__main__":
     main()
