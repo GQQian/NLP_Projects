@@ -5,6 +5,7 @@ from gt_ngram import gt_ngram
 
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
+topics = ['atheism', 'autos', 'graphics', 'medicine', 'motorcycles', 'religion', 'space']
 
 def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
     # TODO: lili write print like first line in ompare_perplexity_ngram()
@@ -24,35 +25,41 @@ def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
             print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, content, sent_pre)
 
 
-def topic_classification():
-    pass
+def topic_classification_gt_ngram():
+    gt_ngrams = {}
+    for topic in topics:
+        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
+        content = preprocess.preprocess_dir(indir)
+        gt_ngrams[topic] = gt_ngram(content)
+
+
+    test_dir = indir_pre + "data/classification_task/test_for_classification"
+    test_text = preprocess.preprocess_dir(test_dir)
+
 
 
 def spell_checker():
     pass
 
 
-def compare_perplexity_ngram():
-    print "[task]: compare perplexity for different n for good turing ngram model"
+def generate_perplexity_gt_ngram():
+    print "\n\nTask: generate perplexity with good-turing ngram"
 
-    indir = indir_pre + "data/classification_task/atheism/train_docs"
-    test_f = indir_pre + "data/classification_task/test_for_classification/file_0.txt"
+    topics = ['atheism', 'autos', 'graphics', 'medicine', 'motorcycles', 'religion', 'space']
+    gt_ngrams = {}
+    for topic in topics:
+        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
+        content = preprocess.preprocess_dir(indir)
+        gt_ngrams[topic] = gt_ngram(content)
 
-    content = preprocess.preprocess_dir(indir)
-    atheism = gt_ngram(content)
-
-    sentences = preprocess.preprocess_file(test_f)
-    print atheism.generate_perplexity(1, sentences)
-    print atheism.generate_perplexity(2, sentences)
-    print atheism.generate_perplexity(3, sentences)
-    print atheism.generate_perplexity(5, sentences)
-    print atheism.generate_perplexity(6, sentences)
-    print atheism.generate_perplexity(7, sentences)
+        print "\nTopic: {}".format(topic)
+        for i in xrange(1, 5):
+            print "[{}-gram]: {}".format(i, gt_ngrams[topic].generate_perplexity(i, content))
 
 
 def main():
-    random_sentence_ngram(topic="atheism")
-    compare_perplexity_ngram()
+    # random_sentence_ngram(topic="atheism")
+    generate_perplexity_gt_ngram()
 
 
 
