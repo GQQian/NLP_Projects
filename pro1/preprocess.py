@@ -3,12 +3,27 @@ import re
 import os
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-def preprocess(indir):
+
+def preprocess_file(f):
+    str = open(os.path.join(root, f),'r').read()
+    return preprocess_str(str)
+
+
+def preprocess_dir(dir):
     """
     Preprocess all the files in the directory
     input: the directory
     output: the processed content from all files and merged into one string
     """
+    str = ""
+    for root, dirs, filenames in os.walk(dir):
+        for f in filenames:
+            raw_content = open(os.path.join(root, f),'r').read()
+            str += raw_content
+    return preprocess_str(str)
+
+
+def preprocess_str(str):
     def remove_punctuation(text):
         text = text.replace('_', '')
         result = re.findall(r'[\w\,\.\!\?]+',text)
@@ -18,25 +33,21 @@ def preprocess(indir):
         result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)
         return result
 
-    buffer, output = "", ""
-    for root, dirs, filenames in os.walk(indir):
-        for f in filenames:
-            raw_content = open(os.path.join(root, f),'r').read()
-            buffer += raw_content
-
     # normalize
-    buffer = buffer.lower()
-    buffer = remove_email(buffer)
-    buffer = remove_punctuation(buffer)
+    str = str.lower()
+    str = remove_email(str)
+    str = remove_punctuation(str)
 
     # corner case
-    buffer = buffer.replace(' i ', ' I ')
-    buffer = buffer.replace(' i\' ', ' I\' ')
-    buffer = buffer.replace(' From :', ' ')
-    buffer = buffer.replace(' Subject :', ' ')
-    buffer = buffer.replace(' Re :', ' ')
+    str = str.replace(' i ', ' I ')
+    str = str.replace(' i\' ', ' I\' ')
+    str = str.replace(' From :', ' ')
+    str = str.replace(' Subject :', ' ')
+    str = str.replace(' Re :', ' ')
 
-    sent_list = sent_tokenize(buffer)
+    sent_list = sent_tokenize(str)
+
+    output = ""
     for sent in sent_list:
         output += " <s> " + sent + " </s> "
 

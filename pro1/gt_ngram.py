@@ -16,8 +16,6 @@ class gt_ngram(object):
 
     def ntoken_count(self, n):
         tokens = self.content.split()
-
-
         if n == 1 or 1 not in self.ncounter_dic:
             counter = {}
             unk_set = set()
@@ -113,11 +111,15 @@ class gt_ngram(object):
 
 
     def perplexity(self, n, sentences):
-        pass
+        nprob_dic[n] = nprob_dic[n] if n in nprob_dic else prob_generator(n)
+
+        # if n == 1:
+        #     tokens = preprocess.preprocess()
+
 
 def main():
     indir = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/atheism/train_docs"
-    content = preprocess.preprocess(indir)
+    content = preprocess.preprocess_dir(indir)
     atheism = gt_ngram(content)
     print atheism.prob_generator(3)
 
