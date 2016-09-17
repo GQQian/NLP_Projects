@@ -5,23 +5,26 @@ from gt_ngram import gt_ngram
 
 indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
+topics = ['atheism', 'autos', 'graphics', 'medicine', 'motorcycles', 'religion', 'space']
 
-def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
+def random_sentence_ngram(n = 2, sent_pre = "I have", topics = ["autos"]):
     # TODO: lili write print like first line in ompare_perplexity_ngram()
-    indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-    content = preprocess.preprocess_dir(indir)
-    ngrams = ngram()
+    for topic in topics:
 
-    for k in xrange(1, n + 1):
-        print "\n\n[{}-gram]\n".format(k)
+        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
+        content = preprocess.preprocess_dir(indir)
+        ngrams = ngram(content)
+        print "\n\n\nTopic: {}\n".format(topic)
+        for k in xrange(1, n + 1):
+            print "[{}-gram]\n".format(k)
 
-        print "Empty sentence"
-        for i in xrange(3):
-            print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, content)
+            print "Empty sentence"
+            for i in xrange(3):
+                print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k)
 
-        print "\nWith incomplete sentence: " + "\"{}\"".format(sent_pre)
-        for i in xrange(3):
-            print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, content, sent_pre)
+            print "\nWith incomplete sentence: " + "\"{}\"".format(sent_pre)
+            for i in xrange(3):
+                print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, sent_pre)
 
 
 def topic_classification():
@@ -51,7 +54,7 @@ def compare_perplexity_ngram():
 
 
 def main():
-    random_sentence_ngram(topic="atheism")
+    random_sentence_ngram(topics=topics)
     compare_perplexity_ngram()
 
 
