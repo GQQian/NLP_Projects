@@ -4,42 +4,32 @@ import os
 import random
 import operator
 import preprocess
-from math import pow
+from math import pow, log, exp
 
 c_max = 5
 
 class gt_ngram(object):
     def __init__(self, content):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
-        self.content = content
+
+        # use unk_1 to replace the first appeared word
+        tokens = content.split()
+        _set = set()
+        for i, token in enumerate(tokens):
+            if token not in _set:
+                tokens[i] = '<unk_1>'
+                _set.add(token)
+        self.content = ' '.join(tokens)
 
 
     def ntoken_count(self, n):
+        counter = {}
         tokens = self.content.split()
-        if n == 1 or 1 not in self.ncounter_dic:
-            counter = {}
-            unk_set = set()
-            # count tokens and put token apears for the first time into unk_set
+        if n == 1:
             for key in tokens:
                 key = tuple([key])
-                if key in counter:
-                    counter[key] += 1
-                elif key in unk_set:
-                    counter[key] = 1
-                else:
-                    unk_set.add(key)
-            counter[tuple(['<unk_1>'])] = len(unk_set)
-
-            # update content: replace token apears for the first time to '<unk_1>'
-            for i in xrange(len(tokens)):
-                if tuple([tokens[i]]) in unk_set:
-                    unk_set.remove(tuple([tokens[i]]))
-                    tokens[i] = '<unk_1>'
-            self.content = ' '.join(tokens)
-            self.ncounter_dic[1] = counter
-
-        if n > 1:
-            counter = {}
+                counter[key] = counter.get(key, 0) + 1
+        else:
             # initialize the counter with keys and value = 0
             _len = len(tokens)
             for i in xrange(_len - n + 1):
@@ -74,13 +64,14 @@ class gt_ngram(object):
                 c_new = 1.0 * (c + 1) * num2 / num1
                 counter.update(dict((tokens, c_new) for tokens in _list))
 
-            self.ncounter_dic[n] = counter
+        self.ncounter_dic[n] = counter
 
         return counter
 
 
     def prob_generator(self, n):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
+        # TODO: jiaojiao: check if nhash_dic needed?
         self.nhash_dic[n], self.nprob_dic[n] = {}, {}
 
         if n == 1:
@@ -110,18 +101,51 @@ class gt_ngram(object):
         return self.nprob_dic[n]
 
 
-    def perplexity(self, n, sentence):
-        nprob_dic[n] = nprob_dic[n] if n in nprob_dic else prob_generator(n)
+    def perplexity(self, n, sentences):
+        self.nprob_dic[n] = self.nprob_dic[n] if n in self.nprob_dic else self.prob_generator(n)
+        tokens = preprocess.preprocess_text(sentences).split()
 
+        # use unk_1 to repalce word not in ncounter_dic[1]
+        self.ncounter_dic[1] = self.ncounter_dic[1] if 1 in self.ncounter_dic else self.ntoken_count(1)
+        for i, token in enumerate(tokens):
+            key = tuple([token])
+            if key not in self.ncounter_dic[1]:
+                tokens[i] = '<unk_1>'
+
+        # calculate perplexity
+        perp = 0
         if n == 1:
-            tokens = preprocess.preprocess_str(sentence)
+            for token in tokens:
+                key = tuple([token])
+                prob = self.nprob_dic[1][key]
+                perp -= log(prob)
+        else:
+            unk = '<unk_{}>'.format(n - 1)
+            _len = len(tokens)
+            for i in xrange(_len - n + 1):
+                key = tuple(tokens[i:(i + n)])
+                if key not in self.nprob_dic[n]:
+                    key = tuple([unk, token])
+
+                prob = self.nprob_dic[n][key]
+                perp -= log(prob)
+
+        perp = exp(1.0 * perp / len(tokens))
+        return perp
 
 
 def main():
     indir = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/atheism/train_docs"
+    test_f = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/test_for_classification/file_0.txt"
     content = preprocess.preprocess_dir(indir)
     atheism = gt_ngram(content)
-    print atheism.prob_generator(3)
+    sentences = preprocess.preprocess_file(test_f)
+    print atheism.perplexity(1, sentences)
+    print atheism.perplexity(2, sentences)
+    print atheism.perplexity(3, sentences)
+    print atheism.perplexity(5, sentences)
+    print atheism.perplexity(6, sentences)
+    print atheism.perplexity(7, sentences)
 
 if __name__ == "__main__":
     main()

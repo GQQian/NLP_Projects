@@ -5,7 +5,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 
 def preprocess_file(f):
-    text = open(os.path.join(root, f),'r').read()
+    text = open(f, 'r').read()
     return preprocess_text(text)
 
 
