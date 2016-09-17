@@ -6,7 +6,6 @@ indir_pre = os.getcwd() + "/"
 outdir_pre = os.getcwd() + "/"
 
 def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
-    # TODO: lili: create ngram class for every topic, and implemente sentence generation for each topic
     indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
     content = preprocess.preprocess(indir)
     ngrams = ngram.ngram_Generator()

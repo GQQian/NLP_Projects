@@ -1,7 +1,6 @@
 import os
 import random
 import operator
-# TODO lili: convert to class
 
 class ngram_Generator(object):
     def __init__(self):

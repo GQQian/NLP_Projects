@@ -8,7 +8,7 @@ from math import pow
 
 c_max = 5
 
-class gt_ngram:
+class gt_ngram(object):
     def __init__(self, content):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
         self.content = content
@@ -21,6 +21,7 @@ class gt_ngram:
             unk_set = set()
             # count tokens and put token only apears once into unk_set
             for key in tokens:
+                key = tuple([key])
                 if key in unk_set:
                     counter[key] = 2
                     unk_set.remove(key)
@@ -28,13 +29,17 @@ class gt_ngram:
                     counter[key] += 1
                 else:
                     unk_set.add(key)
-            counter['<unk>'] = len(unk_set)
+            counter[tuple(['<unk_1>'])] = len(unk_set)
 
             # update content: replace token only apears once to 'unk'
             for i in xrange(len(tokens)):
-                if tokens[i] in unk_set:
-                    tokens[i] = '<unk>'
+                if tuple(tokens[i]) in unk_set:
+                    print tokens[i]
+                    tokens[i] = '<unk_1>'
+                    print tokens[i]
             self.content = ' '.join(tokens)
+            print 'theoretical' in tokens
+            print 'theoretical' in self.content
 
         else:
             # initialize the counter with keys and value = 0
@@ -44,7 +49,10 @@ class gt_ngram:
                 counter[key] = counter.get(key, 0) + 1
 
             # Good-Turing counts
-            c_dict = {0: [tuple(['<unk>'])]}
+
+            # if a bigram not exists, we use ['<unk>'] to replace it,
+            # and the initial count for it is 0
+            c_dict = {0: [tuple(['<unk_{}>'.format(n)])]}
             for key, c in counter.items():
                 if c > c_max:
                     continue
@@ -71,8 +79,34 @@ class gt_ngram:
         self.ncounter_dic[n] = counter
         return counter
 
-    def ngram_generator(self, n, content):
-        pass
+    def prob_generator(self, n):
+        self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
+        self.nhash_dic[n], self.nprob_dic[n] = {}, {}
+
+        if n == 1:
+            _sum = sum(self.ncounter_dic[n].values())
+            self.nprob_dic[n] = dict((key, num * 1.0 / _sum) for key, num in self.ncounter_dic[n].items())
+        elif n > 1:
+            self.ncounter_dic[n - 1] = self.ncounter_dic[n - 1] if n - 1 in self.ncounter_dic else self.ntoken_count(n - 1)
+            unk_nminus1 = tuple(['<unk_{}>'.format(n - 1)])
+            unk_n = tuple(['<unk_{}>'.format(n)])
+            self.nhash_dic[n][unk_nminus1] = []
+            for key_n, num_n in self.ncounter_dic[n].items():
+                if key_n == unk_n:
+                    continue
+                temp = tuple([unk_nminus1[0], key_n[-1]])
+                if n > 2 and temp not in self.nprob_dic[n]:
+                    self.nhash_dic[n][unk_nminus1] = temp
+                    num_nminus1 = self.ncounter_dic[n - 1][unk_nminus1]
+                    self.nprob_dic[n][temp] = 1.0 * self.ncounter_dic[n][unk_n] / num_nminus1
+
+                key_nminus1 = key_n[:-1]
+                self.nhash_dic[n][key_nminus1] = self.nhash_dic[n].get(key_nminus1, [])
+                self.nhash_dic[n][key_nminus1].append(key_n)
+                num_nminus1 = self.ncounter_dic[n - 1][key_nminus1]
+                self.nprob_dic[n][key_n] = 1.0 * num_n / num_nminus1
+
+        return self.nprob_dic[n]
 
     def perplexity(self, n, sentences):
         pass
@@ -81,7 +115,7 @@ def main():
     indir = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/atheism/train_docs"
     content = preprocess.preprocess(indir)
     atheism = gt_ngram(content)
-    print atheism.ntoken_count(2)
+    print atheism.prob_generator(1)
 
 if __name__ == "__main__":
     main()
