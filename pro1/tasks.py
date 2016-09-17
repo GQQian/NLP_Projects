@@ -10,7 +10,7 @@ def random_sentence_ngram(n = 2, sent_pre = "I have", topic = "autos"):
     # TODO: lili write print like first line in ompare_perplexity_ngram()
     indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
     content = preprocess.preprocess_dir(indir)
-    ngrams = ngram.ngram()
+    ngrams = ngram()
 
     for k in xrange(1, n + 1):
         print "\n\n[{}-gram]\n".format(k)
@@ -34,6 +34,7 @@ def spell_checker():
 
 def compare_perplexity_ngram():
     print "[task]: compare perplexity for different n for good turing ngram model"
+
     indir = indir_pre + "data/classification_task/atheism/train_docs"
     test_f = indir_pre + "data/classification_task/test_for_classification/file_0.txt"
 
@@ -50,7 +51,7 @@ def compare_perplexity_ngram():
 
 
 def main():
-    # random_sentence_ngram(topic="atheism")
+    random_sentence_ngram(topic="atheism")
     compare_perplexity_ngram()
 
 
