@@ -2,11 +2,27 @@ import os
 import random
 import operator
 
-class ngram_Generator(object):
+class ngram(object):
     def __init__(self):
+        """
+        Parameter:
+        ncounter_dic: stores the counts for grams, ncounter_dic[1] stores grams for unigram, 
+            ncounter_dic[2][(key1,key2)] will return the count for (key1,key2) in bigram dictionary;
+        nprob_dic: stores the counts for grams, nprob_dic[1] stores grams for unigram, 
+            nprob_dic[2][(key1,key2)] will return the probability for (key1,key2) in bigram dictionary;
+        
+        """
+
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
 
+
     def ntoken_count(self,n, content):
+        """ 
+            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+                       content: list of input sentences
+            Output counter: dictionary, with key, value indicates n-gram tuples, counts respectively
+        """
+
         counter = {}
         tokens = content.split()
         _len = len(tokens)
@@ -15,7 +31,14 @@ class ngram_Generator(object):
             counter[key] = counter.get(key, 0) + 1
         return counter
 
-    def generate(self,n, content):
+
+    def generate_ngram(self,n, content):
+        """ 
+            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+                   content: list of input sentences
+            Output self.nprob_dic[n]: dictionary, with key, value indicates n-gram tuples, probability respectively
+        """
+
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n, content)
         self.nhash_dic[n], self.nprob_dic[n] = {}, {}
 
@@ -35,14 +58,23 @@ class ngram_Generator(object):
 
         return self.nprob_dic[n]
 
+
     def generate_sentence(self,n, content, sentence = '<s>'):
+        """ 
+            Input: n: when n = 1,2,3 indicates unigram, bigram and trigram respectively;
+                   content: list of input sentences
+
+            Output: normalized_sentence: random sentence when sentence is not set, complete the sentence if
+                    sentence is set to some starting words
+        """
+
         sentence_minlen = 5
         sentence_maxlen = 100
 #         ngram_gen = ngram_Generator()
-
+ 
         # if do not have n-gram result, then choose (n-1)-gram
         def produce_next(n, content, sentence_list):
-            self.nprob_dic[n] = self.nprob_dic[n] if n in self.nprob_dic else self.generate(n, content)
+            self.nprob_dic[n] = self.nprob_dic[n] if n in self.nprob_dic else self.generate_ngram(n, content)
             rand_prob = random.uniform(0.0, 1.0)
             prob_sum = 0
 
