@@ -69,7 +69,7 @@ class gt_ngram(object):
         return counter
 
 
-    def prob_generator(self, n):
+    def generate_ngram(self, n):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
         # TODO: jiaojiao: check if nhash_dic needed?
         self.nhash_dic[n], self.nprob_dic[n] = {}, {}
@@ -101,8 +101,8 @@ class gt_ngram(object):
         return self.nprob_dic[n]
 
 
-    def perplexity(self, n, sentences):
-        self.nprob_dic[n] = self.nprob_dic[n] if n in self.nprob_dic else self.prob_generator(n)
+    def generate_perplexity(self, n, sentences):
+        self.nprob_dic[n] = self.nprob_dic[n] if n in self.nprob_dic else self.generate_ngram(n)
         tokens = preprocess.preprocess_text(sentences).split()
 
         # use unk_1 to repalce word not in ncounter_dic[1]
@@ -140,12 +140,12 @@ def main():
     content = preprocess.preprocess_dir(indir)
     atheism = gt_ngram(content)
     sentences = preprocess.preprocess_file(test_f)
-    print atheism.perplexity(1, sentences)
-    print atheism.perplexity(2, sentences)
-    print atheism.perplexity(3, sentences)
-    print atheism.perplexity(5, sentences)
-    print atheism.perplexity(6, sentences)
-    print atheism.perplexity(7, sentences)
+    print atheism.generate_perplexity(1, sentences)
+    print atheism.generate_perplexity(2, sentences)
+    print atheism.generate_perplexity(3, sentences)
+    print atheism.generate_perplexity(5, sentences)
+    print atheism.generate_perplexity(6, sentences)
+    print atheism.generate_perplexity(7, sentences)
 
 if __name__ == "__main__":
     main()
