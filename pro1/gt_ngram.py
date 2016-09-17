@@ -110,11 +110,11 @@ class gt_ngram(object):
         return self.nprob_dic[n]
 
 
-    def perplexity(self, n, sentences):
+    def perplexity(self, n, sentence):
         nprob_dic[n] = nprob_dic[n] if n in nprob_dic else prob_generator(n)
 
-        # if n == 1:
-        #     tokens = preprocess.preprocess()
+        if n == 1:
+            tokens = preprocess.preprocess_str(sentence)
 
 
 def main():

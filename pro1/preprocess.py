@@ -5,25 +5,25 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 
 def preprocess_file(f):
-    str = open(os.path.join(root, f),'r').read()
-    return preprocess_str(str)
+    text = open(os.path.join(root, f),'r').read()
+    return preprocess_text(text)
 
 
 def preprocess_dir(dir):
     """
     Preprocess all the files in the directory
     input: the directory
-    output: the processed content from all files and merged into one string
+    output: the processed content from all files and merged into one texting
     """
-    str = ""
+    text = ""
     for root, dirs, filenames in os.walk(dir):
         for f in filenames:
             raw_content = open(os.path.join(root, f),'r').read()
-            str += raw_content
-    return preprocess_str(str)
+            text += raw_content
+    return preprocess_text(text)
 
 
-def preprocess_str(str):
+def preprocess_text(text):
     def remove_punctuation(text):
         text = text.replace('_', '')
         result = re.findall(r'[\w\,\.\!\?]+',text)
@@ -34,18 +34,18 @@ def preprocess_str(str):
         return result
 
     # normalize
-    str = str.lower()
-    str = remove_email(str)
-    str = remove_punctuation(str)
+    text = text.lower()
+    text = remove_email(text)
+    text = remove_punctuation(text)
 
     # corner case
-    str = str.replace(' i ', ' I ')
-    str = str.replace(' i\' ', ' I\' ')
-    str = str.replace(' From :', ' ')
-    str = str.replace(' Subject :', ' ')
-    str = str.replace(' Re :', ' ')
+    text = text.replace(' i ', ' I ')
+    text = text.replace(' i\' ', ' I\' ')
+    text = text.replace(' From :', ' ')
+    text = text.replace(' Subject :', ' ')
+    text = text.replace(' Re :', ' ')
 
-    sent_list = sent_tokenize(str)
+    sent_list = sent_tokenize(text)
 
     output = ""
     for sent in sent_list:
