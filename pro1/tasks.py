@@ -66,30 +66,29 @@ def topic_classification_gt_ngram():
         gt_ngrams[topic] = gt_ngram(train_text[topic])
 
     # calculate the accuracy for n-gram and choose the best one
-    # accuracy = {} # key: the n in gt_ngram
-    # for i in xrange(1, 2):
-    #     _sum, correct = 0, 0
-    #     for label_topic, text in test_text.items():
-    #         sentences = text.split('</s>')
-    #         for sentence in sentences:
-    #             sentence += ' </s>'
-    #             min_perp, min_topic = sys.maxint, label_topic
-    #
-    #             for topic in topics:
-    #                 perp = gt_ngrams[topic].generate_perplexity(i, sentence)
-    #                 if perp < min_perp:
-    #                     min_perp = perp
-    #                     min_topic = topic
-    #
-    #             if label_topic == min_topic:
-    #                 correct += 1
-    #             _sum += 1
-    #
-    #     accuracy[i] = 1.0 * correct / _sum
-    #     print "[{}-gram] accuracy: {}".format(i, accuracy[i])
-    # #choose the best n
-    # n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
-    n = 3
+    accuracy = {} # key: the n in gt_ngram
+    for i in xrange(1, 2):
+        _sum, correct = 0, 0
+        for label_topic, text in test_text.items():
+            sentences = text.split('</s>')
+            for sentence in sentences:
+                sentence += ' </s>'
+                min_perp, min_topic = sys.maxint, label_topic
+
+                for topic in topics:
+                    perp = gt_ngrams[topic].generate_perplexity(i, sentence)
+                    if perp < min_perp:
+                        min_perp = perp
+                        min_topic = topic
+
+                if label_topic == min_topic:
+                    correct += 1
+                _sum += 1
+
+        accuracy[i] = 1.0 * correct / _sum
+        print "[{}-gram] accuracy: {}".format(i, accuracy[i])
+    #choose the best n
+    n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
 
     # get the result for files in test_for_classification directory
     test_dir = indir_pre + "data/classification_task/test_for_classification"
