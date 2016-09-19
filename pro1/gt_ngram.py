@@ -30,7 +30,6 @@ class gt_ngram(object):
                 key = tuple([key])
                 counter[key] = counter.get(key, 0) + 1
         else:
-            # initialize the counter with keys and value = 0
             _len = len(tokens)
             for i in xrange(_len - n + 1):
                 key = tuple(tokens[i:(i + n)])
@@ -76,6 +75,7 @@ class gt_ngram(object):
 
         if n == 1:
             _sum = sum(self.ncounter_dic[n].values())
+            print _sum
             self.nprob_dic[n] = dict((key, num * 1.0 / _sum) for key, num in self.ncounter_dic[n].items())
         elif n > 1:
             self.ncounter_dic[n - 1] = self.ncounter_dic[n - 1] if n - 1 in self.ncounter_dic else self.ntoken_count(n - 1)
@@ -139,13 +139,7 @@ def main():
     test_f = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/test_for_classification/file_0.txt"
     content = preprocess.preprocess_dir(indir)
     atheism = gt_ngram(content)
-    sentences = preprocess.preprocess_file(test_f)
-    print atheism.generate_perplexity(1, sentences)
-    print atheism.generate_perplexity(2, sentences)
-    print atheism.generate_perplexity(3, sentences)
-    print atheism.generate_perplexity(5, sentences)
-    print atheism.generate_perplexity(6, sentences)
-    print atheism.generate_perplexity(7, sentences)
+
 
 if __name__ == "__main__":
     main()
