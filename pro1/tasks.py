@@ -7,6 +7,7 @@ import sys
 import operator
 import csv
 import numpy as linspace
+import math
 
 # TODO: delete it when not used
 
@@ -32,10 +33,10 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
                 print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, sent_pre)
 
 
-def generate_perplexity_gt_ngram():
+def generate_perplexity_gt_ngram(mission = 'classification_task'):
     gt_ngrams = {}
     for topic in topics:
-        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
+        indir = indir_pre + "data/{}/{}/train_docs".format(mission, topic)
         content = preprocess.preprocess_dir(indir)
         gt_ngrams[topic] = gt_ngram(content)
 
@@ -112,28 +113,31 @@ def topic_classification_gt_ngram():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
-def split_train_test():
+def split_train_test(mission = 'classification_task'):
     """
     split train_docs into     training:test = 4:1
     store the preprocessed file train.txt and test.txt in each topic directory
     """
+
     for topic in topics:
-        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-        content = preprocess.preprocess_dir(indir)
-        tokens = content.split()
+        indir = indir_pre + "data/{}/{}/train_docs".format(mission, topic)
+        num_file = len(os.listdir(indir))
+        num_train_file = math.floor(num_file * 0.8)
+        train_text, test_text = "", ""
 
-        # find the nearest </s> after 80% content
-        pointer = int(len(tokens) * 0.8)
-        while tokens[pointer] != '</s>':
-            pointer += 1
+        for root, dirs, filenames in os.walk(indir):
+            for i, f in enumerate(filenames):
+                raw_content = preprocess.preprocess_file(os.path.join(root, f))
+                if i < num_train_file:
+                    train_text += raw_content
+                else:
+                    test_text += raw_content
 
-        train_text = ' '.join(tokens[:(pointer+1)])
-        test_text = ' '.join(tokens[(pointer+2):])
-
-        train_path = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        test_path = indir_pre + "data/classification_task/{}/test.txt".format(topic)
+        train_path = indir_pre + "data/{}/{}/train.txt".format(mission, topic)
+        test_path = indir_pre + "data/{}/{}/test.txt".format(mission, topic)
         open(train_path, 'w').write(train_text)
         open(test_path, 'w').write(test_text)
+
 
 
 def topic_classification_li_ngram():
@@ -206,12 +210,27 @@ def topic_classification_li_ngram():
 
 
 
-def spell_checker_gt_nrgam():
-    pass
+def spell_checker_gt_nrgam(method = 'perplexity'):
+    gt_ngrams, train_text, test_text  = {}, {}, {} #key: topic
+    for topic in topics:
+        train_f = indir_pre + "data/spell_checking_task/{}/train.txt".format(topic)
+        #test_f = indir_pre + "data/spell_checking_task/{}/test.txt".format(topic)
+        if not os.path.isfile(train_f): #or not os.path.isfile(test_f):
+            split_train_test('spell_checking_task')
+        train_text[topic] = open(train_f, 'r').read()
+        #test_text[topic] = open(test_f, 'r').read()
+        gt_ngrams[topic] = gt_ngram(train_text[topic])
+        if method == 'perplexity':
+            train_perplexity={}
+                for i in xrange(1,5):
+                    train_perplexity[topic][i]=gt_ngrams[topic].generate_perplexity(i,train_text[topic])
+        print train_perplexity[topic][i]
 
 
 def main():
-    generate_perplexity_gt_ngram()
+    #split_train_test('spell_checking_task')
+    #topic_classification_gt_ngram()
+    spell_checker_gt_nrgam()
 
 
 if __name__ == "__main__":
