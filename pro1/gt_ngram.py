@@ -68,7 +68,7 @@ class gt_ngram(object):
 
         return counter
 
-
+        #TODO: CHANGE NAME
     def generate_ngram(self, n):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
         # TODO: jiaojiao: check if nhash_dic needed?
