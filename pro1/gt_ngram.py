@@ -125,7 +125,9 @@ class gt_ngram(object):
             for i in xrange(_len - n + 1):
                 key = tuple(tokens[i:(i + n)])
                 if key not in self.nprob_dic[n]:
-                    key = tuple([unk, token])
+                    key = tuple([unk, tokens[i + n - 1]])
+                    if key not in self.nprob_dic[n]:
+                        continue
 
                 prob = self.nprob_dic[n][key]
                 perp -= log(prob)
