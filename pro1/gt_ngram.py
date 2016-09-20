@@ -128,8 +128,8 @@ class gt_ngram(object):
             for i in xrange(_len):
                 key = tuple(tokens[i:(i + n)])
                 if key not in self.nprob_dic[n]:
-<<<<<<< HEAD
-                    key = tuple([unk])
+# <<<<<<< HEAD
+                    key = tuple([unk, '<unk_1>'])
         ######### end previous Version #######
 
         ########## version with fixed length ##########
@@ -148,11 +148,11 @@ class gt_ngram(object):
 
         ########## end fixed length version #######
 
-=======
-                    key = tuple([unk, tokens[i + n - 1]])
-                    if key not in self.nprob_dic[n]:
-                        continue
->>>>>>> 2e5674ffe9e52a924ad193b23ada90aa42c1e908
+# =======
+#                     key = tuple([unk, tokens[i + n - 1]])
+#                     if key not in self.nprob_dic[n]:
+#                         continue
+# >>>>>>> 2e5674ffe9e52a924ad193b23ada90aa42c1e908
 
                 prob = self.nprob_dic[n][key]
                 perp -= log(prob)
