@@ -84,6 +84,7 @@ class gt_ngram(object):
             self.nhash_dic[n][unk_nminus1] = []
             for key_n, num_n in self.ncounter_dic[n].items():
                 if key_n == unk_n:
+                    print "something"
                     continue
                 temp = tuple([unk_nminus1[0], key_n[-1]])
                 if n > 2 and temp not in self.nprob_dic[n]:
@@ -114,18 +115,38 @@ class gt_ngram(object):
 
         # calculate perplexity
         perp = 0
+
+        ####### Previous Version ##########
         if n == 1:
             for token in tokens:
                 key = tuple([token])
                 prob = self.nprob_dic[1][key]
                 perp -= log(prob)
         else:
-            unk = '<unk_{}>'.format(n - 1)
+            unk = '<unk_{}>'.format(n)
             _len = len(tokens)
-            for i in xrange(_len - n + 1):
+            for i in xrange(_len):
                 key = tuple(tokens[i:(i + n)])
                 if key not in self.nprob_dic[n]:
-                    key = tuple([unk, token])
+                    key = tuple([unk])
+        ######### end previous Version #######
+
+        ########## version with fixed length ##########
+        # if n == 1:
+        #     for token in tokens:
+        #         key = tuple([token])
+        #         prob = self.nprob_dic[1][key]
+        #         perp -= log(prob)
+        # else:
+        #     unk = '<unk_{}>'.format(n - 1)
+        #     _len = len(tokens)
+        #     for i in xrange(_len):
+        #         key = tuple(tokens[i-n+1:i+1]) if i>n-1 and n>1 else tuple(tokens[0:(0+n)])
+        #         if key not in self.nprob_dic[n]:
+        #             key = tuple([unk, token])
+
+        ########## end fixed length version #######
+
 
                 prob = self.nprob_dic[n][key]
                 perp -= log(prob)
