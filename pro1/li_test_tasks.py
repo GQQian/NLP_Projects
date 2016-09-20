@@ -6,7 +6,7 @@ import sys
 import operator
 import csv
 import numpy as linspace
-from bo_ngram import bo_ngram
+from li_ngram import li_ngram
 
 # TODO: delete it when not used
 
