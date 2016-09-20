@@ -119,5 +119,5 @@ class li_ngram(gt_ngram):
         #     perp -= log(prob)
         # print "there are {} fixes for bigram, {} fixes for trigram".format(bi_fix,tri_fix)
 
-        perp = exp(1.0 * perp / len(tokens))
-        return perp
+        # perp = exp(1.0 * perp / len(tokens))
+        # return perp

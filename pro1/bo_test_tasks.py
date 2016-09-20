@@ -1,7 +1,7 @@
 from ngram import ngram
 import os
 import preprocess
-from li_ngram import li_ngram
+from bo_ngram import bo_ngram
 import sys
 import operator
 import csv
@@ -32,27 +32,27 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
                 print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, sent_pre)
 
 
-def generate_perplexity_li_ngram():
-    li_ngrams = {}
+def generate_perplexity_bo_ngram():
+    bo_ngrams = {}
     for topic in topics:
         indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
         content = preprocess.preprocess_dir(indir)
-        li_ngrams[topic] = li_ngram(content)
+        bo_ngrams[topic] = bo_ngram(content)
 
         print "\nTopic: {}".format(topic)
-        print "[{}-gram]: {}".format(3, li_ngrams[topic].generate_perplexity(3, content))
+        print "[{}-gram]: {}".format(3, bo_ngrams[topic].generate_perplexity(3, content))
 
 
-def topic_classification_li_ngram():
+def topic_classification_bo_ngram():
     """
     calculate the accuracy for topic classification with different
     n in Good-Turing ngram, then choose the best one to classify files
     in test_for_classification directory, and write results into
-    li_result.csv in classification_task directory
+    bo_result.csv in classification_task directory
     """
 
-    # get li_ngram for each topic and read all test data
-    li_ngrams, train_text, test_text  = {}, {}, {} #key: topic
+    # get bo_ngram for each topic and read all test data
+    bo_ngrams, train_text, test_text  = {}, {}, {} #key: topic
     for topic in topics:
         train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
         test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
@@ -62,10 +62,10 @@ def topic_classification_li_ngram():
         train_text[topic] = open(train_f, 'r').read()
         test_text[topic] = open(test_f, 'r').read()
 
-        li_ngrams[topic] = li_ngram(train_text[topic])
+        bo_ngrams[topic] = bo_ngram(train_text[topic])
 
     # calculate the accuracy for n-gram and choose the best one
-    accuracy = {} # key: the n in li_ngram
+    accuracy = {} # key: the n in bo_ngram
     for i in xrange(3,4):
         _sum, correct = 0, 0
         for label_topic, text in test_text.items():
@@ -75,7 +75,7 @@ def topic_classification_li_ngram():
                 min_perp, min_topic = sys.maxint, label_topic
 
                 for topic in topics:
-                    perp = li_ngrams[topic].generate_perplexity(i, sentence)
+                    perp = bo_ngrams[topic].generate_perplexity(i, sentence)
                     if perp < min_perp:
                         min_perp = perp
                         min_topic = topic
@@ -86,12 +86,12 @@ def topic_classification_li_ngram():
 
         accuracy[i] = 1.0 * correct / _sum
         print "[{}-gram] {}".format(i, accuracy[i])
-    #choose the best n
+    # choose the best n
     n = 3
 
     # get the result for files in test_for_classification directory
     test_dir = indir_pre + "data/classification_task/test_for_classification"
-    csv_f = indir_pre + "data/classification_task/li_result.csv"
+    csv_f = indir_pre + "data/classification_task/bo_result.csv"
 
     with open(csv_f, 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames = ['ID', 'Prediction'])
@@ -103,7 +103,7 @@ def topic_classification_li_ngram():
                 min_perp, min_topic = sys.maxint, ''
 
                 for topic in topics:
-                    perp = li_ngrams[topic].generate_perplexity(n, text)
+                    perp = bo_ngrams[topic].generate_perplexity(n, text)
                     if perp < min_perp:
                         min_perp = perp
                         min_topic = topic
@@ -139,7 +139,7 @@ def spell_checker_gt_nrgam():
 
 
 def main():
-    generate_perplexity_li_ngram()
+    generate_perplexity_bo_ngram()
 
 
 if __name__ == "__main__":
