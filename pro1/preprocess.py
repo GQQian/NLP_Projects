@@ -33,17 +33,16 @@ def preprocess_text(text):
         result = re.sub(r'[\w\.-]+@[\w\.-]+','',text)
         return result
 
-    # normalize
+    text = text.replace(' From :', ' ')
+    text = text.replace(' Subject :', ' ')
+    text = text.replace(' Re :', ' ')
+
     text = text.lower()
     text = remove_email(text)
     text = remove_punctuation(text)
 
-    # corner case
     text = text.replace(' i ', ' I ')
     text = text.replace(' i\' ', ' I\' ')
-    text = text.replace(' From :', ' ')
-    text = text.replace(' Subject :', ' ')
-    text = text.replace(' Re :', ' ')
 
     sent_list = sent_tokenize(text)
 

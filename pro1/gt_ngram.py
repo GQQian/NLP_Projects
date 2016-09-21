@@ -67,7 +67,7 @@ class gt_ngram(object):
 
         return counter
 
-        #TODO: CHANGE NAME
+
     def generate_ngram(self, n):
         self.ncounter_dic[n] = self.ncounter_dic[n] if n in self.ncounter_dic else self.ntoken_count(n)
         # TODO: jiaojiao: check if nhash_dic needed?
@@ -114,44 +114,20 @@ class gt_ngram(object):
 
         # calculate perplexity
         perp = 0
-
-        ####### Previous Version ##########
         if n == 1:
             for token in tokens:
                 key = tuple([token])
                 prob = self.nprob_dic[1][key]
                 perp -= log(prob)
         else:
-            unk = '<unk_{}>'.format(n)
+            unk = '<unk_{}>'.format(n - 1)
             _len = len(tokens)
-            for i in xrange(_len):
+            for i in xrange(_len - n + 1):
                 key = tuple(tokens[i:(i + n)])
                 if key not in self.nprob_dic[n]:
-# <<<<<<< HEAD
-                    key = tuple([unk, '<unk_1>'])
-        ######### end previous Version #######
-
-        ########## version with fixed length ##########
-        # if n == 1:
-        #     for token in tokens:
-        #         key = tuple([token])
-        #         prob = self.nprob_dic[1][key]
-        #         perp -= log(prob)
-        # else:
-        #     unk = '<unk_{}>'.format(n - 1)
-        #     _len = len(tokens)
-        #     for i in xrange(_len):
-        #         key = tuple(tokens[i-n+1:i+1]) if i>n-1 and n>1 else tuple(tokens[0:(0+n)])
-        #         if key not in self.nprob_dic[n]:
-        #             key = tuple([unk, token])
-
-        ########## end fixed length version #######
-
-# =======
-#                     key = tuple([unk, tokens[i + n - 1]])
-#                     if key not in self.nprob_dic[n]:
-#                         continue
-# >>>>>>> 2e5674ffe9e52a924ad193b23ada90aa42c1e908
+                    key = tuple([unk, tokens[i + n - 1]])
+                    if key not in self.nprob_dic[n]:
+                        key = tuple([unk, '<unk_1>'])
 
                 prob = self.nprob_dic[n][key]
                 perp -= log(prob)
