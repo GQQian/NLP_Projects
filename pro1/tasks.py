@@ -211,20 +211,156 @@ def topic_classification_li_ngram():
 
 
 def spell_checker_gt_nrgam(method = 'perplexity'):
-    gt_ngrams, train_text, test_text  = {}, {}, {} #key: topic
+    gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {} #key: topic
+    
+    indir_words = indir_pre + "data/spell_checking_task/confusion_set.txt"
+    confused_words = open(indir_words, 'r').read().decode("utf-8-sig").encode("utf-8")
+    #in the txt, the phrase "may be" confuses split(). for simplicity, we picked it out.
+    #create two dictionaries for word checking
+    confused_words.replace("may be", "maybe")
+    confused_words = confused_words.split()
+    words = {}
+    changed_text = ""
+    words["even"] = dict()
+    words["odd"] = dict()
+    end = False;
+    for i in xrange(0, len(confused_words)-1, 2):
+        words["even"][confused_words[i]]=[]
+        words["odd"][confused_words[i+1]]=[]
+
+    for i in xrange(0, len(confused_words)-1, 2):
+        words["even"][confused_words[i]].append(confused_words[i+1])
+        words["odd"][confused_words[i+1]].append(confused_words[i])
+
+    words["even"]["maybe"] = ["may be"]
+
+    for side in words:
+
+        for indexw in words[side]:
+            words[side][indexw].append("")
+
+    for topic in topics:
+        gt_ngrams[topic] = dict()
+        test_text[topic] = dict()
+        test_compare[topic] = dict()
+        for i in xrange(1, 5):
+            gt_ngrams[topic][i] = dict()
+
+
+    #create training and testing text
     for topic in topics:
         train_f = indir_pre + "data/spell_checking_task/{}/train.txt".format(topic)
-        #test_f = indir_pre + "data/spell_checking_task/{}/test.txt".format(topic)
-        if not os.path.isfile(train_f): #or not os.path.isfile(test_f):
+        test_f = indir_pre + "data/spell_checking_task/{}/train_modified_docs".format(topic)
+        test_cf = indir_pre + "data/spell_checking_task/{}/train_docs".format(topic)
+
+        num_file = len(os.listdir(test_f))
+        num_train_file = math.floor(num_file * 0.8)
+
+        for root, dirs, filenames in os.walk(test_f):
+            for i, f in enumerate(filenames):
+                if i > num_train_file:
+                    raw_content = preprocess.preprocess_file(os.path.join(root, f),"sentences")
+                    #test_text[topic][f] = dict()
+                    test_text[topic][f] = raw_content
+                    raw_content = preprocess.preprocess_file(os.path.join(test_cf, f.replace("_modified", "")),"sentences")
+                    test_compare[topic][f.replace("_modified", "")] = raw_content
+        if not os.path.isfile(train_f):
             split_train_test('spell_checking_task')
         train_text[topic] = open(train_f, 'r').read()
-        #test_text[topic] = open(test_f, 'r').read()
-        gt_ngrams[topic] = gt_ngram(train_text[topic])
-        if method == 'perplexity':
-            train_perplexity={}
-                for i in xrange(1,5):
-                    train_perplexity[topic][i]=gt_ngrams[topic].generate_perplexity(i,train_text[topic])
-        print train_perplexity[topic][i]
+        for i in xrange(1, 5):
+            gt_ngrams[topic][i] = gt_ngram(train_text[topic])
+
+    #generate good-turing n-gram for the training set
+    for i in xrange(1, 5):
+        for label_topic, text in train_text.items():
+            gt_ngrams[topic][i].npro_dict = gt_ngrams[topic][i].generate_ngram(i)
+    
+    #spell check and accuracy calculation
+    #initiate variables
+    correct_rate = {}
+    correct = {}
+    sentence_count = {}
+    compare_count = {}
+    compare_rate = {}
+    for i in xrange(1, 5):
+        sentence_count[i] = 0
+        correct[i] = 0
+        compare_count[i] = 0
+        for topic in topics:
+            #each file to be examined under the topic
+            for filename in test_text[topic]:
+                filename_compare = filename
+                filename_compare = filename_compare.replace("_modified","")
+                #each sentence in the file
+                sen_processing = test_text[topic][filename][0].split()
+                for j in xrange (0, len(test_text[topic][filename])):
+                    #generate the perplexity of the original sentence
+                    perp_origin = gt_ngrams[topic][i].generate_perplexity(i,test_text[topic][filename][j])
+                    #two-way dictionary
+                    for side in words:
+                        for word1 in words[side]:
+                            sen_tokens = test_text[topic][filename][j].split()
+                            #if there's a confused word
+                            if word1 in sen_tokens:
+                                #if processing a new sentence, count +1
+                                if sen_tokens != sen_processing:
+                                    sentence_count[i] += 1
+                                    sen_processing = sen_tokens
+                                #list of alternative sentences
+                                alternative = []
+                                #list of perplexity for the alternative sentences
+                                perp_alt = []
+                                #alternative.append(test_text[topic][filename][j])
+                                #for each possible alternate word
+                                changed_text = test_text[topic][filename][j]
+                                
+                                """
+                                break the sentence into a list of tokens, replace the token to be examined,
+                                reconstruct the list into a string
+                                """
+                                for k in xrange(0,len(words[side][word1])):   
+                                    #replace the word of interest in the list of tokens
+                                    alternative.append(sen_tokens)
+                                    alternative[k] = [w.replace(word1,''.join(words[side][word1][k])) for w in alternative[k]]
+                                    
+                                    #reconstructing the new sentence
+                                    sent_Tobe = ""
+                                    for m in xrange(0, len(alternative[k])):
+                                        if alternative[k][m].isalpha():
+                                            sent_Tobe += ' '.join(alternative[k][m])
+                                        else:
+                                            sent_Tobe += ''.join(alternative[k][m])
+                                    
+                                    #generate the perplexity of the new sentence
+                                    if len(sent_Tobe)>0:
+                                        perp_alt.append(gt_ngrams[topic][i].generate_perplexity(i,sent_Tobe))
+                                    else: 
+                                        perp_alt.append(1.0*sys.maxint)
+                                    
+                                    #if the new sentence has a lower perplexity
+                                    if perp_alt[k] < perp_origin and perp_alt[k] == min(perp_alt):
+                                                #replace the old sentence with the new one
+                                                #test_text[topic][filename][j]=''.join(alternative[k])
+                                        changed_text = sent_Tobe
+
+                                if changed_text == test_compare[topic][filename_compare][j]:
+                                    correct[i] += 1
+                                if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
+                                    compare_count[i] += 1
+                                        #print i, correct[i], sentence_count[i]
+                                        #print the new sentence with the new word
+        #print correct
+        #print sentence_count
+        correct_rate[i] = 1.0 * correct[i] / sentence_count[i] * 4
+        compare_rate[i] = 1.0 * compare_count[i] / sentence_count[i] *4
+        print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
+        print "{} gram correct compare rate = {}".format(i, compare_rate[i])
+
+
+
+
+
+
 
 
 def main():

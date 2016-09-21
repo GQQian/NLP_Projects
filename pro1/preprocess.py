@@ -4,12 +4,12 @@ import os
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 
-def preprocess_file(f):
+def preprocess_file(f, form = "default"):
     text = open(f, 'r').read()
-    return preprocess_text(text)
+    return preprocess_text(text, form)
 
 
-def preprocess_dir(dir):
+def preprocess_dir(dir, form = "default"):
     """
     Preprocess all the files in the directory
     input: the directory
@@ -20,10 +20,10 @@ def preprocess_dir(dir):
         for f in filenames:
             raw_content = open(os.path.join(root, f),'r').read()
             text += raw_content
-    return preprocess_text(text)
+    return preprocess_text(text, form)
 
 
-def preprocess_text(text):
+def preprocess_text(text, form = "default"):
     def remove_punctuation(text):
         text = text.replace('_', '')
         result = re.findall(r'[\w\,\.\!\?]+',text)
@@ -46,9 +46,11 @@ def preprocess_text(text):
     text = text.replace(' Re :', ' ')
 
     sent_list = sent_tokenize(text)
-
-    output = ""
-    for sent in sent_list:
-        output += " <s> " + sent + " </s> "
-
+    if form == "sentences":
+        output = sent_list
+    else:
+        output = ""
+        for sent in sent_list:
+            output += " <s> " + sent + " </s> "
+    
     return output
