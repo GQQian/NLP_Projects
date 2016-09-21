@@ -82,7 +82,7 @@ class li_ngram(gt_ngram):
             prob = prob_tup.dot(self.r)
             perp -= log(prob)
         perp = exp(1.0 * perp / len(tokens))
-        print "there are {} <unk> for bigram, {} <unk> for trigram, with a total of {} tokens".format(bi_fix, tri_fix, iters[0])
+        # print "there are {} <unk> for bigram, {} <unk> for trigram, with a total of {} tokens".format(bi_fix, tri_fix, iters[0])
         return perp
 
 

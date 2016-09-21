@@ -139,6 +139,7 @@ def spell_checker_gt_nrgam():
 
 
 def main():
+    topic_classification_bo_ngram()
     generate_perplexity_bo_ngram()
 
 

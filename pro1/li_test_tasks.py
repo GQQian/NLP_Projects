@@ -139,7 +139,7 @@ def spell_checker_gt_nrgam():
 
 
 def main():
-    generate_perplexity_li_ngram()
+    topic_classification_li_ngram()
 
 
 if __name__ == "__main__":

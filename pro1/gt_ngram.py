@@ -84,7 +84,6 @@ class gt_ngram(object):
             self.nhash_dic[n][unk_nminus1] = []
             for key_n, num_n in self.ncounter_dic[n].items():
                 if key_n == unk_n:
-                    print "something"
                     continue
                 temp = tuple([unk_nminus1[0], key_n[-1]])
                 if n > 2 and temp not in self.nprob_dic[n]:
