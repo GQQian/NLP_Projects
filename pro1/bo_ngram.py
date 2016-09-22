@@ -8,8 +8,8 @@ from math import pow, log, exp
 import numpy as np
 
 class bo_ngram(gt_ngram):
-    def __init__(self,content,r = [0.6, 0.4]):
-        super(bo_ngram,self).__init__(content)
+    def __init__(self, content, r = [0.6, 0.4]):
+        super(bo_ngram, self).__init__(content)
         # r[0] for bigram, r[1] for unigram
         self.r = r
 
@@ -37,13 +37,13 @@ class bo_ngram(gt_ngram):
 
         # calculate perplexity
         perp = 0
-        
+
         _len = len(token_list[0])
-        
+
         iters = [0, 0, 0]
 
         while iters[0] < _len - 1:
-            prob = 0 
+            prob = 0
             prob_tup = []
             for j in xrange(n):
                 if j < 1:
@@ -56,11 +56,11 @@ class bo_ngram(gt_ngram):
                     prob_tup.append(prob_element)
 
                 else:
-                    
+
                     key = tuple(token_list[j][iters[j]: iters[j] + j + 1])
 
                     while '</s>' in key:
-                        
+
                         key = tuple(token_list[j][iters[j] : iters[j] + j + 1])
                         iters[j] += 1
 
@@ -68,7 +68,7 @@ class bo_ngram(gt_ngram):
                     unk = '<unk_{}>'.format(j)
                     if key not in self.nprob_dic[j + 1]:
                         prob_element = 1
-                    else: 
+                    else:
                         prob_element = self.nprob_dic[j+1][key]
                     prob_tup.append(prob_element)
                     iters[j] += 1
