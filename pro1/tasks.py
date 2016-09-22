@@ -469,9 +469,9 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                             #if there's a confused word
                             if word1 in sen_tokens:
                                 #if processing a new sentence, count +1
-                                if sen_tokens != sen_processing:
-                                    sentence_count[i] += 1
-                                    sen_processing = sen_tokens
+                                sen_tokens != sen_processing:
+                                sentence_count[i] += 1
+                                sen_processing = sen_tokens
                                 #list of alternative sentences
                                 alternative = []
                                 #list of perplexity for the alternative sentences
@@ -484,6 +484,7 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                 break the sentence into a list of tokens, replace the token to be examined,
                                 reconstruct the list into a string
                                 """
+                                new_word = word1
                                 for k in xrange(0,len(words[side][word1])):   
                                     #replace the word of interest in the list of tokens
                                     alternative.append(sen_tokens)
@@ -508,8 +509,10 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                                 #replace the old sentence with the new one
                                                 #test_text[topic][filename][j]=''.join(alternative[k])
                                         changed_text = sent_Tobe
+                                        new_word = words[side][word1][k]
 
-                                if changed_text == test_compare[topic][filename_compare][j]:
+                                if new_word in test_compare[topic][filename_compare][j]:
+                                #test_compare[topic][filename_compare][j]:
                                     correct[i] += 1
                                 if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
                                     compare_count[i] += 1
@@ -517,8 +520,8 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                         #print the new sentence with the new word
         #print correct
         #print sentence_count
-        correct_rate[i] = 1.0 * correct[i] / sentence_count[i] * 4
-        compare_rate[i] = 1.0 * compare_count[i] / sentence_count[i] *4
+        correct_rate[i] = 1.0 * correct[i] / sentence_count[i]
+        compare_rate[i] = 1.0 * compare_count[i] / sentence_count[i]
         print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
         print "{} gram correct compare rate = {}".format(i, compare_rate[i])
 
@@ -530,13 +533,11 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
 
 
 def main():
-<<<<<<< HEAD
+
     #split_train_test('spell_checking_task')
     #topic_classification_gt_ngram()
     spell_checker_gt_nrgam()
-=======
-    topic_classification_bo_ngram()
->>>>>>> db633b2f01232e555833d5cd40d65e2ab6deba23
+
 
 
 if __name__ == "__main__":
