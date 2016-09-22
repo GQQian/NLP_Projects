@@ -124,17 +124,17 @@ def split_train_test():
         tokens = content.split()
 
         # find the nearest </s> after 80% content
-        pointer = int(len(tokens) * 0.8)
-        while tokens[pointer] != '</s>':
-            pointer += 1
+        pointer = int(len(tokens) * 1.0)
+        # while tokens[pointer] != '</s>':
+        #     pointer += 1
 
-        train_text = ' '.join(tokens[:(pointer+1)])
-        test_text = ' '.join(tokens[(pointer+2):])
+        train_text = ' '.join(tokens)
+        # test_text = ' '.join(tokens[(pointer+2):])
 
         train_path = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        test_path = indir_pre + "data/classification_task/{}/test.txt".format(topic)
+        # test_path = indir_pre + "data/classification_task/{}/test.txt".format(topic)
         open(train_path, 'w').write(train_text)
-        open(test_path, 'w').write(test_text)
+        # open(test_path, 'w').write(test_text)
 
 
 def topic_classification_li_ngram():
@@ -143,46 +143,54 @@ def topic_classification_li_ngram():
     li_ngrams, train_text, test_text  = {}, {}, {} #key: topic
     for topic in topics:
         train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        if not os.path.isfile(train_f) or not os.path.isfile(test_f):
-            split_train_test()
+        # test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
+        # if not os.path.isfile(train_f): # or not os.path.isfile(test_f):
+        split_train_test()
 
         train_text[topic] = open(train_f, 'r').read()
-        test_text[topic] = open(test_f, 'r').read()
+        # test_text[topic] = open(test_f, 'r').read()
 
         li_ngrams[topic] = li_ngram(train_text[topic])
+    r2test = [[0.001, 0.004, 0.015, 0.03, 0.95]]
+    accuracy, r = {}, [0,0,0,0]
+    # for i in xrange(1, 10):
+    #     for j in xrange(1, 10):
+    #         for k in xrange(0, 10):
 
-    accuracy, r = {}, []
-    for i in xrange(0, 11):
-        for j in xrange(0, 11 - i):
-            r[0] = round(i * 0.1, 1)
-            r[1] = round(j * 0.1, 1)
-            r[2] = round(1 - r[0] - r[1], 1)
+    #             r[0] = round(i * 0.01, 2)
+    #             r[1] = round(j * 0.01 + 0.03, 2)
+    #             r[2] = round(k * 0.01 + 0.05, 2)
+    #             r[3] = round(1 - r[0] - r[1] - r[2], 2)
+    # setting ngram number
+    n = 5
 
-            _sum, correct = 0, 0
-            for label_topic, text in test_text.items():
-                sentences = text.split('</s>')
-                for sentence in sentences:
-                    sentence += ' </s>'
-                    min_perp, min_topic = sys.maxint, label_topic
+    # start with testing
+    # for r in r2test:
+    #     print "r is {}".format(r) 
+    #     _sum, correct = 0, 0
+    #     for label_topic, text in test_text.items():
+    #         sentences = text.split('</s>')
+    #         for sentence in sentences:
+    #             sentence += ' </s>'
+    #             min_perp, min_topic = sys.maxint, label_topic
 
-                    for topic in topics:
-                        perp = li_ngrams[topic].generate_perplexity(3, sentence, r)
-                        if perp < min_perp:
-                            min_perp = perp
-                            min_topic = topic
+    #             for topic in topics:
+    #                 perp = li_ngrams[topic].generate_perplexity(n, sentence, r = r)
+    #                 if perp < min_perp:
+    #                     min_perp = perp
+    #                     min_topic = topic
 
-                    if label_topic == min_topic:
-                        correct += 1
-                    _sum += 1
+    #             if label_topic == min_topic:
+    #                 correct += 1
+    #             _sum += 1
 
-            accuracy[tuple(r)] = 1.0 * correct / _sum
-            print "{}: {}".format(r, accuracy[tuple(r)])
+    #     accuracy[tuple(r)] = 1.0 * correct / _sum
+    #     print "{}: {}".format(r, accuracy[tuple(r)])
 
     #choose the best r
-    r_tuple = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
-    r = list(r_tuple)
-    print "Best: {}: {}".format(list(r_tuple), accuracy[r_tuple])
+    r = [0.001, 0.004, 0.015, 0.03, 0.95] # max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
+    # r = list(r_tuple)
+    # print "Best: {}: {}".format(list(r_tuple), accuracy[r_tuple])
 
     # get the result for files in test_for_classification directory
     test_dir = indir_pre + "data/classification_task/test_for_classification"
@@ -198,7 +206,7 @@ def topic_classification_li_ngram():
                 min_perp, min_topic = sys.maxint, ''
 
                 for topic in topics:
-                    perp = gt_ngrams[topic].generate_perplexity(n, text, r)
+                    perp = li_ngrams[topic].generate_perplexity(n, text, r)
                     if perp < min_perp:
                         min_perp = perp
                         min_topic = topic
@@ -240,26 +248,55 @@ def topic_classification_bo_ngram():
 
     # calculate the accuracy for n-gram and choose the best one
     accuracy = {} # key: the n in bo_ngram
-    for i in xrange(3,4):
-        _sum, correct = 0, 0
-        for label_topic, text in test_text.items():
-            sentences = text.split('</s>')
-            for sentence in sentences:
-                sentence += ' </s>'
-                min_perp, min_topic = sys.maxint, label_topic
+    for i in xrange(1, 10):
+        for j in xrange(1, 10):
+            for k in xrange(0, 10):
+                r = []
+                r.append(round(i * 0.01, 2))
+                r.append(round(j * 0.01 + 0.03, 2))
+                r.append(round(k * 0.01 + 0.2, 2))
+                r.append(1)
+                print "r is {}".format(r) 
+                _sum, correct = 0, 0
+                for label_topic, text in test_text.items():
+                    sentences = text.split('</s>')
+                    for sentence in sentences:
+                        sentence += ' </s>'
+                        min_perp, min_topic = sys.maxint, label_topic
 
-                for topic in topics:
-                    perp = bo_ngrams[topic].generate_perplexity(i, sentence)
-                    if perp < min_perp:
-                        min_perp = perp
-                        min_topic = topic
+                        for topic in topics:
+                            perp = bo_ngrams[topic].generate_perplexity(4, sentence, r = r)
+                            if perp < min_perp:
+                                min_perp = perp
+                                min_topic = topic
 
-                if label_topic == min_topic:
-                    correct += 1
-                _sum += 1
+                        if label_topic == min_topic:
+                            correct += 1
+                        _sum += 1
 
-        accuracy[i] = 1.0 * correct / _sum
-        print "[{}-gram] {}".format(i, accuracy[i])
+                accuracy[tuple(r)] = 1.0 * correct / _sum
+                print "{}: {}".format(r, accuracy[tuple(r)])
+
+    # for i in xrange(3,4):
+    #     _sum, correct = 0, 0
+    #     for label_topic, text in test_text.items():
+    #         sentences = text.split('</s>')
+    #         for sentence in sentences:
+    #             sentence += ' </s>'
+    #             min_perp, min_topic = sys.maxint, label_topic
+
+    #             for topic in topics:
+    #                 perp = bo_ngrams[topic].generate_perplexity(i, sentence)
+    #                 if perp < min_perp:
+    #                     min_perp = perp
+    #                     min_topic = topic
+
+    #             if label_topic == min_topic:
+    #                 correct += 1
+    #             _sum += 1
+
+    #     accuracy[i] = 1.0 * correct / _sum
+    #     print "[{}-gram] {}".format(i, accuracy[i])
     # choose the best n
     n = 3
 
@@ -304,72 +341,72 @@ def generate_perplexity_li_ngram():
         print "\nTopic: {}".format(topic)
         print "[{}-gram]: {}".format(3, li_ngrams[topic].generate_perplexity(3, content))
 
-def topic_classification_li_ngram():
-    """
-    calculate the accuracy for topic classification with different
-    n in Good-Turing ngram, then choose the best one to classify files
-    in test_for_classification directory, and write results into
-    li_result.csv in classification_task directory
-    """
+# def topic_classification_li_ngram():
+#     """
+#     calculate the accuracy for topic classification with different
+#     n in Good-Turing ngram, then choose the best one to classify files
+#     in test_for_classification directory, and write results into
+#     li_result.csv in classification_task directory
+#     """
 
-    # get li_ngram for each topic and read all test data
-    li_ngrams, train_text, test_text  = {}, {}, {} #key: topic
-    for topic in topics:
-        train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        if not os.path.isfile(train_f) or not os.path.isfile(test_f):
-            split_train_test()
+#     # get li_ngram for each topic and read all test data
+#     li_ngrams, train_text, test_text  = {}, {}, {} #key: topic
+#     for topic in topics:
+#         train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
+#         test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
+#         if not os.path.isfile(train_f) or not os.path.isfile(test_f):
+#             split_train_test()
 
-        train_text[topic] = open(train_f, 'r').read()
-        test_text[topic] = open(test_f, 'r').read()
+#         train_text[topic] = open(train_f, 'r').read()
+#         test_text[topic] = open(test_f, 'r').read()
 
-        li_ngrams[topic] = li_ngram(train_text[topic])
+#         li_ngrams[topic] = li_ngram(train_text[topic])
 
-    # calculate the accuracy for n-gram and choose the best one
-    accuracy = {} # key: the n in li_ngram
-    for i in xrange(3,4):
-        _sum, correct = 0, 0
-        for label_topic, text in test_text.items():
-            sentences = text.split('</s>')
-            for sentence in sentences:
-                sentence += ' </s>'
-                min_perp, min_topic = sys.maxint, label_topic
+#     # calculate the accuracy for n-gram and choose the best one
+#     accuracy = {} # key: the n in li_ngram
+#     for i in xrange(3,4):
+#         _sum, correct = 0, 0
+#         for label_topic, text in test_text.items():
+#             sentences = text.split('</s>')
+#             for sentence in sentences:
+#                 sentence += ' </s>'
+#                 min_perp, min_topic = sys.maxint, label_topic
 
-                for topic in topics:
-                    perp = li_ngrams[topic].generate_perplexity(i, sentence)
-                    if perp < min_perp:
-                        min_perp = perp
-                        min_topic = topic
+#                 for topic in topics:
+#                     perp = li_ngrams[topic].generate_perplexity(i, sentence)
+#                     if perp < min_perp:
+#                         min_perp = perp
+#                         min_topic = topic
 
-                if label_topic == min_topic:
-                    correct += 1
-                _sum += 1
+#                 if label_topic == min_topic:
+#                     correct += 1
+#                 _sum += 1
 
-        accuracy[i] = 1.0 * correct / _sum
-        print "[{}-gram] {}".format(i, accuracy[i])
-    #choose the best n
-    n = 3
+#         accuracy[i] = 1.0 * correct / _sum
+#         print "[{}-gram] {}".format(i, accuracy[i])
+#     #choose the best n
+#     n = 3
 
-    # get the result for files in test_for_classification directory
-    test_dir = indir_pre + "data/classification_task/test_for_classification"
-    csv_f = indir_pre + "data/classification_task/li_result.csv"
+#     # get the result for files in test_for_classification directory
+#     test_dir = indir_pre + "data/classification_task/test_for_classification"
+#     csv_f = indir_pre + "data/classification_task/li_result.csv"
 
-    with open(csv_f, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames = ['ID', 'Prediction'])
-        writer.writeheader()
+#     with open(csv_f, 'w') as csvfile:
+#         writer = csv.DictWriter(csvfile, fieldnames = ['ID', 'Prediction'])
+#         writer.writeheader()
 
-        for root, dirs, filenames in os.walk(test_dir):
-            for f in filenames:
-                text = preprocess.preprocess_file(os.path.join(root, f))
-                min_perp, min_topic = sys.maxint, ''
+#         for root, dirs, filenames in os.walk(test_dir):
+#             for f in filenames:
+#                 text = preprocess.preprocess_file(os.path.join(root, f))
+#                 min_perp, min_topic = sys.maxint, ''
 
-                for topic in topics:
-                    perp = li_ngrams[topic].generate_perplexity(n, text)
-                    if perp < min_perp:
-                        min_perp = perp
-                        min_topic = topic
+#                 for topic in topics:
+#                     perp = li_ngrams[topic].generate_perplexity(n, text)
+#                     if perp < min_perp:
+#                         min_perp = perp
+#                         min_topic = topic
 
-                writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
+#                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
 def spell_checker_gt_nrgam():
@@ -377,7 +414,7 @@ def spell_checker_gt_nrgam():
 
 
 def main():
-    topic_classification_bo_ngram()
+    topic_classification_li_ngram()
 
 
 if __name__ == "__main__":
