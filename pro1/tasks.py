@@ -469,9 +469,9 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                             #if there's a confused word
                             if word1 in sen_tokens:
                                 #if processing a new sentence, count +1
-                                if sen_tokens != sen_processing:
-                                    sentence_count[i] += 1
-                                    sen_processing = sen_tokens
+                                #if sen_tokens != sen_processing:
+                                sentence_count[i] += 1
+                                #sen_processing = sen_tokens
                                 #list of alternative sentences
                                 alternative = []
                                 #list of perplexity for the alternative sentences
@@ -511,9 +511,12 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                         changed_text = sent_Tobe
                                         new_word = words[side][word1][k]
 
-                                if new_word in test_compare[topic][filename_compare][j]:
+                                if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
                                 #test_compare[topic][filename_compare][j]:
                                     correct[i] += 1
+                                else: 
+                                    if word1 not in test_compare[topic][filename_compare][j]:
+                                        correct[i] += 1
                                 if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
                                     compare_count[i] += 1
                                         #print i, correct[i], sentence_count[i]
