@@ -11,6 +11,8 @@ import numpy as linspace
 import numpy
 import math
 import operator
+import re
+import copy
 
 # TODO: delete it when not used
 
@@ -333,9 +335,9 @@ def topic_classification_bo_ngram():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
-def spell_checker_gt_nrgam(task = "test"):
+def spell_checker_gt_nrgam_unfinished(task = "test"):
     test_docs, test_docs_check, gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {}, {}, {} #key: topic
-    
+
     indir_words = indir_pre + "data/spell_checking_task/confusion_set.txt"
     confused_words = open(indir_words, 'r').read().decode("utf-8-sig").encode("utf-8")
     #in the txt, the phrase "may be" confuses split(). for simplicity, we picked it out.
@@ -382,7 +384,7 @@ def spell_checker_gt_nrgam(task = "test"):
         if task != "test":
             test_doc = indir_pre + "data/spell_checking_task/{}/test_modified_docs".format(topic)
             listWordsNew[topic], listWordsInFile[topic], test_docs_check[topic], test_docs[topic], gt_ngrams[topic] = {}, {}, {}, {}, {}
-            
+
 
     for topic in topics:
         for root, dirs, filenames in os.walk(test_f):
@@ -433,7 +435,7 @@ def spell_checker_gt_nrgam(task = "test"):
                 folder = test_docs_check
                 #each file to be examined under the topic
             for filename in folder[topic]:
-                if task == "test":    
+                if task == "test":
                     filename_compare = filename
                     filename_compare = filename_compare.replace("_modified","")
                     #each sentence in the file
@@ -472,7 +474,7 @@ def spell_checker_gt_nrgam(task = "test"):
                                 new_word = word1
                                 if task != "test":
                                     listWordsInFile[topic][filename][i][side].append(new_word)
-                                for k in xrange(0,len(words[side][word1])):   
+                                for k in xrange(0,len(words[side][word1])):
                                     #replace the word of interest in the list of tokens
                                     alternative.append(sen_tokens)
                                     for w in xrange(0, len(alternative[k])):
@@ -504,7 +506,7 @@ def spell_checker_gt_nrgam(task = "test"):
                                     if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
                                     #test_compare[topic][filename_compare][j]:
                                         correct[i] += 1
-                                    else: 
+                                    else:
                                         if word1 not in test_compare[topic][filename_compare][j]:
                                             correct[i] += 1
                                     if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
@@ -551,7 +553,7 @@ def spell_checker_gt_nrgam(task = "test"):
                                                 print q , "of" , len(word_Q)
                                                 print word_Q[q], word_N[q]
 
-                 
+
                     #print stringWhole
 
                 """
@@ -559,187 +561,14 @@ def spell_checker_gt_nrgam(task = "test"):
                 if not os.path.isdir(write_file_to):
                     os.makedirs(write_file_to)
                 open(write_file_to + "/corrected_"+ filename, 'w').write(stringWhole)
-                
-                """      
-                    
+
+                """
+
         correct_rate[i] = 1.0 * correct[i] / sentence_count[i]
         print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
 
 
-        #print correct
-        #print sentence_count
-                    
-
-
-
 def topic_classification_ngram_dis():
-    # get gt_ngram for each topic and read all test data
-    ratio = 0.8
-    ngrams, train_text  = {}, {} #key: topic
-    for topic in topics:
-        train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        split_train_test(ratio = ratio)
-        train_text[topic] = open(train_f, 'r').read()
-        ngrams[topic] = ngram(train_text[topic])
-
-    # calculate the accuracy for n-gram and choose the best one
-    accuracy = {} # key: the n in gt_ngram
-    for i in xrange(1, 5):
-
-        # rank the counter for each topic
-        counter_rank_dic = {}
-        for topic in topics:
-            ngrams[topic].ncounter_dic[i] = ngrams[topic].ncounter_dic[i] if i in ngrams[topic].ncounter_dic else \
-                                            ngrams[topic].ntoken_count(i)
-            sorted_counter = sorted(ngrams[topic].ncounter_dic[i].items(), key = lambda x: x[1], reverse = True)
-            rank = list((k[0]) for k in sorted_counter)
-            counter_rank_dic[topic] = dict((rank[k], k) for k in xrange(len(rank)))
-
-        _sum, correct = 1, 0
-        max_dis = 1500
-        for label_topic in topics:
-            test_dir = indir_pre + "data/classification_task/{}".format(label_topic)
-            for root, dirs, filenames in os.walk(test_dir):
-                for idx, f in enumerate(filenames):
-                    if idx < len(filenames) * ratio:
-                        continue
-
-                    text = open(os.path.join(root, f),'r').read()
-                    test_ngram = ngram(preprocess.preprocess_text(text))
-                    test_ngram.ncounter_dic[i] = test_ngram.ncounter_dic[i] if i in test_ngram.ncounter_dic else \
-                                                 test_ngram.ntoken_count(i)
-                    sorted_counter = sorted(test_ngram.ncounter_dic[i].items(), key = lambda x: x[1], reverse = True)
-                    test_counter_rank_list = list((k[0]) for k in sorted_counter)
-
-                    min_dis, min_topic = sys.maxint, label_topic
-                    for topic in topics:
-                        dis = 0
-                        for idx in xrange(len(test_counter_rank_list)):
-                            tokens = test_counter_rank_list[idx]
-                            if tokens in counter_rank_dic[topic]:
-                                dis += min(abs(idx - counter_rank_dic[topic][tokens]), max_dis)
-                            else:
-                                dis += max_dis
-
-                        if dis < min_dis:
-                            min_dis = dis
-                            min_topic = topic
-
-                    if label_topic == min_topic:
-                        correct += 1
-                    _sum += 1
-
-        accuracy[i] = 1.0 * correct / _sum
-        print "[{}-gram] {}".format(i, accuracy[i])
-
-    #choose the best n
-    n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
-
-    # get the result for files in test_for_classification directory
-    test_dir = indir_pre + "data/classification_task/test_for_classification"
-    csv_f = indir_pre + "data/classification_task/dis_result.csv"
-
-    with open(csv_f, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames = ['ID', 'Prediction'])
-        writer.writeheader()
-
-        for root, dirs, filenames in os.walk(test_dir):
-            for f in filenames:
-                text = open(os.path.join(root, f),'r').read()
-                test_ngram = ngram(preprocess.preprocess_text(text))
-                test_ngram.ncounter_dic[i] = test_ngram.ncounter_dic[i] if i in test_ngram.ncounter_dic else \
-                                             test_ngram.ntoken_count(i)
-                sorted_counter = sorted(test_ngram.ncounter_dic[i].items(), key = lambda x: x[1], reverse = True)
-                test_counter_rank_list = list((i[0]) for i in sorted_counter)
-
-                min_dis, min_topic = sys.maxint, label_topic
-                for topic in topics:
-                    dis = 0
-                    for idx in xrange(len(test_counter_rank_list)):
-                        tokens = test_counter_rank_list[idx]
-                        if tokens in counter_rank_dic[topic]:
-                            dis += min(abs(idx - counter_rank_dic[topic][tokens]), max_dis)
-                        else:
-                            dis += max_dis
-
-                    if dis < min_dis:
-                        min_dis = dis
-                        min_topic = topic
-
-                writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
-
-
-def topic_classification_ngram_dis_mul():
-    # get gt_ngram for each topic and read all test data
-    ratio = 0.9
-    ngrams, train_text  = {}, {} #key: topic
-    for topic in topics:
-        train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        split_train_test(ratio = ratio)
-        train_text[topic] = open(train_f, 'r').read()
-        ngrams[topic] = ngram(train_text[topic])
-
-    # calculate the accuracy for n-gram and choose the best one
-    accuracy = {} # key: the n in gt_ngram
-    counter_rank_dic = {}
-    for i in xrange(1, 3):
-
-        # rank the counter for each topic
-        counter_rank_dic[i] = {}
-        for topic in topics:
-            ngrams[topic].ncounter_dic[i] = ngrams[topic].ncounter_dic[i] if i in ngrams[topic].ncounter_dic else \
-                                            ngrams[topic].ntoken_count(i)
-            sorted_counter = sorted(ngrams[topic].ncounter_dic[i].items(), key = lambda x: x[1], reverse = True)
-            rank = list((k[0]) for k in sorted_counter)
-            counter_rank_dic[i][topic] = dict((rank[k], k) for k in xrange(len(rank)))
-
-
-    r = [0, 0]
-    for j in xrange(10):
-        r[0] = j * 0.1
-        r[1] = 1 - r[0]
-        _sum, correct = 0, 0
-        max_dis = [1500, 1800]
-        for label_topic in topics:
-            test_dir = indir_pre + "data/classification_task/{}".format(label_topic)
-            for root, dirs, filenames in os.walk(test_dir):
-                for idx, f in enumerate(filenames):
-                    if idx < len(filenames) * ratio:
-                        continue
-                    test_counter_rank_list = {}
-                    for i in xrange(1, 3):
-                        text = open(os.path.join(root, f),'r').read()
-                        test_ngram = ngram(preprocess.preprocess_text(text))
-                        test_ngram.ncounter_dic[i] = test_ngram.ncounter_dic[i] if i in test_ngram.ncounter_dic else \
-                                                     test_ngram.ntoken_count(i)
-                        sorted_counter = sorted(test_ngram.ncounter_dic[i].items(), key = lambda x: x[1], reverse = True)
-                        test_counter_rank_list[i] = list((k[0]) for k in sorted_counter)
-
-
-                    min_dis, min_topic = sys.maxint, label_topic
-                    for topic in topics:
-                        dis = 0
-                        for i in xrange(1, 3):
-                            for idx in xrange(len(test_counter_rank_list[i])):
-                                tokens = test_counter_rank_list[i][idx]
-                                if tokens in counter_rank_dic[i][topic]:
-                                    dis += min(abs(idx - counter_rank_dic[i][topic][tokens]), max_dis[i - 1])
-                                else:
-                                    dis += max_dis[i - 1]
-
-                            if dis < min_dis:
-                                min_dis = dis
-                                min_topic = topic
-
-                    if label_topic == min_topic:
-                        correct += 1
-                    _sum += 1
-
-        accuracy[tuple(r)] = 1.0 * correct / _sum
-        print "{}: {}".format(r, accuracy[tuple(r)])
-
-# TODO: change name and comment
-def topic_classification_ngram_dis_1():
     # get gt_ngram for each topic and read all test data
     ratio = 0.8
     ngrams, train_text  = {}, {} #key: topic
@@ -853,16 +682,123 @@ def topic_classification_ngram_dis_1():
 
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
-def spell_checking_jiao():
-    
+def spell_checking_gt_gram():
+    f = indir_pre + "data/spell_checking_task/confusion_set.txt"
+    lines = [line.rstrip('\n\r') for line in open(f)]
+    # key: word   value: a set of confused words
+    confusion_dic = {}
+    for line in lines:
+        if "may" in line:
+            continue
+        words = line.split()
+        for word in words:
+            if word in confusion_dic:
+                for word1 in confusion_dic[word]:
+                    confusion_dic[word1] = confusion_dic[word].union(set(words))
+            else:
+                confusion_dic[word] = set(words)
+
+    confusion_dic['may'] = set(['may', 'may be'])
+
+    # buid gt_ngram models
+    gt_nragms = {}
+    ratio = 0.8
+    split_train_test(mission = "spell_checking_task", ratio = ratio)
+    for topic in topics:
+        train_f = indir_pre + "data/spell_checking_task/{}/train.txt".format(topic)
+        train_text = open(train_f, 'r').read()
+        gt_nragms[topic] = gt_ngram(train_text)
+
+    # get accuracy for i-gram
+    for i in xrange(1, 5):
+        _sum, correct, accuracy = 1, 0, {}
+        for topic in topics:
+            test_dir = indir_pre + "data/spell_checking_task/{}/train_docs".format(topic)
+            for root, dirs, filenames in os.walk(test_dir):
+                for idx, f in enumerate(filenames):
+                    if idx < len(filenames) * ratio:
+                        continue
+                    text = open(os.path.join(root, f),'r').read()
+                    for confusion_word in confusion_dic:
+                        indexes = [m.start() for m in  re.finditer(" " + confusion_word + " ", text)]
+                        if len(indexes) == 0:
+                            continue
+
+                        for index in indexes:
+                            sentences = text[max(0, index - 50): min(len(text), index + 50)]
+                            left, right = sentences.find(' '), sentences.rfind(' ')
+                            sentences = sentences[left : right]
+                            curr_index_left = 50 - left
+                            curr_index_right = 50 - left + len(confusion_word)
+
+                            min_word, min_perp = confusion_word, sys.maxint
+                            for alternative_word in confusion_dic[confusion_word]:
+                                alternative_sentences = sentences[0 : curr_index_left] + " " + alternative_word + \
+                                                        sentences[curr_index_right + 1:]
+                                perp = gt_nragms[topic].generate_perplexity(i, preprocess.preprocess_text(alternative_sentences))
+
+                                if perp < min_perp:
+                                    min_perp = perp
+                                    min_word = alternative_word
+
+                            _sum += 1
+                            if min_word == confusion_word:
+                                correct += 1
+
+        accuracy[i] = 1.0 * correct / _sum
+        print "{}-gram: {}".format(i, accuracy[i])
+
+    # choose the best n
+
+    n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
+    print n
+
+    # output
+    for topic in topics:
+        test_dir = indir_pre + "data/spell_checking_task/{}/test_modified_docs".format(topic)
+        for root, dirs, filenames in os.walk(test_dir):
+            for modified_f in filenames:
+                corrected_f =  indir_pre + "data/spell_checking_task/{}/test_docs/".format(topic) +\
+                               modified_f.replace('modified', 'corrected')
+                text = open(os.path.join(root, modified_f),'r').read()
+
+                for confusion_word in confusion_dic:
+                    begin_index = 0
+                    while begin_index < len(text) and text[begin_index:].find(" " + confusion_word + " ") >= 0:
+                        # find the confusion word
+                        replace_left = text[begin_index:].find(" " + confusion_word + " ") + 1 + begin_index
+                        replace_right = replace_left + len(confusion_word)
+
+                        # get the content from 50 characters left of the word to 50 characters right of the word
+                        sentences = text[max(0, replace_left - 50): min(len(text), replace_left + 50)]
+                        left_bound, right_bound = sentences.rfind(' '), sentences.rfind(' ')
+                        sentences = sentences[sentences.find(' ') : right_bound]
+
+                        # get the current index in these sentences
+                        curr_index_left = 50 - left_bound
+                        curr_index_right = 50 - left_bound + len(confusion_word)
+
+                        # find the best alternative_word
+                        min_word, min_perp = confusion_word, sys.maxint
+                        for alternative_word in confusion_dic[confusion_word]:
+                            alternative_sentences = sentences[0 : curr_index_left] + alternative_word + " " +\
+                                                    sentences[curr_index_right + 1:]
+
+                            perp = gt_nragms[topic].generate_perplexity(n, preprocess.preprocess_text(alternative_sentences))
+
+                            if perp < min_perp:
+                                min_perp = perp
+                                min_word = alternative_word
+
+                        # replace the word with best word
+                        text = text[:replace_left] + min_word + text[replace_right:]
+                        begin_index = replace_right
+
+                open(corrected_f,'w').write(text)
+
 
 def main():
-    #topic_classification_ngram_dis_1()
-
-
-    #split_train_test('spell_checking_task')
-    #topic_classification_gt_ngram()
-    spell_checker_gt_nrgam("test")
+    topic_classification_ngram_dis()
 
 if __name__ == "__main__":
     main()

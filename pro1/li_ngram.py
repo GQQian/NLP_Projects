@@ -28,7 +28,7 @@ class li_ngram(gt_ngram):
             if key not in self.ncounter_dic[1]:
                 tokens[i] = '<unk_1>'
 
-        _len = len(tokens)    
+        _len = len(tokens)
         perp = 0
         for i in xrange(_len):
             prob_tup = []
@@ -57,7 +57,6 @@ class li_ngram(gt_ngram):
         perp = exp(1.0 * perp / len(tokens))
         return perp
 
-    # jiaojiao
         # # calculate perplexity
         # perp = 0
         # # i is the first index of tokens, j is j-gram
