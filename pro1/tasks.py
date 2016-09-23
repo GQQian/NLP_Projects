@@ -333,15 +333,9 @@ def topic_classification_bo_ngram():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
-<<<<<<< HEAD
 def spell_checker_gt_nrgam(task = "test"):
     test_docs, test_docs_check, gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {}, {}, {} #key: topic
     
-=======
-def spell_checker_gt_nrgam(method = 'perplexity'):
-    gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {} #key: topic
-
->>>>>>> 2ced26752e8844463ed12095c158ac41417ec5ab
     indir_words = indir_pre + "data/spell_checking_task/confusion_set.txt"
     confused_words = open(indir_words, 'r').read().decode("utf-8-sig").encode("utf-8")
     #in the txt, the phrase "may be" confuses split(). for simplicity, we picked it out.
@@ -468,13 +462,7 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                 perp_alt = []
                                 #alternative.append(test_text[topic][filename][j])
                                 #for each possible alternate word
-<<<<<<< HEAD
                                 changed_text = folder[topic][filename][j]
-                                
-=======
-                                changed_text = test_text[topic][filename][j]
-
->>>>>>> 2ced26752e8844463ed12095c158ac41417ec5ab
                                 """
 
                                 break the sentence into a list of tokens, replace the token to be examined,
@@ -482,7 +470,6 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
 
                                 """
                                 new_word = word1
-<<<<<<< HEAD
                                 if task != "test":
                                     listWordsInFile[topic][filename][i][side].append(new_word)
                                 for k in xrange(0,len(words[side][word1])):   
@@ -492,14 +479,7 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                         if alternative[k][w] == word1:
                                             alternative[k] = alternative[k][w].replace(word1,''.join(words[side][word1][k]))
                                             break
-                                    
-=======
-                                for k in xrange(0,len(words[side][word1])):
-                                    #replace the word of interest in the list of tokens
-                                    alternative.append(sen_tokens)
-                                    alternative[k] = [w.replace(word1,''.join(words[side][word1][k])) for w in alternative[k]]
 
->>>>>>> 2ced26752e8844463ed12095c158ac41417ec5ab
                                     #reconstructing the new sentence
                                     sent_Tobe = ""
                                     for m in xrange(0, len(alternative[k])):
@@ -520,28 +500,9 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                         #test_text[topic][filename][j]=''.join(alternative[k])
                                         changed_text = sent_Tobe
                                         new_word = words[side][word1][k]
-
-<<<<<<< HEAD
-                                    for p in xrange(0, len(stringWhole[topic][filename])):
-                                        if len(stringWhole[topic][filename]) > p+len(word1):
-                                            if stringWhole[topic][filename][p:].startswith(word1 or word1.capitalize() or word1.upper()) and stringWhole[topic][filename][p+len(word1)].isalpha() == False:
-                                                s1 = stringWhole[topic][filename][0:p]
-                                                s2 = new_word+stringWhole[topic][filename][p+len(new_word):]
-                                                stringWhole[topic][filename] = s1 + s2
-                                     
-        
-
-
                                 else:
                                     if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
                                     #test_compare[topic][filename_compare][j]:
-=======
-                                if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
-                                #test_compare[topic][filename_compare][j]:
-                                    correct[i] += 1
-                                else:
-                                    if word1 not in test_compare[topic][filename_compare][j]:
->>>>>>> 2ced26752e8844463ed12095c158ac41417ec5ab
                                         correct[i] += 1
                                     else: 
                                         if word1 not in test_compare[topic][filename_compare][j]:
@@ -590,7 +551,7 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                                 print q , "of" , len(word_Q)
                                                 print word_Q[q], word_N[q]
 
-                """    
+                 
                     #print stringWhole
 
                 """
@@ -598,8 +559,8 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                 if not os.path.isdir(write_file_to):
                     os.makedirs(write_file_to)
                 open(write_file_to + "/corrected_"+ filename, 'w').write(stringWhole)
-                """
-                            
+                
+                """      
                     
         correct_rate[i] = 1.0 * correct[i] / sentence_count[i]
         print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
@@ -893,15 +854,13 @@ def topic_classification_ngram_dis_1():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 def main():
-    topic_classification_ngram_dis_1()
+    #topic_classification_ngram_dis_1()
 
 
-<<<<<<< HEAD
     #split_train_test('spell_checking_task')
     #topic_classification_gt_ngram()
-    spell_checker_gt_nrgam("not")
-=======
->>>>>>> 2ced26752e8844463ed12095c158ac41417ec5ab
+    spell_checker_gt_nrgam("test")
+
 
 
 
