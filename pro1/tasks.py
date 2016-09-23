@@ -8,6 +8,7 @@ import sys
 import operator
 import csv
 import numpy as linspace
+import numpy
 
 # TODO: delete it when not used
 
@@ -35,14 +36,34 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
 
 def generate_perplexity_gt_ngram():
     gt_ngrams = {}
+    perplexity = {} # key: filename, value: a dic with (key: n, value: perplexity of ngram)
     for topic in topics:
+        print "Topic: {}".format(topic)
         indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-        content = preprocess.preprocess_dir(indir)
-        gt_ngrams[topic] = gt_ngram(content)
+        gt_ngrams[topic] = gt_ngram(preprocess.preprocess_dir(indir))
 
-        print "\nTopic: {}".format(topic)
+
+        # key: n, value: dict(key: filename, value: perplexity of training/test file)
+        perp_train, perp_test = {}, {}
         for i in xrange(1, 6):
-            print "[{}-gram]: {}".format(i, gt_ngrams[topic].generate_perplexity(i, content))
+            # training data
+            perp_train[i] = {}
+            for root, dirs, filenames in os.walk(indir):
+                for f in filenames:
+                    content = open(os.path.join(root, f), 'r').read()
+                    perp_train[i][f] = gt_ngrams[topic].generate_perplexity(i, content)
+
+            # test data
+            perp_test[i] = {}
+            test_dir = indir_pre + "data/classification_task/test_for_classification/"
+            for root, dirs, filenames in os.walk(test_dir):
+                for f in filenames:
+                    content = open(os.path.join(root, f), 'r').read()
+                    perp_test[i][f] = gt_ngrams[topic].generate_perplexity(i, content)
+
+            # print the average perplexity of training/test data
+            print "[{}-gram] training {}".format(i, numpy.mean(perp_train[i].values()))
+            print "[{}-gram] test {}".format(i, numpy.mean(perp_test[i].values()))
 
 
 def topic_classification_gt_ngram():
@@ -57,37 +78,37 @@ def topic_classification_gt_ngram():
     gt_ngrams, train_text, test_text  = {}, {}, {} #key: topic
     for topic in topics:
         train_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        test_f = indir_pre + "data/classification_task/{}/train.txt".format(topic)
-        if not os.path.isfile(train_f) or not os.path.isfile(test_f):
+        if not os.path.isfile(train_f):
             split_train_test()
-
         train_text[topic] = open(train_f, 'r').read()
-        test_text[topic] = open(test_f, 'r').read()
-
         gt_ngrams[topic] = gt_ngram(train_text[topic])
 
     # calculate the accuracy for n-gram and choose the best one
     accuracy = {} # key: the n in gt_ngram
-    for i in xrange(1, 5):
+    for i in xrange(1, 8):
         _sum, correct = 0, 0
-        for label_topic, text in test_text.items():
-            sentences = text.split('</s>')
-            for sentence in sentences:
-                sentence += ' </s>'
-                min_perp, min_topic = sys.maxint, label_topic
+        for label_topic in topics:
+            test_dir = indir_pre + "data/classification_task/{}".format(label_topic)
+            for root, dirs, filenames in os.walk(test_dir):
+                for idx, f in enumerate(filenames):
+                    if idx < len(filenames) * 0.8:
+                        continue
+                    text = open(os.path.join(root, f),'r').read()
+                    min_perp, min_topic = sys.maxint, label_topic
+                    for topic in topics:
+                        perp = gt_ngrams[topic].generate_perplexity(i, text)
+                        if perp < min_perp:
+                            min_perp = perp
+                            min_topic = topic
 
-                for topic in topics:
-                    perp = gt_ngrams[topic].generate_perplexity(i, sentence)
-                    if perp < min_perp:
-                        min_perp = perp
-                        min_topic = topic
+                    if label_topic == min_topic:
+                        correct += 1
+                    _sum += 1
 
-                if label_topic == min_topic:
-                    correct += 1
-                _sum += 1
 
         accuracy[i] = 1.0 * correct / _sum
         print "[{}-gram] {}".format(i, accuracy[i])
+
     #choose the best n
     n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
 
@@ -206,17 +227,6 @@ def topic_classification_li_ngram():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
-def generate_perplexity_bo_ngram():
-    bo_ngrams = {}
-    for topic in topics:
-        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-        content = preprocess.preprocess_dir(indir)
-        bo_ngrams[topic] = bo_ngram(content)
-
-        print "\nTopic: {}".format(topic)
-        print "[{}-gram]: {}".format(3, bo_ngrams[topic].generate_perplexity(3, content))
-
-
 def topic_classification_bo_ngram():
     """
     calculate the accuracy for topic classification with different
@@ -284,25 +294,6 @@ def topic_classification_bo_ngram():
 
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
-def generate_perplexity_bo_ngram():
-    bo_ngrams = {}
-    for topic in topics:
-        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-        content = preprocess.preprocess_dir(indir)
-        bo_ngrams[topic] = bo_ngram(content)
-
-        print "\nTopic: {}".format(topic)
-        print "[{}-gram]: {}".format(3, bo_ngrams[topic].generate_perplexity(3, content))
-
-def generate_perplexity_li_ngram():
-    li_ngrams = {}
-    for topic in topics:
-        indir = indir_pre + "data/classification_task/{}/train_docs".format(topic)
-        content = preprocess.preprocess_dir(indir)
-        li_ngrams[topic] = li_ngram(content)
-
-        print "\nTopic: {}".format(topic)
-        print "[{}-gram]: {}".format(3, li_ngrams[topic].generate_perplexity(3, content))
 
 def topic_classification_li_ngram():
     """
@@ -376,8 +367,9 @@ def spell_checker_gt_nrgam():
     pass
 
 
+
 def main():
-    topic_classification_bo_ngram()
+    topic_classification_gt_ngram()
 
 
 if __name__ == "__main__":
