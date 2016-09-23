@@ -376,8 +376,8 @@ def topic_classification_li_ngram():
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
 
-def spell_checker_gt_nrgam(method = 'perplexity'):
-    gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {} #key: topic
+def spell_checker_gt_nrgam(task = "test"):
+    test_docs, test_docs_check, gt_ngrams, train_text, test_text, test_compare = {}, {}, {}, {}, {}, {} #key: topic
     
     indir_words = indir_pre + "data/spell_checking_task/confusion_set.txt"
     confused_words = open(indir_words, 'r').read().decode("utf-8-sig").encode("utf-8")
@@ -389,6 +389,9 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
     changed_text = ""
     words["even"] = dict()
     words["odd"] = dict()
+    listWordsInFile = {}
+    listWordsNew = {}
+    stringWhole = {}
     end = False;
     for i in xrange(0, len(confused_words)-1, 2):
         words["even"][confused_words[i]]=[]
@@ -406,22 +409,25 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
             words[side][indexw].append("")
 
     for topic in topics:
-        gt_ngrams[topic] = dict()
-        test_text[topic] = dict()
-        test_compare[topic] = dict()
+        stringWhole[topic] = {}
+        gt_ngrams[topic] = {}
         for i in xrange(1, 5):
-            gt_ngrams[topic][i] = dict()
-
-
-    #create training and testing text
-    for topic in topics:
+            gt_ngrams[topic] = {}
         train_f = indir_pre + "data/spell_checking_task/{}/train.txt".format(topic)
-        test_f = indir_pre + "data/spell_checking_task/{}/train_modified_docs".format(topic)
-        test_cf = indir_pre + "data/spell_checking_task/{}/train_docs".format(topic)
 
+        test_f = indir_pre + "data/spell_checking_task/{}/train_modified_docs".format(topic)
+        #test set for accuracy
+        test_cf = indir_pre + "data/spell_checking_task/{}/train_docs".format(topic)
+        #actual testing task documents
         num_file = len(os.listdir(test_f))
         num_train_file = math.floor(num_file * 0.8)
+        test_compare[topic], test_text[topic]= {}, {}
+        if task != "test":
+            test_doc = indir_pre + "data/spell_checking_task/{}/test_modified_docs".format(topic)
+            listWordsNew[topic], listWordsInFile[topic], test_docs_check[topic], test_docs[topic], gt_ngrams[topic] = {}, {}, {}, {}, {}
+            
 
+    for topic in topics:
         for root, dirs, filenames in os.walk(test_f):
             for i, f in enumerate(filenames):
                 if i > num_train_file:
@@ -435,6 +441,18 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
         train_text[topic] = open(train_f, 'r').read()
         for i in xrange(1, 5):
             gt_ngrams[topic][i] = gt_ngram(train_text[topic])
+        if task != "test":
+            for root, dirs, filenames in os.walk(test_doc):
+                for i, f in enumerate(filenames):
+                    raw_content = open(test_doc + "/" + f, 'r').read()
+                    test_docs[topic][f] = raw_content
+                    listWordsNew[topic][f], listWordsInFile[topic][f] = {}, {}
+                    raw_content = preprocess.preprocess_file(os.path.join(test_doc, f),"sentences")
+                    test_docs_check[topic][f] = raw_content
+            if not os.path.isfile(train_f):
+                split_train_test('spell_checking_task')
+            train_text[topic] = open(train_f, 'r').read()
+
 
     #generate good-turing n-gram for the training set
     for i in xrange(1, 5):
@@ -448,28 +466,37 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
     sentence_count = {}
     compare_count = {}
     compare_rate = {}
-    for i in xrange(1, 5):
-        sentence_count[i] = 0
-        correct[i] = 0
-        compare_count[i] = 0
+
+    for i in xrange(2, 3):
+        compare_count[i], correct[i], sentence_count[i] = 0, 0, 0
         for topic in topics:
-            #each file to be examined under the topic
-            for filename in test_text[topic]:
-                filename_compare = filename
-                filename_compare = filename_compare.replace("_modified","")
-                #each sentence in the file
-                sen_processing = test_text[topic][filename][0].split()
-                for j in xrange (0, len(test_text[topic][filename])):
+            if task == "test":
+                folder = test_text
+            else:
+                folder = test_docs_check
+                #each file to be examined under the topic
+            for filename in folder[topic]:
+                if task == "test":    
+                    filename_compare = filename
+                    filename_compare = filename_compare.replace("_modified","")
+                    #each sentence in the file
+                    sen_processing = folder[topic][filename][0].split()
+                else:
+                    listWordsInFile[topic][filename][i] = {}
+                    listWordsNew[topic][filename][i] = {}
+                    stringWhole[topic][filename] = test_docs[topic][filename]
+                for j in xrange (0, len(folder[topic][filename])):
                     #generate the perplexity of the original sentence
-                    perp_origin = gt_ngrams[topic][i].generate_perplexity(i,test_text[topic][filename][j])
                     #two-way dictionary
                     for side in words:
+                        if task != "test":
+                            listWordsInFile[topic][filename][i][side] = []
+                            listWordsNew[topic][filename][i][side] = []
                         for word1 in words[side]:
-                            sen_tokens = test_text[topic][filename][j].split()
+                            sen_tokens = folder[topic][filename][j].split()
                             #if there's a confused word
                             if word1 in sen_tokens:
-                                #if processing a new sentence, count +1
-                                #if sen_tokens != sen_processing:
+                                perp_origin = gt_ngrams[topic][i].generate_perplexity(i,folder[topic][filename][j])
                                 sentence_count[i] += 1
                                 #sen_processing = sen_tokens
                                 #list of alternative sentences
@@ -478,17 +505,24 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                 perp_alt = []
                                 #alternative.append(test_text[topic][filename][j])
                                 #for each possible alternate word
-                                changed_text = test_text[topic][filename][j]
+                                changed_text = folder[topic][filename][j]
                                 
                                 """
+
                                 break the sentence into a list of tokens, replace the token to be examined,
                                 reconstruct the list into a string
+
                                 """
                                 new_word = word1
+                                if task != "test":
+                                    listWordsInFile[topic][filename][i][side].append(new_word)
                                 for k in xrange(0,len(words[side][word1])):   
                                     #replace the word of interest in the list of tokens
                                     alternative.append(sen_tokens)
-                                    alternative[k] = [w.replace(word1,''.join(words[side][word1][k])) for w in alternative[k]]
+                                    for w in xrange(0, len(alternative[k])):
+                                        if alternative[k][w] == word1:
+                                            alternative[k] = alternative[k][w].replace(word1,''.join(words[side][word1][k]))
+                                            break
                                     
                                     #reconstructing the new sentence
                                     sent_Tobe = ""
@@ -511,22 +545,86 @@ def spell_checker_gt_nrgam(method = 'perplexity'):
                                         changed_text = sent_Tobe
                                         new_word = words[side][word1][k]
 
-                                if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
-                                #test_compare[topic][filename_compare][j]:
-                                    correct[i] += 1
-                                else: 
-                                    if word1 not in test_compare[topic][filename_compare][j]:
+                                    for p in xrange(0, len(stringWhole[topic][filename])):
+                                        if len(stringWhole[topic][filename]) > p+len(word1):
+                                            if stringWhole[topic][filename][p:].startswith(word1 or word1.capitalize() or word1.upper()) and stringWhole[topic][filename][p+len(word1)].isalpha() == False:
+                                                s1 = stringWhole[topic][filename][0:p]
+                                                s2 = new_word+stringWhole[topic][filename][p+len(new_word):]
+                                                stringWhole[topic][filename] = s1 + s2
+                                     
+        
+
+
+                                else:
+                                    if len(new_word) > 0 and new_word in test_compare[topic][filename_compare][j]:
+                                    #test_compare[topic][filename_compare][j]:
                                         correct[i] += 1
-                                if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
-                                    compare_count[i] += 1
+                                    else: 
+                                        if word1 not in test_compare[topic][filename_compare][j]:
+                                            correct[i] += 1
+                                    if test_compare[topic][filename_compare][j] == test_text[topic][filename][j]:
+                                        compare_count[i] += 1
                                         #print i, correct[i], sentence_count[i]
                                         #print the new sentence with the new word
+                """
+                if task != "test":
+                    print stringWhole[topic][filename]
+                    print test_docs[topic][filename]
+                    write_file_to = indir_pre + "data/spell_checking_task/{}/test_corrected_docs".format(topic)
+                    if not os.path.isdir(write_file_to):
+                        os.makedirs(write_file_to)
+                    open(write_file_to + "/corrected_"+ filename, 'w').write(stringWhole)
+                """
+                if task != "test":
+                    stringWhole = test_docs[topic][filename]
+                    #replce words in the original file and write it to a new file
+                    q = 0
+                    for side in words:
+                        word_Q = listWordsInFile[topic][filename][i][side]
+                        word_N = listWordsNew[topic][filename][i][side]
+
+                        for p in xrange(0, len(stringWhole)):
+                            if q<len(word_Q) and len(word_Q[q]) > 0:
+                                q = q + 1
+                                if q < len(word_Q):
+                                    if len(stringWhole) > p+len(word_Q[q]):
+                                        if p > 0:
+                                            if stringWhole[p:].startswith(word_Q[q] or word_Q[q].capitalize() or word_Q[q].upper()) and stringWhole[p+len(word_Q[q])].isalpha() == False and stringWhole[p-1].isalpha == False:
+                                                s1 = stringWhole[0:p]
+                                                s2 = word_N[q]+stringWhole[p+len(word_Q[q]):]
+                                                stringWhole = s1 + s2
+                                                q = q+ 1
+                                                print "@@@@@@@@@@@@@@@@@@@@"
+                                                print q , "of" , len(word_Q)
+                                                print word_Q[q], word_N[q]
+                                        else:
+                                            if stringWhole[p:].startswith(word_Q[q] or word_Q[q].capitalize() or word_Q[q].upper()) and stringWhole[p+len(word_Q[q])].isalpha == False:
+                                                s1 = stringWhole[0:p]
+                                                s2 = word_N[q]+stringWhole[p+len(word_Q[q]):]
+                                                stringWhole = s1 + s2
+                                                q = q+ 1
+                                                print q , "of" , len(word_Q)
+                                                print word_Q[q], word_N[q]
+
+                """    
+                    #print stringWhole
+
+                """
+                write_file_to = indir_pre + "data/spell_checking_task/{}/test_corrected_docs".format(topic)
+                if not os.path.isdir(write_file_to):
+                    os.makedirs(write_file_to)
+                open(write_file_to + "/corrected_"+ filename, 'w').write(stringWhole)
+                """
+                            
+                    
+        correct_rate[i] = 1.0 * correct[i] / sentence_count[i]
+        print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
+
+
         #print correct
         #print sentence_count
-        correct_rate[i] = 1.0 * correct[i] / sentence_count[i]
-        compare_rate[i] = 1.0 * compare_count[i] / sentence_count[i]
-        print "{} gram correct spell check rate = {}".format(i, correct_rate[i])
-        print "{} gram correct compare rate = {}".format(i, compare_rate[i])
+                    
+
 
 
 
@@ -539,7 +637,7 @@ def main():
 
     #split_train_test('spell_checking_task')
     #topic_classification_gt_ngram()
-    spell_checker_gt_nrgam()
+    spell_checker_gt_nrgam("not")
 
 
 
