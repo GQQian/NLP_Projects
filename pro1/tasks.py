@@ -767,11 +767,11 @@ def topic_classification_ngram_dis_1():
 
                 writer.writerow({'ID': f, 'Prediction': '{}'.format(topics[min_topic])})
 
+def spell_checking_jiao():
+    
+
 def main():
     topic_classification_ngram_dis_1()
-
-
-
 
 
 if __name__ == "__main__":
