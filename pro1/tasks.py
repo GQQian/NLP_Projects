@@ -710,8 +710,9 @@ def spell_checking_gt_gram():
         gt_nragms[topic] = gt_ngram(train_text)
 
     # get accuracy for i-gram
+    accuracy = {}
     for i in xrange(1, 5):
-        _sum, correct, accuracy = 1, 0, {}
+        _sum, correct = 1, 0
         for topic in topics:
             test_dir = indir_pre + "data/spell_checking_task/{}/train_docs".format(topic)
             for root, dirs, filenames in os.walk(test_dir):
@@ -749,9 +750,7 @@ def spell_checking_gt_gram():
         print "{}-gram: {}".format(i, accuracy[i])
 
     # choose the best n
-
     n = max(accuracy.iteritems(), key = operator.itemgetter(1))[0]
-    print n
 
     # output
     for topic in topics:
@@ -798,7 +797,7 @@ def spell_checking_gt_gram():
 
 
 def main():
-    topic_classification_ngram_dis()
+    spell_checking_gt_gram()
 
 if __name__ == "__main__":
     main()
