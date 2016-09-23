@@ -58,8 +58,9 @@ class gt_ngram(object):
                 else:
                     num1 = len(_list)
 
+                if c + 1 not in c_dict:
+                    continue
                 num2 = len(c_dict[c + 1])
-                # TODO what if num1 == 0? Or just forget this situation as it little happens
                 c_new = 1.0 * (c + 1) * num2 / num1
                 counter.update(dict((tokens, c_new) for tokens in _list))
 

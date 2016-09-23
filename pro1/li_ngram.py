@@ -16,6 +16,9 @@ class li_ngram(gt_ngram):
         if n == 1:
             return super(li_ngram, self).generate_perplexity(n, sentences)
 
+        for z in xrange(n):
+            x = z + 1
+            self.nprob_dic[x] = self.nprob_dic[x] if x in self.nprob_dic else self.generate_ngram(x)
         tokens = preprocess.preprocess_text(sentences).split()
 
         # use unk_1 to repalce word not in ncounter_dic[1]
@@ -25,81 +28,64 @@ class li_ngram(gt_ngram):
             if key not in self.ncounter_dic[1]:
                 tokens[i] = '<unk_1>'
 
+        _len = len(tokens)    
+        perp = 0
+        for i in xrange(_len):
+            prob_tup = []
+            for j in xrange(n):
+                key = tuple(tokens[i - j : i + 1])
 
+                # accessing key
+                if j > 0:
+                    # Replace unknown word with <unk> #
+                    unk = '<unk_{}>'.format(j)
+                    if key != ():
+                        if key not in self.nprob_dic[j + 1]:
+                            key = tuple([unk, tokens[-1]])
 
+                if key == () or (('<s>' in key) and key[-1] != '<s>' and j>0):
+                    prob_element = 0
+                else:
+                    prob_element = self.nprob_dic[j+1][key]
+                prob_tup.append(prob_element)
+            prob_tup = np.array(prob_tup)
+            prob = prob_tup.dot(r)
+            if prob == 0:
+                continue
+            perp -= log(prob)
 
+        perp = exp(1.0 * perp / len(tokens))
+        return perp
 
-
-
-
-
-        # for z in xrange(3):
-        #     x = z + 1
-        #     self.nprob_dic[x] = self.nprob_dic[x] if x in self.nprob_dic else self.generate_ngram(x)
-        # tokens = preprocess.preprocess_text(sentences)
-        # # tokens = preprocess.preprocess_text(sentences).split()
-        # # Prepare sentences for each ngram
-        # token_list = [[],[],[]]
-        # token_list[0] = tokens.replace('<s>', '').split()
-        # token_list[1] = tokens.split()
-        # token_list[2] = tokens.replace('<s>', '<s1> <s2>').split()
-        # tokens = tokens.split()
-        # # for keys in self.nprob_dic.keys():
-        # # use unk_1 to repalce word not in ncounter_dic[1]
-        # self.ncounter_dic[1] = self.ncounter_dic[1] if 1 in self.ncounter_dic else self.ntoken_count(1)
-        # for eachlist in token_list:
-        #     for i, token in enumerate(eachlist):
-        #         key = tuple([token])
-        #         if key not in self.ncounter_dic[1]:
-        #             eachlist[i] = '<unk_1>'
-        #
+    # jiaojiao
         # # calculate perplexity
         # perp = 0
-        #
-        # _len = len(token_list[0])
-        # bi_fix = 0  # count <unk> in bigram
-        # tri_fix = 0 # count <unk> in trigram
-        #
-        #
-        # iters = [0, 0, 0]
-        #
-        # while iters[0] < _len - 1:
+        # # i is the first index of tokens, j is j-gram
+        # for i, token in enumerate(tokens):
         #     prob = 0
-        #     prob_tup = []
-        #     for j in xrange(n):
-        #         if j < 1:
-        #             key = tuple(token_list[j][iters[j]: iters[j] + 1])
-        #             while '</s>' in key:
-        #
-        #                 key = tuple(token_list[j][iters[j]: iters[j] + 1])
-        #                 iters[j] += 1
-        #             iters[j] += 1
-        #
+        #     for j in xrange(1, min(i + 2, n + 1)):
+        #         if r[j - 1] < 0.0000001:
+        #             continue
+        #         if j == 1:
+        #             for token in tokens:
+        #                 key = tuple([token])
+        #                 prob += r[j - 1] * self.nprob_dic[1][key]
         #         else:
+        #             unk = '<unk_{}>'.format(j - 1)
+        #             if i + j > len(tokens):
+        #                 continue
+        #             key = tuple(tokens[i:(i + j)])
+        #             if key not in self.nprob_dic[n]:
+        #                 key = tuple([unk, tokens[i + j - 1]])
+        #                 if key not in self.nprob_dic[j]:
+        #                     key = tuple([unk, '<unk_1>'])
+        #             prob += r[j - 1] * self.nprob_dic[j][key]
         #
-        #             key = tuple(token_list[j][iters[j]: iters[j] + j + 1])
+        #             # print "part: {}".format(r[j - 1] * self.nprob_dic[j][key])
+        #             # print "sum: {}".format(prob)
         #
-        #             while '</s>' in key:
+        #         if prob != 0:
+        #             perp -= log(prob)
         #
-        #                 key = tuple(token_list[j][iters[j] : iters[j] + j + 1])
-        #                 iters[j] += 1
-        #             # print "key is {}, iterater is {}, j is {}".format(key, iters[0], j)
-        #
-        #             # Replace unknown word with <unk> #
-        #             unk = '<unk_{}>'.format(j)
-        #             if key not in self.nprob_dic[j + 1]:
-        #                 key = tuple([unk, tokens[-1]])
-        #             # print "key is {}, iterater is {}, j is {}".format(key, iters[0], j)
-        #                 if j == 1:
-        #                     bi_fix += 1
-        #                 else:
-        #                     tri_fix += 1
-        #             iters[j] += 1
-        #         prob_element = self.nprob_dic[j+1][key]
-        #         prob_tup.append(prob_element)
-        #     prob_tup = np.array(prob_tup)
-        #     prob = prob_tup.dot(r)
-        #     perp -= log(prob)
         # perp = exp(1.0 * perp / len(tokens))
-        # # print "there are {} <unk> for bigram, {} <unk> for trigram, with a total of {} tokens".format(bi_fix, tri_fix, iters[0])
         # return perp
