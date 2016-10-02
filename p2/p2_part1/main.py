@@ -2,18 +2,19 @@
 #       2. feeding data to models
 #       3. getting predictions from models and write to files
 import os
-import preprocessor
-import baseline_model
+from preprocessor import process, generate_path
+from baseline_model import baseline_model
 
 # INPUT: FOLDER NAME
-
-dir_pref = os.getcwd() + "/"
-
-indir = dir_pref + ""
-
+folder = "test-private"  
+directory = generate_path(folder)
 
 def main():
-    pass
+    for root, dirs, filenames in os.walk(directory):
+        for f in filenames:
+            temp = process(directory + f)
+            print "File: {}".format(f)
+            print temp
 
 if __name__ == "__main__":
     main()

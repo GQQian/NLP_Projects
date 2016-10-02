@@ -1,29 +1,20 @@
 import os
+def process(file):
+    """
+    folder: name of folder
+    TODO: wrong way to compile all files together, test files should be parsed separately,
+    TOFIX: read folder from main, and get filenames here
+    """
+    compiled_content = []
+    raw_content = open(file, 'r').read()
+    compiled_content = raw_content.split('\n')
 
-class preprocessor(object):
-	def __init__(self):
-		self.root = os.getcwd() + "/"
+    while '' in compiled_content:
+        compiled_content.remove('')
 
-	def fetch_data(self, folder):
-		"""
-		folder: name of folder
-		TODO: wrong way to compile all files together, test files should be parsed separately,
-		TOFIX: read folder from main, and get filenames here
-		"""
-		path, output, compiled_content = self.root + folder, [], []
+    for i, unit in enumerate(compiled_content):
+        compiled_content[i] = tuple(unit.split('\t'))
+    return compiled_content
 
-		for root, dirs, filenames in os.walk(path):
-			for file in filenames:
-				raw_content = open(os.path.join(root, f), 'r').read()
-				compiled_content += raw_content
-
-
-
-
-
-
-	def process(self, folder):
-		"""
-		folder: name of folder
-		"""
-		pass
+def generate_path(folder):
+    return os.getcwd() + "/" + folder + "/"

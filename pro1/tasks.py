@@ -37,7 +37,6 @@ def random_sentence_ngram(n = 2, sent_pre = "I have"):
             for i in xrange(3):
                 print "[{}]  ".format(i + 1) + ngrams.generate_sentence(k, sent_pre)
 
-
 def generate_perplexity_gt_ngram():
     gt_ngrams = {}
     perplexity = {} # key: filename, value: a dic with (key: n, value: perplexity of ngram)
