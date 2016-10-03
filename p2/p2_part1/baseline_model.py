@@ -48,7 +48,14 @@ class baseline_model(object):
 
 
     def label_phrase(self, untagged_sequence):
-        # untagged_sequence should be a list of 
+        """
+        parameter:
+        untagged_sequence: 
+            type: list of tuples, structure of tuple(TOKEN, TAG)
+        
+        rtype: list of tuples, tuples contains starting and ending index of predicted cues. 
+               structure of tuple(starting_idx, ending_idx)
+        """
         output = []
         for i, word in enumerate(untagged_sequence):
 
@@ -63,6 +70,13 @@ class baseline_model(object):
         return output
 
     def label(self, untagged_sequence):
+        """
+        parameter:
+        untagged_sequence: 
+            type: list of tuples, structure of tuple(TOKEN, TAG)
+        
+        rtype: list of tuples, structure of tuple(TOKEN, TAG, PREDICTION)
+        """
         tagged = untagged_sequence
         for i, word in enumerate(untagged_sequence):
             tagged[i] += ("O",)
