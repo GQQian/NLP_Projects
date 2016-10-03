@@ -3,7 +3,6 @@ def process(file):
     """
     folder: name of folder
     TODO: wrong way to compile all files together, test files should be parsed separately,
-    TOFIX: read folder from main, and get filenames here
     """
     compiled_content = []
     raw_content = open(file, 'r').read()
