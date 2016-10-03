@@ -6,10 +6,10 @@ Group member: Zili Xiang(zx77), Youdan Xu(yx339), Guanqiao Qian(gq25)
 ################## READ project2_proposal.pdf ##########################
 ########################################################################
 
-1. Test functions are all in test.py, to know about what specifically what each function intends to do,
-read description of that function.
+1. Test functions are all in test.py, to know about what specifically what each function intends to do, read description of that function.
 
-2. Test functions in test.py are to be executed in main.py, we have marked the location where you should
-   put functions from test.py.
+2. Test functions in test.py are to be executed in main.py, we have marked the location where you should put functions from test.py.
 
-3. Have fun grading! 
+3. The results of uncertain_sent_detection function will be in sentence_result.csv and uncertain_phrase_detection function will be in phrase_result.csv.
+
+4. Have fun grading!
