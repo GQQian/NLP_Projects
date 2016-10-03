@@ -32,6 +32,12 @@ class baseline_model(object):
         pass
 
     def train(self, tagged_sequence = None):
+        """
+        Prepare self.predictors and self.fpredictors. 
+        The source of list of predictors is:
+        https://github.com/wooorm/hedges/blob/master/data.txt
+        """
+
         predictors = ['consider', 'in my mind', 'doubtful', 'something or other', 'certainly', 'find', 'seemed', "if i'm understanding you correctly", 'somewhere', 'more or less', 'kind of', 'seems', 'actually', 'pretty', 'so far', 'must', 'might', 'someone', 'somebody', 'around', 'read', 'mainly', 'couple', 'overall', 'possible', 'possibly', 'speculate', 'like', 'at least', 'should', 'seldom', 'always', 'found', 'and so forth', 'says', 'often', 'some', 'somehow', 'understood', 'likely', 'assumption', 'estimated', 'thinks', 'really', 'probable', 'definite', 'tend', 'hopefully', 'probably', 'bunch', 'can', 'unsure', 'in my opinion', 'look like', 'doubt', 'consistent with', 'little', 'possibility', 'quite', 'surely', 'estimate', 'diagnostic', 'appears', 'suggested', 'about', 'rare', 'conceivably', 'many', 'could', 'suggests', 'et cetera', 'usually', 'appear to be', 'finds', 'presumably', 'probability', 'appeared', 'speculates', 'improbable', 'my impression', 'speculated', 'my thinking is', 'rarely', 'considers', 'presumable', 'guess', 'necessarily', 'would', 'indicate', 'assumed', 'alleged', 'approximately', 'few', 'much', 'be sure', 'assumes', 'in my understanding', 'supposedly', 'mostly', 'estimates', 'apparent', 'and all that', 'understand', 'basically', 'somewhat', 'believe', 'partially', 'supposes', 'almost never', 'largely', 'believes', 'will', 'assume', 'suggestive', 'suppose', 'supposed', 'believed', 'quite clearly', 'in general', 'inconclusive', 'unlikely', 'my understanding is', 'guesses', 'almost', 'certain', 'effectively', 'say', 'guessed', 'something', 'seem', 'apparently', 'evidently', 'sort of', 'their impression', 'perhaps', 'suggest', 'generally', 'clearly', 'occasionally', 'virtually', 'a bit', 'several', 'fairly', 'may', 'most', 'frequently', 'allege', 'appear', 'understands', 'practically', 'considered', 'maybe', 'clear', 'sometimes', 'roughly', 'in my view', 'think', 'thought', 'rather', 'definitely', 'looks like', "don't know"]
         for i, word in enumerate(predictors):
             self.predictors.append(tuple(word.split()))
