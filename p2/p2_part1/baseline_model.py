@@ -23,9 +23,9 @@ class baseline_model(object):
             self.fpredictors.append(self.predictors[i][0])
 
 
-    def label(self, untagged_sequence):
+    def label_temp(self, untagged_sequence):
         # untagged_sequence should be a list of 
-        output = []
+        
         for i, word in enumerate(untagged_sequence):
 
             for j, cue in enumerate(self.fpredictors):
@@ -37,3 +37,27 @@ class baseline_model(object):
                     if sample == self.predictors[j]:
                         output.append((i, i + _len - 1))
         return output
+
+    def label(self, untagged_sequence):
+        tagged = untagged_sequence
+        for i, word in enumerate(untagged_sequence):
+            tagged[i] += ("O",)
+            for j, cue in enumerate(self.fpredictors):
+                # print "i: {}, j: {}".format(i, j)
+
+                if word[0] == cue:
+                    _len = len(self.predictors[j])
+                    sample = tuple()
+                    for k in xrange(i, i + _len):
+                        try:
+                            sample += (untagged_sequence[k][0],)
+                        except IndexError:
+                            break
+                    if sample == self.predictors[j]:
+                        temp = list(tagged[i])
+                        temp[2] = "CUE"
+                        tagged[i] = temp
+        return tagged
+
+
+
