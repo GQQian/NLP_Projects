@@ -3,7 +3,7 @@ from preprocessor import process, generate_path, sent_process
 from baseline_model import baseline_model
 import csv
 
-def uncertain_phrase_detection():
+def uncertain_phrase_detection_bm():
     """
     execute uncertain phrase detection and write result to phrase_result.csv, which will be saved
     under current folder
@@ -38,7 +38,7 @@ def uncertain_phrase_detection():
         writer.writerow({'Type': "CUE-public", 'Spans': pub_result_str})
 
     ##### predicting data in test-private folder #######
-    
+
         data_combined = []
         pri_result_str = ""
         for root, dirs, filenames in os.walk(directory_pri):
@@ -51,10 +51,10 @@ def uncertain_phrase_detection():
         for label in pri_result:
             pri_result_str += str(label[0]) + '-' + str(label[1]) + ' '
 
-        writer.writerow({'Type': "CUE-private", 'Spans': pri_result_str}) 
+        writer.writerow({'Type': "CUE-private", 'Spans': pri_result_str})
 
 
-def uncertain_sent_detection():
+def uncertain_sent_detection_bm():
     """
     execute uncertain sentence detection and write result to sentence_result.csv, which will be saved
     under current folder
@@ -96,7 +96,7 @@ def uncertain_sent_detection():
         pub_result_str = ""
         for label in sent_result_pub:
             pub_result_str += str(label) + ' '
-        writer.writerow({'Type': "SENTENCE-public", 'Indices': pub_result_str})   
+        writer.writerow({'Type': "SENTENCE-public", 'Indices': pub_result_str})
 
 ############### Private part ################
 
