@@ -31,5 +31,33 @@ def sent_process(file):
     return sentence_split
 
 
+def sent_process_BIWEO(file):
+    sentence_split = sent_process(file)
+    for sent in sentence_split:
+        left = 0
+        while left < len(sent):
+            sent[left] = sent[left]
+            # O: outside
+            if sent[left][2] == '_':
+                sent[left] = (sent[left][0], sent[left][1], 'O')
+                left += 1
+            # W: signle word
+            elif left == len(sent) - 1 or sent[left][2] != sent[left + 1][2]:
+                sent[left] = (sent[left][0], sent[left][1], 'W')
+                left += 1
+            # BIE: begin, in, end
+            else:
+                right = left + 1
+                while right != len(sent) - 1 and sent[right][2] == sent[left][2]:
+                    right += 1
+                sent[left] = (sent[left][0], sent[left][1], 'B')
+                sent[right - 1] = (sent[right - 1][0], sent[right - 1][1], 'E')
+                for i in xrange(left + 1, right - 1):
+                    sent[i] = (sent[i][0], sent[i][1], 'I')
+                left = right
+
+    return sentence_split
+
+
 def generate_path(folder):
     return os.getcwd() + "/" + folder + "/"
