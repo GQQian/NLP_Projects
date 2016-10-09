@@ -1,26 +1,26 @@
 import os
 import random
 
-# TODO: 1. train: 
+# TODO: 1. train:
 #              type: dictionary
 #              keys: (TOKEN, TAGS)
 #              vals: counts/ level of indications
 #       2. getting data, and outputing predictions
-#       3. 
+#       3.
 
 class baseline_model(object):
 
     def __init__(self):
         """
-        self.predictors: 
+        self.predictors:
             type: list of tuples
-            description: list containing all the predictor phrases of uncertainty, tuples contain token(s) 
+            description: list containing all the predictor phrases of uncertainty, tuples contain token(s)
             of cue/predicting phrases
-        
+
         self.fpredictors:
             type: dict
-            description: 
-                $key: first token of each self.predictors element; 
+            description:
+                $key: first token of each self.predictors element;
                 $value: list of index of self.predictor element with $key as first token
                 This variable is introduced to increase efficiency of our searching algorithm
         """
@@ -28,12 +28,9 @@ class baseline_model(object):
         self.predictors = []
         self.fpredictors = {}
 
-    def feature_token_counter(self, tagged_sequence = None):
-        pass
-
     def train(self, tagged_sequence = None):
         """
-        Prepare self.predictors and self.fpredictors. 
+        Prepare self.predictors and self.fpredictors.
         The source of list of predictors is:
         https://github.com/wooorm/hedges/blob/master/data.txt
         """
@@ -50,10 +47,10 @@ class baseline_model(object):
     def label_phrase(self, untagged_sequence):
         """
         parameter:
-        untagged_sequence: 
+        untagged_sequence:
             type: list of tuples, structure of tuple(TOKEN, TAG)
-        
-        rtype: list of tuples, tuples contains starting and ending index of predicted cues. 
+
+        rtype: list of tuples, tuples contains starting and ending index of predicted cues.
                structure of tuple(starting_idx, ending_idx)
         """
         output = []
@@ -72,9 +69,9 @@ class baseline_model(object):
     def label(self, untagged_sequence):
         """
         parameter:
-        untagged_sequence: 
+        untagged_sequence:
             type: list of tuples, structure of tuple(TOKEN, TAG)
-        
+
         rtype: list of tuples, structure of tuple(TOKEN, TAG, PREDICTION)
         """
         tagged = untagged_sequence
@@ -95,6 +92,3 @@ class baseline_model(object):
                         temp[2] = "CUE"
                         tagged[i] = temp
         return tagged
-
-
-
