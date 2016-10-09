@@ -3,7 +3,7 @@ Group Name: anonymous2.33
 Group member: Zili Xiang(zx77), Youdan Xu(yx339), Guanqiao Qian(gq25)
 ########################################################################
 ##### More specific about what we implemented for this project, ########
-################## READ project2_proposal.pdf ##########################
+####################### READ proposal.pdf ##############################
 ########################################################################
 
 1. Test functions are all in test.py, to know about what specifically what each function intends to do, read description of that function.
