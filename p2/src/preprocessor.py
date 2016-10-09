@@ -18,6 +18,10 @@ def process(file):
 
 
 def sent_process(file):
+    """
+    return: a list of sentences. Sentences are repesented by a list of tuples
+            tuple format: (apple, NN, - or CUE-#)
+    """
     compiled_content = []
     raw_content = open(file, 'r').read()
     compiled_content = raw_content.split('\n')
@@ -31,7 +35,11 @@ def sent_process(file):
     return sentence_split
 
 
-def sent_process_BIWEO(file):
+def sent_process_biweo(file):
+    """
+    return: a list of sentences. Sentences are repesented by a list of tuples
+            tuple format: (apple, NN, B/I/W/E/O)
+    """
     sentence_split = sent_process(file)
     for sent in sentence_split:
         left = 0

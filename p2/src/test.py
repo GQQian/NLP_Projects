@@ -1,6 +1,7 @@
 import os
-from preprocessor import process, generate_path, sent_process
+from preprocessor import process, generate_path, sent_process, sent_process_biweo
 from baseline_model import baseline_model
+from hmm_model import hmm_model
 import csv
 
 def uncertain_phrase_detection_bm():
@@ -11,8 +12,8 @@ def uncertain_phrase_detection_bm():
     folder_pub = "test-public"
     folder_pri = "test-private"
     bm = baseline_model()
-    directory_pub = generate_path(folder_pub)
-    directory_pri = generate_path(folder_pri)
+    dir_pub = generate_path(folder_pub)
+    dir_pri = generate_path(folder_pri)
     bm.train()
 
     csv_f = os.getcwd() + "/" + "phrase_result.csv"
@@ -23,9 +24,9 @@ def uncertain_phrase_detection_bm():
         writer.writeheader()
 
         data_combined = []
-        for root, dirs, filenames in os.walk(directory_pub):
+        for root, dirs, filenames in os.walk(dir_pub):
             for f in filenames:
-                data = process(directory_pub + f)
+                data = process(dir_pub + f)
                 data_combined += data
         data_combined.pop(0)
         print "# tokens in public folder: {}".format(len(data_combined))
@@ -41,9 +42,9 @@ def uncertain_phrase_detection_bm():
 
         data_combined = []
         pri_result_str = ""
-        for root, dirs, filenames in os.walk(directory_pri):
+        for root, dirs, filenames in os.walk(dir_pri):
             for f in filenames:
-                data = process(directory_pri + f)
+                data = process(dir_pri + f)
                 data_combined += data
         print "# tokens in private folder: {}".format(len(data_combined))
         pri_result = bm.label_phrase(data_combined)
@@ -61,8 +62,8 @@ def uncertain_sent_detection_bm():
     """
     folder_pub = "test-public"
     folder_pri = "test-private"
-    directory_pub = generate_path(folder_pub)
-    directory_pri = generate_path(folder_pri)
+    dir_pub = generate_path(folder_pub)
+    dir_pri = generate_path(folder_pri)
 
     bm = baseline_model()
     bm.train()
@@ -74,12 +75,12 @@ def uncertain_sent_detection_bm():
         writer.writeheader()
 
         data_combined = []
-        for root, dirs, filenames in os.walk(directory_pub):
+        for root, dirs, filenames in os.walk(dir_pub):
             for f in filenames:
-                data = sent_process(directory_pub + f)
+                data = sent_process(dir_pub + f)
                 data_combined += data
 
-############ public part ############
+        ############ public part ############
 
         pub_result = []
         data_combined.pop(0)
@@ -98,13 +99,13 @@ def uncertain_sent_detection_bm():
             pub_result_str += str(label) + ' '
         writer.writerow({'Type': "SENTENCE-public", 'Indices': pub_result_str})
 
-############### Private part ################
+        ############### Private part ################
 
         data_combined = []
         pri_result_str = ""
-        for root, dirs, filenames in os.walk(directory_pri):
+        for root, dirs, filenames in os.walk(dir_pri):
             for f in filenames:
-                data = sent_process(directory_pri + f)
+                data = sent_process(dir_pri + f)
                 data_combined += data
 
         pri_result = []
@@ -123,3 +124,51 @@ def uncertain_sent_detection_bm():
             pri_result_str += str(label) + ' '
 
         writer.writerow({'Type': "SENTENCE-private", 'Indices': pri_result_str})
+
+
+def build_hmm_biweo(train_ratio = 0.8):
+
+    dir_train = os.getcwd() + "train"
+    for root, dirs, filenames in os.walk(dir_train):
+        for i, f in enumerate(filenames):
+            # split data into training and test set with train_ratio
+            if i > len(filenames) * train_ratio:
+                break
+            data = sent_process_biweo(dir_train + f)
+            data_combined += data
+
+    # merge all symbols into an article
+    symbol_content, state_content = "", ""
+    for sent in data:
+        for token in sent:
+            symbol_content += token[0]
+            state_content += token[2]
+
+    # use gt_ngram to get states, symboles set, transitions
+    symbol_ngram = gt_ngram(symbol_content)
+    state_ngram = gt_ngram(state_content)
+
+    symbols = set(symbol_ngram.ntoken_count(2).keys())
+    states = set(state_ngram.ntoken_count(2).keys())
+
+
+
+    """
+    :param symbols: the set of output symbols (alphabet)
+    :type symbols: seq of any
+    :param states: a set of states representing state space
+    :type states: seq of any
+    :param transitions: transition probabilities; Pr(s_i | s_j) is the
+        probability of transition from state i given the model is in
+        state_j
+    :type transitions: ConditionalProbDistI
+    :param outputs: output probabilities; Pr(o_k | s_i) is the probability
+        of emitting symbol k when entering state i
+    :type outputs: ConditionalProbDistI
+    :param priors: initial state distribution; Pr(s_i) is the probability
+        of starting in state i
+    :type priors: ProbDistI
+    :param transform: an optional function for transforming training
+        instances, defaults to the identity function.
+    :type transform: callable
+    """
