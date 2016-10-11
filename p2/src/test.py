@@ -2,6 +2,8 @@ import os
 from preprocessor import process, generate_path, sent_process, sent_process_biweo
 from baseline_model import baseline_model
 from hmm_model import hmm_model
+from gt_ngram import gt_ngram
+from ngram import ngram
 import csv
 
 def uncertain_phrase_detection_bm():
@@ -128,29 +130,43 @@ def uncertain_sent_detection_bm():
 
 def build_hmm_biweo(train_ratio = 0.8):
 
-    dir_train = os.getcwd() + "train"
+    dir_train = os.getcwd() + "/train/"
+    data_combined = []
     for root, dirs, filenames in os.walk(dir_train):
         for i, f in enumerate(filenames):
             # split data into training and test set with train_ratio
             if i > len(filenames) * train_ratio:
                 break
-            data = sent_process_biweo(dir_train + f)
+            data = sent_process_biweo(root + f)
             data_combined += data
 
     # merge all symbols into an article
-    symbol_content, state_content = "", ""
-    for sent in data:
+    symbol_content, state_content = [], []
+    for sent in data_combined:
         for token in sent:
-            symbol_content += token[0]
-            state_content += token[2]
+            symbol_content.append(token[0])
+            state_content.append(token[2])
 
-    # use gt_ngram to get states, symboles set, transitions
-    symbol_ngram = gt_ngram(symbol_content)
-    state_ngram = gt_ngram(state_content)
+    # use ngram, gt_ngram to get states, symboles set, transitions
+    symbol_ngram = gt_ngram(" ".join(symbol_content))
+    state_ngram = ngram(" ".join(state_content))
 
-    symbols = set(symbol_ngram.ntoken_count(2).keys())
-    states = set(state_ngram.ntoken_count(2).keys())
+    symbols = set(symbol_ngram.ntoken_count(1).keys())
+    states = set(state_ngram.ntoken_count(1).keys())
 
+    transitions = state_ngram.generate_ngram(2)
+
+
+    # compute outputs
+    outputs = {} # key: (symbol, state), value: probability of P(symbol, state|state)
+    count_dict = {} # key: tuple(symbol, state),  value: count
+    for i in xrange(len(symbol_content)):
+        symbol, state = symbol_content[i], state_content[i]
+        _tuple = (symbol, state)
+        count_dict[_tuple] = count_dict.get(_tuple, 0) + 1
+
+    for key, val in count_dict.items():
+        outputs[key] = 1.0 * val / state_ngram.ncounter_dic[1][tuple(key[1])]
 
 
     """
@@ -172,3 +188,4 @@ def build_hmm_biweo(train_ratio = 0.8):
         instances, defaults to the identity function.
     :type transform: callable
     """
+build_hmm_biweo()
