@@ -23,7 +23,7 @@ def sent_process(file):
             tuple format: (apple, NN, - or CUE-#)
     """
     compiled_content = []
-    raw_content = open(file, 'r').read()
+    raw_content = open(file, 'r').read().lower()
     compiled_content = raw_content.split('\n')
 
     sentence_split = [list(value) for key, value in groupby(compiled_content, lambda s: s == "") if not key]

@@ -4,7 +4,9 @@ from baseline_model import baseline_model
 from hmm_model import hmm_model
 from gt_ngram import gt_ngram
 from ngram import ngram
+from hmm_model import hmm_model
 import csv
+import sys
 
 def uncertain_phrase_detection_bm():
     """
@@ -18,7 +20,7 @@ def uncertain_phrase_detection_bm():
     dir_pri = generate_path(folder_pri)
     bm.train()
 
-    csv_f = os.getcwd() + "/" + "phrase_result.csv"
+    csv_f = os.getcwd() + "/" + "bm_phrase_result.csv"
 
     ##### predicting data in test-public folder #####
     with open(csv_f, 'w') as csvfile:
@@ -70,7 +72,7 @@ def uncertain_sent_detection_bm():
     bm = baseline_model()
     bm.train()
 
-    csv_f = os.getcwd() + "/" + "sentence_result.csv"
+    csv_f = os.getcwd() + "/" + "bm_sentence_result.csv"
 
     with open(csv_f, 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Indices'])
@@ -128,8 +130,8 @@ def uncertain_sent_detection_bm():
         writer.writerow({'Type': "SENTENCE-private", 'Indices': pri_result_str})
 
 
-def build_hmm_biweo(train_ratio = 0.8):
-
+def uncertain_detection_biweo(train_ratio = 0.8):
+    ###### use training data to train hmm model ######
     dir_train = os.getcwd() + "/train/"
     data_combined = []
     for root, dirs, filenames in os.walk(dir_train):
@@ -140,52 +142,55 @@ def build_hmm_biweo(train_ratio = 0.8):
             data = sent_process_biweo(root + f)
             data_combined += data
 
-    # merge all symbols into an article
-    symbol_content, state_content = [], []
-    for sent in data_combined:
-        for token in sent:
-            symbol_content.append(token[0])
-            state_content.append(token[2])
+    hmm = hmm_model()
+    hmm.train(data_combined)
 
-    # use ngram, gt_ngram to get states, symboles set, transitions
-    symbol_ngram = gt_ngram(" ".join(symbol_content))
-    state_ngram = ngram(" ".join(state_content))
-
-    symbols = set(symbol_ngram.ntoken_count(1).keys())
-    states = set(state_ngram.ntoken_count(1).keys())
-
-    transitions = state_ngram.generate_ngram(2)
+    ###### test data
+    correct, _sum = 0, 0
+    data_combined = []
+    for root, dirs, filenames in os.walk(dir_train):
+        start = int(len(filenames) * train_ratio + 1)
+        for i in xrange(start, len(filenames)):
+            f = filenames[i]
+            data = sent_process_biweo(root + f)
+            data_combined += data
 
 
-    # compute outputs
-    outputs = {} # key: (symbol, state), value: probability of P(symbol, state|state)
-    count_dict = {} # key: tuple(symbol, state),  value: count
-    for i in xrange(len(symbol_content)):
-        symbol, state = symbol_content[i], state_content[i]
-        _tuple = (symbol, state)
-        count_dict[_tuple] = count_dict.get(_tuple, 0) + 1
+    ###### prase and sent detection ######
+    def get_detection_results(type):
+        _dir = generate_path("test-{}".format(type))
+        data_combined = []
+        for root, dirs, filenames in os.walk(_dir):
+            for f in filenames:
+                data = sent_process(_dir + f)
+                data_combined += data
 
-    for key, val in count_dict.items():
-        outputs[key] = 1.0 * val / state_ngram.ncounter_dic[1][tuple(key[1])]
+        phrase_ret, sent_ret = [], []
+        phrase_index = 0
+        for sent_index, sent in enumerate(data_combined):
+            labels = hmm.label_phrase(sent)
+            if len(labels) > 0:
+                sent_ret.append(str(sent_index))
+                for label in labels:
+                    phrase_ret.append("{}-{}".format(label[0] + phrase_index, label[1] + phrase_index))
+            phrase_index += len(sent)
 
+        return (" ".join(phrase_ret), " ".join(sent_ret))
 
-    """
-    :param symbols: the set of output symbols (alphabet)
-    :type symbols: seq of any
-    :param states: a set of states representing state space
-    :type states: seq of any
-    :param transitions: transition probabilities; Pr(s_i | s_j) is the
-        probability of transition from state i given the model is in
-        state_j
-    :type transitions: ConditionalProbDistI
-    :param outputs: output probabilities; Pr(o_k | s_i) is the probability
-        of emitting symbol k when entering state i
-    :type outputs: ConditionalProbDistI
-    :param priors: initial state distribution; Pr(s_i) is the probability
-        of starting in state i
-    :type priors: ProbDistI
-    :param transform: an optional function for transforming training
-        instances, defaults to the identity function.
-    :type transform: callable
-    """
-build_hmm_biweo()
+    # get and write results into csv
+    public_ret, private_ret = get_detection_results("public"), get_detection_results("private")
+
+    phrase_f = os.getcwd() + "/" + "hmm_phrase_result.csv"
+    sent_f = os.getcwd() + "/" + "hmm_sentence_result.csv"
+
+    with open(phrase_f, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
+        writer.writeheader()
+        writer.writerow({'Type': "CUE-public", 'Spans': public_ret[0]})
+        writer.writerow({'Type': "CUE-private", 'Spans': private_ret[0]})
+
+    with open(sent_f, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Indices'])
+        writer.writeheader()
+        writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
+        writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
