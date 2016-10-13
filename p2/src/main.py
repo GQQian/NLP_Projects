@@ -10,7 +10,7 @@ def main():
 ##### replace the function below with whatever function you want to call from test.py #######
 #############################################################################################
 #############################################################################################
-    uncertain_detection_biweo()
+    uncertain_detection_hmm()
 
 if __name__ == "__main__":
     main()
