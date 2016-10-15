@@ -135,7 +135,7 @@ def uncertain_detection_bm():
     uncertain_sent_detection_bm()
 
 
-def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_bw_model):
+def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
     ############ use training data to train hmm model ############
     dir_train = os.getcwd() + "/train/"
     data_combined = []
@@ -150,6 +150,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_bw_model):
     hmm = model()
     hmm.train(data_combined)
 
+
     ############ use test data to get accuracy ############
     data_combined = []
     for root, dirs, filenames in os.walk(dir_train):
@@ -159,15 +160,17 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_bw_model):
             data = sent_process_biweo(root + f)
             data_combined += data
 
-    correct, _sum = 0, 0
+    phrase_correct, phrase_sum = 0, 0
+    sent_correct, sent_sum = 0, len(data_combined)
     for sent in data_combined:
         tags = hmm.tag_sentence(sent)
         for i, tag in enumerate(tags):
             if sent[i][2] != 'O' :
-                _sum += 1
-                correct += 1 if sent[i][2] == tag else 0
+                phrase_sum += 1
+                phrase_correct += 1 if sent[i][2] == tag else 0
 
-    print 1.0 * correct / _sum
+    print "phrase accuracy: {}".format(1.0 * phrase_correct / phrase_sum)
+    # print "sentence accuracy: {}".format(1.0 * sent_correct / sent_sum)
 
 
     ############ prase and sent detection ############
