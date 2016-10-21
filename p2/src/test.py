@@ -163,6 +163,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
     phrase_correct, phrase_sum = 0, 0
     sent_correct, sent_sum = 0, len(data_combined)
     for sent in data_combined:
+        print(sent)
         tags = hmm.tag_sentence(sent)
         for i, tag in enumerate(tags):
             if sent[i][2] != 'O' :
