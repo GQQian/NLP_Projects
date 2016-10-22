@@ -1,10 +1,9 @@
 import os
-from preprocessor import process, generate_path, sent_process, sent_process_bmweo, sent_process_bio
+from preprocessor import *
 from baseline_model import baseline_model
-from hmm_model import hmm_model
+from hmm_model import *
 from gt_ngram import gt_ngram
 from ngram import ngram
-from hmm_model import hmm_bw_model, hmm_forward_model, hmm_viterbi_model
 import csv
 import sys
 
@@ -37,7 +36,7 @@ def uncertain_detection_bm():
                     data_combined += data
             data_combined.pop(0)
             print "# tokens in public folder: {}".format(len(data_combined))
-            pub_result = bm.label_phrase_untagged(data_combined)
+            pub_result = bm.label(data_combined)
 
             pub_result_str = ""
             for label in pub_result:
@@ -54,7 +53,7 @@ def uncertain_detection_bm():
                     data = process(dir_pri + f)
                     data_combined += data
             print "# tokens in private folder: {}".format(len(data_combined))
-            pri_result = bm.label_phrase_untagged(data_combined)
+            pri_result = bm.label(data_combined)
 
             for label in pri_result:
                 pri_result_str += str(label[0]) + '-' + str(label[1]) + ' '
@@ -135,7 +134,7 @@ def uncertain_detection_bm():
     uncertain_sent_detection_bm()
 
 
-def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
+def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model, file_prefix = "viterbi", tagging = sent_process_bio):
     ############ use training data to train hmm model ############
     dir_train = os.getcwd() + "/train/"
     data_combined = []
@@ -144,7 +143,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
             # split data into training and test set with train_ratio
             if i > len(filenames) * train_ratio:
                 break
-            data = sent_process_bio(root + f)
+            data = tagging(root + f)
             data_combined += data
 
     hmm = model()
@@ -157,7 +156,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
         start = int(len(filenames) * train_ratio + 1)
         for i in xrange(start, len(filenames)):
             f = filenames[i]
-            data = sent_process_bio(root + f)
+            data = tagging(root + f)
             data_combined += data
 
     # Precision p is the ratio of true positives tp to all predicted positives tp + fp.
@@ -219,8 +218,8 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
     # get and write results into csv
     public_ret, private_ret = get_detection_results("public"), get_detection_results("private")
 
-    phrase_f = os.getcwd() + "/" + "hmm_phrase_result_1.csv"
-    sent_f = os.getcwd() + "/" + "hmm_sentence_result_1.csv"
+    phrase_f = os.getcwd() + "/" + "{}_phrase_result.csv".format(file_prefix)
+    sent_f = os.getcwd() + "/" + "{}_sentence_result.csv".format(file_prefix)
 
     with open(phrase_f, 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
