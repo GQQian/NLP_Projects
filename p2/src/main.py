@@ -11,10 +11,12 @@ def main():
 ##### replace the function below with whatever function you want to call from test.py #######
 #############################################################################################
 #############################################################################################
-    print "[Viterbi]"
-    uncertain_detection_hmm(model=hmm_viterbi_model)
-    print "\n[Forward]"
-    uncertain_detection_hmm(model=hmm_forward_model)
+    # print "[Viterbi]"
+    # uncertain_detection_hmm(model=hmm_viterbi_model)
+    # print "\n[Forward]"
+    # uncertain_detection_hmm(model=hmm_forward_model)
+    print "CRF"
+    uncertain_detection_crf()    
 
 if __name__ == "__main__":
     main()

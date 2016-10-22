@@ -4,6 +4,7 @@ from baseline_model import baseline_model
 from hmm_model import hmm_model
 from gt_ngram import gt_ngram
 from ngram import ngram
+from crf_model import crf_model
 from hmm_model import hmm_bw_model, hmm_forward_model, hmm_viterbi_model
 import csv
 import sys
@@ -193,8 +194,6 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
     print "Phrase F score: {}".format(phrase_f)
     print "Sentence F score: {}".format(sent_f)
 
-
-
     ############ prase and sent detection ############
     def get_detection_results(type):
         _dir = generate_path("test-{}".format(type))
@@ -233,6 +232,125 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
         writer.writeheader()
         writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
         writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
+
+
+def uncertain_detection_crf():
+    dir_train = os.getcwd() + "/train/"
+    train_ratio = .8
+    train_sents, test_sents = [], []
+    for root, dirs, filenames in os.walk(dir_train):
+        for i, f in enumerate(filenames):
+            # split data into training and test set with train_ratio
+            if i > len(filenames) * train_ratio:
+                data = sent_process_bmweo(root + f)
+                test_sents += data
+            else:
+                data = sent_process_bmweo(root + f)
+                train_sents += data
+
+    crf = crf_model()
+    crf.train(train_sents)
+
+    ############ use test data to get Mean F Score ############
+    data_combined = []
+    for root, dirs, filenames in os.walk(dir_train):
+        start = int(len(filenames) * train_ratio + 1)
+        for i in xrange(start, len(filenames)):
+            f = filenames[i]
+            data = sent_process_bmweo(root + f)
+            data_combined += data
+
+    # Precision p is the ratio of true positives tp to all predicted positives tp + fp.
+    # Recall r is the ratio of true positives to all actual positives tp + fn.
+    # The F score is given by
+    # F = 2pr/(p+r)
+    # p = tp/(tp+fp)   r = tp/(tp+fn)
+
+    [phrase_p_cum, phrase_r_cum, phrase_tp, sent_p_cum, sent_r_cum, sent_tp] = [0] * 6
+    for sent in data_combined:
+        correct_tags = [token[2] for token in sent]
+        correct_labels = crf.tag(sent)
+        correct_sent = False if len(correct_labels) == 0 else True
+
+        predict_labels = crf.tag(sent)
+        # print "{}".format(predict_labels)
+        predict_sent = False if len(predict_labels) == 0 else True
+
+        phrase_p_cum += len(predict_labels) # tp+fp
+        phrase_r_cum += len(correct_labels) # tp+fn
+        sent_p_cum += 1 # tp+fp
+        sent_r_cum += 1 # tp+fn
+
+        intersect = [label for label in correct_labels if label in predict_labels]
+        phrase_tp += len(intersect)
+        sent_tp += predict_sent == correct_sent
+
+    phrase_p, phrase_r = 1.0 * phrase_tp / phrase_p_cum, 1.0 * phrase_tp / phrase_r_cum
+    sent_p, sent_r = 1.0 * sent_tp / sent_p_cum, 1.0 * sent_tp / sent_r_cum
+
+    phrase_f = 1.0 * 2 * (phrase_p * phrase_r) / (phrase_p + phrase_r)
+    sent_f = 1.0 * 2 * (sent_p * sent_r) / (sent_p + sent_r)
+
+    print "Phrase F score: {}".format(phrase_f)
+    print "Sentence F score: {}".format(sent_f)
+
+
+    def get_detection_results(type):
+        _dir = generate_path("test-{}".format(type))
+        data_combined = []
+        for root, dirs, filenames in os.walk(_dir):
+            for f in filenames:
+                data = sent_process(_dir + f)
+                data_combined += data
+
+        phrase_ret, sent_ret = [], []
+        phrase_index = 0
+        sums = 0
+        for sent_index, sent in enumerate(data_combined):
+            labels = []
+            left, right = 0, 0
+            tags = crf.tag(sent)
+            sums += len(tags)
+            # print "tags: {}".format(tags)
+            while left < len(sent):
+                if tags[left] == 'W':
+                    labels.append(tuple([left, left]))
+                    left += 1
+                elif tags[left] == 'B':
+                    right = left + 1
+                    while right < len(sent) and tags[right] != 'O':
+                        right += 1
+                    labels.append(tuple([left, right - 1]))
+                    left = right
+                else:
+                    left += 1
+
+            if len(labels) > 0:
+                sent_ret.append(str(sent_index))
+                for label in labels:
+                    phrase_ret.append("{}-{}".format(label[0] + phrase_index, label[1] + phrase_index))
+            phrase_index += len(sent)
+
+        return (" ".join(phrase_ret), " ".join(sent_ret))
+
+    public_ret, private_ret = get_detection_results("public"), get_detection_results("private")
+
+    phrase_f = os.getcwd() + "/" + "crf_phrase_result.csv"
+    sent_f = os.getcwd() + "/" + "crf_sentence_result.csv"
+    # print "public_ret phrase: {}".format(len(public_ret[0]))
+    # print "public_ret sentence: {}".format(len(public_ret[1]))
+    with open(phrase_f, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
+        writer.writeheader()
+        writer.writerow({'Type': "CUE-public", 'Spans': public_ret[0]})
+        writer.writerow({'Type': "CUE-private", 'Spans': private_ret[0]})
+
+    with open(sent_f, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Indices'])
+        writer.writeheader()
+        writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
+        writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
+
 
 def get_cues():
     """

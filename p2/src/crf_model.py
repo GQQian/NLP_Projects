@@ -11,27 +11,54 @@ import csv
 # print(sklearn.__version__)
 # input 
 
-# Data format:
-dir_train = os.getcwd() + "/train/"
-train_sents, test_sents = [], []
-train_ratio = .8
+class crf_model(object):
+    def __init__(self, filename = "trained_model"):
+        self.filename = filename
+        self.tagger = None
 
-for root, dirs, filenames in os.walk(dir_train):
-    for i, f in enumerate(filenames):
-        # split data into training and test set with train_ratio
-        if i > len(filenames) * train_ratio:
-            data = sent_process_bmweo(root + f)
-            test_sents += data
-        data = sent_process_bmweo(root + f)
-        train_sents += data
+    def train(self, tagged_sentence):
+        X_train = [sent2features(s) for s in tagged_sentence]
+        y_train = [sent2labels(s) for s in tagged_sentence]
+        trainer = pycrfsuite.Trainer(verbose = False)
+
+        # print "{}".format(X_train)
+        # print "{}".format(y_train)
+
+        for xseq, yseq in zip(X_train, y_train):
+            trainer.append(xseq, yseq)
+
+        # Set training parameters. We will use L-BFGS training algorithm 
+        # (it is default) with Elastic Net (L1 + L2) regularization.
+        trainer.set_params({
+            'c1': 1.0,   # coefficient for L1 penalty
+            'c2': 1e-3,  # coefficient for L2 penalty
+            'max_iterations': 50,  # stop earlier
+
+            # include transitions that are possible, but not observed
+            'feature.possible_transitions': True
+        })
+        # Possible parameters for the default training algorithm:
+        trainer.params()
+        trainer.train(self.filename)
+
+        self.tagger = pycrfsuite.Tagger()
+        self.tagger.open(self.filename) # here??
+
+
+    def tag(self, untagged_sentence):
+        # print "{}".format(sent2features(untagged_sentence))
+        return self.tagger.tag(sent2features(sent2features(untagged_sentence)))
+
 
 # ## Features
 # 
-# Next, define some features. In this example we use word identity, word suffix, word shape and word POS tag; also, some information from nearby words is used. 
+# Next, define some features. In this example we use word identity, word 
+# suffix, word shape and word POS tag; also, some information from nearby words is used. 
 # 
-# This makes a simple baseline, but you certainly can add and remove some features to get (much?) better results - experiment with it.
-print "Test print input: {}".format(test_sents[0])
-print "Test print input: {}".format(train_sents[0])
+# This makes a simple baseline, but you certainly can add and remove some features to get 
+# (much?) better results - experiment with it.
+# print "Test print input: {}".format(test_sents[0])
+# print "Test print input: {}".format(train_sents[0])
 
 def word2features(sent, i):
     word = sent[i][0]
@@ -72,7 +99,7 @@ def word2features(sent, i):
         ])
     else:
         features.append('EOS')
-                
+     
     return features
 
 
@@ -83,25 +110,25 @@ def sent2labels(sent):
     return [label for token, postag, label in sent]
 
 def sent2tokens(sent):
-    return [token for token, postag, label in sent]    
+    return [token for token, postag, label in sent]
 
 
 # This is what word2features extracts:
 
 # In[7]:
 
-sent2features(train_sents[0])[0]
+# sent2features(train_sents[0])[0]
 
 
 # Extract the features from the data:
 
 # In[8]:
 
-X_train = [sent2features(s) for s in train_sents]
-y_train = [sent2labels(s) for s in train_sents]
+# X_train = [sent2features(s) for s in train_sents]
+# y_train = [sent2labels(s) for s in train_sents]
 
-X_test = [sent2features(s) for s in test_sents]
-y_test = [sent2labels(s) for s in test_sents]
+# X_test = [sent2features(s) for s in test_sents]
+# y_test = [sent2labels(s) for s in test_sents]
 
 
 # ## Train the model
@@ -111,37 +138,33 @@ y_test = [sent2labels(s) for s in test_sents]
 
 # In[9]:
 
-trainer = pycrfsuite.Trainer(verbose=False)
+# trainer = pycrfsuite.Trainer(verbose=False)
 
-for xseq, yseq in zip(X_train, y_train):
-    trainer.append(xseq, yseq)
+# for xseq, yseq in zip(X_train, y_train):
+#     trainer.append(xseq, yseq)
 
 
-# Set training parameters. We will use L-BFGS training algorithm (it is default) with Elastic Net (L1 + L2) regularization.
+# Set training parameters. We will use L-BFGS training algorithm (it is default) with Elastic Net 
+# (L1 + L2) regularization.
 
 # In[10]:
 
 
 
-trainer.set_params({
-    'c1': 1.0,   # coefficient for L1 penalty
-    'c2': 1e-3,  # coeff9icient for L2 penalty
-    'max_iterations': 50,  # stop earlier
+# trainer.set_params({
+#     'c1': 1.0,   # coefficient for L1 penalty
+#     'c2': 1e-3,  # coeff9icient for L2 penalty
+#     'max_iterations': 50,  # stop earlier
 
-    # include transitions that are possible, but not observed
-    'feature.possible_transitions': True
-})
-# Possible parameters for the default training algorithm:
-trainer.params()
-trainer.train("training data")
+#     # include transitions that are possible, but not observed
+#     'feature.possible_transitions': True
+# })
+# # Possible parameters for the default training algorithm:
 
-
-# trainer.train saves model to a file:
-
-# In[ ]:
-
-
-# We can also get information about the final state of the model by looking at the trainer's logparser. If we had tagged our input data using the optional group argument in add, and had used the optional holdout argument during train, there would be information about the trainer's performance on the holdout set as well. 
+# We can also get information about the final state of the model by looking at the 
+# trainer's logparser. If we had tagged our input data using the optional group argument 
+# in add, and had used the optional holdout argument during train, there would be 
+# information about the trainer's performance on the holdout set as well. 
 
 # In[ ]:
 
@@ -151,7 +174,8 @@ trainer.train("training data")
 # We can also get this information for every step using trainer.logparser.iterations
 
 
-# print "Length of last iteration: {}\n\n Info about last iteration: {}".format(len(trainer.logparser.iterations), trainer.logparser.iterations[-1])
+# print "Length of last iteration: {}\n\n Info about last iteration: 
+# {}".format(len(trainer.logparser.iterations), trainer.logparser.iterations[-1])
 
 
 # ## Make predictions
@@ -160,8 +184,8 @@ trainer.train("training data")
 
 # In[ ]:
 
-tagger = pycrfsuite.Tagger()
-tagger.open('training data')
+# tagger = pycrfsuite.Tagger()
+# tagger.open('training data')
 
 
 # Let's tag a sentence to see how it works:
@@ -170,72 +194,6 @@ tagger.open('training data')
 ####################################
 ########## writing output ##########
 ####################################
-
-def get_detection_results(tagger, type):
-    
-    _dir = generate_path("test-{}".format(type))
-    data_combined = []
-    for root, dirs, filenames in os.walk(_dir):
-        for f in filenames:
-            data = sent_process(_dir + f)
-            data_combined += data
-
-    phrase_ret, sent_ret = [], []
-    phrase_index = 0
-    sums = 0
-    for sent_index, sent in enumerate(data_combined):
-        labels = []
-        left, right = 0, 0
-        tags = tagger.tag(sent2features(sent))
-        sums += len(tags)
-        print "tags: {}".format(tags)
-        while left < len(sent):
-            if tags[left] == 'W':
-                labels.append(tuple([left, left]))
-                left += 1
-            elif tags[left] == 'B':
-                right = left + 1
-                while right < len(sent) and tags[right] != 'O':
-                    right += 1
-                labels.append(tuple([left, right - 1]))
-                left = right
-            else:
-                left += 1
-
-        if len(labels) > 0:
-            sent_ret.append(str(sent_index))
-            for label in labels:
-                phrase_ret.append("{}-{}".format(label[0] + phrase_index, label[1] + phrase_index))
-        phrase_index += len(sent)
-
-    return (" ".join(phrase_ret), " ".join(sent_ret))
-
-# get and write results into csv
-public_ret, private_ret = get_detection_results(tagger, "public"), get_detection_results(tagger, "private")
-
-phrase_f = os.getcwd() + "/" + "crf_phrase_result.csv"
-sent_f = os.getcwd() + "/" + "crf_sentence_result.csv"
-print "public_ret phrase: {}".format(len(public_ret[0]))
-print "public_ret sentence: {}".format(len(public_ret[1]))
-with open(phrase_f, 'w') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
-    writer.writeheader()
-    writer.writerow({'Type': "CUE-public", 'Spans': public_ret[0]})
-    writer.writerow({'Type': "CUE-private", 'Spans': private_ret[0]})
-
-with open(sent_f, 'w') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Indices'])
-    writer.writeheader()
-    writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
-    writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
-
-
-
-# example_sent = test_sents[0]
-# print "{}\n\n".format(' '.join(sent2tokens(example_sent)))
-# print("Predicted:", ' '.join(tagger.tag(sent2features(example_sent))))
-# print("Correct:  ", ' '.join(sent2labels(example_sent)))
-
 
 # ## Evaluate the model
 
@@ -266,52 +224,58 @@ def bio_classification_report(y_true, y_pred):
 
 # Predict entity labels for all sentences in our testing set ('testb' Spanish data):
 
-y_pred = [tagger.tag(xseq) for xseq in X_test]
+# y_pred = [tagger.tag(xseq) for xseq in X_test]
 
 
 # ..and check the result. Note this report is not comparable to results in CONLL2002 
 # papers because here we check per-token results (not per-entity). Per-entity numbers will be worse.  
 
-print(bio_classification_report(y_test, y_pred))
+# print(bio_classification_report(y_test, y_pred))
 
 
 # ## Let's check what classifier learned
 
-from collections import Counter
-info = tagger.info()
+# from collections import Counter
+# info = tagger.info()
 
-def print_transitions(trans_features):
-    for (label_from, label_to), weight in trans_features:
-        print("%-6s -> %-7s %0.6f" % (label_from, label_to, weight))
+# def print_transitions(trans_features):
+#     for (label_from, label_to), weight in trans_features:
+#         print("%-6s -> %-7s %0.6f" % (label_from, label_to, weight))
 
-print("Top likely transitions:")
-print_transitions(Counter(info.transitions).most_common(15))
+# print("Top likely transitions:")
+# print_transitions(Counter(info.transitions).most_common(15))
 
-print("\nTop unlikely transitions:")
-print_transitions(Counter(info.transitions).most_common()[-15:])
+# print("\nTop unlikely transitions:")
+# print_transitions(Counter(info.transitions).most_common()[-15:])
 
 
-# We can see that, for example, it is very likely that the beginning of an organization name (B-ORG) will be followed by a token inside organization name (I-ORG), but transitions to I-ORG from tokens with other labels are penalized. Also note I-PER -> B-LOC transition: a positive weight means that model thinks that a person name is often followed by a location.
+# We can see that, for example, it is very likely that the beginning of an organization name (B-ORG) 
+# will be followed by a token inside organization name (I-ORG), but transitions to I-ORG from tokens 
+# with other labels are penalized. Also note I-PER -> B-LOC transition: a positive weight means that 
+# model thinks that a person name is often followed by a location.
 # 
 # Check the state features:
 
 # In[ ]:
 
-def print_state_features(state_features):
-    for (attr, label), weight in state_features:
-        print("%0.6f %-6s %s" % (weight, label, attr))    
+# def print_state_features(state_features):
+#     for (attr, label), weight in state_features:
+#         print("%0.6f %-6s %s" % (weight, label, attr))    
 
-print("Top positive:")
-print_state_features(Counter(info.state_features).most_common(20))
+# print("Top positive:")
+# print_state_features(Counter(info.state_features).most_common(20))
 
-print("\nTop negative:")
-print_state_features(Counter(info.state_features).most_common()[-20:])
+# print("\nTop negative:")
+# print_state_features(Counter(info.state_features).most_common()[-20:])
 
 # Some observations:
 # 
-# * **8.743642 B-ORG  word.lower=psoe-progresistas** - the model remembered names of some entities - maybe it is overfit, or maybe our features are not adequate, or maybe remembering is indeed helpful;
-# * **5.195429 I-LOC  -1:word.lower=calle**: "calle" is a street in Spanish; model learns that if a previous word was "calle" then the token is likely a part of location;
-# * **-3.529449 O      word.isupper=True**, ** -2.913103 O      word.istitle=True **: UPPERCASED or TitleCased words are likely entities of some kind;
+# * **8.743642 B-ORG  word.lower=psoe-progresistas** - the model remembered names of some entities - maybe 
+# it is overfit, or maybe our features are not adequate, or maybe remembering is indeed helpful;
+# * **5.195429 I-LOC  -1:word.lower=calle**: "calle" is a street in Spanish; model learns that if a previous 
+# word was "calle" then the token is likely a part of location;
+# * **-3.529449 O      word.isupper=True**, ** -2.913103 O      word.istitle=True **: UPPERCASED or TitleCased 
+# words are likely entities of some kind;
 # * **-2.585756 O      postag=NP** - proper nouns (NP is a proper noun in the Spanish tagset) are often entities.
 
 # ## What to do next
@@ -321,8 +285,3 @@ print_state_features(Counter(info.state_features).most_common()[-20:])
 # 3. Apply the model to 'testb' data again.
 # 
 # The model in this notebook is just a starting point; you certainly can do better!
-
-# In[ ]:
-
-
-
