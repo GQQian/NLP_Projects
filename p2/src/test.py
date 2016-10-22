@@ -1,5 +1,5 @@
 import os
-from preprocessor import process, generate_path, sent_process, sent_process_bmweo, sent_process_bio
+from preprocessor import process, generate_path, sent_process, sent_process_biweo
 from baseline_model import baseline_model
 from hmm_model import hmm_model
 from gt_ngram import gt_ngram
@@ -37,7 +37,7 @@ def uncertain_detection_bm():
                     data_combined += data
             data_combined.pop(0)
             print "# tokens in public folder: {}".format(len(data_combined))
-            pub_result = bm.label_phrase_untagged(data_combined)
+            pub_result = bm.label_phrase(data_combined)
 
             pub_result_str = ""
             for label in pub_result:
@@ -54,7 +54,7 @@ def uncertain_detection_bm():
                     data = process(dir_pri + f)
                     data_combined += data
             print "# tokens in private folder: {}".format(len(data_combined))
-            pri_result = bm.label_phrase_untagged(data_combined)
+            pri_result = bm.label_phrase(data_combined)
 
             for label in pri_result:
                 pri_result_str += str(label[0]) + '-' + str(label[1]) + ' '
@@ -144,55 +144,33 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
             # split data into training and test set with train_ratio
             if i > len(filenames) * train_ratio:
                 break
-            data = sent_process_bio(root + f)
+            data = sent_process_biweo(root + f)
             data_combined += data
 
     hmm = model()
     hmm.train(data_combined)
 
 
-    ############ use test data to get Mean F Score ############
+    ############ use test data to get accuracy ############
     data_combined = []
     for root, dirs, filenames in os.walk(dir_train):
         start = int(len(filenames) * train_ratio + 1)
         for i in xrange(start, len(filenames)):
             f = filenames[i]
-            data = sent_process_bio(root + f)
+            data = sent_process_biweo(root + f)
             data_combined += data
 
-    # Precision p is the ratio of true positives tp to all predicted positives tp + fp.
-    # Recall r is the ratio of true positives to all actual positives tp + fn.
-    # The F score is given by
-    # F = 2pr/(p+r)
-    # p = tp/(tp+fp)   r = tp/(tp+fn)
-
-    [phrase_p_cum, phrase_r_cum, phrase_tp, sent_p_cum, sent_r_cum, sent_tp] = [0] * 6
+    phrase_correct, phrase_sum = 0, 0
+    sent_correct, sent_sum = 0, len(data_combined)
     for sent in data_combined:
-        correct_tags = [token[2] for token in sent]
-        correct_labels = hmm.label_phrase_tagged(correct_tags)
-        correct_sent = False if len(correct_labels) == 0 else True
+        tags = hmm.tag_sentence(sent)
+        for i, tag in enumerate(tags):
+            if sent[i][2] != 'O' :
+                phrase_sum += 1
+                phrase_correct += 1 if sent[i][2] == tag else 0
 
-        predict_labels = hmm.label_phrase_untagged(sent)
-        predict_sent = False if len(predict_labels) == 0 else True
-
-        phrase_p_cum += len(predict_labels) # tp+fp
-        phrase_r_cum += len(correct_labels) # tp+fn
-        sent_p_cum += 1 # tp+fp
-        sent_r_cum += 1 # tp+fn
-
-        intersect = [label for label in correct_labels if label in predict_labels]
-        phrase_tp += len(intersect)
-        sent_tp += predict_sent == correct_sent
-
-    phrase_p, phrase_r = 1.0 * phrase_tp / phrase_p_cum, 1.0 * phrase_tp / phrase_r_cum
-    sent_p, sent_r = 1.0 * sent_tp / sent_p_cum, 1.0 * sent_tp / sent_r_cum
-
-    phrase_f = 1.0 * 2 * (phrase_p * phrase_r) / (phrase_p + phrase_r)
-    sent_f = 1.0 * 2 * (sent_p * sent_r) / (sent_p + sent_r)
-
-    print "Phrase F score: {}".format(phrase_f)
-    print "Sentence F score: {}".format(sent_f)
-
+    print "phrase accuracy: {}".format(1.0 * phrase_correct / phrase_sum)
+    # print "sentence accuracy: {}".format(1.0 * sent_correct / sent_sum)
 
 
     ############ prase and sent detection ############
@@ -207,7 +185,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
         phrase_ret, sent_ret = [], []
         phrase_index = 0
         for sent_index, sent in enumerate(data_combined):
-            labels = hmm.label_phrase_untagged(sent)
+            labels = hmm.label_phrase(sent)
             if len(labels) > 0:
                 sent_ret.append(str(sent_index))
                 for label in labels:
@@ -219,8 +197,8 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
     # get and write results into csv
     public_ret, private_ret = get_detection_results("public"), get_detection_results("private")
 
-    phrase_f = os.getcwd() + "/" + "hmm_phrase_result_1.csv"
-    sent_f = os.getcwd() + "/" + "hmm_sentence_result_1.csv"
+    phrase_f = os.getcwd() + "/" + "hmm_phrase_result.csv"
+    sent_f = os.getcwd() + "/" + "hmm_sentence_result.csv"
 
     with open(phrase_f, 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
@@ -233,35 +211,3 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
         writer.writeheader()
         writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
         writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
-
-def get_cues():
-    """
-    return all cues in training data
-    """
-    cues = {}
-
-    dir_train = os.getcwd() + "/train/"
-    data_combined = []
-    for root, dirs, filenames in os.walk(dir_train):
-        for i, f in enumerate(filenames):
-            data = sent_process(root + f)
-            data_combined += data
-
-    for sent in data_combined:
-        left = 0
-        while left < len(sent):
-            curr_tag = sent[left][2]
-            if curr_tag == '_':
-                left += 1
-                continue
-            else:
-                right = left + 1
-
-            while right < len(sent) and sent[right][2] == curr_tag:
-                right += 1
-
-            cue = tuple(sent[i][0] for i in xrange(left, right))
-            cues[cue] = cues.get(cue, 0) + 1
-
-            left = right
-    return cues

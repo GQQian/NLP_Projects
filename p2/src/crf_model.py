@@ -4,7 +4,7 @@ import nltk
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.preprocessing import LabelBinarizer
 import sklearn
-from preprocessor import process, generate_path, sent_process, sent_process_biweo
+from preprocessor import process, generate_path, sent_process, sent_process_bmweo
 import pycrfsuite
 import csv
 
@@ -20,9 +20,9 @@ for root, dirs, filenames in os.walk(dir_train):
     for i, f in enumerate(filenames):
         # split data into training and test set with train_ratio
         if i > len(filenames) * train_ratio:
-            data = sent_process_biweo(root + f)
+            data = sent_process_bmweo(root + f)
             test_sents += data
-        data = sent_process_biweo(root + f)
+        data = sent_process_bmweo(root + f)
         train_sents += data
 
 # ## Features
@@ -123,17 +123,17 @@ for xseq, yseq in zip(X_train, y_train):
 
 
 
-# trainer.set_params({
-#     'c1': 1.0,   # coefficient for L1 penalty
-#     'c2': 1e-3,  # coeff9icient for L2 penalty
-#     'max_iterations': 50,  # stop earlier
+trainer.set_params({
+    'c1': 1.0,   # coefficient for L1 penalty
+    'c2': 1e-3,  # coeff9icient for L2 penalty
+    'max_iterations': 50,  # stop earlier
 
-#     # include transitions that are possible, but not observed
-#     'feature.possible_transitions': True
-# })
-# # Possible parameters for the default training algorithm:
-# trainer.params()
-# trainer.train("training data")
+    # include transitions that are possible, but not observed
+    'feature.possible_transitions': True
+})
+# Possible parameters for the default training algorithm:
+trainer.params()
+trainer.train("training data")
 
 
 # trainer.train saves model to a file:
@@ -184,7 +184,7 @@ def get_detection_results(tagger, type):
     phrase_index = 0
     sums = 0
     for sent_index, sent in enumerate(data_combined):
-          = []
+        labels = []
         left, right = 0, 0
         tags = tagger.tag(sent2features(sent))
         sums += len(tags)
@@ -269,9 +269,8 @@ def bio_classification_report(y_true, y_pred):
 y_pred = [tagger.tag(xseq) for xseq in X_test]
 
 
-# ..and check the result. Note this report is not comparable to results in CONLL2002 papers because here we check per-token results (not per-entity). Per-entity numbers will be worse.  
-
-# In[ ]:
+# ..and check the result. Note this report is not comparable to results in CONLL2002 
+# papers because here we check per-token results (not per-entity). Per-entity numbers will be worse.  
 
 print(bio_classification_report(y_test, y_pred))
 
