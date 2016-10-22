@@ -169,6 +169,14 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
 
     [phrase_p_cum, phrase_r_cum, phrase_tp, sent_p_cum, sent_r_cum, sent_tp] = [0] * 6
     for sent in data_combined:
+<<<<<<< HEAD
+        print(sent)
+        tags = hmm.tag_sentence(sent)
+        for i, tag in enumerate(tags):
+            if sent[i][2] != 'O' :
+                phrase_sum += 1
+                phrase_correct += 1 if sent[i][2] == tag else 0
+=======
         correct_tags = [token[2] for token in sent]
         correct_labels = hmm.label_phrase_tagged(correct_tags)
         correct_sent = False if len(correct_labels) == 0 else True
@@ -193,6 +201,7 @@ def uncertain_detection_hmm(train_ratio = 0.8, model = hmm_forward_model):
 
     print "Phrase F score: {}".format(phrase_f)
     print "Sentence F score: {}".format(sent_f)
+>>>>>>> 99e66b0461289c41b2e6c1a754735915b6453046
 
     ############ prase and sent detection ############
     def get_detection_results(type):
