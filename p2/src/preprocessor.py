@@ -35,10 +35,10 @@ def sent_process(file):
     return sentence_split
 
 
-def sent_process_biweo(file):
+def sent_process_bmweo(file):
     """
     return: a list of sentences. Sentences are repesented by a list of tuples
-            tuple format: (apple, NN, B/I/W/E/O)
+            tuple format: (apple, NN, B/M/W/E/O)
     """
     sentence_split = sent_process(file)
     for sent in sentence_split:
@@ -61,7 +61,34 @@ def sent_process_biweo(file):
                 sent[left] = (sent[left][0], sent[left][1], 'B')
                 sent[right - 1] = (sent[right - 1][0], sent[right - 1][1], 'E')
                 for i in xrange(left + 1, right - 1):
-                    sent[i] = (sent[i][0], sent[i][1], 'I')
+                    sent[i] = (sent[i][0], sent[i][1], 'M')
+                left = right
+
+    return sentence_split
+
+
+def sent_process_bio(file):
+    """
+    return: a list of sentences. Sentences are repesented by a list of tuples
+            tuple format: (apple, NN, B/I/O)
+    """
+    sentence_split = sent_process(file)
+
+    for sent in sentence_split:
+        left = 0
+        while left < len(sent):
+            # O: outside
+            if sent[left][2] == '_':
+                sent[left] = (sent[left][0], sent[left][1], 'O')
+                left += 1
+            # BI: begin, in
+            else:
+                cue = sent[left][2]
+                sent[left] = (sent[left][0], sent[left][1], 'B')
+                right = left + 1
+                while right != len(sent) and sent[right][2] == cue:
+                    sent[right] = (sent[right - 1][0], sent[right - 1][1], 'I')
+                    right += 1
                 left = right
 
     return sentence_split
