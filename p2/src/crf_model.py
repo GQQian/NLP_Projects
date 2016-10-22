@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelBinarizer
 import sklearn
 from preprocessor import process, generate_path, sent_process, sent_process_biweo
 import pycrfsuite
+import csv
 
 # print(sklearn.__version__)
 # input 
@@ -29,7 +30,8 @@ for root, dirs, filenames in os.walk(dir_train):
 # Next, define some features. In this example we use word identity, word suffix, word shape and word POS tag; also, some information from nearby words is used. 
 # 
 # This makes a simple baseline, but you certainly can add and remove some features to get (much?) better results - experiment with it.
-
+print "Test print input: {}".format(test_sents[0])
+print "Test print input: {}".format(train_sents[0])
 
 def word2features(sent, i):
     word = sent[i][0]
@@ -119,28 +121,19 @@ for xseq, yseq in zip(X_train, y_train):
 
 # In[10]:
 
-trainer.set_params({
-    'c1': 1.0,   # coefficient for L1 penalty
-    'c2': 1e-3,  # coeff9icient for L2 penalty
-    'max_iterations': 50,  # stop earlier
-
-    # include transitions that are possible, but not observed
-    'feature.possible_transitions': True
-})
 
 
-# Possible parameters for the default training algorithm:
+# trainer.set_params({
+#     'c1': 1.0,   # coefficient for L1 penalty
+#     'c2': 1e-3,  # coeff9icient for L2 penalty
+#     'max_iterations': 50,  # stop earlier
 
-# In[11]:
-
-trainer.params()
-
-
-# Train the model:
-
-# In[12]:
-
-trainer.train("training data")
+#     # include transitions that are possible, but not observed
+#     'feature.possible_transitions': True
+# })
+# # Possible parameters for the default training algorithm:
+# trainer.params()
+# trainer.train("training data")
 
 
 # trainer.train saves model to a file:
@@ -152,13 +145,13 @@ trainer.train("training data")
 
 # In[ ]:
 
-print("Info about final state: %s\n\n" % trainer.logparser.last_iteration)
+# print("Info about final state: %s\n\n" % trainer.logparser.last_iteration)
 
 
 # We can also get this information for every step using trainer.logparser.iterations
 
 
-print "Length of last iteration: {}\n\n Info about last iteration: {}".format(len(trainer.logparser.iterations), trainer.logparser.iterations[-1])
+# print "Length of last iteration: {}\n\n Info about last iteration: {}".format(len(trainer.logparser.iterations), trainer.logparser.iterations[-1])
 
 
 # ## Make predictions
@@ -178,10 +171,70 @@ tagger.open('training data')
 ########## writing output ##########
 ####################################
 
-example_sent = test_sents[0]
-print "{}\n\n".format(' '.join(sent2tokens(example_sent)))
-print("Predicted:", ' '.join(tagger.tag(sent2features(example_sent))))
-print("Correct:  ", ' '.join(sent2labels(example_sent)))
+def get_detection_results(tagger, type):
+    
+    _dir = generate_path("test-{}".format(type))
+    data_combined = []
+    for root, dirs, filenames in os.walk(_dir):
+        for f in filenames:
+            data = sent_process(_dir + f)
+            data_combined += data
+
+    phrase_ret, sent_ret = [], []
+    phrase_index = 0
+    sums = 0
+    for sent_index, sent in enumerate(data_combined):
+          = []
+        left, right = 0, 0
+        tags = tagger.tag(sent2features(sent))
+        sums += len(tags)
+        print "tags: {}".format(tags)
+        while left < len(sent):
+            if tags[left] == 'W':
+                labels.append(tuple([left, left]))
+                left += 1
+            elif tags[left] == 'B':
+                right = left + 1
+                while right < len(sent) and tags[right] != 'O':
+                    right += 1
+                labels.append(tuple([left, right - 1]))
+                left = right
+            else:
+                left += 1
+
+        if len(labels) > 0:
+            sent_ret.append(str(sent_index))
+            for label in labels:
+                phrase_ret.append("{}-{}".format(label[0] + phrase_index, label[1] + phrase_index))
+        phrase_index += len(sent)
+
+    return (" ".join(phrase_ret), " ".join(sent_ret))
+
+# get and write results into csv
+public_ret, private_ret = get_detection_results(tagger, "public"), get_detection_results(tagger, "private")
+
+phrase_f = os.getcwd() + "/" + "crf_phrase_result.csv"
+sent_f = os.getcwd() + "/" + "crf_sentence_result.csv"
+print "public_ret phrase: {}".format(len(public_ret[0]))
+print "public_ret sentence: {}".format(len(public_ret[1]))
+with open(phrase_f, 'w') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Spans'])
+    writer.writeheader()
+    writer.writerow({'Type': "CUE-public", 'Spans': public_ret[0]})
+    writer.writerow({'Type': "CUE-private", 'Spans': private_ret[0]})
+
+with open(sent_f, 'w') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames = ['Type', 'Indices'])
+    writer.writeheader()
+    writer.writerow({'Type': "SENTENCE-public", 'Indices': public_ret[1]})
+    writer.writerow({'Type': "SENTENCE-private", 'Indices': private_ret[1]})
+
+
+
+# example_sent = test_sents[0]
+# print "{}\n\n".format(' '.join(sent2tokens(example_sent)))
+# print("Predicted:", ' '.join(tagger.tag(sent2features(example_sent))))
+# print("Correct:  ", ' '.join(sent2labels(example_sent)))
 
 
 # ## Evaluate the model
