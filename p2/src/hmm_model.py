@@ -8,6 +8,7 @@ class hmm_model(object):
         self.symbols = set()
         self.transitions = {}
         self.outputs = {} # key: (symbol, state), value: probability of P(symbol, state|state)
+        self.state_start_prob = {}
 
 
     def train(self, tagged_sentences = None):
@@ -20,11 +21,13 @@ class hmm_model(object):
         # merge all symbols and states
         symbol_content, state_content = [], []
         for sent in tagged_sentences:
+            self.state_start_prob[sent[0][2]] = self.state_start_prob.get(sent[0][2], 0) + 1
             for token in sent:
                 symbol_content.append(token[0])
                 state_content.append(token[2])
+        self.state_start_prob = dict((state, 1.0*self.state_start_prob[state]/len(tagged_sentences)) for state in self.state_start_prob)
 
-        # use ngram, gt_ngram to get states, symbols set, self.transitions
+        # use ngram, gt_ngram to get states, symbols set, transitions
         symbol_ngram = gt_ngram(" ".join(symbol_content))
         state_ngram = ngram(" ".join(state_content))
 
@@ -56,7 +59,7 @@ class hmm_model(object):
         return ['O'] * len(untagged_sentence)
 
 
-    def label_phrase(self, untagged_sentence):
+    def label_phrase_untagged(self, untagged_sentence):
         """
         parameter:
         tagged_sequences:
@@ -67,6 +70,9 @@ class hmm_model(object):
         """
 
         tags = self.tag_sentence(untagged_sentence)
+        return self.label_phrase_tagged(tags)
+
+    def label_phrase_tagged(self, tags):
         output = []
         left, right = 0, 0
         while left < len(tags):
@@ -102,8 +108,8 @@ class hmm_viterbi_model(hmm_model):
         _max = 0
 
         for _tuple in tuples:
-            if _tuple in self.outputs and self.outputs[_tuple] > _max:
-                _max = self.outputs[_tuple]
+            if _tuple in self.outputs and self.outputs[_tuple] > _max and _tuple[1] in self.state_start_prob:
+                _max = self.outputs[_tuple] * self.state_start_prob[_tuple[1]]
                 tags[0] = _tuple[1]
 
         # words after 1st one
@@ -113,10 +119,11 @@ class hmm_viterbi_model(hmm_model):
             _max = 0
 
             for _tuple in tuples:
-                if _tuple in self.outputs and tuple([tags[0], _tuple[1]]) in self.transitions and \
-                   self.outputs[_tuple] * self.transitions[tuple([tags[0], _tuple[1]])] > _max:
-                    _max = self.outputs[_tuple] * self.transitions[tuple([tags[0], _tuple[1]])]
-                    tags[i] = _tuple[1]
+                if _tuple in self.outputs and tuple([tags[0], _tuple[1]]) in self.transitions:
+                    curr = self.outputs[_tuple] * self.transitions[tuple([tags[0], _tuple[1]])]
+                    if curr > _max:
+                        _max = curr
+                        tags[i] = _tuple[1]
 
         return tags
 
@@ -137,11 +144,12 @@ class hmm_forward_model(hmm_model):
 
         # 1st word
         token = untagged_sentence[0]
+
         tuples = [tuple([token[0], state[0]]) for state in self.states]
 
         for _tuple in tuples:
-            if _tuple in self.outputs:
-                curr_score[_tuple[1]] = self.outputs[_tuple]
+            if _tuple in self.outputs and _tuple[1] in self.state_start_prob:
+                curr_score[_tuple[1]] = self.outputs[_tuple] * self.state_start_prob[_tuple[1]]
 
         tags[0] = max(curr_score.items(), key=lambda x: x[1])[0]
 
@@ -156,8 +164,13 @@ class hmm_forward_model(hmm_model):
                     curr_tag, curr_score[curr_tag] = _tuple[1], 0
                     for last_tag in last_score:
                         if tuple([last_tag, curr_tag]) in self.transitions:
-                            curr_score[curr_tag] += self.outputs[_tuple] * self.transitions[tuple([last_tag, curr_tag])] * \
+                            curr_score[curr_tag] += self.outputs[
+                            _tuple] * self.transitions[tuple([last_tag, curr_tag])] * \
                                                     last_score[last_tag]
+
+            # To avoid all later scorses are 0
+            if len(curr_score) == 0 or max(curr_score.values()) == 0:
+                curr_score['O'] = 1
 
             tags[i] = max(curr_score.items(), key=lambda x: x[1])[0]
 
