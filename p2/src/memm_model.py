@@ -30,13 +30,13 @@ class memm_model(object):
         self.boi_full_list = [] #store all the boi tags that occur in the training set
         self.boi_end_list = [] #store boi tags that are at the end of the sentence
         self.posStartList = [] #store pos that are begining of the sentence
-        self.BOI_list = ('B', 'I', 'O', 'W', 'E')
+        self.BOI_list = ('B', 'M', 'O', 'W', 'E')
         self.labeled_features = []
         self.pos_biew = []
         self.state_ngram = object
         self.transitions = {}
         self.pos_B = []
-        self.pos_I = []
+        self.pos_M = []
         self.pos_E = []
         self.word_confuse = []
         self.states = set()
@@ -50,7 +50,7 @@ class memm_model(object):
         #puc = '-'.decode("utf-8")
          #some char is outof ASCII
         features['ofB'] = pos in self.pos_B
-        features['ofI'] = pos in self.pos_I
+        features['ofM'] = pos in self.pos_M
         features['ofE'] = pos in self.pos_E
         features['start_of_sentence'] = pos in self.posStartList
         #features['end_of_sentence'] = pos in self.boi_end_list
@@ -86,8 +86,8 @@ class memm_model(object):
                 self.word_confuse.append(word)
             if(tag == 'B'):
                 self.pos_B.append(pos)
-            if(tag == 'I'):
-                self.pos_I.append(pos)
+            if(tag == 'M'):
+                self.pos_M.append(pos)
             if(tag == 'E'):
                 self.pos_E.append(pos)
             self.labeled_features.append(item)
@@ -128,80 +128,13 @@ class memm_model(object):
 
         self.maxent_classifier = MaxentClassifier.train(train_set, max_iter=2)
         pickle.dump(self.maxent_classifier , f)
-        """
-        self.dicE = {} #temporarry dic 
-        countTag = 0
-        countEnd = 0
-        #calculate the prior (End|state) = C(state, End)/C(state) 
-        for i in self.BOI_list:
-            for j  in range(len(self.boi_end_list)):
-                for f in self.boi_full_list:
-                    if j == 0:
-                        if i == f:
-                            countTag = countTag + 1 
-                if i == self.boi_end_list[j]:
-                    countEnd = countEnd + 1 
-            ProbE = format(countEnd/(countTag*1.0), '.5f')
-            self.dicE.update({i: {"END":ProbE}})
-
-            countEnd = 0
-            countTag = 0
-        """
+        
         f.close() 
 
 
 ###############################################################################################
 
     def tag_sentence(self, untagged_sentence):
-        """
-        tags = ['O'] * len(untagged_sentence)
-
-        # 1st word
-        token = untagged_sentence[0]
-        tuples = [tuple([token[0], state[0]]) for state in self.BOI_list]
-        word = token[0]
-        pos = token[1]
-        tRange = len(self.BOI_list)
-        wRange = len(untagged_sentence)
-        posterior_min = 0
-        features = self.MEMM_features(word,pos,'start')
-        probability = self.maxent_classifier.prob_classify(features) 
-        for t in range (tRange):
-            if(('start',self.BOI_list[t]) not in self.transitions):
-                posterior = 0
-            else:
-                posterior = self.transitions['start',self.BOI_list[t]] * float(probability.prob(self.BOI_list[t]))
-            if(posterior > posterior_min):  
-                tags[0] = self.BOI_list[t]
-        print(tags)
-
-
-        # words after 1st one
-        for w in range (1, wRange): 
-            token = untagged_sentence[w]
-            word = token[0]
-            pos = token[1]
-            posterior_min = 0
-            tagchosen = 0
-            features = self.MEMM_features(word,pos,tags[w-1])
-            probability = self.maxent_classifier.prob_classify(features) 
-            for t in range (tRange):
-                posterior = 0
-                if((tags[w-1],self.BOI_list[t]) not in self.transitions):
-                    posterior = 0
-                else:
-                    posterior = self.transitions[tags[w-1],self.BOI_list[t]] * float(probability.prob(self.BOI_list[t]))
-               
-                #print(probability)
-                #print(posterior)
-                if(posterior > posterior_min):  
-                    posterior_min = posterior
-                    tags[w] = self.BOI_list[t]
-            print(tags[w])
-
-        return tags
-
-        """
 
         wordList = []
         poslist = []
@@ -245,18 +178,12 @@ class memm_model(object):
                 else:
                     posterior = self.transitions[path[w-1],self.BOI_list[t]] * float(probability.prob(self.BOI_list[t]))
                
-                #print(probability)
-                #print(posterior)
                 if(posterior > posterior_min):  
                     posterior_min = posterior
                     tagchosen = t
-                #print(self.BOI_list[t], posterior)
-            #if(tagchosen != 2):
-                #print(tagchosen)
+
 
             path.append(self.BOI_list[tagchosen])
-
-        print (path)
         return path
 
         
