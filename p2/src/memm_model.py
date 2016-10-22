@@ -5,18 +5,7 @@
 ####################################################################################################
 ####################################################################################################
 
-"""
- feature of interest: f<b,s>(o_t,s_t) = 1 if b(o_t) is true and s = s_t, f = 0 otherwise
- Here, b(o_t) is the feature of interest. We determined that the feature to be discussed
- is that if the corresponding state of observation o_t was B(Beginning) or I(inside), and 
- the "next state" s is within the domain of the possible domain of s_t from the training set, 
- Then we set f = 1. For the E(end) tag, if the previous tag is I, and s is determined to be an 
- O(outside), W(single word), or B, we change the previous I tag to an E tag.
-
- notation: state: the BIWEO tags created by preprocessor. We do not use p-o-s tags here
-"""
 import nltk
-from nltk.stem.porter import *
 from nltk.classify import MaxentClassifier
 import pickle
 import os,sys
