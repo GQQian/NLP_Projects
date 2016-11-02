@@ -57,35 +57,3 @@ def question_preprocess(file):
 
 	return questions
 
-
-def patterns_preprocess(file):
-	patterns = {}
-
-	raw_content = open(file, 'r').read()
-	raw_content = raw_content.encode("utf8")
-	content_list = raw_content.split('\n')
-	for x in xrange(0, len(content_list)):
-		#print(content_list[x])
-		token = content_list[x].split()
-		if(token[0] not in patterns):
-			patterns[token[0]] = []
-		patterns[token[0]].append(token[1])
-	return patterns
-
-"""
-
-dir_train = os.getcwd() + "/question.txt"
-question_preprocess(dir_train)
-"""
-
-"""
-
-dir_train = os.getcwd() + "/doc_dev/100/"
-data_combined = []
-for root, dirs, filenames in os.walk(dir_train):
-    for i, f in enumerate(filenames):
-    	#print(root+f)
-        data = doc_process(root + f)
-        #print(data)
-
-"""
