@@ -80,21 +80,3 @@ def patterns_preprocess(file):
 			patterns[token[0]] = []
 		patterns[token[0]].append(token[1])
 	return patterns
-
-"""
-
-dir_train = os.getcwd() + "/question.txt"
-question_preprocess(dir_train)
-"""
-
-"""
-
-dir_train = os.getcwd() + "/doc_dev/100/"
-data_combined = []
-for root, dirs, filenames in os.walk(dir_train):
-    for i, f in enumerate(filenames):
-    	#print(root+f)
-        data = doc_process(root + f)
-        #print(data)
-
-"""
