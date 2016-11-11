@@ -40,6 +40,7 @@ for key in questions:
 	guess[key] = dict((x, ("", sys.maxint, "")) for x in xrange(0, 5))
 	question_ngram[key] = gt_ngram(questions[key])
 
+
 	for textfile in text[key]:
 		for x in xrange(0,len(text[key][textfile])):
 			sent = text[key][textfile][x]

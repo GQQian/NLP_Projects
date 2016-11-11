@@ -47,7 +47,7 @@ while ($line = <INPUT>) {
 			$oldq, $answer_rank, $recip;
 		$sum += $recip;
 	    }
-	    else { 
+	    else {
 	        printf "Question %3d: No correct answer found. \n", $oldq;
 		$num_notfound++;
 	    }
@@ -66,7 +66,7 @@ while ($line = <INPUT>) {
 		printf "lenght1 %d\n",length($p);
 		printf "lenght2 %d\n",length($response);
 		#$response=$p;
-	    #if ($p =~ /(?:\W|^)$response(?:\W|$)/i) 
+	    #if ($p =~ /(?:\W|^)$response(?:\W|$)/i)
 	    if ($response =~ /(?:\W|^)$p(?:\W|$)/i) {
 	    #if ($response =~ m/$p/) {
 		printf "get into the condition\n";
@@ -83,7 +83,7 @@ if ($qid != 0) { # i.e., submission file not empty
 		$qid, $answer_rank, $recip;
 	$sum += $recip;
     }
-    else { 
+    else {
         printf "Question %3d: No correct answer found. \n", $oldq;
 		$num_notfound++;
     }
@@ -92,5 +92,3 @@ if ($qid != 0) { # i.e., submission file not empty
 $ave = $sum / $num_qs;
 printf "\nMean reciprocal rank over %d questions is %.3f\n", $num_qs, $ave;
 print "$num_notfound questions had no answers found in top 5 responses.\n";
-
-
