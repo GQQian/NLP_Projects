@@ -39,8 +39,11 @@ def compute_train_score_and_label(test_or_dev = "dev"):
 
     for _id, question in questions.items():
         question_id = _id.replace('\r', '')
-        if question_id not in correct_answers or int(question_id) % 4 != 0:
+        if question_id not in correct_answers:
             continue
+
+        # if int(question_id) % 4 != 0:
+        #     continue
 
         print "[[{}]]".format(question_id)
 
@@ -73,7 +76,14 @@ def compute_train_score_and_label(test_or_dev = "dev"):
         dir = os.getcwd() + "/doc_{}/{}/".format(test_or_dev, _id)
 
         for filename in os.listdir(dir):
-            if int(filename) > 25:
+            try:
+                int(filename)
+            except ValueError:
+                print "!!!error"
+                print filename
+                continue
+
+            if int(filename) > 40:
                 continue
 
             f = dir + filename
@@ -159,11 +169,6 @@ def compute_train_score_and_label(test_or_dev = "dev"):
                 if len(timexes) > 0:
                     p_results_dict[p_idx[p]] = timexes
                     result_len += len(timexes)
-        #
-        # print idx_p.keys()
-        # print p_idx.values()
-        # print p_tfidf_score
-        # print p_results_dict
 
         # key: tuple(answer, idx of p), value: tfidf score
         answer_tfidf_score = {}
@@ -172,13 +177,6 @@ def compute_train_score_and_label(test_or_dev = "dev"):
                 # TODO a bug here   hard code
                 if idx in p_tfidf_score:
                     answer_tfidf_score[tuple([answer, idx])] = p_tfidf_score[idx]
-
-        # update p_idx and idx_p
-        # idx_p = dict((idx, idx_p[idx]) for idx in p_results_dict)
-        # p_idx = dict((p, p_idx[p]) for p in idx_p.values())
-
-        # print "\ntfidf_score"
-        # print answer_tfidf_score
 
         del p_results_dict
 
@@ -225,9 +223,6 @@ def compute_train_score_and_label(test_or_dev = "dev"):
 
         del p_chunk_score
 
-        # print "\nchunk_score"
-        # print answer_chunk_score
-
 
         ######################## get pre and post p score for answer ########################
         answer_pre_pro_score = {}
@@ -239,9 +234,6 @@ def compute_train_score_and_label(test_or_dev = "dev"):
             post_score = p_tfidf_score.get(pro_idx, 0)
 
             answer_pre_pro_score[answer_p] = 1.0 * (pre_score + post_score) / 2
-
-        # print "\npre_pro_score"
-        # print answer_pre_pro_score
 
 
         ######################## label the answer ########################
@@ -266,10 +258,7 @@ def compute_train_score_and_label(test_or_dev = "dev"):
 
             print answer_str
 
-
             answers.append(answer_str)
-
-        # break
 
     # write answers into answer_labeled.txt
     with open("train_answer_labeled.txt", "w") as f:
@@ -285,7 +274,6 @@ def compute_test_score(test_or_dev = "test"):
     # list of answers with format:
     # question id;answer;tfidf score;chunk score;pre_post score
     answers = []
-
 
     for _id, question in questions.items():
         question_id = _id.replace('\r', '')
@@ -413,11 +401,6 @@ def compute_test_score(test_or_dev = "test"):
                 if len(timexes) > 0:
                     p_results_dict[p_idx[p]] = timexes
                     result_len += len(timexes)
-        #
-        # print idx_p.keys()
-        # print p_idx.values()
-        # print p_tfidf_score
-        # print p_results_dict
 
         # key: tuple(answer, idx of p), value: tfidf score
         answer_tfidf_score = {}
@@ -426,13 +409,6 @@ def compute_test_score(test_or_dev = "test"):
                 # TODO a bug here   hard code
                 if idx in p_tfidf_score:
                     answer_tfidf_score[tuple([answer, idx])] = p_tfidf_score[idx]
-
-        # update p_idx and idx_p
-        # idx_p = dict((idx, idx_p[idx]) for idx in p_results_dict)
-        # p_idx = dict((p, p_idx[p]) for p in idx_p.values())
-
-        # print "\ntfidf_score"
-        # print answer_tfidf_score
 
         del p_results_dict
 
@@ -479,9 +455,6 @@ def compute_test_score(test_or_dev = "test"):
 
         del p_chunk_score
 
-        # print "\nchunk_score"
-        # print answer_chunk_score
-
 
         ######################## get pre and post p score for answer ########################
         answer_pre_pro_score = {}
@@ -493,9 +466,6 @@ def compute_test_score(test_or_dev = "test"):
             post_score = p_tfidf_score.get(pro_idx, 0)
 
             answer_pre_pro_score[answer_p] = 1.0 * (pre_score + post_score) / 2
-
-        # print "\npre_pro_score"
-        # print answer_pre_pro_score
 
 
         ######################## get the answer_str ########################
@@ -527,18 +497,6 @@ def compute_test_score(test_or_dev = "test"):
 def crf_model():
     train_data = []
     test_data = []
-
-    train_dir = os.getcwd() + "/train_answer_labeled_full.txt"
-    with open(train_dir) as f:
-        data = f.split("\n")
-        for i, entry in enumerate(data):
-            data[i] = data.split()
-            train_data
-    for root, dirs, filenames in os.walk(dir_train)
-
-
-    X_train = [sent2features(s) for s in train_sents]
-    y_train = [sent2labels(s) for s in train_sents]
 
     train_data.append([label, tfidf_score, chunk_score, pre_post_score])
 
@@ -582,7 +540,7 @@ def crf_model():
             test_data.append([_split[0], _split[1], _split[2], tfidf_score, chunk_score, pre_post_score])
 
     # TODO: Zili Xiang
-    
+    labels = 
 
 
 

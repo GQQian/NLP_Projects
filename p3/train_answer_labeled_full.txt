@@ -1078,7 +1078,7 @@
 211;Patricio Aylwin;0;4.39444915467;1;0.0
 211;Begin Sanchez;0;4.39444915467;3;0.0
 211;Antonio Aranibar;0;4.39444915467;2;0.0
-103;1980 blast which had the power of a 24megaton nuclear warhead or 2500;0;6.20455776257;0;0.0
+103;1980 blast which had the power of a 24megaton nuclear warheads or 2500;0;6.20455776257;0;0.0
 103;22000 people in 1985 while more than 2000 perished in pyroclastic flows blasts of hot gas rock and ash from Mexicos El Chichon in 1982;0;6.99301512293;0;3.10227888128
 103;1902 pyroclastic flows killed 29000 near Mount Pelee in Martinique 6000 near Santa Maria volcano in Guatemala and 1560 in the eruption of Soufriere on St Vincent said Tilling who is based in Washington DC His count shows 13080 more died during the six other deadly eruptions this century three volcanoes in 1951 and three others in 1911 1919 and 1963;0;8.91260796367;0;0.0
 103;1944;1;9.03777110662;1;0.0
