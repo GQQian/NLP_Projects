@@ -11,19 +11,16 @@ class gt_ngram(object):
     def __init__(self, content):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
 
-        # # use unk_1 to replace the first appeared word
-        # tokens = content.split()
-        # _set = set()
-        # for i, token in enumerate(tokens):
-        #     if token not in _set:
-        #         tokens[i] = '<unk_1>'
-        #         _set.add(token)
-        #
-        # self.content = content + ' '.join(tokens)
-
-        # add a unk_1
+        # use unk_1 to replace the first appeared word
         tokens = content.split()
-        self.content + content + ' unk_1'
+        _set = set()
+        for i, token in enumerate(tokens):
+            if token not in _set:
+                tokens[i] = '<unk_1>'
+                _set.add(token)
+
+        self.content = content + ' '.join(tokens)
+        tokens = content.split()
 
 
     def ntoken_count(self, n):
@@ -145,15 +142,3 @@ class gt_ngram(object):
         else:
             perp = exp(1.0 * perp / len(tokens))
         return perp
-
-"""
-def main():
-    indir = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/atheism/train_docs"
-    test_f = "/Users/Christina/DropBox/Courses/CS4740/cs4740/pro1/data/classification_task/test_for_classification/file_0.txt"
-    content = preprocess.preprocess_dir(indir)
-    atheism = gt_ngram(content)
-
-
-if __name__ == "__main__":
-    main()
-"""

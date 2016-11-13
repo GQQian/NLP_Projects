@@ -10,8 +10,6 @@ from timex import *
 import math
 
 
-
-
 def compute_train_score_and_label(test_or_dev = "dev"):
     dir_question = os.getcwd() + "/question_{}.txt".format(test_or_dev)
     questions = p3_preprocess.question_preprocess_with_pos(dir_question)
@@ -242,9 +240,13 @@ def compute_train_score_and_label(test_or_dev = "dev"):
 
         for answer_p in answer_tfidf_score:
             answer = answer_p[0]
+            idx = answer_p[1]
             tfidf_score = answer_tfidf_score[answer_p]
             chunk_score = answer_chunk_score[answer_p]
             pre_pro_score = answer_pre_pro_score[answer_p]
+
+
+            doc_id = p_doc_dict[idx]
 
             label = 0
             for _correct in correct_set:
@@ -253,8 +255,8 @@ def compute_train_score_and_label(test_or_dev = "dev"):
                     break
 
             # answer format:
-            # question id;answer;label;tfidf score;chunk score;pre_post score
-            answer_str = "{0};{1};{2};{3};{4};{5}\n".format(question_id, answer, label, tfidf_score, chunk_score, pre_pro_score)
+            # question id;doc_id;answer;label;tfidf score;chunk score;pre_post score
+            answer_str = "{0};{1};{2};{3};{4};{5};{6}\n".format(question_id, doc_id, answer, label, tfidf_score, chunk_score, pre_pro_score)
 
             print answer_str
 
@@ -302,7 +304,7 @@ def compute_test_score(test_or_dev = "test"):
 
         ######################## Passage retrieval ########################
         passages_tf = {} # key: text(p), value: list of tf with count
-        p_doc_dict = {} # key: text(p), value: doc_id
+        p_doc_dict = {} # key: p index, value: doc_id
         idf_count = {} # key: word, value: idf
         _id = _id.replace("\r", "")
         dir = os.getcwd() + "/doc_{}/{}/".format(test_or_dev, _id)
@@ -450,8 +452,8 @@ def compute_test_score(test_or_dev = "test"):
         # key: answer, value: chunk count
         answer_chunk_score = {}
         for answer_p in answer_tfidf_score:
-            p_idx = answer_p[1]
-            answer_chunk_score[answer_p] = p_chunk_score[p_idx]
+            idx = answer_p[1]
+            answer_chunk_score[answer_p] = p_chunk_score[idx]
 
         del p_chunk_score
 
@@ -475,11 +477,13 @@ def compute_test_score(test_or_dev = "test"):
             tfidf_score = answer_tfidf_score[answer_p]
             chunk_score = answer_chunk_score[answer_p]
             pre_pro_score = answer_pre_pro_score[answer_p]
+            print idx
+            print p_doc_dict[idx]
             doc_id = p_doc_dict[idx]
 
 
             # answer format:
-            # question id;answer;doc id;tfidf score;chunk score;pre_post score
+            # question id;doc id;answer;tfidf score;chunk score;pre_post score
             answer_str = "{0};{1};{2};{3};{4};{5}\n".format(question_id, doc_id, answer, tfidf_score, chunk_score, pre_pro_score)
 
             print answer_str
@@ -505,7 +509,7 @@ def crf_model():
         for line in lines:
             _split = line.split(';')
             # answer format:
-            # question id;answer;label;tfidf score;chunk score;pre_post score
+            # question id;doc_id;answer;label;tfidf score;chunk score;pre_post score
             pre_post_score = round(float(_split[-1]), 3)
             chunk_score = round(float(_split[-2]), 3)
             tfidf_score = round(float(_split[-3]), 3)
@@ -520,7 +524,7 @@ def crf_model():
         for line in lines:
             _split = line.split(';')
             # answer format:
-            # question id;answer;doc id;tfidf score;chunk score;pre_post score
+            # question id;doc id;answer;tfidf score;chunk score;pre_post score
             pre_post_score = round(float(_split[-1]), 3)
             chunk_score = round(float(_split[-2]), 3)
             tfidf_score = round(float(_split[-3]), 3)
@@ -534,6 +538,5 @@ def crf_model():
 
 
 
-# compute_train_score_and_label()
-# compute_test_score()
-crf_model()
+compute_train_score_and_label()
+compute_test_score()

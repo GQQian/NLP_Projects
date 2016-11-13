@@ -4,7 +4,7 @@ import p3_preprocess
 from textblob import TextBlob
 from gt_ngram import gt_ngram
 
-dir_question = os.getcwd() + "/question.txt"
+dir_question = os.getcwd() + "/question_dev.txt"
 questions = p3_preprocess.question_preprocess(dir_question)
 #questions is a dict with key = ID and value = question
 
@@ -76,7 +76,7 @@ for key in questions:
 						break
 
 #output:
-with open("answer.txt", "w") as text_file:
+with open("baseline_answer_dev.txt", "w") as text_file:
 	for key in questions:
 		for x in xrange(0,5):
 			text_file.write(key.replace("\r", "") + " " + guess[key][x][2] + " " + guess[key][x][0] + "\n")
