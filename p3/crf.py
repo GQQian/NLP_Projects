@@ -534,6 +534,6 @@ def crf_model():
 
 
 
-compute_train_score_and_label()
+# compute_train_score_and_label()
 # compute_test_score()
-# crf_model()
+crf_model()
