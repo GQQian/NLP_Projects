@@ -8,7 +8,9 @@ import nltk
 from location_extractor import extract_locations
 from timex import *
 
-dir_question = os.getcwd() + "/question.txt"
+test_or_dev = "dev"
+
+dir_question = os.getcwd() + "/question_{}.txt".format(test_or_dev)
 questions = p3_preprocess.question_preprocess_with_pos(dir_question)
 passage_max_num = 10
 st = StanfordNERTagger(os.getcwd()+'/english.all.3class.distsim.crf.ser.gz', os.getcwd()+"/stanford-ner.jar")
@@ -31,9 +33,11 @@ for _id, question in questions.items():
 
     # Passage retrieval and get passages with the first passage_max_num scores
     passages_dict = {} # key: text, value: score
-    p_doc_dict = {} # key: passage, value: doc__id
+    p_doc_dict = {} # key: passage, value: doc_id
     _id = _id.replace("\r", "")
-    dir = os.getcwd() + "/doc_dev/{}/".format(_id)
+    # dir = os.getcwd() + "/doc_dev/{}/".format(_id)
+    dir = os.getcwd() + "/doc_{}/{}/".format(test_or_dev, _id)
+
     for filename in os.listdir(dir):
         f = dir + filename
         doc_passages = p3_preprocess.doc_process(f)
@@ -127,7 +131,7 @@ for _id, question in questions.items():
     print answers[_id]
 
 # write answer into file
-with open("part2_answer.txt", "w") as text_file:
+with open("part2_answer_{}.txt".format(test_or_dev), "w") as text_file:
     for question_id, tuples in answers.items():
         for _tuple in tuples:
             doc_id, answer = _tuple[0], _tuple[1]

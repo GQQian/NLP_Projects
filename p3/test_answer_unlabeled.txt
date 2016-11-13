@@ -1,0 +1,854 @@
+28;14;Tex;8.59415423255;0;0.0
+28;18;Bill Smith;7.95507427326;1;0.0
+28;6;Stormie Jones;10.6223024798;0;0.0
+28;14;Lynn McMahon;8.59415423255;0;0.0
+28;14;Stormie Jones;8.59415423255;0;0.0
+28;12;Stormie Jones;9.28730141311;0;0.0
+28;10;Stormie Jones;9.28730141311;0;0.0
+28;14;Koch;10.2444141395;0;0.0
+28;3;Stormie Jones;10.6223024798;0;0.0
+28;19;Stormie Jones;8.13739583006;0;0.0
+81;10;Qatar;0.0;1;0.0
+81;10;Qatar;0.0;1;0.0
+81;10;Qatar;0.0;2;0.0
+81;10;Doha Airport;0.0;1;0.0
+81;1;Qatar;0.0;2;0.0
+81;1;His Highness;0.0;2;0.0
+81;1;Sanaa;0.0;0;0.0
+34;20;last year;9.88328484522;0;0.0
+34;4;250000 for a new headquarters in Delavan Wis Keeshan joined Red Skelton Emmett Kelly Sr and Larry Harmon creator of Bozo the Clown earlier this year;14.989675489;0;0.0
+34;3;1952;10.8534838169;0;0.0
+34;17;1955;13.9320483742;1;0.0
+40;6;James Watson;6.72262979486;0;0.0
+54;2;Aldrin;7.59085212369;1;0.0
+54;3;Armstrong;7.34471905415;1;0.0
+54;15;Thomas O Paine;8.77647578935;0;0.0
+54;1;Neil A Armstrong;7.34471905415;1;0.0
+54;2;Armstrong;7.59085212369;1;0.0
+54;3;Aldrin;7.34471905415;1;0.0
+54;12;Michael Collins;7.34471905415;1;0.0
+54;2;Collins;7.59085212369;1;0.0
+54;3;Armstrong;7.40853056689;0;0.0
+54;13;Neil Armstrongs;9.13647852338;0;0.0
+54;3;Aldrin;7.59085212369;2;0.0
+54;13;Bush;9.13647852338;0;0.0
+2;5;Stokes;5.85793315448;0;0.0
+2;12;Janet Todd;5.85793315448;0;0.0
+2;12;Todd;5.85793315448;0;0.0
+2;5;Adams;5.85793315448;0;0.0
+2;4;Jeffery Lundgren;6.18208490672;2;0.0
+2;21;Grover Cleveland;7.08170858611;0;0.0
+2;4;Cheryl;6.18208490672;2;0.0
+2;4;Karen;6.18208490672;2;0.0
+2;6;Alice;6.30991827823;1;0.0
+2;4;Damon;6.18208490672;2;0.0
+2;4;Alice Elizabeth;6.18208490672;2;0.0
+2;4;Dennis Avery;6.18208490672;2;0.0
+2;21;John Adams;7.27586460055;0;0.0
+2;21;John Quincy Adams;7.27586460055;0;0.0
+2;6;Lundgren;6.30991827823;1;0.0
+2;4;Rebecca;6.18208490672;2;0.0
+2;4;Trina;6.18208490672;2;0.0
+2;12;Marty Siegel;5.85793315448;0;0.0
+69;15;William Sound;16.0207033049;4;0.0
+69;7;William Sound;16.5315289287;1;0.0
+69;23;Joseph Hazelwood;16.9651649138;2;0.0
+69;13;William Sound;15.8665526251;3;0.0
+69;2;William;18.5746028262;2;0.0
+69;23;Exxon Valdez;16.9651649138;2;0.0
+69;6;William Sound;17.8124627742;4;0.0
+69;10;Exxon Valdez;17.1193155936;2;0.0
+69;10;William Sound;17.1193155936;2;0.0
+69;23;William Sound;16.9651649138;2;0.0
+69;15;Exxon Valdez;16.0207033049;4;0.0
+49;13;JJ Rawlings;2.07944154168;2;0.0
+49;13;Anyidoho;2.07944154168;2;0.0
+49;1;Obed Asamoah;2.07944154168;2;0.0
+49;14;Robert Mugabe;2.77258872224;0;0.0
+49;1;Soglo;2.07944154168;1;0.0
+49;14;Woven Enock Mahachi;2.77258872224;0;0.0
+49;14;Rawlings;2.77258872224;0;0.0
+49;14;Gilbert Diendere;4.15888308336;1;0.0
+49;18;Al Gore;4.15888308336;0;0.0
+49;14;Burkina Faso;4.15888308336;1;0.0
+49;18;Nana Konadu Agyeman Rawlings;2.77258872224;0;1.38629436112
+49;14;Rawlings;4.15888308336;1;0.0
+49;18;Hillary Clinton;4.15888308336;0;0.0
+49;14;Blaise Compaore;4.15888308336;1;0.0
+49;18;Fidel Castro;4.15888308336;0;0.0
+49;9;Rawlings;2.77258872224;0;0.0
+49;1;Soglo;2.07944154168;1;0.0
+49;1;Sossou;2.07944154168;1;0.0
+49;1;Ghanas;2.07944154168;2;0.0
+49;18;Jerry John Rawlings;2.77258872224;1;1.38629436112
+49;18;Nelson Mandela;2.77258872224;1;1.38629436112
+49;14;Zephirin Diabre;4.15888308336;1;0.0
+49;18;Rawlings;2.77258872224;0;1.38629436112
+49;9;Eduardo dos Santos;2.77258872224;0;0.0
+49;18;Mr Ekow Arkaah;2.77258872224;0;1.38629436112
+13;4;Walt Whitman;10.0244654791;1;0.0
+13;15;Sammy Stewart;7.97796809313;1;0.0
+13;14;Robinson;12.829998357;0;0.0
+13;15;Bernard Malamuds;7.97796809313;1;0.0
+13;15;Dock Ellis;7.97796809313;1;0.0
+13;15;Lenny Randle;7.97796809313;1;0.0
+13;14;Jackie;10.093777279;1;0.0
+13;15;Baltimore Ron LeFlore;7.97796809313;1;0.0
+13;4;Vin Scully;10.0244654791;1;0.0
+13;1;Robinson;8.99516499031;1;0.0
+13;1;Hank Aaron;8.99516499031;1;0.0
+13;1;Willie Mays Roy Campanella Ernie Banks;8.99516499031;1;0.0
+66;3;July 14 1789;8.77786371462;1;0.0
+66;18;1846;7.86365126545;0;0.0
+66;10;17631817 whose four symphonies are played by the Gulbenkian Foundation Orchestra of Lisbon under Michel Swierczewski on a pair of Nimbus CDs 5184;6.83195356557;1;0.0
+66;14;Two hundred years ago this Friday;8.77786371462;1;0.0
+66;1;1789;7.82364593083;0;0.0
+66;11;last year President Francois Mitterrand has invited President Bush 29 other world leaders and an estimated crowd of 2 million to his own party for the 200th anniversary of the storming of the Bastille July;6.83195356557;1;0.0
+66;21;1989;8.07496035912;1;0.0
+66;1;1789;8.0349550245;0;0.0
+76;3;1964 and now married to Julia Rawlinson and Marina Victoria Alexandra born in 1966;11.3667429548;0;0.0
+76;3;1928;9.62377364973;0;0.0
+76;25;August;8.86163359769;1;0.0
+76;2;1964 and married to Julia Rawlinson and Marina Victoria Alexandra born in 1966;11.3667429548;0;0.0
+76;23;July 5 1986;7.67786350068;0;0.0
+21;3;today expressed regret over the death of Colombian Ambassador to Honduras Lucelly Garcia de Montoya who was murdered by unidentified individuals early today;13.5853801554;2;0.0
+21;24;Sunday was elected the official Liberal Party candidate with 4821;13.7826567331;0;0.0
+21;10;Yesterday;11.1701534262;2;0.0
+21;2;today;13.5853801554;2;0.0
+82;12;South Bend;8.0143357373;1;0.0
+82;21;South Bend;7.32118855674;1;0.0
+82;5;Penn State;7.32118855674;1;0.0
+82;10;Hoosierland;9.51841313408;1;0.0
+82;1;Palo Alto;7.32118855674;1;0.0
+82;16;El Toro;7.32118855674;1;0.0
+82;18;Notre Dame;7.32118855674;1;0.0
+82;10;South Bend;9.51841313408;1;0.0
+82;10;Cal;9.51841313408;1;0.0
+82;21;New Jersey;7.32118855674;1;0.0
+82;1;South Bend;7.32118855674;1;0.0
+29;22;1974 resignation from the presidency died Wednesday;3.68887945411;0;2.03022150527
+29;20;1946;4.75359019111;0;0.0
+29;10;April;2.99573227355;0;0.0
+29;1;Friday;2.99573227355;0;0.0
+29;1;April 24 XINHUA US President Bill Clinton has declared April 27 Wednesday a national day of mourning for former US President Richard Nixon who died on April 22 White House sources said here today;2.99573227355;0;0.0
+29;20;1960;4.06044301055;0;0.0
+29;12;last year;2.99573227355;1;0.0
+37;12;Francis Coppolas Godfather;11.4969485104;2;0.0
+37;21;Broxton;7.10249935577;2;0.0
+41;24;Jack Oshita;4.61512051684;0;0.0
+41;1;Morris;6.47389069635;0;0.0
+53;12;Wednesday between the PLO and Israel 9000;8.43554920238;5;0.0
+53;12;May 8 AFP The Palestinian police deployment in the Gaza Strip scheduled to start on Sunday 8 May has been delayed again Palestinian sources said here late Saturday;8.26565016558;1;0.0
+53;4;May 11 XINHUA The first group of Palestinian policemen numbering some 150 arrived in the Gaza Strip at about 0300 1200;8.67111527369;1;0.0
+53;21;April 11 AFPThe son of PLO negotiator Nabil Shath has arrived here to take over the computer software the Israeli Army has used to run the Gaza Strip and Jericho a colleague said Monday 11 April;10.3450917073;3;0.0
+53;6;0500 GMT on 8 June adds that the PLO has rejected an Israeli proposal to release hundreds of Palestinian prisoners tomorrow;10.4336451046;4;0.0
+53;11;May;9.33503281593;2;0.0
+53;3;May 4 AFP Autonomy came at last to the Gaza Strip and Jericho on Wednesday 4 May;8.95879734614;3;0.0
+5;3;Nancy Dunne;17.7536222742;2;0.0
+5;12;David Koresh;13.3020147056;2;0.0
+5;15;David Koresh;11.222573164;1;0.0
+5;14;David Koresh;16.1441843617;2;0.0
+12;1;Surabaya;11.6864080731;0;0.0
+12;18;Indonesia;7.52294091807;1;0.0
+12;9;Singapore;8.86163359769;0;0.0
+12;17;Indonesia;7.98956044933;0;0.0
+12;1;Indonesia;7.98956044933;1;0.0
+12;9;Malaysia;8.86163359769;0;0.0
+12;1;Malaysia;13.2958459855;2;0.0
+12;16;Asia Pacific;10.0078475679;1;0.0
+12;9;Indonesia;8.86163359769;0;0.0
+12;9;Jakarta;8.86163359769;0;0.0
+12;1;England;7.98956044933;1;0.0
+12;3;Indonesia;12.4927542176;1;0.0
+26;6;Mikhail S Gorbachev;7.76302130902;1;0.0
+26;11;David Starr Jordan;9.70893145807;1;0.0
+26;18;William Ballhaus;9.01578427751;1;0.0
+26;18;Rosemary Schraer;9.01578427751;1;0.0
+26;18;Donald Kennedy;9.01578427751;1;0.0
+26;18;David Packard;9.01578427751;1;0.0
+26;2;Michael Boskin;7.60887062919;0;0.0
+26;7;Raisa;10.5356100313;1;0.0
+26;22;Keith Baker;8.18423477409;0;0.0
+26;18;Theodore Huller;9.01578427751;1;0.0
+26;22;Paul A Robinson;8.18423477409;0;0.0
+26;6;Donald Kennedy;8.86163359769;0;0.0
+26;7;Mikhail S Gorbachev;10.5356100313;1;0.0
+26;6;Gorbachev;8.86163359769;0;0.0
+26;6;George P Shultz;8.86163359769;0;0.0
+26;18;Davis;9.01578427751;1;0.0
+26;18;Richard Atkinson;9.01578427751;1;0.0
+67;15;Asea Brown Boveri;4.96981329958;0;0.0
+67;24;Thomas Cook;5.1239639794;0;0.0
+67;13;Christian Dalloz Bilsom;4.96981329958;0;0.0
+67;15;William Low;4.96981329958;0;0.0
+67;18;Philip Mellor;4.06044301055;0;0.0
+67;15;Halkin;4.96981329958;0;0.0
+71;23;Seyyed Mohammed Ali Javid;4.02535169074;1;0.0
+71;6;Hamidullah Tarzi;4.02535169074;1;0.0
+71;6;Abdol Rahman;4.02535169074;1;0.0
+71;11;Rabbani;6.06842558824;5;0.0
+71;6;Borhanoddin Rabbani;4.96981329958;4;0.0
+71;1;Borhanoddin Rabbani;5.25749537203;4;0.0
+71;6;Abdol Aziz Morad;4.02535169074;1;0.0
+71;7;Ramadan;3.87120101091;3;0.0
+71;6;Mahmud Mastiri;4.96981329958;4;0.0
+71;6;Fazl Karim Aymaq Kabul;4.02535169074;1;0.0
+71;17;Borhanoddin Rabbani;3.87120101091;3;0.0
+71;2;Borhanoddin Rabbani;5.25749537203;4;0.0
+71;2;Sardar Faruq Ahmad Khan Laghari;5.25749537203;4;0.0
+71;6;Sayed Eshaq;4.02535169074;1;0.0
+71;1;Levon TerPetrosyan;5.25749537203;4;0.0
+71;24;Mawlawi Morad Ali Morad;3.87120101091;3;0.0
+71;6;Abdol Hai Allahi;4.02535169074;1;0.0
+71;7;Borhanoddin Rabbani;3.87120101091;3;0.0
+71;11;Borhanoddin Rabbani;6.06842558824;5;0.0
+36;6;William Shatner;9.43348392329;2;0.0
+36;5;William Shatner;12.4292161968;2;0.0
+36;6;Lisabeth Shatner;9.43348392329;2;0.0
+36;25;Gene Roddenberry;12.6884987948;2;0.0
+36;3;Stan Stice;17.2575299341;4;0.0
+36;20;James T Kirk;10.4628747429;0;0.0
+36;25;Kirk;12.6884987948;2;0.0
+42;10;Kunst;3.76120011569;0;0.0
+42;12;Aliengena;3.76120011569;1;0.0
+42;1;Jeana Yeager;10.8353169319;1;1.88060005785
+42;12;Tony;3.76120011569;1;0.0
+42;14;Dick Rutan;3.76120011569;1;0.0
+42;1;Dick Rutan;10.8353169319;1;1.88060005785
+42;14;Yeager;3.76120011569;1;0.0
+42;10;Kunst;3.76120011569;0;0.0
+42;1;Tony;3.76120011569;1;5.41765846595
+42;15;Tony Aliengena;3.76120011569;1;0.0
+52;2;Christopher P Jones;28.6562121581;4;0.0
+52;4;Clayne M Yeates;6.29156913956;1;0.0
+52;13;Richard Spehalski;6.29156913956;1;0.0
+52;15;Martin Leipold;6.29156913956;1;0.0
+52;11;Slonski;4.69134788223;0;0.0
+79;1;Union;3.73766961828;1;0.0
+79;1;Washington;5.52942908751;1;2.84178988367
+79;1;William Petersons;5.37527840768;0;0.0
+79;1;Washington;5.37527840768;0;0.0
+79;1;Maryland;5.37527840768;0;0.0
+79;1;Lincoln;3.73766961828;1;0.0
+79;25;Washington;5.52942908751;1;0.0
+79;25;Springfield Ill;5.52942908751;1;0.0
+79;1;Lincoln;5.68357976734;2;2.76471454376
+79;9;Scandal Tours;3.89182029811;2;0.0
+79;1;Lincoln;3.73766961828;1;0.0
+83;12;New York City;11.4059636679;0;0.0
+83;18;Quincy Mass;8.12563098848;0;0.0
+83;18;Lamar Mo;8.92105701816;1;0.0
+83;12;New York;11.4059636679;0;0.0
+8;17;June could fall 15 per cent short of the level reached in the corresponding period of 1993;9.25874951118;0;0.0
+8;12;may prove to be the genres new Heavens Gate the 1980;4.85203026392;0;0.0
+11;13;Ang Lee;9.73234329633;2;0.0
+11;13;Alexandre Rockwell;9.73234329633;2;0.0
+11;22;Mvusi;8.40267980463;0;0.0
+11;16;Ryan;9.73234329633;2;0.0
+11;19;Lanyer;11.1202087497;1;0.0
+11;12;Meg Ryan;12.1302385691;2;0.0
+11;12;John Grisham;12.1302385691;2;0.0
+11;12;Tom Hanks;12.1302385691;2;0.0
+11;13;Andrew Davis;9.73234329633;2;0.0
+11;12;Tom Cruise;12.1302385691;2;0.0
+11;13;James B Harris;9.73234329633;2;0.0
+11;22;Menges;8.40267980463;0;0.0
+11;13;Nora Ephron;9.73234329633;2;0.0
+11;12;Nora Ephron;11.6782534454;2;0.0
+11;12;Sally Met Harry;11.6782534454;2;0.0
+27;20;Patricia Street;18.0717453721;0;0.0
+27;25;Patricia Street;43.7729806606;0;0.0
+27;24;Patricia Street;47.3564995991;0;0.0
+39;5;WILLY BRANDT;8.31776616672;2;0.0
+39;21;Markus Wolf;8.14786712992;3;0.0
+39;2;Willy Brandt;11.2687625464;2;0.0
+39;17;Markus Wolf;8.14786712992;3;0.0
+39;2;Brigitte SeebacherBrandt;11.2687625464;2;0.0
+39;5;Willy Brandt Hamish Hamilton;8.31776616672;2;0.0
+39;25;Genscher;8.14786712992;3;0.0
+39;25;Willy Brandt;8.14786712992;3;0.0
+39;17;Willy Brandt Reuter;8.14786712992;3;0.0
+39;2;Wehner;11.2687625464;2;0.0
+39;23;Willy Brandt;8.14786712992;3;0.0
+39;21;Willy Brandt Reuter;8.14786712992;3;0.0
+19;24;Cesar Milstein;8.48879371689;0;0.0
+19;2;Egil Aarvik;10.0212705882;1;0.0
+19;8;Ronald Jue;8.3064721601;1;0.0
+19;5;RIGOBERTA Menchu;8.3064721601;0;0.0
+19;23;Pauling;6.69703424767;0;0.0
+19;19;Mikhail S Gorbachev;6.80239476332;0;0.0
+19;3;Alfred Nobel;6.80239476332;1;0.0
+19;8;Dalai Lama;8.3064721601;1;0.0
+19;4;Jorge Serrano Elias;8.22951111896;1;0.0
+70;4;Rodman;12.6223589923;0;0.0
+70;6;Piston;8.78889830934;0;0.0
+70;9;Harry Caray;8.10802122138;1;0.0
+70;17;Michael Jordan;8.10802122138;1;0.0
+70;4;Jordan;10.1751926705;0;0.0
+70;17;Dominique Wilkins;8.10802122138;1;0.0
+31;10;Oscar Arias;7.57250298502;3;0.0
+31;10;Niehaus;7.57250298502;3;0.0
+31;1;Armando Calderon;5.49306144334;3;0.0
+31;16;Zabludovsky;5.78074351579;4;0.0
+31;6;Rafael Angel Calderon;5.78074351579;2;0.0
+31;1;Li;5.49306144334;3;0.0
+31;1;Li Tenghui;5.78074351579;4;0.0
+31;16;Rafael Angel Calderon Fournier;5.78074351579;4;0.0
+31;11;Rolando Laclewho;5.78074351579;2;0.0
+31;10;Rodrigo Madrigal;7.57250298502;3;0.0
+31;19;Li;8.26565016558;5;0.0
+31;16;Jacobo Zabludovsky;5.78074351579;4;0.0
+31;1;Calderon;5.78074351579;4;0.0
+31;1;Li;5.78074351579;4;0.0
+31;10;Gonzalo Facio;7.57250298502;3;0.0
+31;1;Alfredo Cristiani;5.49306144334;3;0.0
+31;10;Sonia Picado;7.57250298502;3;0.0
+31;7;Li;7.57250298502;5;0.0
+31;16;Rafael Angel Calderon F Fournier;5.78074351579;4;0.0
+59;3;Coahuila;7.22766249873;1;0.0
+59;16;Mexico;11.961909727;1;0.0
+59;3;Colombias Medellin;7.22766249873;1;0.0
+59;12;Thailand;7.80302664363;1;0.0
+59;3;United States;7.22766249873;1;0.0
+59;24;United States;8.49617382419;1;0.0
+59;14;Barranquilla;6.41673228251;1;0.0
+59;14;Santa Fe;6.41673228251;1;0.0
+59;3;Ciudad Juarez;7.22766249873;1;0.0
+59;14;United States;6.41673228251;1;0.0
+59;14;Spain;6.41673228251;1;0.0
+59;14;Puerto Colombia;6.41673228251;1;0.0
+59;15;March;6.4754327167;0;0.0
+59;13;United States;7.22766249873;1;0.0
+59;3;Oaxaca;7.22766249873;1;0.0
+59;17;United States;11.961909727;1;0.0
+59;14;Colombia;6.41673228251;1;0.0
+59;14;Bogota Inravision;6.41673228251;1;0.0
+59;17;Mexico;11.961909727;1;0.0
+59;12;United States;9.88246818531;2;0.0
+59;15;Fight Drugs;6.4754327167;0;0.0
+59;15;Ciudad Victoria;6.4754327167;0;0.0
+59;25;United States;6.41673228251;2;0.0
+59;16;United States;11.961909727;1;0.0
+59;15;Spain;6.4754327167;0;0.0
+43;7;Jackie Wilson Higher;14.4365036256;1;0.0
+43;7;Charlie Sexton;14.4365036256;1;0.0
+43;7;Marvin Gaye;14.4365036256;1;0.0
+43;7;Kenny Rogers Lady Skyliners;14.4365036256;1;0.0
+43;7;Jon St James;14.4365036256;1;0.0
+43;14;Leavitt;6.86797440897;2;0.0
+43;7;Anna David Bowie;14.4365036256;1;0.0
+43;7;Higher Gene Pitney;14.4365036256;1;0.0
+43;24;Ike;6.43775164974;0;6.13774104845
+43;7;Roy Orbison;14.4365036256;1;0.0
+43;25;Kim Ilsong;17.4402680708;3;0.0
+43;7;Leon Russell;14.4365036256;1;0.0
+43;7;Percy Sledge;14.4365036256;1;0.0
+43;7;Bardeux;14.4365036256;1;0.0
+43;14;William Boyd;6.86797440897;2;0.0
+43;7;Delbert McClinton Lovey Dovey Prince Kiss Jerry Lee Lewis Breathless Bo Diddley Dearest Darling Bob Wills;14.4365036256;1;0.0
+43;7;David Bowie;14.4365036256;1;0.0
+43;7;Johnny Mathis;14.4365036256;1;0.0
+51;1;Bakili Muluzi;15.2627890057;4;0.0
+51;18;Chakufwa Chihana;9.6519445267;5;0.0
+51;1;Chakufwa Chihana;15.2627890057;4;0.0
+51;19;Kamlepo Kalua;18.6107418728;8;0.0
+51;8;Chihana;16.2058779307;1;0.0
+51;22;Kamuzu Banda;12.0177652091;1;0.0
+51;19;Banda;18.6107418728;8;0.0
+51;14;Bakili Muluzi;8.95879734614;2;0.0
+51;6;Bakili Muluzi;9.76972756236;3;0.0
+64;5;last weeks abortive coup in Panama gave Gen Manuel A Noriega a choice of retiring and going into exile in Panama or being turned over for extradition to the United States on drug charges sources close to the uprising said Thursday;13.4949746606;3;0.0
+64;13;Monday;9.67633597982;1;0.0
+64;17;Wednesday;11.3700707449;2;0.0
+64;16;Wednesday night announcing that deposed Panamanian dictator Manuel A Noriega has surrendered to US authorities On Wednesday;15.3748031484;3;0.0
+64;10;today;9.67633597982;1;0.0
+64;24;Wednesday;11.5036021375;2;0.0
+64;2;1981;11.2081379246;2;0.0
+64;4;1989 election he apparently was losing gave up still wearing his military uniform after realizing even his supporters had turned against him the archbishop of Panama Marcos McGrath said today;9.78807670102;1;0.0
+3;16;1996 before being sold off completely seven years later;8.881836305;3;0.0
+3;22;two years later;9.55478077825;1;0.0
+78;3;DPS Deputy;6.13556489108;1;0.0
+78;4;Sofiyanski;6.13556489108;1;0.0
+84;2;Alexander M Haig Jr;7.17701876591;2;0.0
+84;3;William E Simon;11.6478408994;2;3.80616841858
+84;3;Nixon;11.6478408994;2;3.80616841858
+84;3;Rose Mary Woods;11.6478408994;2;3.80616841858
+84;15;Warren Christopher;8.99863119829;3;0.0
+84;2;Richard Allen;7.17701876591;2;0.0
+84;3;Henry;11.3201534923;3;0.0
+84;2;Henry A Kissinger;8.27563105458;3;0.0
+84;1;Nixon;14.1533668364;5;0.0
+84;2;Nixon;8.27563105458;3;0.0
+84;3;Nixon;11.3201534923;3;0.0
+84;1;Barbara Black;14.1533668364;5;0.0
+84;1;Robert McKay;14.1533668364;5;0.0
+84;14;Kissinger;8.65032450402;2;0.0
+84;1;Carter;14.1533668364;5;0.0
+84;1;Earl Silbert;14.1533668364;5;0.0
+84;15;William Perry;8.99863119829;3;0.0
+84;1;Warren Christopher;14.1533668364;5;0.0
+84;3;Billy Graham;7.61233683717;3;5.82392044968
+84;2;Bushs;8.27563105458;3;0.0
+84;3;Bebe Rebozo;11.6478408994;2;3.80616841858
+84;2;Nixon;8.27563105458;3;0.0
+84;2;Reagan;7.17701876591;2;0.0
+84;14;Nixon;8.65032450402;2;0.0
+84;3;Ron Ziegler;7.61233683717;3;5.82392044968
+84;2;Kissinger;8.27563105458;3;0.0
+84;1;Jimmy Carter Erwin Griswold;14.1533668364;5;0.0
+84;1;Gerald Gunther;14.1533668364;5;0.0
+84;2;William P Rogers;8.27563105458;3;0.0
+84;1;Cyrus Vance;14.1533668364;5;0.0
+84;3;Alexander M Haig;7.61233683717;3;5.82392044968
+10;5;today;5.85793315448;0;0.0
+10;9;February 1972;5.50125821054;0;0.0
+24;6;Santa Barbara;10.8075437467;0;0.0
+24;9;Bruce Henderson;9.96547594987;0;11.2103904287
+24;4;David Berteaux La Jolla Carlos Campbell Sweetwater Tony Clark Valhalla Darren Cox Torrey Pines Kevin Flanagan Torrey Pines Terrence Hamilton Patrick Henry Clark James San Diego Chris Johnson Crawford Adam Jones Poway Shane Knight Poway Ray McDavid Clairemont Joe McNaull Monte Vista Eric Meek;10.8075437467;0;0.0
+24;9;Bob Trettin;22.4207808575;2;9.79492233031
+24;9;Henderson;13.4189417601;1;0.0
+24;9;Maria Ybarra;22.4207808575;2;9.79492233031
+24;9;Henderson;13.4189417601;1;0.0
+24;9;Jim Sills Hendersons;22.4207808575;2;9.79492233031
+24;9;Sills;13.4189417601;1;0.0
+24;9;Ybarra;13.4189417601;1;0.0
+24;4;Aaron Wilhite Lincoln;10.8075437467;0;0.0
+24;9;Ybarra;13.4189417601;1;0.0
+24;9;Sills;13.4189417601;1;0.0
+38;14;Matti Nykanen;13.5386497241;2;0.0
+38;5;Greg Evangelatos;11.5015105622;1;0.0
+38;5;Torrance;16.0405409456;0;0.0
+38;17;Sergei Grinkov;13.5386497241;2;0.0
+38;5;Diana Golden;16.0405409456;0;0.0
+38;17;Brian Boitano;13.5386497241;2;0.0
+38;10;Tomba;12.7277195079;2;0.0
+38;14;Gunde Svan;13.5386497241;2;0.0
+38;17;Katya Gordeeva;13.5386497241;2;0.0
+38;5;Tomba;12.7277195079;2;0.0
+38;5;Cathy Gentile;16.0405409456;0;0.0
+38;14;Gaetan Boucher;13.5386497241;2;0.0
+38;5;Golden;16.0405409456;0;0.0
+30;1;Sacramento;4.43081679884;1;3.11128813404
+30;1;El Monte;4.43081679884;1;3.11128813404
+30;1;San Diego;4.43081679884;1;2.21540839942
+30;8;Dallas;10.4122310101;1;0.0
+30;1;San Diego;4.43081679884;1;0.0
+30;1;San Diego;4.43081679884;1;2.21540839942
+30;15;Long Beach;5.98141421125;0;0.0
+30;8;St Louis;10.4122310101;1;0.0
+30;1;La Jolla;4.43081679884;1;3.11128813404
+30;15;Los Angeles;5.98141421125;0;0.0
+30;1;California Edison;4.43081679884;1;2.21540839942
+44;3;Australia;5.37527840768;3;0.0
+44;1;Japan;5.66296048014;2;0.0
+44;2;Japan;8.03008409427;1;0.0
+44;3;Mexico;5.37527840768;3;0.0
+44;12;Japan;5.37527840768;3;0.0
+44;2;Germany;8.03008409427;1;0.0
+44;12;Japan;5.66296048014;2;2.68763920384
+44;3;European Union;5.37527840768;3;0.0
+58;3;Fidel Castro;4.15888308336;0;0.0
+58;24;Luis Ayllon;6.23832462504;1;0.0
+58;11;Kohl;4.85203026392;0;0.0
+58;11;Jacques Delors;4.85203026392;0;0.0
+58;9;Kohl;4.15888308336;1;0.0
+58;16;Arpad Gonczs;4.85203026392;1;0.0
+58;17;Eduardo;6.23832462504;0;0.0
+58;3;Carlos Solchaga Spanish;4.15888308336;0;0.0
+58;17;Luis Alberto Lacalle;6.23832462504;0;0.0
+58;8;Yasir Arafat;5.54517744448;2;0.0
+58;3;Felipe Gonzalez Spains;4.15888308336;0;0.0
+58;2;Felipe Gonzalez;4.15888308336;1;0.0
+58;9;Alberto Miguez;4.15888308336;1;0.0
+58;8;Javier Solana;5.54517744448;2;0.0
+58;2;Lage;4.15888308336;1;0.0
+58;17;Jose Maria Figueres;6.23832462504;0;0.0
+58;16;Pedro Fernandez Cespedes;4.85203026392;1;0.0
+58;8;Felipe Gonzalez;5.54517744448;2;0.0
+58;14;Solana;3.4657359028;1;0.0
+50;4;Mitchell;8.24275634571;0;0.0
+50;15;Evans;7.09007683578;0;0.0
+50;7;Amelia Earhart;6.97541392746;0;0.0
+50;7;Bobbi Trout;6.97541392746;0;0.0
+50;7;Bobbi Trout;6.97541392746;0;0.0
+65;20;Cincinnati;5.99146454711;1;0.0
+65;10;Texas;8.98719682066;0;0.0
+65;10;Stockton University;8.98719682066;0;0.0
+65;10;Cal State;8.98719682066;0;0.0
+65;10;Tacoma Wash;8.98719682066;0;0.0
+65;10;Los Angeles;8.98719682066;0;0.0
+65;2;Views In;5.99146454711;0;0.0
+65;20;Texas;5.99146454711;1;0.0
+65;20;St Louis;5.99146454711;1;0.0
+65;3;Claremont;7.60090245954;1;0.0
+65;10;University;8.98719682066;0;0.0
+65;20;University;5.99146454711;1;0.0
+65;10;Massachusetts;9.90348755254;0;0.0
+73;10;Los Angeles;6.06842558824;0;0.0
+73;2;University;6.06842558824;0;0.0
+73;2;Hawaii;4.96981329958;0;0.0
+73;22;Hale;5.66296048014;0;0.0
+18;1;Bush;13.4880059913;1;0.0
+18;13;Schwarzkopf;14.5378281158;1;0.0
+18;1;Robert T Herres;13.4880059913;1;0.0
+18;2;Bush;17.870032626;3;0.0
+18;25;Gen Colin L Powell;12.9283902034;1;0.0
+18;2;Colin Powell;17.870032626;3;0.0
+18;19;Bob Woodward;14.8743003524;1;0.0
+18;18;Bushs;17.7365012334;1;0.0
+18;18;Gen Powell;17.7365012334;1;0.0
+18;3;Powell;16.4837382649;1;0.0
+18;19;Bush;14.8743003524;1;0.0
+18;19;Gen Powell;14.8743003524;1;0.0
+18;3;Gen Colin L Powell;23.6887450673;1;0.0
+18;1;Colin Powell;13.4880059913;1;0.0
+18;13;Powell;14.5378281158;1;0.0
+18;8;Clinton;14.0476217793;1;0.0
+18;8;Colin Powell;14.0476217793;1;0.0
+85;17;Farooq Ahmed Leghari;7.45471994936;2;0.0
+85;6;Nixon;13.2875794663;6;0.0
+85;6;Eisenhower;7.74240202182;4;0.0
+85;20;Farooq Ahmad Khan Leghari;6.7615727688;3;0.0
+85;17;Al Gore;6.7615727688;2;0.0
+85;17;Warren Christopher;6.7615727688;2;0.0
+85;17;Leghari;6.7615727688;2;0.0
+85;12;Richard Milhous Nixon;10.5149907441;5;0.0
+85;6;Richard Milhous Nixon;11.6136030327;6;0.0
+17;5;Benton;11.2687625464;1;0.0
+17;1;Indiana University;14.2197589261;1;0.0
+17;16;Toronto;9.8218435635;0;0.0
+17;6;Born;9.88246818531;1;0.0
+17;2;Westmoreland;9.88246818531;1;0.0
+17;2;Virginia George;9.88246818531;1;0.0
+17;16;George;9.8218435635;0;0.0
+17;6;George Washington;9.88246818531;1;0.0
+17;5;Mariette Okla;11.2687625464;1;0.0
+17;20;United States;18.4964250452;2;0.0
+17;6;Lowell Mass;9.88246818531;1;0.0
+17;2;Westmoreland County;9.88246818531;1;0.0
+17;1;India;14.2197589261;1;0.0
+17;20;Georgetown George;18.4964250452;2;0.0
+17;5;Benton County;11.2687625464;1;0.0
+17;1;Washington;14.2197589261;1;0.0
+25;2;1951;10.5343337069;1;0.0
+25;3;1960s and 1970s the manmade Port Rashid was opened in 1972 bridges were built over the creek the airport expanded and in 1979 Dubai created the 67berth deepwater harbour of Jebel Ali 30km south of Dubai complete with an enveloping 100 sq km free trade zone opened in 1985;7.93164402145;2;0.0
+25;1;1956 the advent of oil and the development ambitions of Sheikh Rashid bin Saeed bin Maktoum the emirates second ruler who died in 1990 quickly turned Dubai into a sprawling lowrise city which today;20.91839384;3;0.0
+25;23;5000;9.69091295257;0;0.0
+25;13;March;6.54534966033;0;0.0
+6;7;Richmond;5.49306144334;0;0.0
+6;7;Globe;7.16703787691;0;0.0
+6;7;Texas;5.49306144334;0;0.0
+6;7;Louisiana;5.49306144334;0;0.0
+33;4;El Ninos Angell;8.71193726821;2;0.0
+33;4;Angell;6.00388706711;1;0.0
+33;9;Bill Hibbert;6.00388706711;1;0.0
+33;22;Santa Anas;9.68402471906;1;0.0
+33;9;La Nina;6.00388706711;1;0.0
+45;18;Christopher P Jones;5.73657229748;0;0.0
+45;2;Norm Haynes;10.6418470759;0;0.0
+45;25;Dick Spehalski;7.42297125105;0;0.0
+45;18;Charley Kohlhase;5.73657229748;0;0.0
+45;14;William J ONeil;7.42297125105;0;0.0
+45;16;Richard Spehalski;7.42297125105;0;0.0
+45;8;William J;7.42297125105;0;0.0
+57;16;Webb;3.21887582487;0;0.0
+57;10;Elizabeth;3.21887582487;0;2.41415686865
+57;10;Elizabeths;3.21887582487;0;0.0
+57;10;Elizabeth II;3.21887582487;0;2.41415686865
+57;10;Harold BrooksBaker;4.8283137373;1;1.60943791243
+57;7;Michael Stead;6.43775164974;1;0.0
+57;11;Harrison;3.21887582487;0;0.0
+57;10;Margaret Thatcher;3.21887582487;0;0.0
+62;1;Norman;9.36426245425;0;0.0
+62;13;Italy;10.6327737797;1;0.0
+62;8;Memory;8.43554920238;1;0.0
+62;4;Hopkins;9.46962296991;0;0.0
+62;2;New York;16.1779512242;1;0.0
+62;4;Thomass;9.46962296991;0;0.0
+62;17;Grove;7.27239839257;0;0.0
+62;4;England;9.36426245425;0;0.0
+62;2;Swansea;10.5149907441;0;0.0
+62;1;Normandy;9.36426245425;0;0.0
+62;2;Dylan The;10.5149907441;0;0.0
+72;18;Daryl Kelley;9.0765803818;0;0.0
+72;2;John Sweeten;13.3332723911;1;0.0
+72;1;John Sweeten;14.4318846797;1;0.0
+72;14;Wilson;10.065606402;0;0.0
+72;18;Richard A Oppel Jr;9.0765803818;0;0.0
+72;7;Karen Hutchens;10.065606402;0;0.0
+72;18;Vaughn Jeffery;7.16703787691;1;0.0
+72;18;Jenifer Warren;9.0765803818;0;0.0
+72;7;Sen Larry Stirling RSan Diego;10.065606402;0;0.0
+72;16;Richard Keefe;8.67931204089;0;0.0
+86;12;Lyle;4.20469261939;0;0.0
+86;6;Dante Ronsard Baudelaire Goethe Rilke;5.3082676974;1;0.0
+86;1;Duriscoe;4.20469261939;0;0.0
+86;20;Eleutherius;5.3082676974;1;0.0
+86;6;Mari Lwyd;5.3082676974;1;0.0
+86;20;Father Maur van Doorslaer;5.3082676974;1;0.0
+86;6;Watkins;5.3082676974;1;0.0
+1;1;Thatcher;7.6043963488;1;0.0
+1;19;Margaret Thatcher;8.46821300919;2;0.0
+1;17;Margaret Thatcher;10.0776509216;1;0.0
+1;1;Margaret Thatcher;10.741384217;1;0.0
+1;19;Howes;7.73848812249;0;0.0
+1;14;Lady Thatcher Lord Howe;8.04076899437;1;0.0
+1;20;Margaret Thatcher;12.7857011227;2;0.0
+1;1;Edward Heath;7.6043963488;1;0.0
+1;14;Lawson;8.04076899437;1;0.0
+1;10;Margaret Thatchers;10.0776509216;2;0.0
+1;20;Walesa;12.7857011227;2;0.0
+1;23;Margaret Thatcher;10.0776509216;1;0.0
+1;18;Margaret Thatcher;10.0776509216;2;0.0
+1;1;Reagan;7.6043963488;1;0.0
+1;19;MARGARET THATCHER;8.46821300919;2;0.0
+16;22;United States;6.47389069635;0;0.0
+16;22;Airport;6.47389069635;0;0.0
+16;22;The Sin;6.47389069635;0;0.0
+22;4;Barry RandalWilliams;6.96413561242;2;0.0
+22;1;Jesus Gil y Gil;9.58438361008;1;0.0
+22;4;Marbella Jesus Gil y Gil;9.58438361008;2;2.95404146908
+22;14;De la Rosa amp Asociados Ricardo Soriano;5.21493575761;1;0.0
+22;3;Jesus Gil y Gil;5.75574221359;0;0.0
+9;8;last November North Korean President Kim Ilsong has again started his direct rule over the nation in dealing with issues of top priority such as the alleged DPRK nuclear development so as to get over the most serious crisis ever since the nations founding and that North Korea is now moving toward implementing the policy of granting limited rights of independent cultivation to farmers which is a policy basically modeled on the reform program that was started in China in the late 1970;11.0106630719;2;0.0
+46;11;1964;6.51619307604;2;0.0
+46;14;June incident was Chinas second nuclear test after it conducted a previous one in October last year;4.33073334029;1;0.0
+46;25;may say that the start was good enough Grigory Berdennikov permanent Russian representative to the United Nations commented om the results of the first meeting of the annual session of UN conference on disarmament which concluded here on Thursday;5.50938833663;0;0.0
+46;16;January;5.71702770141;1;0.0
+87;10;Fuegi;3.43398720449;0;0.0
+87;1;James Joyces;3.43398720449;0;1.71699360224
+87;1;Giacomo Joyce;3.43398720449;0;1.71699360224
+87;1;Faber;3.43398720449;0;1.71699360224
+87;1;Alain Le Garsmeur Little Brown;5.13579843705;1;0.0
+87;10;Gorky;3.43398720449;0;0.0
+87;1;Bernard McGinley;5.13579843705;1;0.0
+87;20;John Gielgud;5.13579843705;1;0.0
+87;1;Ellmann;3.43398720449;0;1.71699360224
+87;1;Bernard McCabe;5.13579843705;1;0.0
+87;2;Stephen Hero;5.13579843705;1;0.0
+87;1;JOYCE;5.13579843705;1;0.0
+87;1;Richard Ellmann;3.43398720449;0;1.71699360224
+87;1;John Wyse Jackson;5.13579843705;1;0.0
+87;20;Chekhov;5.13579843705;1;0.0
+87;10;Brecht;3.43398720449;0;0.0
+87;20;Pinter;5.13579843705;1;0.0
+87;1;Jeri Johnson;5.13579843705;1;0.0
+87;1;Ulysses;3.43398720449;0;1.71699360224
+56;25;Moran Towing;19.3571849364;0;0.0
+56;3;Los Angeles;16.1741292324;2;0.0
+56;3;San Pedro;16.1741292324;2;0.0
+56;2;Northern California;15.1380373007;1;0.0
+56;6;San Pedro;19.8376908785;3;0.0
+56;6;Los Angeles;19.8376908785;3;0.0
+56;2;San Francisco;12.7401420279;2;0.0
+56;1;Wilmington;14.792396923;1;0.0
+56;2;Baltimore;15.1380373007;1;0.0
+56;2;California;15.1380373007;1;0.0
+56;10;Los Angeles;18.5392346824;2;0.0
+56;2;Los Angeles;12.7401420279;2;0.0
+56;2;San Pedro;14.2829358662;2;0.0
+56;25;Section;19.3571849364;0;0.0
+56;1;San Pedro;14.792396923;1;0.0
+56;2;San Francisco;15.1380373007;1;0.0
+63;20;Bill Clintons;11.2489599191;0;0.0
+63;23;George Bush;8.10167774745;0;0.0
+63;4;Dan Quayle;10.6735957742;0;0.0
+63;3;Ross Perot;9.24647941859;1;4.05083887373
+63;20;George Bushs;11.2489599191;0;0.0
+63;4;Al Gore;10.6735957742;0;0.0
+63;4;Bush;10.6735957742;0;0.0
+63;3;Bill Clinton;9.24647941859;1;4.05083887373
+63;23;Martin Van Buren;8.10167774745;0;0.0
+63;3;George Bush;9.24647941859;1;4.05083887373
+63;18;Hubert Humphrey;9.16951837746;0;0.0
+63;4;Bill Clinton;10.6735957742;0;0.0
+32;24;Kermit;7.56941179245;1;0.0
+32;12;Kermit;7.56941179245;1;0.0
+32;3;Kermit;7.56941179245;1;3.78470589623
+32;6;Kermit;8.90869459251;2;0.0
+32;6;Henson;8.90869459251;2;0.0
+32;1;Jim Henson;7.56941179245;1;3.78470589623
+32;22;Emma Cratchit;7.56941179245;1;0.0
+32;3;Henson;7.56941179245;1;3.78470589623
+32;3;Jim Henson;7.56941179245;1;3.78470589623
+32;3;Mickey Mouse;7.56941179245;1;3.78470589623
+32;4;Kermit;7.56941179245;1;0.0
+32;1;Kermit;7.56941179245;1;3.78470589623
+32;12;Sammy;7.56941179245;1;0.0
+4;9;Li;7.32118855674;0;0.0
+4;25;Lien Chan;6.82219739062;0;0.0
+4;9;Fidel Ramos;7.32118855674;0;0.0
+4;16;Lee Tenghui;6.82219739062;0;0.0
+4;10;Li Tenghui;7.72665366485;0;0.0
+4;10;Chuan Likphai;7.72665366485;0;0.0
+4;9;Li Tenghui;7.32118855674;0;0.0
+4;2;Chao;6.82219739062;1;0.0
+4;25;Lee Tenghui;6.82219739062;0;0.0
+4;12;Lee;7.72665366485;0;0.0
+23;10;North Korea;4.09434456222;0;0.0
+23;10;Pyongyang;4.85203026392;0;0.0
+23;10;Washington;4.85203026392;0;0.0
+23;1;Pyongyang;9.44145209294;0;0.0
+23;12;Pyongyang;4.09434456222;0;0.0
+23;3;United States;4.85203026392;0;0.0
+23;10;Seoul;4.85203026392;0;0.0
+23;2;Pyongyang;4.78749174278;0;0.0
+23;1;North Korea;9.44145209294;0;0.0
+23;1;Yongbyon;9.44145209294;0;0.0
+55;1;may;6.0799331951;1;2.94443897917
+55;3;may;6.0799331951;1;4.35949526236
+55;1;May 27 KCNA A NODONG SINMUN analyst today;5.88887795833;2;3.03996659755
+55;3;May commentary A Shameful Spokesman for F Splittist Forces Text The Japanese reactionaries and the South Korean puppets are making an attempt to arouse the public opinion by slandering our reunification formula through a confederal system regarding the fact that Yemen which was reunified four years ago;8.71899052471;1;3.03996659755
+55;3;today;11.6634295039;2;0.0
+55;2;today;8.8333169375;3;2.94443897917
+60;13;Tsutomu Hata;3.80666248977;0;0.0
+60;1;Wu Jianmin;7.61332497954;4;0.0
+60;13;Shigeto Nagano;3.80666248977;0;0.0
+60;6;Hata;4.90527477844;3;0.0
+60;6;Shigeto Nagano;4.90527477844;3;0.0
+60;1;Shigeto Nagano;7.61332497954;4;0.0
+60;6;Wu Jianmin;4.90527477844;3;0.0
+60;11;Tsutomu Hata;3.80666248977;2;0.0
+60;22;Koji Kakizawa;4.90527477844;2;0.0
+60;6;Li Peng;4.90527477844;3;0.0
+60;1;Tang Jiaxuan;7.61332497954;4;0.0
+60;6;Kunihiro Michihiko;4.90527477844;3;0.0
+60;12;Hata;3.80666248977;3;0.0
+60;5;Tsutomu Hatas;6.51471269087;1;0.0
+60;17;Tsutomu Hata;4.90527477844;2;0.0
+60;22;Tang Jiaxuan;4.90527477844;2;0.0
+60;17;Shigeto Naganos;4.90527477844;2;0.0
+60;10;Shigeto Nagano;3.80666248977;2;0.0
+60;10;Tustomu Hata;3.80666248977;2;0.0
+60;1;Kunihiro Michihiko;7.61332497954;4;0.0
+60;1;Tsutomu Hata;7.61332497954;4;0.0
+60;22;Tsutomu Hata;4.90527477844;2;0.0
+60;12;Tsutomu Hata;3.80666248977;1;0.0
+60;5;Nagano;6.51471269087;1;0.0
+60;1;Li Peng;7.61332497954;4;0.0
+60;5;Hatas;6.51471269087;1;0.0
+60;6;Tang Jiaxuan;4.90527477844;3;0.0
+60;17;Koji Kakizawa;4.90527477844;2;0.0
+15;19;Charles Buddy Rogers;5.95064255259;0;0.0
+15;13;Parisot Steven Wright;9.93962659915;0;0.0
+15;13;James Acheson Dangerous Liaisons;9.93962659915;0;0.0
+15;13;William Guttentag Malcolm Clarke;9.93962659915;0;0.0
+15;23;Rogers;5.25749537203;0;3.87120101091
+15;13;Dennis Jennings;9.93962659915;0;0.0
+15;13;Christopher Hampton;9.93962659915;0;0.0
+15;13;Peter Biziou;9.93962659915;0;0.0
+15;13;Roger Rabbit;9.93962659915;0;0.0
+15;23;Rogers III;7.74240202182;0;2.62874768601
+15;13;Wanda;9.93962659915;0;0.0
+15;13;Roger Rabbit MAKEUP Ve Neill Steve LaPorte Robert Short Beetlejuice;9.93962659915;0;0.0
+15;13;Barry Levinson;9.93962659915;0;0.0
+15;13;John Lasseter William Reeves;9.93962659915;0;0.0
+15;13;Charles L Campbell Louis L Edemann;9.93962659915;0;0.0
+15;13;Marcel Ophuls;9.93962659915;0;0.0
+15;15;Tom Schulmans;5.08759633523;0;0.0
+15;13;Dave Grusin;9.93962659915;0;0.0
+15;13;Geena Davis;9.93962659915;0;0.0
+15;13;Carly Simon;9.93962659915;0;0.0
+15;25;Rogers III;7.74240202182;0;0.0
+15;13;Pelle;9.93962659915;0;0.0
+15;25;Rogers;5.25749537203;0;0.0
+15;13;Dustin Hoffman Rain Man;9.93962659915;0;0.0
+15;13;Ken Ralston Richard Williams Edward Jones George Gibbs;9.93962659915;0;0.0
+15;13;Stuart Craig art Gerard James;9.93962659915;0;0.0
+15;13;Arthur Schmidt;9.93962659915;0;0.0
+15;13;Jodie Foster;9.93962659915;0;0.0
+15;13;Ronald Bass Barry Morrow;9.93962659915;0;0.0
+15;13;Kevin Kline;9.93962659915;0;0.0
+15;13;Les Fresholtz Dick Alexander Vern Poore Willie D Burton Bird;9.93962659915;0;0.0
+74;18;next Wednesday;8.31776616672;0;0.0
+74;1;two years ago;9.68831217087;0;0.0
+74;1;four years ago;9.68831217087;0;0.0
+88;16;Tom Duncan;3.95124371858;0;0.0
+88;6;Lester;7.17011954345;2;0.0
+88;14;Shakespeare;5.56068163102;1;0.0
+88;17;Hamnet Shakespeare;5.56068163102;1;0.0
+88;14;Hamlet;5.56068163102;1;0.0
+88;1;Olivier;3.95124371858;0;0.0
+88;1;Alan Hamilton;3.95124371858;0;0.0
+88;17;Hamlet;5.56068163102;1;0.0
+88;4;Kennedy;5.56068163102;1;0.0
+88;14;Ian Wilson;5.56068163102;1;0.0
+68;21;Saturday;4.90527477844;0;0.0
+80;9;1893 Nordhoff set two national precedents by staging an independent selection of its postmaster and by allowing women to vote in his election 27 years before;11.4840320413;0;0.0
+80;1;1971;6.26909628371;0;0.0
+80;12;1920s marital partnerships that kept families afloat in the 1930s the abrupt rise of women in the paid workforce during the 40s war effort all such historic potentialities for a radical restructuring of the family and the workplace were lost in the 1950;6.96224346427;0;0.0
+80;7;1920;12.3345713956;0;0.0
+80;7;Saturday to celebrate the 19th Amendment which was ratified 69 years ago this month;15.1071601179;0;0.0
+35;3;Of;6.53087762773;0;3.64650883989
+35;8;Atlantic City;7.29301767977;0;0.0
+35;2;Atlantic;9.30792070032;1;0.0
+35;8;Atlantic;7.29301767977;0;0.0
+35;3;Resorts International;7.4265490724;0;0.0
+35;2;Trump Taj;9.30792070032;1;0.0
+35;2;Atlantic City;9.30792070032;1;0.0
+35;17;Trump;10.6942150614;0;0.0
+35;11;Trump;6.04025471128;0;0.0
+35;2;New York;9.30792070032;1;0.0
+35;2;GROUP;9.30792070032;1;0.0
+47;2;United States;12.4923937923;1;0.0
+47;20;United States;11.6694675688;1;0.0
+47;10;Mars;11.8395205109;1;0.0
+47;1;NASA;15.6704476227;1;0.0
+47;8;Mars;14.8054501852;0;0.0
+47;8;United States;14.8054501852;0;0.0
+48;14;Kennedy;9.07520769798;1;0.0
+48;10;Lee Harvey Oswald;9.07520769798;1;0.0
+48;7;Jim;13.680377884;1;0.0
+48;13;Jack Ruby;9.07520769798;1;0.0
+48;1;Lee Harvey Oswald;13.680377884;1;0.0
+48;2;Louis Stokes;13.680377884;1;0.0
+48;7;Lee Harvey Oswald;13.680377884;1;0.0
+48;14;Mao Zedong;9.07520769798;1;0.0
+48;13;Lee Harvey Oswald;9.07520769798;1;0.0
+48;12;John F Kennedy;9.07520769798;1;0.0
+48;7;Jack Ruby;13.680377884;1;0.0
+48;14;Joke Zeder;9.07520769798;1;0.0
+48;16;DM Thomass;9.07520769798;1;0.0
+48;7;Bellis;13.680377884;1;0.0
+48;15;Kennedy Lee Harvey Oswald;11.1546492397;1;0.0
+48;16;Lee Harvey Oswald;9.07520769798;1;0.0
+48;15;Oswald;11.1546492397;1;0.0
+48;11;Lee Harvey Oswald;9.07520769798;1;0.0
+48;7;John F Kennedy;13.680377884;1;0.0
+48;10;William Pounders;9.07520769798;1;0.0
+48;10;John F Kennedys;9.07520769798;1;0.0
+48;2;Lee Harvey Oswald;13.680377884;1;0.0
+48;15;Oleg;11.1546492397;1;0.0
+48;12;Lee Harvey Oswald;9.07520769798;1;0.0
+48;14;Lee Harvey Oswald;9.07520769798;1;0.0
+48;14;Khrushchev;9.07520769798;1;0.0
+48;10;Jack Ruby;9.07520769798;1;0.0
+48;2;Kennedy;13.680377884;1;0.0
+48;7;Tammy Bakker;13.680377884;1;0.0
+7;4;Sergey Krikalev;6.6080006253;1;0.0
+7;1;Alan Shepard;7.70661291396;3;0.0
+7;8;Glenn;11.8810001839;3;0.0
+7;4;Boris Yeltsin;8.08610253567;2;0.0
+7;5;McCarthy;21.2622472098;5;0.0
+61;1;Hale;6.26909628371;0;0.0
+61;23;Scottie Pippen;6.87523208728;0;0.0
+61;14;Spain;8.25322764558;0;0.0
+61;14;Philadelphia;6.68461172767;0;0.0
+77;3;1793;9.83996185166;0;0.0
+77;1;1916;7.89655270164;1;0.0
+77;16;April 21 1918;6.10479323241;0;0.0
+77;1;1917;8.38571682863;0;0.0
+77;2;Today;9.57052913521;1;0.0
+14;20;Irishtown;6.55393340403;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+14;17;Gadsden County;6.55393340403;0;3.8147449582
+14;17;Gadsden;6.55393340403;0;3.8147449582
+14;11;West Grant;5.83773044717;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+14;11;West Grant;5.83773044717;0;0.0
+20;13;Walter Bodmer;14.1230871653;0;0.0
+20;1;Victor McKusick;48.4325878593;2;0.0
+20;4;Walter Bodmer;13.7974738705;0;0.0

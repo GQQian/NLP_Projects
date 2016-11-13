@@ -11,15 +11,19 @@ class gt_ngram(object):
     def __init__(self, content):
         self.nprob_dic, self.nhash_dic, self.ncounter_dic = {}, {}, {}
 
-        # use unk_1 to replace the first appeared word
-        tokens = content.split()
-        _set = set()
-        for i, token in enumerate(tokens):
-            if token not in _set:
-                tokens[i] = '<unk_1>'
-                _set.add(token)
+        # # use unk_1 to replace the first appeared word
+        # tokens = content.split()
+        # _set = set()
+        # for i, token in enumerate(tokens):
+        #     if token not in _set:
+        #         tokens[i] = '<unk_1>'
+        #         _set.add(token)
+        #
+        # self.content = content + ' '.join(tokens)
 
-        self.content = content + ' '.join(tokens)
+        # add a unk_1
+        tokens = content.split()
+        self.content + content + ' unk_1'
 
 
     def ntoken_count(self, n):
