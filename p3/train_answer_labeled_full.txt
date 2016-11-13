@@ -1,0 +1,3027 @@
+146;Lawrence Halprin;0;7.94979721616;0;0.0
+146;James Park;0;10.3106512173;0;0.0
+146;Bryant Park Bryant Park;0;12.0052469381;1;0.0
+146;San Jose;0;10.3106512173;0;0.0
+146;Lynden B Miller;0;12.0052469381;1;0.0
+146;Frank Lloyd Wright;0;8.28626945278;0;0.0
+146;Jay Gomez;0;8.11342663994;1;0.0
+167;Akiko Suwanai;0;3.68887945411;0;1.84443972706
+167;Gheorghe Hagi;0;3.68887945411;0;0.0
+167;Deborah Voigt;0;3.68887945411;0;1.84443972706
+167;Tchaikovsky;0;3.68887945411;0;1.84443972706
+167;Boris Berezovski;0;3.68887945411;0;1.84443972706
+167;Parcells;0;3.68887945411;0;0.0
+167;Ms Voigt;0;3.68887945411;0;0.0
+167;Hans Choi;0;3.68887945411;0;1.84443972706
+167;Gustav Rivinius;0;3.68887945411;0;1.84443972706
+93;Gandhi;1;4.15888308336;0;0.0
+93;Dalai Lama;0;3.4657359028;2;0.0
+93;Rajiv Gandhis;0;4.85203026392;2;0.0
+93;Jawalharlal Nehru;0;2.77258872224;1;1.38629436112
+93;Rajiv Gandhi;0;3.4657359028;2;0.0
+93;Rao;1;3.4657359028;2;0.0
+93;Chou Enlai;0;2.77258872224;1;1.38629436112
+224;Jake;0;10.6816649823;3;8.36392721454
+224;Jake;0;10.6816649823;3;0.0
+224;Jake;0;12.1167495076;3;0.0
+224;William Conrad;0;16.7278544291;7;5.34083249114
+224;Joe Penny;0;16.7278544291;7;5.34083249114
+224;George Bush;0;10.6816649823;3;0.0
+224;Jake;0;8.37907988929;3;0.0
+224;Jake;0;10.6816649823;3;0.0
+224;Jake Styles;0;16.7278544291;7;5.34083249114
+224;Viet Nam;0;10.6816649823;3;0.0
+224;Jake;0;16.7278544291;7;5.34083249114
+224;Murphy Brown;0;10.6816649823;3;0.0
+224;Silverman;0;8.37907988929;3;0.0
+224;Penny;1;10.6816649823;3;8.36392721454
+224;Jake;0;10.6816649823;3;0.0
+224;Jake;0;10.6816649823;3;0.0
+224;William Cannon Conrad;0;10.6816649823;3;0.0
+215;Magdalena Ortega;0;8.4091624472;2;0.0
+215;Maria Prado;0;8.4091624472;2;0.0
+215;Gilroy;0;8.4091624472;2;0.0
+215;Robert Stewart;0;10.0997120145;2;0.0
+240;Finlay Calder;0;10.9612778467;0;0.0
+137;Ettore DiVito;0;4.60517018599;1;0.0
+137;Hawaiis;0;5.54517744448;4;0.0
+137;David Callies;0;4.60517018599;1;0.0
+192;Wednesday;0;10.8765366182;0;0.0
+192;today;0;10.1143965662;1;0.0
+192;may;0;10.3657109945;2;0.0
+107;Langley;0;7.52779398772;0;0.0
+107;Freddie Roberts;0;6.87935580446;0;0.0
+107;Huffman;0;6.75460409949;0;0.0
+107;Wright;1;8.25868149626;0;0.0
+107;Wright;1;7.52779398772;0;0.0
+107;Wright;1;6.75460409949;0;0.0
+162;Pharaoh Zozer;0;6.51471269087;0;0.0
+162;Imhotep;0;6.51471269087;0;0.0
+162;Philippe Auguste;0;8.08332860879;0;0.0
+162;Sidney Shlenker;0;9.69276652122;1;0.0
+162;Zoser;1;9.69276652122;0;0.0
+194;Spain;1;6.9314718056;2;0.0
+194;Liberty;0;4.85203026392;1;4.85203026392
+194;Spain;1;4.85203026392;0;0.0
+194;Catalonia;0;6.9314718056;2;0.0
+194;Benavides;0;4.85203026392;0;0.0
+194;Police;0;5.68017260902;0;0.0
+194;Ajuria Enea;0;4.85203026392;0;0.0
+194;Lejona;0;5.68017260902;0;0.0
+154;Mayor Art Agnos had reduced the San Francisco Fire Department staffing by 76 positions four months earlier;0;8.18868912444;1;0.0
+154;70000 commuters ride the BART train from Concord into Oakland and San Francisco on a typical Monday but that line was closed Sunday;0;7.09007683578;0;0.0
+232;Cambridge Mass;0;6.1862086239;0;2.68763920384
+232;Total Nutrition;0;7.97796809313;2;0.0
+232;Total Nutrition;0;7.97796809313;2;0.0
+232;Cambridge Mass;0;6.1862086239;0;0.0
+232;University;0;6.1862086239;1;0.0
+232;University;0;19.3695560879;1;0.0
+232;Massachusetts;1;8.38343320124;1;0.0
+232;Palo Alto;0;6.1862086239;0;2.68763920384
+232;Chicago;0;6.1862086239;1;0.0
+232;Harvard;0;19.3695560879;1;0.0
+232;Stanford University;0;6.1862086239;0;2.68763920384
+232;Total Nutrition;0;7.97796809313;2;0.0
+232;Stanford University;0;6.1862086239;0;0.0
+232;Tufts;0;6.1862086239;0;2.68763920384
+232;Tufts;0;6.1862086239;0;0.0
+232;University;0;8.38343320124;1;0.0
+232;Palo Alto;0;6.1862086239;0;0.0
+232;Toronto;0;8.38343320124;1;0.0
+183;Horner;0;5.78074351579;0;0.0
+183;Charles B Darrow;0;6.18001665365;0;0.0
+183;Mallory San Jose;0;6.18001665365;0;0.0
+183;Brad Drexler;0;5.78074351579;0;0.0
+183;Binney amp Smith;0;8.67111527369;0;0.0
+183;Hodgsons;0;5.78074351579;0;0.0
+120;Maine;0;9.88328484522;0;0.0
+120;Dijon;0;8.46062283993;2;0.0
+304;John;0;11.4312814759;1;0.0
+304;Rao;0;14.5039747906;1;0.0
+304;John;0;11.4312814759;1;0.0
+304;John;0;11.4312814759;1;0.0
+304;Kennedy;0;10.4504522229;1;0.0
+304;John F Kennedy;0;10.4504522229;0;0.0
+304;Robert Orme;0;11.4312814759;1;0.0
+304;John;0;13.2230409452;1;0.0
+304;Geoffrey Chaucer;0;13.2230409452;1;0.0
+304;John;0;11.3259209603;1;0.0
+209;Samuel Johnson;0;8.42858053306;1;0.0
+209;Mark Twain;0;7.31853954857;1;0.0
+209;James Boswell;0;8.42858053306;1;0.0
+209;Savage;0;7.2591161281;1;0.0
+209;Edmond Malone;0;7.84463264446;1;0.0
+209;Greene;0;6.98286275147;2;0.0
+209;Johnson;0;14.2419788796;3;0.0
+209;Samuel Goldwyn;0;9.22935837781;1;0.0
+209;Holmes;0;7.2591161281;1;0.0
+209;Ed Clark;0;14.2419788796;3;0.0
+209;George Brown;0;14.2419788796;3;0.0
+209;Caro;0;14.2419788796;3;0.0
+209;Donald;0;6.98286275147;2;0.0
+209;Brown;0;14.2419788796;3;0.0
+209;Scott Berg;0;9.22935837781;1;0.0
+209;Samuel Johnsons Lives;0;7.31853954857;1;0.0
+255;Thailand;0;3.4657359028;2;0.0
+255;Burma;0;4.85203026392;3;0.0
+255;Laos;0;3.4657359028;1;0.0
+255;Thai;0;4.15888308336;1;0.0
+255;Burmas;0;3.4657359028;1;0.0
+255;Tenasserim Division;0;3.4657359028;1;0.0
+255;District Tak;0;6.9314718056;1;0.0
+255;Burma;0;3.4657359028;2;0.0
+255;Thailand;0;4.85203026392;3;0.0
+255;Thailand;0;3.4657359028;1;0.0
+255;Burma;0;3.4657359028;1;0.0
+255;Mae Sot;0;6.9314718056;1;0.0
+255;Mae Ramat;0;6.9314718056;1;0.0
+255;Pai District;0;6.9314718056;1;0.0
+255;Burma;0;4.15888308336;1;0.0
+255;Burma;0;6.9314718056;1;0.0
+255;Burma;0;4.15888308336;2;0.0
+255;Muang District;0;6.9314718056;1;0.0
+284;this year;0;5.41164605186;1;0.0
+284;June;0;4.96981329958;1;0.0
+284;1990;0;5.41164605186;1;0.0
+284;Today;0;9.75545147371;2;0.0
+284;1970;0;5.03695260241;2;0.0
+284;1989;0;5.03695260241;2;0.0
+178;Chester A Arthur;0;9.77792432956;0;0.0
+178;Xu Yong;0;7.58069975222;0;0.0
+178;Hrawi;0;8.28626945278;0;0.0
+178;Rene Mouawad;0;6.08904487545;0;3.04452243772
+178;James A Garfield;0;9.77792432956;0;0.0
+178;Amin Gemayel;0;8.28626945278;0;0.0
+178;Chester A Arthur;0;9.77792432956;0;0.0
+178;Kim Yongsam;0;9.57498348556;0;0.0
+178;Zhang Dengyi;0;7.58069975222;0;0.0
+178;James A Garfield;0;9.77792432956;0;0.0
+178;Aaron Burr;0;6.08904487545;0;0.0
+178;Bishara Khoury;0;6.08904487545;0;3.04452243772
+126;Venezuela;1;2.77258872224;1;1.38629436112
+126;Sucre;0;5.54517744448;1;0.0
+126;Monagas;0;5.54517744448;1;0.0
+126;Venezuelas Orinoco;1;2.77258872224;0;0.0
+126;Venezuela;1;5.54517744448;2;0.0
+296;Wednesday;0;7.64969262371;2;0.0
+130;Leaman;0;5.27811465923;0;0.0
+130;Lacana;0;3.36729582999;1;0.0
+130;Corona;0;5.27811465923;0;0.0
+130;Royex;0;6.73459165997;2;0.0
+130;Royex;0;6.0063531596;1;0.0
+130;Ned Goodman;0;6.73459165997;2;0.0
+130;Pezim;0;5.27811465923;0;0.0
+114;Merced;0;29.3612986882;0;17.6704825615
+114;Anza;0;35.340965123;0;14.6806493441
+114;Anza Sept;0;35.340965123;0;14.6806493441
+114;Delta;0;29.3612986882;0;17.6704825615
+114;United States;0;29.3612986882;0;17.6704825615
+114;San Jose;0;29.3612986882;0;17.6704825615
+114;Modesto;0;29.3612986882;0;17.6704825615
+114;San Mateo;0;29.3612986882;0;17.6704825615
+114;Butte;0;35.340965123;0;14.6806493441
+114;Yuba;0;35.340965123;0;14.6806493441
+114;Santa Barbara;0;35.340965123;0;14.6806493441
+114;Santa Rosa;0;29.3612986882;0;17.6704825615
+114;Grasse;0;7.68063742756;1;0.0
+114;Butte;0;29.3612986882;0;17.6704825615
+114;San Mateo;0;35.340965123;0;14.6806493441
+114;Modesto;0;35.340965123;0;14.6806493441
+114;United States;0;35.340965123;0;14.6806493441
+114;Delta;0;35.340965123;0;14.6806493441
+114;Fresno;0;29.3612986882;0;17.6704825615
+114;Sacramento;0;29.3612986882;0;17.6704825615
+114;Anza;0;29.3612986882;0;17.6704825615
+114;Merced;0;35.340965123;0;14.6806493441
+114;West Valley;0;29.3612986882;0;17.6704825615
+114;Wales;0;6.81563999007;2;0.0
+114;Porterville;0;35.340965123;0;14.6806493441
+114;Monterey;0;35.340965123;0;14.6806493441
+114;West Valley;0;35.340965123;0;14.6806493441
+138;Japans Yoshiaki Tsutsumi;0;9.02159824738;1;0.0
+138;Fortune;0;9.02159824738;1;0.0
+138;Yoshiaki Tsutsumi;0;9.02159824738;1;5.73197264137
+138;Tsutsumi;1;11.4639452827;1;4.51079912369
+138;Canadas Kenneth Cole Irving;0;9.02159824738;1;0.0
+138;Sam Moore Walton;0;10.8353366233;1;4.51079912369
+138;Forbes;0;9.02159824738;1;0.0
+138;Walton;0;9.02159824738;1;0.0
+138;Forbes;0;11.4639452827;1;4.51079912369
+138;Walton;0;9.02159824738;1;0.0
+138;Elizabeth II;0;13.3202432731;0;0.0
+138;Walton;0;8.61613313927;1;0.0
+138;Haruhiko Yoshimoto;0;9.02159824738;1;0.0
+166;Melbourne;0;3.87120101091;1;0.0
+166;Court;0;4.56434819147;1;0.0
+166;Melbourne;0;4.56434819147;1;0.0
+166;England;0;4.56434819147;1;0.0
+166;Melbourne;0;3.87120101091;1;0.0
+166;Brisbane;0;5.25749537203;1;0.0
+166;March;0;4.56434819147;1;0.0
+166;Melbourne;0;3.87120101091;1;0.0
+166;Australia;1;11.7313860684;5;0.0
+166;Melbourne;0;4.96981329958;2;0.0
+166;Miami;0;4.56434819147;1;0.0
+166;Australia;1;3.87120101091;1;0.0
+166;Brisbane Tue;0;11.7313860684;5;0.0
+166;Canberra;0;4.56434819147;1;0.0
+166;Australia;1;5.25749537203;1;0.0
+166;Adelaide Tue;0;11.7313860684;5;0.0
+166;Indonesia;0;3.87120101091;1;0.0
+166;Fairfax;0;3.87120101091;1;0.0
+166;England;0;4.56434819147;1;0.0
+166;Melbourne;0;4.56434819147;1;0.0
+166;Mon;0;11.7313860684;5;0.0
+166;Australia;1;3.87120101091;1;0.0
+166;England;0;3.87120101091;1;0.0
+166;Sydney;0;5.25749537203;1;0.0
+166;Western Australia;0;4.56434819147;1;0.0
+141;Wyoming;0;9.82530977147;0;5.25922847602
+141;Florida;0;9.82530977147;0;5.25922847602
+141;Tennessee;0;8.37839078854;0;0.0
+141;Illinois;0;7.90838715929;0;0.0
+141;Chicago;0;7.43838353004;1;0.0
+141;Mississippi;0;8.37839078854;0;0.0
+141;Kentucky Illinois;0;8.37839078854;0;0.0
+141;Texas;0;8.37839078854;0;0.0
+141;Chicago;0;7.43838353004;1;0.0
+141;Plains;0;9.82530977147;0;5.25922847602
+141;Texas;0;7.43838353004;1;0.0
+141;Texas;0;9.82530977147;0;5.25922847602
+141;Iowa;0;7.90838715929;0;0.0
+141;Chicago;0;7.43838353004;1;0.0
+160;Langston Hughes;0;7.45007956981;1;0.0
+160;Hughes;0;7.92008319905;0;0.0
+160;Kurt Weills;0;7.92008319905;0;0.0
+160;Langston Hughes;0;8.14322675037;1;0.0
+160;Langston Hughes;0;6.06378520869;1;0.0
+160;Federico Garcia Lorca;0;7.92008319905;0;0.0
+160;Calvin Simmons;0;6.75693238925;1;3.03189260434
+160;Arnold Rampersad;0;9.60184177307;0;0.0
+160;Hughes;0;9.60184177307;0;0.0
+160;Langston Hughes;0;6.75693238925;1;0.0
+160;Johnson;0;8.14322675037;1;0.0
+160;Gabriela Mistral;0;7.92008319905;0;0.0
+160;Hughes;0;14.7493362499;0;0.0
+160;Fallon;0;6.75693238925;1;3.03189260434
+160;Langston Hughes;0;6.06378520869;1;3.37846619462
+279;Kings Canyon;0;10.953504658;1;0.0
+279;Virginia;0;14.2926536406;1;0.0
+279;Shenandoah;0;14.2926536406;1;0.0
+279;Glacier Basin;0;14.2926536406;1;0.0
+279;Moraine Park;0;14.2926536406;1;0.0
+279;Fresno;0;9.319374133;1;0.0
+279;Arizona;0;14.2926536406;1;0.0
+279;Missouri;0;14.2926536406;1;0.0
+279;Grant Grove;0;7.93307977188;1;4.6596870665
+279;Maryland;0;14.2926536406;1;0.0
+279;Los Angeles;0;8.49964003217;0;0.0
+279;Maine;0;14.2926536406;1;0.0
+279;Oceanside;0;14.2926536406;1;0.0
+279;Furnace Creek;0;14.2926536406;1;0.0
+279;Kings Canyon;0;7.93307977188;1;4.6596870665
+279;Tennessee;0;14.2926536406;1;0.0
+279;Colorado;0;14.2926536406;1;0.0
+279;Texas Spring;0;14.2926536406;1;0.0
+279;North Carolina;0;14.2926536406;1;0.0
+279;Visalia;0;9.319374133;1;0.0
+214;Chuck Yeager;0;10.2174950502;1;0.0
+214;Chuck Yeager;0;10.2174950502;1;0.0
+214;Glennis;0;10.2174950502;1;0.0
+214;Chuck Yeager;0;10.2174950502;1;0.0
+214;Yeager;1;10.2174950502;1;0.0
+214;David Dempsey;0;10.2174950502;1;0.0
+214;Yeager;1;10.2174950502;1;0.0
+239;Malick;0;5.41164605186;0;0.0
+239;George Tomlinson Chicago Ronald J Cohen Arlington Heights Ill Edmund J Conroy Willowbrook Ill Robert D Furst Jr Deephaven Minn Robert J Griffin Winnetka Ill Terrence P Madden LaGrange Ill Bruce A Nixon;0;8.05070338147;0;0.0
+239;Anthony J Roti Glenview Ill Mary A Rowell Glencoe Ill;0;8.05070338147;0;0.0
+239;Clyde;0;8.05070338147;1;0.0
+239;Henry Kissinger;0;5.41164605186;0;0.0
+239;John K Angelo Hinsdale Ill Leonard Cahnmann;0;8.05070338147;0;0.0
+239;Dennis M Sullivan Highland Park Ill;0;8.05070338147;0;0.0
+239;Hays;0;5.41164605186;0;0.0
+239;Arthur Penns Bonnie;0;8.05070338147;1;0.0
+239;Harry Truman;0;5.41164605186;0;0.0
+239;Judith Wendie Malick;0;5.41164605186;0;0.0
+239;Terrence;0;6.10479323241;0;0.0
+239;Terrence Malicks Badlands;0;8.05070338147;1;0.0
+239;Mario Puzo;0;7.35755620091;1;0.0
+239;John Malick;0;6.10479323241;0;0.0
+239;Terrence Malick;0;8.74385056203;1;0.0
+239;Malick Sene;0;5.41164605186;0;0.0
+239;Wayne Hays;0;6.10479323241;0;0.0
+239;Dean Rusk;0;5.41164605186;0;0.0
+239;Terrence Malick Badlands;0;8.74385056203;1;0.0
+239;Kennedy;0;5.41164605186;0;0.0
+239;Roy E Erickson Northbrook Ill Terrence M Corby Brian D Fox George D Leventis Yossi Morik Peggy Anne Ogorek Keith M Rudman Thomas M Schwarz Pemberton H Shober Jr;0;8.05070338147;0;0.0
+239;Martin Brian Benben;0;5.41164605186;0;0.0
+239;Lyndon B Johnson;0;5.41164605186;0;0.0
+239;Evarts Ziegler;0;7.35755620091;1;0.0
+239;Joan Didion John Gregory Dunne Robert Towne Richard Donner Philip Kaufman Terrence Malick Sydney Pollack;0;7.35755620091;1;0.0
+239;Pressman;0;8.74385056203;1;0.0
+241;Pavlovian;0;5.68357976734;1;0.0
+241;St Georges;0;5.52942908751;1;0.0
+241;Windsor;0;5.68357976734;1;0.0
+241;Country Life;0;5.68357976734;1;0.0
+241;Windsor Castle;0;9.26709870579;1;0.0
+241;London;0;7.32118855674;1;0.0
+241;Windsor;0;5.68357976734;1;0.0
+241;Windsor;0;9.26709870579;1;0.0
+241;Wales;0;5.68357976734;1;0.0
+241;Windsor;0;5.68357976734;1;0.0
+241;Buckingham Palace;0;5.68357976734;1;0.0
+201;Kermit;0;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;0;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Sam;0;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Henson;1;5.74300318781;1;0.0
+201;Jim Henson Ponce;0;5.74300318781;0;0.0
+182;Brownsville;0;3.89182029811;0;0.0
+182;Gilbert;0;3.89182029811;0;0.0
+182;Corpus Christi;0;3.89182029811;0;0.0
+303;Davis;0;8.48260174665;0;0.0
+303;Lincoln;0;8.48260174665;0;0.0
+303;Cosma;0;8.05515773182;0;0.0
+303;Rao;0;13.9896739271;1;4.62237089935
+303;McAlpine;0;8.05515773182;0;0.0
+303;John;0;11.0365012679;1;0.0
+303;Oliver TwistletonWykehamFiennes;0;8.48260174665;0;0.0
+303;John;0;15.299181145;0;0.0
+303;Geoffrey Chaucer;0;9.24474179869;1;0.0
+303;Nurser Rutter Laurence;0;8.48260174665;0;0.0
+303;John;0;9.24474179869;1;0.0
+303;John;0;9.24474179869;1;0.0
+303;John;0;9.24474179869;0;6.99483696353
+231;1770;1;8.25322764558;0;0.0
+231;Tuesday;0;5.95064255259;0;0.0
+231;Monday night may;0;7.96554557313;0;0.0
+231;1922;0;6.46146817635;0;0.0
+106;Raymond;0;7.15461535691;0;0.0
+106;Kirk Kerkorian;0;7.15461535691;0;0.0
+106;Wilbur Wright;0;7.15461535691;0;0.0
+106;Rudy Hillinga;0;9.45720044991;0;0.0
+106;Wright;1;7.15461535691;0;0.0
+106;Tim McClure;0;5.54517744448;0;0.0
+106;Orville;0;7.15461535691;0;0.0
+299;Dallas;0;5.99146454711;0;0.0
+299;Los Angelesbound;0;5.52146091786;0;0.0
+299;United States;0;5.52146091786;0;0.0
+299;Logan;0;5.29831736655;0;0.0
+299;Fort Worth;0;5.99146454711;0;0.0
+299;Detroit;0;6.90775527898;0;0.0
+299;Newark;0;5.99146454711;0;0.0
+299;Memphis;0;5.99146454711;0;0.0
+299;Logan International;0;5.52146091786;0;0.0
+299;Minneapolis;0;5.99146454711;0;0.0
+299;Logan;0;6.21460809842;0;0.0
+299;Logans;0;5.52146091786;0;0.0
+299;Detroit;0;5.99146454711;0;0.0
+116;1000;0;8.77647578935;0;0.0
+116;last year;0;7.58069975222;0;0.0
+116;may;0;9.21830854163;0;0.0
+116;1988;0;7.71423114485;0;0.0
+116;1000;0;10.3859137018;0;0.0
+116;may;0;9.084777149;0;0.0
+312;Iowa;0;7.89655270164;0;0.0
+312;Freedom Bowl;0;6.9314718056;0;0.0
+312;Miami;1;7.20340552108;1;0.0
+312;Colorado;0;7.20340552108;1;0.0
+312;Virginia;0;19.6800547712;0;0.0
+312;Fiesta Bowl;0;6.9314718056;0;0.0
+312;Maryland;0;7.89655270164;0;0.0
+312;Cal;0;7.89655270164;0;0.0
+312;United States;0;7.89655270164;0;0.0
+312;Miami;1;7.20340552108;1;0.0
+312;Texas;0;7.89655270164;0;0.0
+312;India;0;7.89655270164;0;0.0
+312;Louisville;0;7.89655270164;0;0.0
+312;Texas;0;7.20340552108;1;0.0
+312;Virginia;0;7.89655270164;0;0.0
+312;Iowa;0;19.6800547712;0;0.0
+312;Washington;0;7.89655270164;0;0.0
+312;Orange;0;7.89655270164;0;0.0
+312;Michigan;0;7.89655270164;0;0.0
+312;Michigan;0;7.20340552108;1;0.0
+312;Texas;0;19.6800547712;0;0.0
+191;Peter Heyworth;0;7.91717198885;0;0.0
+191;Jane Goodall;0;8.67931204089;1;0.0
+191;Janes;0;9.44145209294;1;0.0
+191;Andrew Porter David Cairns;0;7.91717198885;0;0.0
+191;Solti;0;7.91717198885;0;0.0
+191;Jane Goodall;0;12.0805094226;2;0.0
+191;Edmund Tracey Goodalls;0;7.91717198885;0;0.0
+191;Goodall;0;7.91717198885;0;0.0
+191;Dar es Salaam Ms Goodall;0;8.47678777678;0;0.0
+191;Stephen Arlen;0;7.91717198885;0;0.0
+191;Lucas;0;7.91717198885;0;0.0
+191;Stevie Nicks;0;12.0805094226;2;0.0
+191;Jane Goodall;0;9.93207500939;1;0.0
+191;Jane Goodall;0;7.98616486033;1;0.0
+191;Dian Fossey;0;7.98616486033;1;0.0
+191;Jane Goodall;0;7.98616486033;1;0.0
+191;Nicks;0;9.44145209294;1;0.0
+155;30 years ago;0;5.74939298591;0;0.0
+170;79 years ago;0;12.1960223097;0;0.0
+170;79 years after;0;10.5865843972;0;0.0
+170;Sunday;0;10.5865843972;0;0.0
+170;Sunday;0;12.1960223097;0;0.0
+170;yesterday on the 79th anniversary of the Triangle Shirtwaist fire history repeated itself the may;0;10.5865843972;1;5.29329219862
+170;1911;1;10.5865843972;0;5.29329219862
+170;Todays highlight in history On March 25 1911;0;10.5865843972;0;0.0
+170;today;0;10.5865843972;1;0.0
+170;Todays Highlight in History On March 25 1911;0;10.5865843972;0;0.0
+195;Darth Vader;0;9.69091295257;2;0.0
+195;Darth Vader;0;9.69091295257;2;0.0
+195;Rosie ONeill;0;9.69091295257;2;0.0
+195;Muhammad Ali;0;7.35755620091;2;0.0
+195;Bill Walsh Bill;0;9.13129716464;1;0.0
+195;George Lucas;0;9.13129716464;1;0.0
+195;James Earl Jones;0;9.13129716464;1;0.0
+195;George Seifert;0;9.13129716464;1;0.0
+195;Darth Vader;0;9.13129716464;1;0.0
+195;Tyson;0;7.35755620091;2;0.0
+195;Bill;0;9.13129716464;1;0.0
+195;Ali;0;7.35755620091;2;0.0
+195;Karloff;0;7.35755620091;2;0.0
+195;Darth Vader;0;9.13129716464;1;0.0
+195;Harris Barton;0;9.13129716464;1;0.0
+195;Wolf Basil Rathbone;0;7.35755620091;2;0.0
+195;Mike Tyson;0;7.35755620091;2;0.0
+149;Washington;0;7.94022776515;0;0.0
+149;Microsofts;0;12.0373462543;1;0.0
+149;Mr Gates;0;7.68063742756;0;0.0
+149;United States;0;9.09290727508;1;0.0
+149;University;0;7.94022776515;0;0.0
+270;Monday;0;12.9916850538;0;0.0
+313;730000 years ago by one of Earths most powerful eruptions a blast that spewed 600 times more material than the May 1980;0;8.74830491238;0;0.0
+313;1980;1;10.413312676;0;0.0
+313;May 18 1980;0;7.64969262371;0;0.0
+313;600 years ago is thought to have yielded at least as much molten rock half a cubic kilometer as Mount St Helens did when it erupted in 1980;0;13.0523700056;1;0.0
+313;Ten Years Later;0;8.16051824748;0;0.0
+313;Thursday;0;9.3147003873;0;0.0
+248;James Bond;0;8.86163359769;0;0.0
+248;Mary Fanning Wickham Bond;0;8.0143357373;0;0.0
+248;TIMOTHY DALTON;0;8.86163359769;0;0.0
+248;Brooke Shields;0;8.86163359769;0;0.0
+248;James Bond Triumphs Timothy Dalton;0;10.6533930669;0;0.0
+248;James Bond;0;10.6533930669;0;0.0
+248;Brenda Starr;0;8.86163359769;0;0.0
+248;James Bond;0;8.86163359769;0;0.0
+248;Bonds;0;8.0143357373;0;0.0
+248;Michael G Wilson;0;6.22257626807;0;0.0
+248;James Bond;0;8.0143357373;0;0.0
+248;Fleming;1;8.0143357373;0;0.0
+248;Dalton;0;8.86163359769;0;0.0
+248;Albert R Cubby Broccoli;0;6.22257626807;0;0.0
+248;Mary;0;6.22257626807;0;0.0
+248;AngloSaxon;0;8.0143357373;0;0.0
+248;James Bond Sean Connery George Lazenby Moore Dalton;0;8.0143357373;0;0.0
+248;James Bond;0;6.22257626807;0;0.0
+248;Bond;0;6.22257626807;0;0.0
+248;James Bond;0;8.86163359769;0;0.0
+248;James Bond;0;6.22257626807;0;0.0
+248;Ian Flemings James Bond;0;8.0143357373;0;0.0
+248;Bond James Bond;0;6.22257626807;0;0.0
+248;AngloSaxon;0;6.22257626807;0;0.0
+248;Fleming;1;6.22257626807;0;0.0
+285;Panama;0;4.66343909411;0;0.0
+285;Panama;0;5.35658627467;0;0.0
+285;Panama;0;4.66343909411;0;0.0
+285;United States;0;4.7621739348;0;0.0
+285;Smithsonian;0;4.66343909411;0;0.0
+285;San Blas;0;5.35658627467;0;0.0
+285;Panama;0;6.04973345523;0;0.0
+285;Santa Fe;0;4.7621739348;0;0.0
+285;Washington;1;4.7621739348;0;0.0
+285;India;0;4.7621739348;0;0.0
+285;Panama City;0;4.66343909411;0;0.0
+179;Greek Tragedy;0;8.39162996844;1;0.0
+179;Alaska;0;12.8914396388;0;0.0
+179;European Union;0;17.3222564376;2;0.0
+179;China John;0;7.64969262371;1;0.0
+179;United States;0;17.3222564376;2;0.0
+179;Waart;0;7.64969262371;1;0.0
+99;Howatson;0;12.1780897509;0;0.0
+99;Lale Sariibrahimoglu;0;7.22402480829;0;0.0
+99;Joseph Fontenrose;0;12.1780897509;0;0.0
+99;Howatson;0;8.0349550245;0;0.0
+99;Howard;0;10.268547246;0;0.0
+99;Poseidon;1;7.62948991639;1;0.0
+109;Jody Conradt;0;6.3561076607;0;3.56464877446
+109;Barbara Tucker;0;7.12929754893;0;3.17805383035
+109;Barbara Jordan;0;6.43615036837;1;0.0
+109;John Glenn;0;7.61480536471;1;0.0
+109;Jim Wright;0;5.74300318781;1;0.0
+109;Lena Guerrero DAustin;0;5.74300318781;1;0.0
+109;Lloyd Bentsen;0;7.12929754893;1;0.0
+109;Bush;0;7.12929754893;1;0.0
+109;Walt Rostow;0;6.3561076607;0;3.56464877446
+109;Norman Y Mineta;0;7.61480536471;1;0.0
+109;Lyndon Johnson;0;6.3561076607;0;3.56464877446
+109;Barbara Mikulski;0;7.61480536471;1;0.0
+109;Joshua;0;7.2093402566;0;0.0
+109;Richards;0;5.74300318781;1;0.0
+109;Sen Lloyd Bentsen;0;5.74300318781;1;0.0
+109;Barbara Jordan;0;5.74300318781;1;0.0
+109;Barbara Jordan;0;7.61480536471;1;0.0
+109;Nancy Earl;0;6.3561076607;0;3.56464877446
+109;Jim Hightower;0;7.12929754893;1;0.0
+109;Barbara Jordan;0;5.74300318781;1;0.0
+109;Barbara Jordan;0;5.74300318781;1;0.0
+109;Barbara Jordan;0;7.12929754893;1;0.0
+109;Bill Bradley;0;7.61480536471;1;0.0
+109;Barbara Jordans;0;6.43615036837;1;0.0
+109;Jim Hightower;0;5.74300318781;1;0.0
+109;Fran Harris;0;7.12929754893;0;3.17805383035
+109;Bill Richardson;0;7.61480536471;1;0.0
+109;Jordan;0;7.12929754893;0;3.17805383035
+109;Ann Richards;0;7.12929754893;1;0.0
+109;Richards;0;5.74300318781;1;0.0
+109;Ann Richards;0;6.3561076607;0;3.56464877446
+109;Sam Nunn;0;7.61480536471;1;0.0
+131;yesterday claimed a razorthin win over Ms Geraldine Ferraro former vicepresidential candidate in the hotly contested primary battle to become the Democratic candidate for the New York Senate seat at stake in November;0;12.8062818304;1;0.0
+131;Sunday;0;10.6090572531;2;0.0
+131;maybe it would probably start with one of them as we did in the election in 1984;0;12.0077741342;1;0.0
+131;1984;1;13.0294253817;2;0.0
+131;Five years ago;0;12.2184951655;2;0.0
+291;Wilmington Del;0;5.54517744448;4;0.0
+291;Baby;0;5.54517744448;4;0.0
+92;Adolph Rickenbacker;1;7.97796809313;0;0.0
+92;Little Richard;0;5.80814248998;0;0.0
+92;Harry Sumrall;0;6.90675477865;0;0.0
+92;Marco Avelino;0;5.08759633523;0;0.0
+92;Verlaine;0;5.08759633523;0;0.0
+92;Hendrix;0;6.90675477865;0;0.0
+92;Beck;0;6.90675477865;0;0.0
+92;Alvino Rey;0;8.00536706732;0;0.0
+92;Clapton;0;6.90675477865;0;0.0
+92;Fender;0;3.98898404656;1;0.0
+92;Jeff Beck;0;6.90675477865;0;0.0
+92;Pete Townshend;0;5.08759633523;0;0.0
+92;Robert Johnson Elvis Presley;0;5.80814248998;0;0.0
+91;New York;0;7.37775890823;0;0.0
+91;Sebastian;0;4.85203026392;0;0.0
+91;Austria;0;4.85203026392;0;2.42601513196
+91;United States;0;7.37775890823;0;0.0
+91;Austria;0;4.85203026392;0;2.42601513196
+101;John Dew;0;5.95324333429;0;0.0
+101;Canada;0;4.82028156561;0;0.0
+101;Wales;0;4.82028156561;0;0.0
+101;GAO;0;4.82028156561;0;0.0
+139;Newsome;0;8.38343320124;0;0.0
+139;Seifert;0;10.4628747429;1;0.0
+139;Bruce Coslet;0;11.3865455821;1;0.0
+139;John Robinson;0;9.30710404041;0;0.0
+139;Bud Carson;0;8.9016389323;0;0.0
+139;Green;0;9.30710404041;0;0.0
+139;Bud Carson;0;8.38343320124;0;0.0
+139;Adolph;0;9.01942196796;0;0.0
+139;McNeil;0;11.3865455821;1;0.0
+139;Bernie Kosar;0;12.5423162846;1;0.0
+139;Dan Henning;0;9.30710404041;1;0.0
+139;Dennis Conner;0;9.30710404041;1;0.0
+139;Gaston Green;0;9.30710404041;0;0.0
+139;Marc Trestman Clevelands;0;8.38343320124;0;0.0
+139;Gary;0;9.30710404041;0;0.0
+140;Mohammeds;1;7.26542972325;2;0.0
+140;Mohammed;1;7.26542972325;2;0.0
+140;Rushdies;0;6.30991827823;2;0.0
+140;Gabriel;0;7.26542972325;2;0.0
+140;Kazmi;0;7.26542972325;2;0.0
+140;Ive;0;6.30991827823;2;0.0
+140;Mohammed;1;6.73933662736;2;0.0
+140;Mohammed;1;7.26542972325;2;0.0
+140;Mohammeds;1;7.26542972325;2;0.0
+165;Germany;0;9.72955074528;0;0.0
+165;Switzerland;0;15.3390225405;0;0.0
+125;Picasso;0;4.8283137373;3;0.0
+125;Yo Picasso;1;4.8283137373;1;0.0
+125;Vincent van Goghs Irises;0;4.8283137373;3;0.0
+125;Yo Picasso;1;4.8283137373;2;0.0
+125;Yo Picasso;1;4.8283137373;3;0.0
+125;Yo Picasso;1;4.8283137373;1;0.0
+125;Yo Picasso;1;4.8283137373;2;0.0
+125;Pablo Picassos Yo Picasso;0;4.8283137373;3;0.0
+125;Henri Matisse;0;4.8283137373;2;0.0
+125;Picasso;0;4.8283137373;2;0.0
+125;Yo Picasso;1;4.8283137373;2;0.0
+125;Pablo Picasso;0;4.8283137373;3;0.0
+125;Picasso;0;4.8283137373;2;0.0
+125;John Whitney Payson;0;4.8283137373;0;0.0
+125;Vincent van Gogh;0;4.8283137373;3;0.0
+125;van Gogh;0;4.8283137373;3;0.0
+238;last year by Judge Leland C Nielsen who suggested that the NBA could not possibly win its case under the guidelines established in an antitrust suit between the Los Angeles Raiders and the National Football League according to the opinion issued yesterday;0;6.87935580446;0;0.0
+238;Mayes a thirdround draft choice out of Washington State ran for 1353 yards last year;0;5.78074351579;0;0.0
+217;Charles Windsor;0;9.18080856937;1;0.0
+217;Ann Eveleth;0;6.08221891038;0;0.0
+217;Mary;0;4.89034912822;0;0.0
+217;Edward Fox;0;6.08221891038;0;0.0
+217;Buthelezi;0;6.08221891038;0;0.0
+217;Edward Fox Hamish Hamilton;0;6.08221891038;0;0.0
+217;Elizabeth II;1;9.18080856937;1;0.0
+217;Paul R Verkuil;0;4.89034912822;0;0.0
+217;Farouk Chothia;0;6.08221891038;0;0.0
+177;Lake Michigan;0;5.45532111536;0;0.0
+177;Lake St;0;5.45532111536;0;0.0
+177;Botswana;0;10.2597974298;0;0.0
+177;Ann Arbor;0;5.45532111536;0;0.0
+177;Detroit;0;5.45532111536;0;0.0
+177;Columbus;0;5.69035945432;0;0.0
+302;James Madison;0;4.15888308336;0;0.0
+302;Southern Africa;0;4.15888308336;0;0.0
+302;Victorian;0;5.25749537203;1;0.0
+302;Richmond Va;0;4.27666611902;2;0.0
+302;Philadelphia;0;4.27666611902;2;0.0
+302;Harris;0;4.15888308336;0;0.0
+302;Philadelphia;0;4.27666611902;2;0.0
+230;Orange County;0;5.76832099579;0;0.0
+230;Orange;0;5.76832099579;0;0.0
+230;Anaheim;0;5.76832099579;0;0.0
+230;Anaheim;0;6.1737861039;0;0.0
+230;Anaheim;0;5.54517744448;0;0.0
+230;Victorville;0;6.1737861039;0;0.0
+230;Las Vegas;0;5.76832099579;0;0.0
+230;Las Vegas;0;5.19295685089;0;0.0
+230;George Air;0;6.1737861039;0;0.0
+230;Las Vegas;0;5.29831736655;0;0.0
+230;Disneyland;0;5.29831736655;0;0.0
+230;Roth;0;6.1737861039;0;0.0
+230;Palmdale;0;5.37527840768;0;0.0
+230;Roth;0;6.1737861039;0;0.0
+230;Santa Barbara;0;5.19295685089;0;0.0
+230;George Air;0;6.1737861039;0;0.0
+230;Los Angeles;0;6.80239476332;0;0.0
+230;Las Vegas;0;6.1737861039;0;0.0
+230;Los Angeles;0;5.19295685089;0;0.0
+230;Los Angeles;0;5.37527840768;0;0.0
+230;Las Vegas;0;6.1737861039;0;0.0
+230;San Bernardino;0;5.95064255259;0;0.0
+230;Los Angeles;0;6.06842558824;0;0.0
+230;Las Vegas;0;6.80239476332;0;0.0
+230;East Los;0;5.19295685089;0;0.0
+230;Los Angeles;0;5.95064255259;0;0.0
+230;Victorville;0;6.1737861039;0;0.0
+230;Anaheim;0;6.1737861039;0;0.0
+185;today noon to 11 pm MondayFriday 11 am to 11 pm Saturday and 11 am to 8 pm next Sunday;0;6.59167373201;6;6.04236758767
+185;this week Kids day is Tuesday when kids 16 and under are admitted free from noon to 5 pm seniors day is Wednesday with those 60 and over admitted free all day and Tuesday through Friday;0;12.0847351753;7;3.295836866
+185;Today Creating a garden habitat for wildlife by Phil and Vi Nisonger of Santa Clara County Humane Society 2 pm box Friday Designing with garden flowers by Ruth Holmstrom of San Jose Garden Club and Furyu Floral Designers 2 pm box Saturday Malahini Orchid Society show and sale all day next to Orchid House talk by Albert Wilson noon orchid growing Ken Matheson of Santa Clara Valley and Malahini Orchid Societies 2 pm box Sunday;0;7.69028602068;6;4.39444915467
+185;MondaySaturday in the Living section of the Mercury News and Sundays in the Local section starting today;0;8.78889830934;6;0.0
+185;Sunday Milpitas Day Monday San Jose Day Wednesday Service Club Day Thursday Peace Officers Day Next Friday;0;21.9722457734;20;0.0
+185;9982277 or 510 7622277 Exhibits A Native American Exploration will be held at 1030 am Tuesday and storytelling is scheduled for 1 pm Saturday at the Childrens Discovery Museum open 10 am to 5 pm Tuesdays through Saturdays and noon to 5 pm Sunday;0;7.69028602068;5;0.0
+185;2953;0;5.49306144334;4;8.23959216501
+185;Monday California natives for the dry landscape by Glenn Rogers landscape architect and California Native Plant Society 2 pm box Tuesday Kids day planters Make Your Own Dorothy Goble Dorothy Dorenus and Las Jardineras Club members 2 pm box Wednesday Orchids by Weegie Caughlan of the Peninsula Orchid Society 130 pm box Aug 8 Bonsai by Les Steele and John Thompson of Midori Bonsai Club 2 pm box Aug 9 Cactus and succulents by Don Cravalho of the Cactus and Succulent Society of San Jose 2 pm box Aug 10 Clara B Rees Iris Society show and sale all day next to Patio Area Santa Clara Valley Branch of American Begonia Society show and sale all day next to Orchid House talk by Albert Wilson noon propagating begonias by Mary Ann Leer and Malvina Rendler of the American Begonia Society 2 pm box Aug 11 Santa Clara County Rose Society show and sale all day next to Patio Area rose talk by Lorrie Freeman of the Santa Clara County Rose Society 2 pm Information 408 2953;0;8.78889830934;7;3.84514301034
+185;5787529 ODCSan Francisco presents The Velveteen Rabbit at 2 pm today 2 and 7 pm Thursday 7 pm Friday 2 and 7 pm Saturday and 2 pm next Sunday;0;7.69028602068;5;0.0
+185;Friday Dahlias by Harrison Elleard of John E Stowell Dahlia Society 2 pm box Saturday Nite Bloomers African Violet Club show and sale all day next to Orchid House raising African violets by Doreen Hassan 2 pm box Sunday Cactus and Succulent Society of San Jose show and sale all day next to Patio Area talk by Albert Wilson noon Floriculture Day and awards presentation 230 pm box Monday Fuchsias by Elsie and Al Sydnor of San Jose Branch American Fuchsia Society 2 pm box Tuesday Kids day planters Make Your Own by Nancy Homen and members of Las Jardineras Garden Club 2 pm box Wednesday;0;16.47918433;12;2.74653072167
+278;Monaghan;1;8.41980084541;0;0.0
+278;Gerry Durnell;0;7.03350648429;0;0.0
+278;Monaghan;1;7.32118855674;0;0.0
+171;Botswana;1;6.89770494313;1;0.0
+171;Kent;0;6.89770494313;1;0.0
+171;Botswana;1;6.89770494313;1;0.0
+171;Botswanas Kalahari;1;10.2989023248;0;0.0
+171;Kenya;0;6.89770494313;1;0.0
+171;Nairobi;0;6.89770494313;1;0.0
+171;Botswana;1;6.89770494313;1;0.0
+115;Mexico;1;6.70930434026;0;0.0
+142;South African;0;7.90248743716;0;0.0
+142;White Bear;0;5.78074351579;0;0.0
+142;Kenya;1;7.90248743716;0;0.0
+142;Africa;1;7.90248743716;0;0.0
+142;Live;0;5.78074351579;0;0.0
+142;Saudi Arabias;1;5.78074351579;0;0.0
+142;Vos;0;5.78074351579;0;0.0
+176;Blanc;0;4.66343909411;0;0.0
+176;Kennedy;0;6.45519856334;0;0.0
+176;Woody Woodpecker Speedy Gonzalez Pepe Le;0;4.66343909411;0;0.0
+176;Morse;0;5.37527840768;0;0.0
+176;Samuel FB;0;4.66343909411;0;0.0
+176;Edwin Armstrong;0;8.24695803257;0;0.0
+176;Yosemite Sam;0;4.66343909411;0;0.0
+176;William W Hansen;0;6.45519856334;0;0.0
+176;Hughes;0;8.24695803257;0;0.0
+314;1980;1;10.9612778467;0;0.0
+314;730000 years ago by one of Earths most powerful eruptions a blast that spewed 600 times more material than the May 1980;0;9.32366905728;0;0.0
+314;600 years ago is thought to have yielded at least as much molten rock half a cubic kilometer as Mount St Helens did when it erupted in 1980;0;14.8530981448;0;0.0
+314;Thursday;0;9.57498348556;0;0.0
+148;Guam;0;3.295836866;3;0.0
+148;Mariana Islands;0;2.19722457734;2;0.0
+148;Guam;0;4.39444915467;4;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;Northern Mariana Islands;0;2.19722457734;2;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;Mariana Islands;0;2.19722457734;2;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;Matthews;0;2.19722457734;2;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;US;0;2.19722457734;2;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;Wright;0;2.19722457734;2;0.0
+148;Marianas;0;2.19722457734;2;0.0
+148;Northern Mariana Islands;0;2.19722457734;2;0.0
+148;Guam;0;2.19722457734;2;0.0
+148;Matthews;0;2.19722457734;2;0.0
+163;Charles A Lindbergh;0;10.0858091093;0;2.74031946167
+163;Florio;0;7.78322401634;1;0.0
+163;Charles Lindberghs;0;7.78322401634;1;0.0
+163;Anne Morrow Lindbergh;0;10.0858091093;0;2.74031946167
+163;Bruno Richard Hauptmann;0;5.48063892334;1;0.0
+163;Bruno Hauptmann;0;5.48063892334;1;0.0
+163;Mooney;0;5.48063892334;1;0.0
+163;Katchers;0;5.48063892334;1;0.0
+163;Lindbergh;0;7.78322401634;1;0.0
+163;Mrs Lindberghs;0;10.0858091093;0;2.74031946167
+163;Charles Lindbergh Jr;0;7.78322401634;1;0.0
+163;Lindbergh;0;10.0858091093;0;0.0
+163;Charles A Lindbergh;0;5.48063892334;0;5.04290455467
+163;Scott Berg;0;5.48063892334;0;5.04290455467
+163;Bruno Richard Hauptmann;0;10.0858091093;0;0.0
+163;Charles Lindbergh;0;5.48063892334;1;0.0
+163;Chipowski;0;7.78322401634;1;0.0
+163;Anne Morrow Lindbergh;0;10.0858091093;0;0.0
+163;Tim Mayer;0;5.48063892334;1;0.0
+163;Hauptmann;0;7.78322401634;1;0.0
+163;Charles Lucky Lindy Lindbergh;0;10.0858091093;0;0.0
+163;Charles Lindberghs;0;5.48063892334;1;0.0
+163;Hauptmann;0;5.48063892334;1;0.0
+163;Christopher Lee Marshall;0;5.48063892334;1;0.0
+163;Anna Hauptmann;0;7.78322401634;1;0.0
+163;James W Lloyd;0;10.0858091093;0;2.74031946167
+163;Charles Lindbergh;0;5.48063892334;1;0.0
+163;Charles Lindbergh;0;5.48063892334;1;0.0
+163;Bruno Hauptmann;0;7.78322401634;1;0.0
+163;Scott Berg;0;10.0858091093;0;2.74031946167
+163;Charles Lindbergh;0;5.48063892334;1;0.0
+163;Hauptmann;0;10.0858091093;0;0.0
+112;Hampstead;0;12.6600993203;0;0.0
+112;Venus;0;5.22574667371;0;0.0
+112;Fridays;0;5.22574667371;0;0.0
+112;Venus;0;5.91889385427;0;0.0
+112;Venus;0;12.6600993203;0;0.0
+112;California;0;5.91889385427;0;0.0
+112;Venus;0;4.68213122712;0;0.0
+98;Montenegro;0;2.19722457734;2;1.09861228867
+98;Belgrade;0;2.19722457734;2;0.0
+98;Macedonia;0;2.19722457734;2;0.0
+98;Montenegro;0;2.19722457734;2;0.0
+98;Serbia;0;2.19722457734;2;0.0
+98;Albania;0;2.19722457734;2;0.0
+98;Montenegro;0;2.19722457734;2;1.09861228867
+98;Montenegro;0;2.19722457734;2;0.0
+98;Croatia;0;2.19722457734;2;0.0
+98;Montenegro;0;2.19722457734;2;0.0
+98;Montenegro;0;2.19722457734;2;0.0
+98;Ohrid;0;2.19722457734;2;0.0
+98;Slovenia;0;2.19722457734;2;0.0
+98;Italy;0;2.19722457734;2;1.09861228867
+98;Bijela Montenegro;0;2.19722457734;2;0.0
+98;Montenegro;0;2.19722457734;2;0.0
+98;Serbia;0;2.19722457734;2;1.09861228867
+98;Montenegro;0;3.295836866;3;0.0
+98;Macedonia;0;2.19722457734;2;0.0
+98;Serbia;0;2.19722457734;2;0.0
+98;Salvage;0;2.19722457734;2;0.0
+98;Herzegovina Text;0;3.295836866;3;0.0
+98;Serbia;0;2.19722457734;2;0.0
+108;Derek Wastila;0;3.91202300543;2;0.0
+108;Mary Herron;0;4.60517018599;2;0.0
+108;Homer Bludau;0;3.91202300543;2;0.0
+108;Coronado Smith;0;3.91202300543;2;0.0
+108;Jesse MacNeil;0;3.91202300543;2;0.0
+108;Coronado;0;4.60517018599;2;0.0
+108;Mary Herron;0;4.60517018599;2;0.0
+108;Coronado;0;3.91202300543;2;0.0
+108;Marian Catholic;0;3.91202300543;2;0.0
+108;Coronado;0;3.91202300543;2;0.0
+108;Coronado;0;4.60517018599;2;0.0
+108;Boyd;0;4.38202663467;1;0.0
+108;Susan Keith;0;4.60517018599;2;0.0
+108;Coronado;0;3.91202300543;2;0.0
+290;Jamaica;1;7.16703787691;1;0.0
+290;Ocho Rios;0;7.16703787691;1;0.0
+290;Ocho Rios;0;7.16703787691;1;0.0
+290;Jamaica;1;7.16703787691;1;0.0
+290;Montego Bay;0;7.16703787691;1;0.0
+290;Montego Bay;0;7.16703787691;1;0.0
+290;Montego Bay;0;7.16703787691;1;0.0
+290;Ocho Rios;0;7.16703787691;1;0.0
+290;Jamaica;1;7.16703787691;1;0.0
+290;New York;0;7.16703787691;1;0.0
+290;Jamaica;1;7.16703787691;1;0.0
+290;Ocho Rios;0;7.16703787691;1;0.0
+132;Australia;1;4.78749174278;2;0.0
+132;Australia;1;4.78749174278;2;0.0
+132;Australia;1;4.78749174278;2;0.0
+132;New Zealand;0;4.78749174278;2;0.0
+216;Billy;0;8.41980084541;2;0.0
+216;William H Bonney Jr;0;8.41980084541;2;0.0
+216;Pat Garrett;0;8.41980084541;2;0.0
+216;Pat Garrett;0;8.41980084541;2;0.0
+216;Pat Garrett;0;8.41980084541;2;0.0
+216;Billy the Kid Miller;0;8.55333223803;4;0.0
+216;Billy;0;8.41980084541;2;0.0
+216;Billy;0;8.41980084541;2;0.0
+216;Louis Kid;0;10.5149907441;2;0.0
+216;Bonney;0;8.41980084541;2;0.0
+216;Charlie;0;8.41980084541;2;0.0
+216;Billy;0;8.55333223803;4;0.0
+216;Lincoln;0;8.41980084541;2;0.0
+216;Pat Garrett;0;8.41980084541;2;0.0
+216;Billy;0;8.41980084541;2;0.0
+216;Cagney;0;10.5149907441;2;0.0
+237;Siberia;0;8.65869275369;1;0.0
+237;Yakutia;0;7.27239839257;1;0.0
+237;Beers;0;7.27239839257;1;0.0
+237;Most;0;7.27239839257;1;0.0
+237;Lunda Norte;0;7.27239839257;1;0.0
+237;Japan;0;7.27239839257;1;0.0
+237;Russia;1;8.65869275369;1;0.0
+237;Gras;0;6.9314718056;2;0.0
+237;North America;1;6.9314718056;2;0.0
+237;Of;0;5.88610403145;1;0.0
+237;Russia;1;7.27239839257;1;0.0
+237;Russia;1;7.27239839257;2;0.0
+100;Hungary;1;2.77258872224;2;0.0
+100;Tuesdays;0;2.77258872224;2;0.0
+100;Hungary;1;2.77258872224;2;0.0
+100;Hungary;1;2.77258872224;0;0.0
+100;Slovakia;1;4.15888308336;2;0.0
+100;Hungary;1;2.77258872224;2;0.0
+100;Hungary;1;2.77258872224;2;0.0
+100;Slovakia;1;2.77258872224;1;0.0
+100;Hungary;1;4.15888308336;2;0.0
+100;Budapest;1;2.77258872224;2;0.0
+100;Bratislava;1;2.77258872224;2;0.0
+100;Slovakia;1;2.77258872224;2;0.0
+100;The Hague;0;2.77258872224;2;0.0
+100;Zitny Ostrov;0;4.15888308336;2;0.0
+100;March;0;2.77258872224;2;0.0
+247;33224 Washington DC 200330224 202 7372599 Heres a sampling of some other flower festivals check Dogwood Arts Festival in Knoxville Tenn April 1228 111 N Central Knoxville Tenn 37902 615 6374561 check The Azalea Trail Festival in Mobile Ala which spreads from March to May in between special events visitors can stroll along marked scenic trails to enjoy the profusion of flowers co Mobile Convention amp Visitors Corp 1 St Louis Centre Suite 2002 Mobile Ala 36602 205 4335100 or 800 6666182 check Atlanta Dogwood Festival in Georgia April 1221;0;19.1301610498;0;7.78031417668
+247;30000 tulips 10000 daffodils 2000;0;6.34212141872;0;0.0
+247;50219 515 6284311 check Tulip Time Festival in Holland Mich May 818 150 W 8th St Holland Mich 49423 616 3964221 check Portland Rose Festival in Oregon June;0;10.6048012958;0;7.78031417668
+247;2610 Atlanta Ga 30303 404 5256145 check Azalea Festival at Callaway Gardens in Georgia March 3031 April 67 and April 1314 Callaway Gardens Pine Mountain Ga 31822 404 6632281 check Shenandoah Apple Blossom Festival in Winchester Va May 25 5 N Cameron St Winchester Va 22601 703 6623863 check Pella Tulip Time Festival in Iowa May;0;15.5606283534;0;14.8674811728
+247;1878;0;7.8547691835;1;0.0
+247;today;0;6.9314718056;0;0.0
+124;Sosnoff;0;0.0;0;0.0
+124;Martin T Sosnoff;0;0.0;1;0.0
+124;Pratt;0;0.0;1;0.0
+153;Britains Queen Elizabeth II;0;8.62047154087;1;0.0
+153;Elizabeth II;1;8.62047154087;1;0.0
+267;Harry Markowitz Merton Miller;0;9.22276289197;0;5.04911581466
+267;Joseph E Murray;0;10.0982316293;1;0.0
+267;Naguib Mahfouz;0;10.3859137018;2;0.0
+267;Madesani;0;9.51044496443;2;0.0
+267;Lucila Godoy;0;9.51044496443;2;0.0
+267;Donnall Thomas;0;10.0982316293;1;0.0
+267;Camilo Jose Cela;0;7.90100705199;2;0.0
+267;Maurice Allais;0;11.196843918;1;0.0
+267;Donnall Thomas;0;10.0982316293;1;4.61138144599
+267;Naguib Mahfouz;0;7.90100705199;1;0.0
+267;William Sharpe;0;9.22276289197;0;5.04911581466
+267;Nadine Gordimer;0;9.51044496443;2;0.0
+267;Alcayaga;0;9.51044496443;2;0.0
+267;Octavio Paz;0;10.0982316293;1;4.61138144599
+267;Mikhail S Gorbachev;0;9.22276289197;0;5.04911581466
+267;Naguib Mahfouz;0;11.196843918;1;0.0
+267;Vicente Aleixandre;0;7.90100705199;1;0.0
+267;Joseph E Murray;0;10.0982316293;1;4.61138144599
+267;Juan Ramon Jimenez;0;7.90100705199;1;0.0
+267;Grazia Deledda;0;9.51044496443;2;0.0
+267;Octavio Paz;0;10.0982316293;1;0.0
+267;Camilo Jose Cela;0;7.90100705199;2;0.0
+267;Franco;0;7.90100705199;1;0.0
+309;Jeff Logsdon;0;2.07944154168;1;1.03972077084
+309;Jim Henson;0;4.15888308336;1;0.0
+309;Kermit Miss Piggy;0;2.07944154168;0;0.0
+309;Henson;1;2.07944154168;1;0.0
+309;Kermit;0;2.07944154168;0;0.0
+309;Susan Berry;0;2.07944154168;0;1.03972077084
+309;Jim Henson;0;2.07944154168;1;0.0
+309;Henson;1;4.15888308336;0;0.0
+309;Kermit;0;2.07944154168;0;0.0
+309;Erwin Okun;0;2.07944154168;0;1.03972077084
+309;Disneys Mickey Mouse;0;2.07944154168;0;1.03972077084
+309;Jim Henson;0;2.07944154168;0;0.0
+309;Henson;1;2.07944154168;0;1.03972077084
+309;Roger Rabbit;0;2.07944154168;1;0.0
+309;Henson;1;2.07944154168;0;0.0
+309;Mickey Mouse;0;2.07944154168;0;0.0
+309;Mickey Mouse;0;4.15888308336;1;0.0
+309;Kermit;0;4.15888308336;1;0.0
+172;Thatcher;0;6.55108033504;2;0.0
+172;Henry Kissinger;0;6.55108033504;2;0.0
+172;Dwight D Eisenhower;0;8.40737832541;2;0.0
+172;Reagan;0;6.55108033504;2;0.0
+172;Bush;0;6.55108033504;2;0.0
+172;Manuel Solis Palma;0;8.40737832541;2;0.0
+172;Reagan;0;6.55108033504;2;0.0
+172;Mrs Thatcher;0;6.55108033504;2;0.0
+172;Jimmy Carters;0;6.90775527898;3;0.0
+172;Reagan;0;6.90775527898;3;0.0
+172;Oliver North;0;6.55108033504;2;0.0
+172;Daniel Ortega;0;6.55108033504;2;0.0
+172;Reagan;0;8.54090971803;2;0.0
+172;Mikhail S Gorbachev;0;8.54090971803;2;0.0
+172;Adlai Stevenson;0;8.40737832541;2;0.0
+184;1961;0;11.9853012784;1;0.0
+184;June 1963 two years after;0;8.894258825;0;0.0
+184;200 years ago and opened the road to the region of Brandenburg in Prussia but its six battlescarred sandstone columns became a symbol of division after the wall was built in 1961;0;17.7843939328;1;0.0
+184;Tuesday and the two later announced plans for the treaty and a number of other changes The famed Brandenburg Gate isolated in East Berlin since the Berlin Wall was built in 1961;0;11.9853012784;0;0.0
+184;28 years ago;0;12.6784484589;1;0.0
+184;1961;0;12.6784484589;0;0.0
+246;1983;0;6.38350663488;1;0.0
+246;1940;0;7.97796809313;0;0.0
+246;1244;0;6.38350663488;0;0.0
+246;24000 huge transmission towers carrying 69000 to 500000volt electrical conductor lines along a 1200;0;6.38350663488;0;0.0
+246;1936;1;9.39166142844;0;0.0
+164;Shayne Wasdens;0;3.21887582487;0;0.0
+164;Criqui;0;3.21887582487;0;0.0
+164;Smith;0;3.21887582487;0;0.0
+204;1934;0;8.18868912444;0;0.0
+204;1978;0;9.084777149;0;0.0
+204;1839;1;11.8393473657;0;0.0
+204;1936;0;8.5923006639;0;0.0
+204;1911;0;9.084777149;0;0.0
+90;Langanker;0;7.17011954345;1;0.0
+90;North;0;9.73506890091;0;0.0
+90;Gesell;0;9.73506890091;0;0.0
+90;James J Ritty;0;11.3466465343;0;0.0
+90;Colvin;0;11.3466465343;0;0.0
+90;Denise Anderson;0;9.73506890091;0;0.0
+90;Dickson;0;9.73506890091;0;0.0
+283;2750;0;6.32435896238;0;0.0
+283;today from 1 to 3 pm 408 9710323 check Contemporary quilts by 28 Northern California artists including Joan Schulze Kathleen Sharp Yvonne Porcella and Heather Urquhart see related article page 1E are on view through July;0;8.95879734614;0;0.0
+111;Abner Graves;0;6.05208916892;1;0.0
+111;AllStar Baseball;0;7.66152708136;2;0.0
+111;David Q Voigt;0;6.43775164974;4;0.0
+111;Abner Doubleday;0;6.05208916892;1;0.0
+111;Cartwright;0;6.05208916892;1;0.0
+197;Iowa;0;7.94307271728;0;0.0
+197;Iowa;0;19.7265747868;0;0.0
+197;Washington;0;7.94307271728;0;0.0
+197;Cal;0;7.94307271728;0;0.0
+197;Michigan;0;7.94307271728;0;0.0
+197;Michigan;0;7.24992553672;1;0.0
+197;Texas;0;19.7265747868;0;0.0
+197;Miami;1;7.24992553672;1;0.0
+197;United States;0;7.94307271728;0;0.0
+197;Texas;0;7.24992553672;1;0.0
+197;Texas;0;7.94307271728;0;0.0
+197;India;0;7.94307271728;0;0.0
+197;Maryland;0;7.94307271728;0;0.0
+197;Virginia;0;19.7265747868;0;0.0
+197;Colorado;0;7.24992553672;1;0.0
+197;Miami;1;7.24992553672;1;0.0
+197;Virginia;0;7.94307271728;0;0.0
+197;Orange;0;7.94307271728;0;0.0
+197;Louisville;0;7.94307271728;0;0.0
+193;Boston;1;5.29831736655;1;0.0
+193;DC;0;5.29831736655;1;0.0
+193;Fort Worth;0;28.3478848231;1;0.0
+193;Detroit;0;6.68461172767;1;0.0
+193;Dallas;0;28.3478848231;1;0.0
+193;Minneapolis;0;28.3478848231;1;0.0
+193;Detroit;0;28.3478848231;1;0.0
+193;Newark;0;28.3478848231;1;0.0
+193;Memphis;0;28.3478848231;1;0.0
+133;1984;0;10.4868198671;0;0.0
+133;1500;0;11.2897819137;0;0.0
+257;Wednesday;0;6.59987049921;0;0.0
+257;35000 years ago;1;6.59987049921;0;0.0
+257;may;0;7.69848278788;0;0.0
+228;Paula Zahn;0;9.12869638294;1;0.0
+228;Spencer Christian Zahn;0;10.4251344149;1;0.0
+228;Lunden;0;9.75938620856;0;5.33008637695
+228;Jane Pauley;0;9.8218435635;1;0.0
+228;Charles Gibson;0;10.4251344149;1;0.0
+228;Paula Zahn;0;9.8218435635;1;0.0
+228;Paula Zahn;0;11.8114287761;1;0.0
+228;Nielsen;0;8.43554920238;1;0.0
+228;Deborah Norville;0;9.8218435635;1;0.0
+228;Joan Lunden;0;10.6601727539;1;4.87969310428
+228;Sullivan;0;9.8218435635;1;0.0
+113;Robert E Davidson;0;6.11368217983;0;0.0
+113;Dimitri Yazov;0;6.46146817635;2;0.0
+113;Gen Robert E Lees Confederates;0;6.11368217983;0;0.0
+113;Kim Holien;0;7.37775890823;4;0.0
+113;Bush;0;6.46146817635;2;0.0
+113;Yazovs;0;6.46146817635;2;0.0
+113;Peterson;0;9.3325580047;2;0.0
+113;Gen George Picketts;0;6.11368217983;0;2.99573227355
+113;Baldwyn Forrest;0;6.11368217983;0;0.0
+123;Newton;0;7.88231491898;0;0.0
+123;Lynn Mass;0;7.88231491898;0;0.0
+123;India;0;13.5598438149;2;0.0
+123;United States;0;7.88231491898;0;0.0
+123;Baudhayan;0;13.5598438149;2;0.0
+121;December;0;8.04718956217;0;0.0
+121;Monday;0;8.51719319142;1;0.0
+121;Friday;0;7.37775890823;2;0.0
+121;today were going to offer fans across the country membership to the Babe Ruth Museum King said Tuesday behind the house where the Sultan of Swat was born 95 years ago;0;10.705489138;1;0.0
+121;1926;0;8.51719319142;1;0.0
+121;Wednesday;0;7.37775890823;2;0.0
+121;28000 men women and children visited the House of Ruth last year;0;15.6426572802;0;0.0
+244;Cleo Laine;0;6.31896811375;0;0.0
+244;Linda Albert;0;6.31896811375;0;0.0
+244;Franz Gruber;0;8.71686338654;1;0.0
+308;Copenhagen;0;5.78074351579;0;0.0
+308;Omaha Neb;0;10.9861228867;0;0.0
+308;Kansas;0;5.08759633523;0;0.0
+308;United States;0;6.71901315439;0;0.0
+308;Ohio Patricia;0;6.02586597383;0;0.0
+308;Mc;0;8.91623773172;0;0.0
+308;European Union;0;5.78074351579;0;0.0
+308;Streetsboro;0;6.02586597383;0;0.0
+308;United States;0;5.78074351579;0;0.0
+308;Amsterdam;0;5.78074351579;0;0.0
+308;Kansas City;0;5.08759633523;0;0.0
+308;Las Vegas;1;8.91623773172;0;0.0
+268;Collins;0;6.38687931936;2;0.0
+268;Edgar Allan Poe;0;6.38687931936;2;0.0
+268;Peter OToole;0;6.38687931936;2;0.0
+268;Corman;0;6.38687931936;2;0.0
+268;Poe;1;6.38687931936;2;0.0
+268;Annabel Lee;0;6.38687931936;2;0.0
+268;Lance Henricksen;0;6.38687931936;2;0.0
+236;Wiccan Marsh;0;5.99146454711;2;0.0
+187;Tommy Robinson;0;6.78219205601;0;0.0
+187;Wankel;0;8.97941663334;0;0.0
+211;Frei;0;4.39444915467;2;0.0
+211;Carlos Saul Menem;0;5.49306144334;2;0.0
+211;Gonzalo Sanchez de Lozada;0;5.49306144334;2;0.0
+211;Valdes;0;4.39444915467;1;0.0
+211;Eduardo Frei Ruiz Tagle;0;4.39444915467;1;0.0
+211;Eduardo Frei;0;4.39444915467;2;0.0
+211;Freis;0;4.39444915467;1;0.0
+211;Juan Carlos Wasmosy;0;5.49306144334;2;0.0
+211;Sanchez de Lozada;1;4.39444915467;2;0.0
+211;Eduardo Frei;0;4.39444915467;1;0.0
+211;Gabriel Valdes;0;4.39444915467;1;0.0
+211;Al Gore;0;4.39444915467;2;0.0
+211;Frei;0;4.39444915467;1;0.0
+211;Bill Clinton;0;4.39444915467;2;0.0
+211;Gonzalo Sanchez de Lozadas;0;4.39444915467;1;0.0
+211;Carlos Saul Menem;0;5.49306144334;2;0.0
+211;Juan Carlos;0;4.39444915467;1;0.0
+211;Enrique Silva Cimma;0;4.39444915467;1;0.0
+211;Gonzalo Sanchez de Lozada;0;5.49306144334;2;0.0
+211;Gonzalo Sanchez de Lozada;0;4.39444915467;2;0.0
+211;Gonzalo Sanchez de Lozada;0;4.39444915467;1;0.0
+211;Aylwin;0;4.39444915467;1;0.0
+211;Juan Carlos Wasmosy;0;5.49306144334;2;0.0
+211;Patricio Aylwin;0;4.39444915467;1;0.0
+211;Carlos Menem;0;4.39444915467;1;0.0
+211;Patricio Aylwin;0;4.39444915467;1;0.0
+211;Begin Sanchez;0;4.39444915467;3;0.0
+211;Antonio Aranibar;0;4.39444915467;2;0.0
+103;1980 blast which had the power of a 24megaton nuclear warheads or 2500;0;6.20455776257;0;0.0
+103;22000 people in 1985 while more than 2000 perished in pyroclastic flows blasts of hot gas rock and ash from Mexicos El Chichon in 1982;0;6.99301512293;0;3.10227888128
+103;1902 pyroclastic flows killed 29000 near Mount Pelee in Martinique 6000 near Santa Maria volcano in Guatemala and 1560 in the eruption of Soufriere on St Vincent said Tilling who is based in Washington DC His count shows 13080 more died during the six other deadly eruptions this century three volcanoes in 1951 and three others in 1911 1919 and 1963;0;8.91260796367;0;0.0
+103;1944;1;9.03777110662;1;0.0
+103;1000 more than 300000 people died from volcanic flows lava pyroclastic or mud tsunamis and posteruption starvation Tilling said in a summary of his remarks for today;0;6.20455776257;0;3.49650756147
+301;Wednesday;0;8.07090608879;2;0.0
+301;1986;0;7.15461535691;1;0.0
+175;may;0;23.2928731;13;0.0
+175;today;0;81.8331489196;43;0.0
+175;1994;0;12.5423162846;7;0.0
+175;three days ago on the basis that alBid would resign six months later;0;10.0481072421;3;0.0
+254;1976;1;8.88875674785;1;0.0
+254;1976;1;7.27931883541;1;0.0
+254;1960;0;8.61431990215;1;0.0
+254;Saturday;0;6.43775164974;0;0.0
+150;Rotterdam;0;4.36944785247;1;0.0
+150;Bucharest;0;0.0;0;0.0
+150;Hungary;0;4.36944785247;2;0.0
+150;Netherlands;0;0.0;0;0.0
+150;European Union;0;4.36944785247;1;0.0
+150;Romania;0;0.0;1;0.0
+150;Germany;0;4.36944785247;1;0.0
+150;Romania;0;4.36944785247;1;0.0
+150;Transylvani;0;4.36944785247;2;0.0
+150;Romania;0;8.73889570493;1;0.0
+150;Bucharest Monique;0;0.0;1;0.0
+150;Romania;0;0.0;1;4.36944785247
+150;Transylvania;0;4.36944785247;2;0.0
+150;Romania;0;0.0;2;0.0
+150;Hungarian King;0;4.36944785247;2;0.0
+150;Romania;0;4.36944785247;2;0.0
+150;Romania;0;0.0;2;4.36944785247
+227;Sams;0;4.04305126783;0;0.0
+227;Sam;0;4.04305126783;1;0.0
+227;S Robson John T Jim C;0;4.04305126783;0;0.0
+227;Sam Walton;0;4.04305126783;0;0.0
+227;Sam Walton;0;4.04305126783;0;0.0
+227;Sam Walton;0;4.04305126783;0;0.0
+227;Walton;1;4.04305126783;0;0.0
+227;Whyte;0;4.04305126783;0;0.0
+227;Sam Walton;0;4.04305126783;0;0.0
+227;Sam Walton;0;4.04305126783;0;0.0
+227;Rabalais;0;4.04305126783;0;0.0
+158;Zebulon Montgomery Pike;0;7.90838715929;0;0.0
+158;Clark;0;7.90838715929;0;0.0
+158;Beth El;0;6.29894924686;0;0.0
+158;Zebulon Pike;0;6.52209279817;1;0.0
+158;Zebulon Pike;0;8.1315307106;1;0.0
+158;Zebulon Pike;0;7.43838353004;1;0.0
+158;Lewis;0;7.90838715929;0;0.0
+158;Zebulon Pike;0;5.82894561761;1;0.0
+97;Anubis Warpus Jacek Lentz;0;6.72262979486;1;3.36131489743
+97;Homo;0;6.72262979486;1;0.0
+97;Tom Cairns;0;6.72262979486;1;0.0
+97;Brian Friedman;0;6.72262979486;1;3.36131489743
+97;Romuald Tecco;0;6.59167373201;0;0.0
+97;Moshinsky;0;6.72262979486;1;0.0
+97;Brian Foster;0;6.72262979486;1;0.0
+97;Michael Yeargans;0;6.72262979486;1;0.0
+97;Dennis Russell Davies;0;6.59167373201;0;0.0
+97;Martens;0;6.72262979486;1;3.36131489743
+97;Paul Dunkel;0;6.59167373201;0;0.0
+97;Adams;0;6.59167373201;0;0.0
+97;Santa Cruz You;0;6.72262979486;1;3.36131489743
+97;Drumrock Keith Coleman;0;6.72262979486;1;0.0
+97;Ursula Oppens;0;6.59167373201;0;0.0
+97;Anubis Warpus;0;6.72262979486;1;0.0
+97;Paul Zukofsky;0;6.59167373201;0;0.0
+198;May 18 1980;0;9.72913416539;0;0.0
+198;730000 years ago by one of Earths most powerful eruptions a blast that spewed 600 times more material than the May 1980;0;12.9071879957;0;0.0
+198;1980;1;9.86266555802;0;0.0
+198;1965;0;9.97599424332;1;0.0
+198;1980;1;10.2681306661;0;0.0
+205;Rose;0;10.0572381523;1;0.0
+205;Zimmermann;0;12.9451559213;0;0.0
+205;Clifford Stoll;0;10.3969940625;2;0.0
+205;Stoll;1;10.3969940625;2;5.7889913008
+205;Stoll;1;14.5558771459;2;0.0
+220;Woodstock;0;5.45958551414;2;0.0
+220;Woodstock;0;5.45958551414;2;0.0
+220;Altamont;0;5.45958551414;2;0.0
+220;Woodstock;0;7.87283617503;3;0.0
+220;Bethel;1;5.45958551414;2;0.0
+220;Woodstock;0;5.45958551414;2;0.0
+220;Bethel New;1;8.43511508038;1;0.0
+220;Woodstock;0;5.45958551414;2;0.0
+220;Woodstock;0;5.45958551414;2;0.0
+288;Don Koehler;0;6.61740297797;0;0.0
+288;Doris Chickering;0;6.61740297797;0;0.0
+288;Arias;0;7.16703787691;0;0.0
+288;Bob De Lyser;0;5.98141421125;0;0.0
+288;Bush;0;7.16703787691;0;0.0
+288;Daniel Ortegas;0;7.16703787691;0;0.0
+288;Sandy Allen;0;6.61740297797;0;0.0
+288;Bush;0;7.16703787691;0;0.0
+288;Lincoln;1;5.98141421125;0;0.0
+288;Kae Sumner;0;5.98141421125;0;0.0
+316;July Peters;0;7.97796809313;0;0.0
+316;Churchill College;0;7.75018416226;0;0.0
+316;San Jose;0;11.9669521397;0;0.0
+316;Most;0;7.12849594568;0;0.0
+316;Pierce College;0;7.97796809313;0;0.0
+280;St Paul;0;7.16703787691;1;0.0
+280;Mayo Clinic;0;5.37527840768;0;0.0
+280;Mayo Clinic;0;3.58351893846;0;0.0
+280;Mayo Clinic;0;5.37527840768;0;0.0
+280;Mayo;0;5.37527840768;1;0.0
+280;Rochester;1;5.37527840768;0;0.0
+280;Graham;0;5.37527840768;1;0.0
+280;Weinberg;0;3.58351893846;0;0.0
+280;St Marys;0;5.37527840768;1;0.0
+280;Rochester;1;5.37527840768;0;0.0
+280;Nancy;0;5.37527840768;0;0.0
+226;United States;0;1.38629436112;2;0.69314718056
+226;Venezuela;0;1.38629436112;2;0.0
+226;Venezuela;0;1.38629436112;2;0.69314718056
+226;Haiti;0;1.38629436112;2;0.0
+226;Venezuela;0;2.07944154168;3;0.0
+226;Venezuela;0;1.38629436112;2;0.69314718056
+226;Russia;0;1.38629436112;2;0.0
+226;Venezuela;0;1.38629436112;2;0.69314718056
+226;Venezuela;0;1.38629436112;2;0.0
+226;Venezuela;0;1.38629436112;2;0.0
+226;Colombia;0;1.38629436112;2;0.0
+226;Venezuela;0;1.38629436112;2;0.0
+226;Haiti;0;1.38629436112;2;0.0
+226;Europe;0;1.38629436112;2;0.69314718056
+226;Haiti;0;1.38629436112;2;0.69314718056
+226;Haiti;0;2.07944154168;3;0.0
+226;Venezuela;0;1.38629436112;2;0.69314718056
+226;Haiti;0;1.38629436112;2;0.69314718056
+226;Venezuela;0;2.07944154168;3;0.0
+226;Cuba;0;1.38629436112;2;0.69314718056
+219;Italy Francese;0;6.74993119379;0;0.0
+219;Inca;0;7.58069975222;1;0.0
+219;Guinea;0;7.58069975222;1;0.0
+219;Legionnaires;0;4.94164242261;1;2.4708212113
+219;South America;1;7.58069975222;1;0.0
+219;Peru;0;7.58069975222;1;0.0
+219;Guinea;0;4.94164242261;1;2.4708212113
+219;Italy;0;6.74993119379;0;0.0
+245;Bonnie Blue Butler Scarletts;0;10.0667961701;1;0.0
+245;Beau Bridges;0;7.61579107204;1;0.0
+245;Prissy Patrick Curtis;0;10.0667961701;1;0.0
+245;Huston;0;7.643961949;0;0.0
+245;Jonna Lee;0;7.61579107204;0;0.0
+245;Benjamin Bradlee Jrs;0;8.94481110417;1;0.0
+245;Sam Spiegel;0;7.643961949;0;0.0
+245;Evelyn Keyes;0;10.0667961701;1;0.0
+245;Suellen OHara Cammie King Conlon;0;10.0667961701;1;0.0
+245;Henna;0;7.643961949;0;0.0
+245;Juliet;0;7.643961949;0;0.0
+245;Rhodes;0;8.41183267576;0;0.0
+245;Screwface;0;7.36770857237;0;0.0
+245;James Schatz;0;8.94481110417;1;0.0
+245;Nikos Kazantzakis;0;8.94481110417;1;0.0
+245;Truman;0;8.41183267576;0;0.0
+245;Butterfly McQueen;0;10.0667961701;1;0.0
+245;Fred Crane;0;10.0667961701;1;0.0
+245;Gregg Geiss;0;10.0667961701;1;0.0
+245;Deborah Kerr;0;7.643961949;0;0.0
+245;Turna;0;10.3577428248;0;0.0
+245;Viertel;0;7.643961949;0;0.0
+245;Romeo;0;7.643961949;0;0.0
+245;Bonnie Blue;0;10.0667961701;1;0.0
+245;Mickey Kuhn;0;10.0667961701;1;0.0
+245;Beau Wilkes;0;10.0667961701;1;0.0
+292;Dallas;0;8.55333223803;2;0.0
+292;Ft Washington;0;5.66296048014;2;0.0
+292;Cincinnati;1;5.66296048014;2;0.0
+292;Rhone;0;5.66296048014;2;0.0
+292;Dallas;0;5.66296048014;2;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+134;Desmond Tutu;0;4.27666611902;1;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+134;Desmond Tutu;0;4.27666611902;1;0.0
+134;Trevor Tutu;0;4.27666611902;1;0.0
+134;Desmond Tutu;0;4.27666611902;1;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+134;Desmond Tutu;0;4.27666611902;1;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+134;Tutu;0;4.27666611902;1;0.0
+134;Botha;0;3.58351893846;1;0.0
+134;Desmond Tutu;0;3.58351893846;1;0.0
+229;1987 to 1991 said she will arrive in California on Wednesday;0;7.37900812763;0;2.8903717579
+229;Sunday;0;5.87493073085;0;0.0
+229;1990 Massachusetts 24931 DC 24446 Maryland 16911 Connecticut 15939 New Jersey 15787 Florida 15624 Ohio 14888 Illinois 13278 Pennsylvania 12943 Michigan 12840 New York 11406 Delaware 9930 CALIFORNIA 9930 New Hampshire 8142 Maine 7784 Virginia 7638 Vermont 7593 Arizona 7244 Indiana 7583 Rhode Island 6541 Idaho 6522 Wisconsin 6310 Iowa 6081 Oregon 5656 Kentucky 5345 Washington 5039 Missouri 4348 Colorado 4229 South Dakota 4186 West Virginia 3730 Montana 2675 Kansas 2595 Minnesota 1545 California lottery receipts in millons bar chart approximation 1986 1750 1987 1400 1988 2100 1989 2700 1990 2500;0;7.97796809313;0;0.0
+229;April;0;5.18178355029;0;0.0
+259;Lisa Malone;0;7.86018505747;1;0.0
+259;Mae C Jemison;0;7.68616230349;0;0.0
+259;Sally K Ride;0;8.06085575293;2;0.0
+259;Sally Ride;0;6.67456139181;1;0.0
+259;Lisa Malone;0;9.56493314971;2;0.0
+259;Fletcher;0;8.06085575293;2;0.0
+259;Sally Ride Americas;0;8.06085575293;2;0.0
+259;Melnick;0;7.68616230349;0;0.0
+122;Witham Smith;0;8.45318786144;1;0.0
+122;Alice Siegel;0;9.72955074528;5;0.0
+122;Deborah Felder;0;9.72955074528;5;0.0
+122;Robert B Thomas;1;8.4969904841;2;0.0
+122;George Washington;0;8.14031554016;3;0.0
+122;Richards Almanac;0;8.14031554016;3;0.0
+122;Margo McLooneBasta;0;9.72955074528;5;0.0
+122;Hale;0;8.4969904841;2;0.0
+144;Bahr Ran;0;5.99146454711;1;0.0
+144;Albert;0;6.57925121201;1;0.0
+144;Bill G Cody;0;6.1737861039;1;0.0
+144;Bill Cody;1;7.37775890823;1;0.0
+144;Anderson;0;5.99146454711;1;0.0
+144;Thomas B Morrison;0;5.99146454711;2;0.0
+144;Jim Kelly;0;6.39692965522;0;0.0
+144;Lonnie Marts;0;6.39692965522;0;0.0
+144;Okoye;0;6.39692965522;0;0.0
+144;Bill Comstock;0;7.37775890823;1;0.0
+144;Buffalo Bill;0;6.57925121201;1;0.0
+144;Buffalo Bill;0;5.99146454711;2;0.0
+144;Paul Fees;0;5.99146454711;2;0.0
+144;Baker;0;5.99146454711;1;0.0
+144;Bahr;0;5.99146454711;1;0.0
+144;Kevin Ross;0;6.39692965522;0;0.0
+144;Thurman Thomas;0;6.39692965522;0;0.0
+144;Cody Wyo;0;5.99146454711;2;0.0
+151;1991;0;9.33131829853;0;0.0
+151;Thursday;0;6.12249280951;0;0.0
+151;1888;1;5.28826703069;0;0.0
+174;Alton B Parker;0;8.62047154087;0;0.0
+174;Leon Czolgosz;0;10.8176961182;1;0.0
+174;Lee Harvey Oswald Victor Garber;0;10.8176961182;1;0.0
+174;McKinley;0;6.42324696353;0;0.0
+174;Reagan;0;6.59167373201;0;0.0
+174;Hess;0;6.59167373201;0;0.0
+174;Carter;0;6.59167373201;0;0.0
+174;Ford;0;10.8176961182;1;0.0
+174;Theodore Roosevelt;0;6.59167373201;0;0.0
+174;Jace Alexander;0;10.8176961182;1;0.0
+174;Lynette Squeaky Fromme;0;10.8176961182;1;0.0
+174;Frank J Donatelli;0;6.59167373201;0;0.0
+174;Sara Jane Moore Greg Germann;0;10.8176961182;1;0.0
+174;Van Buren;0;6.59167373201;0;0.0
+174;John Hinckley Annie Golden;0;10.8176961182;1;0.0
+174;Bush;0;6.59167373201;0;0.0
+174;Terrence Mann;0;10.8176961182;1;0.0
+174;Theodore Roosevelt;0;8.62047154087;0;0.0
+174;William McKinley;0;8.62047154087;0;0.0
+174;Leslie H Southwick;0;6.59167373201;0;0.0
+174;McKinley;0;10.8176961182;1;0.0
+174;Walter Mondale;0;6.59167373201;0;0.0
+174;John Wilkes Booth Debra Monk;0;10.8176961182;1;0.0
+174;Andrew Johnson;0;6.59167373201;0;0.0
+269;Warwick;0;4.39444915467;0;0.0
+269;Norge;0;8.78889830934;0;0.0
+269;Hardwick;0;4.39444915467;0;0.0
+269;Leonard Hadley;0;4.39444915467;0;0.0
+269;Hoover;0;4.39444915467;0;0.0
+266;1986 Chernobyl nuclear accident by late yesterday;1;6.3561076607;0;0.0
+266;1980 to 1985;0;18.8702916478;0;0.0
+266;Monday;0;6.51025834052;1;0.0
+266;last week that any major accident had occurred at the plant since the 1986;0;5.90808293817;1;0.0
+266;April;0;7.97177612288;0;0.0
+266;1986;1;5.90808293817;0;0.0
+265;Melanie Wilkes;0;5.29330482472;0;0.0
+265;Patrick Curtis Ric Holt;0;4.8283137373;0;0.0
+265;Rand Brooks;0;5.29330482472;0;2.64665241236
+265;Olivia de Havilland;0;5.29330482472;0;0.0
+265;Brooks;0;5.29330482472;0;2.64665241236
+265;Bonnie Blue;0;4.8283137373;0;0.0
+265;Melanie Wilkes;0;4.8283137373;0;0.0
+265;Charles Hamilton;0;5.29330482472;0;2.64665241236
+265;De Havilland;0;5.29330482472;0;2.64665241236
+265;Ellen;0;4.8283137373;0;0.0
+265;Todays Scarlett;0;10.270904593;0;0.0
+265;Scarlett;0;4.8283137373;0;0.0
+265;Scarlett Scarlett;0;4.8283137373;0;0.0
+265;Brown;0;10.270904593;0;0.0
+265;Evelyn Keyes;0;4.8283137373;0;0.0
+265;Scarlett;0;5.94017125272;0;0.0
+265;Scarlett OHara;0;5.94017125272;0;0.0
+265;Butterfly McQueen;0;4.8283137373;0;0.0
+265;Beau Wilkeses;0;5.29330482472;0;2.64665241236
+265;Scarlett Dilcey;0;4.8283137373;0;0.0
+265;Fred Crane;0;4.8283137373;0;0.0
+265;Charles Hamilton Ann Rutherford;0;4.8283137373;0;0.0
+265;Bonnie Grandmother Robillard;0;4.8283137373;0;0.0
+265;Shes;0;5.29330482472;0;0.0
+265;Clark Gable;0;5.29330482472;0;0.0
+265;Hamilton;0;5.29330482472;0;2.64665241236
+265;Mickey Kuhn;0;4.8283137373;0;0.0
+265;Melanie Hamilton Wilkes;0;5.29330482472;0;2.64665241236
+265;Vivien Leigh;0;5.29330482472;0;0.0
+265;Rand Brooks;0;4.8283137373;0;0.0
+265;Mitchell;0;10.270904593;0;0.0
+265;Ashley;0;4.8283137373;0;0.0
+265;Beau Wilkes;0;4.8283137373;0;0.0
+265;Gregg Geiss;0;4.8283137373;0;0.0
+265;Ellen Mammy;0;4.8283137373;0;0.0
+210;Stuart Allsop;0;8.80537513891;1;0.0
+210;Joyce;0;8.80537513891;1;0.0
+210;Eric Drexler;0;8.80537513891;1;0.0
+210;Fred Cohen;0;8.80537513891;1;0.0
+210;John Quarterman;0;14.6639780198;1;0.0
+210;William Gibson;0;22.5014262568;4;0.0
+210;William Gibson;0;18.5696006241;3;0.0
+235;1970s and the first Barbie encyclopaedia was written in 1975;0;7.89095671614;1;0.0
+235;3510;0;11.3105032365;0;0.0
+235;1964;0;6.79234442747;0;0.0
+235;1988 and the first quarter of 1989;0;7.89095671614;0;0.0
+145;Hollywood;0;13.6979155046;1;0.0
+145;Bangkok;0;11.3465402475;1;0.0
+145;Oliver Twist;0;10.6533930669;2;0.0
+145;Lawrence;0;10.6533930669;2;0.0
+145;Star Wars;0;10.6533930669;2;0.0
+145;Sri Lanka;0;10.6533930669;1;0.0
+145;Little Dorrit;0;10.6533930669;2;0.0
+145;Kind Hearts;0;10.6533930669;2;0.0
+145;The Bridge;0;10.6533930669;2;0.0
+145;Thailand;1;16.0492907618;1;0.0
+145;India;0;10.6533930669;2;0.0
+145;Coronets;0;10.6533930669;2;0.0
+145;Thai;1;21.3067861338;2;5.67327012374
+110;Kapaau Hawaii;0;4.02535169074;0;0.0
+110;Christmas;0;4.02535169074;0;0.0
+110;Charleston;0;4.02535169074;0;0.0
+110;Billion;0;4.02535169074;0;0.0
+110;Watch Over;0;4.02535169074;0;0.0
+110;Streetcar;0;4.02535169074;0;0.0
+110;Toronto;0;4.02535169074;0;0.0
+110;Young;0;4.02535169074;0;0.0
+110;Hawaii;0;4.02535169074;0;0.0
+289;Peru;1;7.16703787691;1;0.0
+289;Spain;0;7.16703787691;1;0.0
+289;Perus;1;7.16703787691;1;0.0
+289;Peru;1;7.16703787691;1;0.0
+289;Santa Lucia;0;7.16703787691;1;0.0
+118;Kester;0;7.74240202182;2;0.0
+118;Coolidge;0;8.73101341527;1;0.0
+102;Vladimir Selkov;0;8.57998017952;3;0.0
+102;Derek Weatherford;0;8.57998017952;3;0.0
+102;Biondi;1;8.01829613852;0;0.0
+102;Matt Biondi;0;8.82114223633;2;0.0
+102;Tom Jager;0;8.01829613852;0;0.0
+102;Spitz;0;7.32514895796;1;0.0
+102;Chen;0;8.46821300919;0;0.0
+102;Mary T Meagher;0;7.32514895796;1;0.0
+102;Vladimir Shemetov;0;8.57998017952;3;0.0
+96;Martin Luther King Jr Martin Luther King Jr Boulevard;0;9.93962659915;2;0.0
+96;Martin Luther King Jr;0;8.55333223803;2;0.0
+96;Thomas Stonewall Jackson;0;5.66296048014;1;0.0
+96;Martin Luther King;0;8.55333223803;2;0.0
+96;Martin Luther King;0;5.66296048014;1;0.0
+96;King;0;5.66296048014;1;0.0
+96;Douglas Wilder;0;5.66296048014;1;0.0
+96;Kaifu;0;5.66296048014;1;0.0
+96;Lorraine Motel;0;5.3082676974;0;0.0
+96;Crenshaw;0;8.55333223803;2;0.0
+96;Coretta Scott King;0;5.66296048014;1;0.0
+96;Jackson;0;5.66296048014;1;0.0
+96;Steve Klein;0;5.66296048014;1;0.0
+96;Coretta Scott King;0;5.66296048014;1;0.0
+96;Martin Luther King Jr;0;8.89178663586;1;0.0
+96;King;0;5.66296048014;1;0.0
+96;James Farmer;0;5.66296048014;1;0.0
+96;Robert E Lee;0;5.66296048014;1;0.0
+96;Martin Luther King;0;5.66296048014;1;0.0
+320;Wankel;0;6.87523208728;0;0.0
+320;Deeres;0;6.87523208728;0;0.0
+320;Yamanouchi;0;6.87523208728;0;0.0
+199;San Marcos;0;7.74240202182;0;0.0
+199;Lawrenceville;1;8.41449579318;0;0.0
+199;Bristol;0;7.74240202182;0;0.0
+199;Santa Ana;0;7.74240202182;0;0.0
+199;Allen County;0;7.72134861262;0;8.40396908858
+199;Riders;0;8.39344238398;0;3.86067430631
+199;Allen;0;7.72134861262;0;8.40396908858
+199;Philadelphia;0;8.41449579318;0;0.0
+199;Valencia;0;8.14786712992;0;0.0
+199;California Appeals;0;8.39344238398;0;3.86067430631
+199;Princeton;0;8.41449579318;0;0.0
+199;Woodland Hills;0;8.14786712992;0;0.0
+261;may reveal mistakes that can be avoided a second time see Toying with Depression in this space Sept 5 1985;0;7.67786350068;1;0.0
+261;1930 is given a large role in converting the recession of the early 1930;0;10.3859137018;2;0.0
+261;1929;0;7.86018505747;0;0.0
+261;1873 to 1896;1;8.77647578935;1;0.0
+261;1929;0;9.69276652122;1;0.0
+221;Ann;0;11.7360690163;0;7.47747242058
+221;Yogi Bear Boo Boo;0;11.7360690163;0;7.47747242058
+221;Jeremy Lorimar;0;14.9549448412;0;5.86803450814
+221;Ricardo Hernandezs;0;11.2644641057;0;0.0
+221;Papa Bear;0;11.7360690163;0;7.47747242058
+221;Andy;0;11.7360690163;0;7.47747242058
+221;Seuss;1;14.6248394928;0;0.0
+221;Rudolph;0;12.4038983889;0;0.0
+221;Calvin Santas;0;14.9549448412;0;5.86803450814
+221;Horton;0;12.139932843;0;0.0
+221;Seusss;1;11.2644641057;0;0.0
+221;Seuss;1;14.8479830441;1;0.0
+221;Bartholomew Cubbins;0;12.139932843;0;0.0
+221;Theodor Ted Geisel;0;14.6248394928;0;0.0
+221;Berenstein;0;11.7360690163;0;7.47747242058
+221;Carol A Charlie Brown;0;12.4038983889;0;0.0
+221;Bartholomew;0;12.139932843;0;0.0
+295;Thursday;0;7.96554557313;2;0.0
+295;this year;0;6.57925121201;0;0.0
+317;Riders;0;8.07090608879;0;3.51054198214
+317;Cerritos;0;6.32793678373;0;0.0
+317;New Jersey;1;6.32793678373;1;0.0
+317;Allen;0;7.02108396429;0;7.89256861682
+317;Allen County;0;7.02108396429;0;7.89256861682
+317;United States;0;7.58069975222;0;0.0
+317;Valencia;0;6.53087762773;0;0.0
+317;Horsham Pa;0;8.07090608879;0;0.0
+317;California Appeals;0;8.07090608879;0;3.51054198214
+117;William Wordsworths;0;6.80239476332;1;0.0
+117;John Keats William Wordsworth Samuel T Coleridge;0;6.80239476332;1;0.0
+117;William Wordsworth;0;6.80239476332;1;0.0
+117;Turner;0;9.79812703688;1;0.0
+117;Shelley;0;9.79812703688;1;0.0
+117;Byron Alfred Tennyson;0;6.80239476332;1;0.0
+117;Dorothy;0;6.80239476332;1;0.0
+117;Wordsworth;0;6.80239476332;0;0.0
+117;William Wordsworth Speak;0;6.80239476332;1;0.0
+117;William Wordsworth;0;9.79812703688;1;0.0
+117;Leo Snider;0;6.80239476332;1;0.0
+117;William Wordsworth;0;6.80239476332;1;0.0
+117;Dorothy;0;6.80239476332;0;0.0
+117;Wordsworth Keats Byron;0;9.79812703688;1;0.0
+117;Blake;0;9.79812703688;1;0.0
+117;William;0;6.80239476332;0;0.0
+117;William Wordsworth;0;6.80239476332;1;0.0
+117;Dorothy;0;6.80239476332;1;0.0
+117;William Wordsworth;0;6.80239476332;1;0.0
+117;Johann Bodmers;0;6.80239476332;1;0.0
+196;Baltimore;0;7.72312009227;1;0.0
+196;Boston;1;9.3325580047;1;0.0
+196;Richmond Va;0;7.72312009227;1;0.0
+196;Boston;1;7.72312009227;1;0.0
+196;Providence;0;6.33682573115;0;0.0
+196;England;0;6.33682573115;0;0.0
+196;University;0;5.76832099579;3;0.0
+196;Richmond Va;0;9.3325580047;1;0.0
+196;England;0;5.76832099579;3;0.0
+196;Boston;1;7.72312009227;1;0.0
+159;Johnson;0;6.55677835616;0;0.0
+159;Travis;0;8.43554920238;1;0.0
+159;Harrison;0;8.43554920238;1;0.0
+159;Atkinson;0;10.4279793671;0;0.0
+159;Mr Atkinson;0;10.4279793671;0;0.0
+159;Henry B Viller;0;6.84800527458;1;0.0
+159;Vicky Phares;0;8.6397647438;2;0.0
+186;Lucille San Jose;0;2.19722457734;0;0.0
+186;Lozano Theresa Gilroy;0;3.66356164613;0;0.0
+186;Bandeo Fred;0;3.295836866;0;0.0
+186;Jeffrey;0;3.295836866;0;0.0
+186;David San Jose;0;3.66356164613;0;0.0
+186;Leedy Michelle;0;3.66356164613;0;0.0
+186;Reyes Iluminda;0;2.19722457734;0;0.0
+186;Gray;0;4.7621739348;0;0.0
+186;Ortiz Luis San Jose;0;3.66356164613;0;0.0
+186;Wu Peili;0;4.7621739348;0;0.0
+186;Weber Theresa;0;3.295836866;0;0.0
+186;Pearson Donna;0;4.7621739348;0;0.0
+186;Wesley Milpitas;0;3.66356164613;0;0.0
+186;Andrews Carmencita;0;4.7621739348;0;0.0
+186;Gutierrez Tina;0;2.19722457734;0;0.0
+186;Todd;0;2.19722457734;0;0.0
+186;Vincent San Jose;0;3.66356164613;0;0.0
+186;Clampett Bob;0;1.09861228867;0;0.0
+186;Schriver Terry;0;3.66356164613;0;0.0
+186;Phipps David;0;2.19722457734;0;0.0
+186;Curtis;0;4.7621739348;0;0.0
+186;Christopher Jimmy;0;1.09861228867;0;0.0
+186;Lowry Kent San Jose;0;2.19722457734;0;0.0
+186;Niblack Laura;0;4.7621739348;0;0.0
+186;Arias Rudolph Jr San Jose;0;1.09861228867;0;0.0
+186;Julian San Jose;0;1.09861228867;0;0.0
+186;Ikan Belen;0;2.19722457734;0;0.0
+186;Beri Sham;0;2.19722457734;0;0.0
+186;Cheryl Milpitas;0;2.19722457734;0;0.0
+186;Thomas Andre;0;3.295836866;0;0.0
+186;Sandoval Efrain;0;1.09861228867;0;0.0
+186;Ajay;0;1.09861228867;0;0.0
+186;Wai;0;4.7621739348;0;0.0
+186;Noreen Milpitas;0;2.19722457734;0;0.0
+186;Jim San Jose;0;2.19722457734;0;0.0
+186;Anibarro Luis;0;2.19722457734;0;0.0
+186;TERESA;0;1.09861228867;0;0.0
+186;Dunnam Randall;0;2.19722457734;0;0.0
+186;Jerry;0;4.7621739348;0;0.0
+186;Christensen Christine;0;1.09861228867;0;0.0
+186;Carlson Andrew;0;2.19722457734;0;0.0
+186;Stephanie San Jose;0;2.19722457734;0;0.0
+186;Ruiz Gaudelupe;0;1.09861228867;0;0.0
+186;Reynaga Martin;0;1.09861228867;0;0.0
+186;Marquez Rene;0;2.19722457734;0;0.0
+186;Theresa Morgan Hill;0;2.19722457734;0;0.0
+186;Martin San Jose;0;2.19722457734;0;0.0
+186;Osuna Nora;0;1.09861228867;0;0.0
+186;Heath Dristy;0;3.66356164613;0;0.0
+186;Beck Colleen;0;3.295836866;0;0.0
+186;Garcia Veronica San Jose;0;2.19722457734;0;0.0
+186;Ballantyne Theresa;0;2.19722457734;0;0.0
+186;Gregory San Jose;0;3.66356164613;0;0.0
+186;Rosmussen Sandra;0;3.66356164613;0;0.0
+186;Elodia Modesto;0;2.19722457734;0;0.0
+186;Larry San Jose;0;1.09861228867;0;0.0
+186;Gabriel San Jose;0;2.19722457734;0;0.0
+186;Turpen Laura;0;3.295836866;0;0.0
+186;Eige Jeanne;0;1.09861228867;0;0.0
+186;Evans Lori;0;3.66356164613;0;0.0
+186;Lisa San Jose;0;2.19722457734;0;0.0
+186;ODonnell Darla;0;2.56494935746;0;1.28247467873
+186;Richard;0;2.19722457734;0;0.0
+186;Irina;0;4.7621739348;0;0.0
+186;Blyth Heather San Jose;0;3.66356164613;0;0.0
+186;Gregory Georgina;0;3.295836866;0;0.0
+186;Mary San Jose;0;2.19722457734;0;0.0
+186;Nickelson Laura;0;4.7621739348;0;0.0
+186;Evelyn San Jose;0;2.19722457734;0;0.0
+186;Patrick Milpitas;0;2.19722457734;0;0.0
+186;Vaziri Farshid;0;2.19722457734;0;0.0
+186;Jones Elaine;0;3.66356164613;0;0.0
+186;AlHelew Ahmad;0;2.19722457734;0;0.0
+186;Eberle Patrice;0;3.66356164613;0;0.0
+186;Felix San Jose;0;2.19722457734;0;0.0
+186;Charles;0;2.19722457734;0;0.0
+186;Lee Leeandra San Jose;0;2.19722457734;0;0.0
+186;Luera Elena San Jose;0;3.66356164613;0;0.0
+186;Ralph San Jose;0;3.66356164613;0;0.0
+186;George;0;4.7621739348;0;0.0
+186;Carolyn San Jose;0;1.09861228867;0;0.0
+186;Rodriguez Marvin San Jose;0;3.66356164613;0;0.0
+186;Deborah;0;4.7621739348;0;0.0
+186;Iman San Jose;0;2.19722457734;0;0.0
+186;Janis San Jose;0;2.19722457734;0;0.0
+186;Bosso Charlene;0;2.56494935746;0;1.28247467873
+186;Karen;0;2.19722457734;0;0.0
+186;Linda San Jose;0;2.19722457734;0;0.0
+186;Samuel;0;3.295836866;0;0.0
+186;Ronald;0;1.09861228867;0;0.0
+186;Jay;0;4.7621739348;0;0.0
+186;Gil;0;2.19722457734;0;0.0
+186;Acosta Sonia;0;4.7621739348;0;0.0
+186;Reyes Jose San Jose;0;2.19722457734;0;0.0
+186;Gately William;0;3.295836866;0;0.0
+186;Wagner Deni San Jose;0;2.19722457734;0;0.0
+186;Cunha Robert;0;2.19722457734;0;0.0
+186;Anthony San Jose;0;3.66356164613;0;0.0
+186;Owen Susan;0;4.7621739348;0;0.0
+186;Felton Mary;0;1.09861228867;0;0.0
+186;Kuwabara Rie;0;1.09861228867;0;0.0
+186;Taylor Herbert;0;2.19722457734;0;0.0
+186;McGuigan Cynthia;0;1.09861228867;0;0.0
+186;Jorge San Jose;0;2.19722457734;0;0.0
+186;Sophie;0;2.19722457734;0;0.0
+186;Mark;0;3.295836866;0;0.0
+186;Joseph San Jose;0;1.09861228867;0;0.0
+186;Toor Raj;0;4.7621739348;0;0.0
+186;Diep Anh San Jose;0;3.66356164613;0;0.0
+186;Douglas;0;1.09861228867;0;0.0
+186;Kristen San Jose;0;2.19722457734;0;0.0
+186;Pearlstein Susan;0;3.295836866;0;0.0
+186;Javier Maria;0;4.7621739348;0;0.0
+186;Williams Erica;0;2.19722457734;0;0.0
+186;Carlson James;0;2.19722457734;0;0.0
+186;Robert;0;4.7621739348;0;0.0
+186;Lugo Janette;0;3.295836866;0;0.0
+186;Cruz George Jr Morgan Hill;0;2.19722457734;0;0.0
+186;Molina Epitacio;0;3.66356164613;0;0.0
+186;Glusker Sharon;0;3.295836866;0;0.0
+186;Awbrey Carrie;0;1.09861228867;0;0.0
+186;Jon San Jose;0;2.19722457734;0;0.0
+186;Harold;0;2.19722457734;0;0.0
+186;Heisey David;0;2.19722457734;0;0.0
+186;Mark San Jose;0;3.66356164613;0;0.0
+186;Richard;0;2.19722457734;0;0.0
+186;Quintana Jaime;0;2.19722457734;0;0.0
+186;Gomez Theresa;0;1.09861228867;0;0.0
+186;Mansour;0;4.7621739348;0;0.0
+186;Kristi San Jose;0;1.09861228867;0;0.0
+186;Tolentino Benjamin San Jose;0;2.19722457734;0;0.0
+186;Polanco Annette;0;2.19722457734;0;0.0
+186;Roberts Michael;0;1.09861228867;0;0.0
+186;Medina Rosie;0;3.66356164613;0;0.0
+186;Signorelli Anthony San Jose;0;2.19722457734;0;0.0
+186;Flaris Sanny;0;2.19722457734;0;0.0
+186;Judy San Jose;0;1.09861228867;0;0.0
+186;Marco San Jose;0;3.66356164613;0;0.0
+186;Jennifer;0;2.19722457734;0;0.0
+186;James;0;1.09861228867;0;0.0
+186;Thomas San Jose;0;3.66356164613;0;0.0
+186;Don;0;1.09861228867;0;0.0
+186;Fernandez Anna;0;4.7621739348;0;0.0
+186;Smith Amy;0;1.09861228867;0;0.0
+186;Alvear Sandra;0;2.19722457734;0;0.0
+186;Medeiros Billie;0;4.7621739348;0;0.0
+186;Ann;0;3.66356164613;0;0.0
+186;Janke Kirby;0;2.19722457734;0;0.0
+186;Jesus San Jose;0;2.19722457734;0;0.0
+186;Scott San Jose;0;3.66356164613;0;0.0
+186;Scott Megan;0;4.7621739348;0;0.0
+186;Craig;0;1.09861228867;0;0.0
+186;Ruiz Sara;0;3.66356164613;0;0.0
+186;Judith San Jose;0;2.19722457734;0;0.0
+186;Godwin Dalice;0;4.7621739348;0;0.0
+186;Matthew San Jose;0;2.19722457734;0;0.0
+186;Iglesias Kathi;0;3.295836866;0;0.0
+186;Karen San Jose;0;2.19722457734;0;0.0
+186;Michael San Jose;0;3.66356164613;0;0.0
+186;Greg;0;3.295836866;0;0.0
+186;Bruan San Jose;0;3.66356164613;0;0.0
+186;Conrad Milpitas;0;3.66356164613;0;0.0
+186;Acosta Glenn Milpitas;0;3.66356164613;0;0.0
+186;Chiu Peter;0;2.19722457734;0;0.0
+186;William;0;4.7621739348;0;0.0
+186;Barbara San Jose;0;2.19722457734;0;0.0
+186;Andrew San Jose;0;2.19722457734;0;0.0
+186;Miller Jeffrey San Jose;0;1.09861228867;0;0.0
+186;Langarcia Yolanda;0;2.19722457734;0;0.0
+186;Mila;0;4.7621739348;0;0.0
+186;Christopher San Jose;0;3.66356164613;0;0.0
+186;Winnen Irene;0;1.09861228867;0;0.0
+186;Jim;0;1.09861228867;0;0.0
+186;GATOSSARATOGA Moazeni Reza;0;2.19722457734;0;0.0
+186;Richard;0;1.09861228867;0;0.0
+186;Brett;0;3.295836866;0;0.0
+186;Jensen Fiona;0;4.7621739348;0;0.0
+186;Hoch Kevin;0;2.19722457734;0;0.0
+186;Deborah San Jose;0;2.19722457734;0;0.0
+186;Tsien Li;0;3.66356164613;0;0.0
+186;Matibug Jose;0;2.19722457734;0;0.0
+186;Dickinson Mary;0;3.295836866;0;0.0
+186;Roberto;0;3.295836866;0;0.0
+186;Travis;0;4.7621739348;0;0.0
+186;Diana Milpitas;0;2.19722457734;0;0.0
+186;Sanders Gail;0;2.19722457734;0;0.0
+186;Oliveira Olga;0;2.19722457734;0;0.0
+186;Tina Modesto;0;3.66356164613;0;0.0
+186;Narciso;0;4.7621739348;0;0.0
+186;Michael;0;2.56494935746;0;1.28247467873
+186;Lujan Robert San Jose;0;2.19722457734;0;0.0
+186;Joel;0;3.295836866;0;0.0
+186;Lujan Tina;0;2.19722457734;0;0.0
+186;Trautman Ellie;0;3.295836866;0;0.0
+186;Anderson Dennis;0;2.19722457734;0;0.0
+186;Miller Jimmie;0;2.19722457734;0;0.0
+186;Mendoza Rene;0;2.19722457734;0;0.0
+186;Jacobo Sarah;0;4.7621739348;0;0.0
+186;Ceja Genaro;0;3.295836866;0;0.0
+186;Laure San Jose;0;2.19722457734;0;0.0
+186;Dan;0;4.7621739348;0;0.0
+186;Verdusco Theresa;0;3.295836866;0;0.0
+186;Lindahl Paige;0;3.295836866;0;0.0
+186;Alongi Teresa;0;2.19722457734;0;0.0
+186;Vargas David;0;2.19722457734;0;0.0
+186;Keith;0;4.7621739348;0;0.0
+186;William San Jose;0;2.19722457734;0;0.0
+186;Hipolito Bong;0;2.19722457734;0;0.0
+186;Colteaux Donna;0;4.7621739348;0;0.0
+186;Jennifer Manteca;0;1.09861228867;0;0.0
+186;HAYWARD Po Theresa;0;4.7621739348;0;0.0
+186;Coleman Meri;0;2.19722457734;0;0.0
+186;Lewis Regina;0;3.295836866;0;0.0
+186;Neumann Gayle;0;4.7621739348;0;0.0
+186;Esparza Regina;0;3.66356164613;0;0.0
+186;Yee Nancy;0;3.66356164613;0;0.0
+186;Barbara San Jose;0;2.19722457734;0;0.0
+186;Robert;0;1.09861228867;0;0.0
+186;Stephen San Jose;0;2.19722457734;0;0.0
+186;Benjamin Gilroy;0;2.19722457734;0;0.0
+186;Todd Greer;0;3.66356164613;0;0.0
+186;Allen San Jose;0;2.19722457734;0;0.0
+186;Alexander;0;4.7621739348;0;0.0
+186;Dale San Jose;0;3.66356164613;0;0.0
+186;Nuckolls Yvette;0;4.7621739348;0;0.0
+186;Elliott Kim;0;2.56494935746;0;1.28247467873
+186;Damon Alan;0;2.19722457734;0;0.0
+186;Pamela San Jose;0;2.19722457734;0;0.0
+186;Martinez Maria;0;3.66356164613;0;0.0
+186;Sandoval Maria;0;2.19722457734;0;0.0
+186;Carter Mildred;0;1.09861228867;0;0.0
+186;Thompson Scott;0;1.09861228867;0;0.0
+186;Scott Jason;0;2.19722457734;0;0.0
+186;Carla San Jose;0;2.19722457734;0;0.0
+186;Kerry;0;4.7621739348;0;0.0
+186;Zarringhalam Mohamad;0;3.295836866;0;0.0
+186;Karen Morgan Hill;0;2.19722457734;0;0.0
+186;Consuelo San Jose;0;2.19722457734;0;0.0
+186;Cynthia San Jose;0;2.19722457734;0;0.0
+186;Rebecca Morgan Hill;0;2.19722457734;0;0.0
+186;Harmon Diane;0;4.7621739348;0;0.0
+186;Claudia San Jose;0;2.19722457734;0;0.0
+186;Stuart;0;2.56494935746;0;1.28247467873
+186;Gomez Rosemary;0;3.295836866;0;0.0
+186;Wesson Karen;0;3.295836866;0;0.0
+186;Calk Clemencia;0;1.09861228867;0;0.0
+186;Navarro Christy;0;1.09861228867;0;0.0
+186;Rivera Josefina;0;3.295836866;0;0.0
+186;Knox Theresa;0;4.7621739348;0;0.0
+186;Chris;0;3.295836866;0;0.0
+186;Wilson Meridith;0;1.09861228867;0;0.0
+186;John San Jose;0;3.66356164613;0;0.0
+186;Maldonado Raul;0;3.295836866;0;0.0
+186;Rodriguez Jose;0;2.19722457734;0;0.0
+186;Morales Gladys;0;1.09861228867;0;0.0
+186;Gaylord;0;4.7621739348;0;0.0
+186;Mike;0;3.295836866;0;0.0
+186;Mark;0;4.7621739348;0;0.0
+186;Joseph San Jose;0;3.66356164613;0;0.0
+186;Doan Jeff Morgan Hill;0;2.19722457734;0;0.0
+186;Lennon John;0;2.19722457734;0;0.0
+186;Angela San Jose;0;2.19722457734;0;0.0
+186;Torres Susan;0;3.66356164613;0;0.0
+186;Johnson Cindy;0;4.7621739348;0;0.0
+186;Randall;0;4.7621739348;0;0.0
+186;Salah Mariam;0;4.7621739348;0;0.0
+186;Osborne Gail;0;3.295836866;0;0.0
+186;Stoddard Susan;0;3.66356164613;0;0.0
+186;James San Jose;0;2.19722457734;0;0.0
+186;Merin Jeff;0;1.09861228867;0;0.0
+186;Urbina Erasmo San Jose;0;2.19722457734;0;0.0
+186;Reiner Madelyn;0;4.7621739348;0;0.0
+186;Lissette San Jose;0;2.19722457734;0;0.0
+186;GATOSSARATOGA Deutsch Debi;0;3.66356164613;0;0.0
+186;Erica;0;2.19722457734;0;0.0
+186;Shorey Ray San Jose;0;2.19722457734;0;0.0
+186;Scott;0;1.09861228867;0;0.0
+186;Martin James;0;2.19722457734;0;0.0
+186;Jonny;0;1.09861228867;0;0.0
+186;Timothy San Jose;0;2.19722457734;0;0.0
+186;Dantes Maylene;0;4.7621739348;0;0.0
+186;Palacios Nocole;0;3.66356164613;0;0.0
+186;Raymond;0;3.295836866;0;0.0
+186;Ferrario Julie;0;3.66356164613;0;0.0
+186;Calimpong Yolanda;0;2.19722457734;0;0.0
+186;Patricia Milpitas;0;2.19722457734;0;0.0
+186;Paul;0;3.295836866;0;0.0
+186;Nicholas San Jose;0;3.66356164613;0;0.0
+186;Geraldo;0;4.7621739348;0;0.0
+186;Granchelli Heidi;0;3.66356164613;0;0.0
+186;Zavislan Jeanette;0;2.19722457734;0;0.0
+186;Anthony;0;4.7621739348;0;0.0
+186;Chang Corinne;0;2.19722457734;0;0.0
+186;Peter San Jose;0;1.09861228867;0;0.0
+186;Metcalf Toni San Jose;0;3.66356164613;0;0.0
+186;Robert San Jose;0;3.66356164613;0;0.0
+186;Bryan;0;4.7621739348;0;0.0
+186;Fleischman Frances;0;2.19722457734;0;0.0
+186;Samuel San Jose;0;3.66356164613;0;0.0
+186;Nancy;0;1.09861228867;0;0.0
+186;Broome Rosemary;0;1.09861228867;0;0.0
+186;Zenobl Sergio;0;2.19722457734;0;0.0
+186;Darryl;0;4.7621739348;0;0.0
+186;Jensen David;0;2.19722457734;0;0.0
+186;Sherrell Sandra;0;3.66356164613;0;0.0
+186;Mary San Jose;0;2.19722457734;0;0.0
+186;Janet San Jose;0;2.19722457734;0;0.0
+186;Bill;0;3.295836866;0;0.0
+186;Goularte Diana;0;2.19722457734;0;0.0
+186;Lyons Dennis;0;2.19722457734;0;0.0
+186;Dudley David San Jose;0;2.19722457734;0;0.0
+186;Manuel San Jose;0;3.66356164613;0;0.0
+186;Gonzales Patricia;0;2.19722457734;0;0.0
+186;Lisa San Jose;0;2.19722457734;0;0.0
+186;Joanna;0;3.66356164613;0;0.0
+186;Gilbert Bryan;0;2.19722457734;0;0.0
+186;Taylor Lawrence;0;2.19722457734;0;0.0
+186;Juan San Jose;0;2.19722457734;0;0.0
+186;Bunten Ron San Jose;0;1.09861228867;0;0.0
+186;Aguilar Valerie San Jose;0;3.66356164613;0;0.0
+186;David;0;1.09861228867;0;0.0
+186;Weir Denise;0;3.66356164613;0;0.0
+186;Butler Geraldine;0;3.66356164613;0;0.0
+186;Cheryl San Jose;0;2.19722457734;0;0.0
+186;Diaz Debra;0;1.09861228867;0;0.0
+186;Carter Shanel;0;4.7621739348;0;0.0
+186;Jackson Leon;0;2.19722457734;0;0.0
+186;Brown Steffany;0;3.295836866;0;0.0
+186;Reich Paul;0;2.19722457734;0;0.0
+186;Reyburn Barbara;0;4.7621739348;0;0.0
+186;Ianovich Mary;0;3.66356164613;0;0.0
+186;Myrna;0;2.56494935746;0;1.28247467873
+186;Flory;0;4.7621739348;0;0.0
+186;Agarwal Alka;0;3.66356164613;0;0.0
+186;McClellan Loretta;0;2.19722457734;0;0.0
+186;Sima San Jose;0;2.19722457734;0;0.0
+186;Thompson Cheryl;0;1.09861228867;0;0.0
+186;Dimmick Luhanna;0;4.7621739348;0;0.0
+186;TERESA;0;2.19722457734;0;0.0
+186;Wilkins Deborah;0;1.09861228867;0;0.0
+186;Martinez Julia;0;3.295836866;0;0.0
+186;Vargas Gilbert;0;2.19722457734;0;0.0
+186;Charles;0;4.7621739348;0;0.0
+186;Cruz Roland;0;2.19722457734;0;0.0
+186;Huttlinger Patricia;0;1.09861228867;0;0.0
+186;Roger;0;3.295836866;0;0.0
+186;Pico Michelle;0;2.19722457734;0;0.0
+186;Brown Elizabeth;0;2.19722457734;0;0.0
+186;Lee Lydia;0;4.7621739348;0;0.0
+186;Lawrence;0;1.09861228867;0;0.0
+186;Deborah Milpitas;0;2.19722457734;0;0.0
+186;Sean;0;4.7621739348;0;0.0
+186;Giovacchini Joseph;0;2.19722457734;0;0.0
+186;Rynderman Michel;0;2.19722457734;0;0.0
+186;Beck Shari;0;4.7621739348;0;0.0
+186;Michael;0;4.7621739348;0;0.0
+186;Jeffrey San Jose;0;3.66356164613;0;0.0
+186;Stanton Christine San Jose;0;3.66356164613;0;0.0
+186;Domingo;0;4.7621739348;0;0.0
+186;Fernandez Maria;0;2.19722457734;0;0.0
+186;Theriault Marie;0;3.66356164613;0;0.0
+186;Jeffrey San Jose;0;2.19722457734;0;0.0
+186;Fordyce Jill;0;3.66356164613;0;0.0
+186;Wooding Maria;0;3.66356164613;0;0.0
+186;Joanne;0;2.19722457734;0;0.0
+186;Dehoyos Susie San Jose;0;2.19722457734;0;0.0
+186;Genest Carolyn;0;3.66356164613;0;0.0
+186;Wygant Michele;0;2.19722457734;0;0.0
+186;Hernandez Monica;0;3.66356164613;0;0.0
+186;Haynes Michael Morgan Hill;0;2.19722457734;0;0.0
+186;Tina San Jose;0;2.19722457734;0;0.0
+186;Arthur San Jose;0;3.66356164613;0;0.0
+186;Schapira Arlene;0;3.66356164613;0;0.0
+186;Merton;0;4.7621739348;0;0.0
+186;Barron Magdelena;0;2.19722457734;0;0.0
+186;Crunk Lalonda;0;3.66356164613;0;0.0
+186;Hennessy Geraldine;0;3.295836866;0;0.0
+186;Tucci Jan;0;2.19722457734;0;0.0
+186;Hofer Diane;0;1.09861228867;0;0.0
+186;Scott;0;4.7621739348;0;0.0
+186;Arvind San Jose;0;3.66356164613;0;0.0
+186;Ken;0;1.09861228867;0;0.0
+186;Khan Ishrat;0;3.66356164613;0;0.0
+186;McKinney Bridget;0;1.09861228867;0;0.0
+186;Stevenson Kristen;0;3.66356164613;0;0.0
+186;Kevin;0;3.295836866;0;0.0
+186;Romero Cheri;0;3.66356164613;0;0.0
+186;Smith Janet;0;4.7621739348;0;0.0
+186;Chris;0;4.7621739348;0;0.0
+186;Ladislav Stefan;0;1.09861228867;0;0.0
+186;Correa Marisela;0;1.09861228867;0;0.0
+186;Douglas;0;3.295836866;0;0.0
+186;Garcia Laura San Jose;0;3.66356164613;0;0.0
+186;Johnson Sheryl;0;4.7621739348;0;0.0
+186;Sanders Karen;0;2.19722457734;0;0.0
+186;Linda San Jose;0;2.19722457734;0;0.0
+186;Pereira Joelma;0;2.19722457734;0;0.0
+186;Sarro Suzanne;0;1.09861228867;0;0.0
+186;Bello Kate;0;1.09861228867;0;0.0
+186;Juan San Jose;0;3.66356164613;0;0.0
+186;Lalith San Jose;0;3.66356164613;0;0.0
+186;Griffin Edward;0;4.7621739348;0;0.0
+186;Toig Sheri;0;1.09861228867;0;0.0
+186;Gary of Atherton;0;1.09861228867;0;0.0
+186;Juaquin;0;2.56494935746;0;1.28247467873
+186;Gregory;0;4.7621739348;0;0.0
+186;Lucero Diane San Jose;0;2.19722457734;0;0.0
+186;Kolander Jacqueline;0;3.66356164613;0;0.0
+186;Barker Kenneth;0;2.19722457734;0;0.0
+186;Javier San Jose;0;3.66356164613;0;0.0
+186;Fabbri Marquita;0;3.295836866;0;0.0
+186;Hernandez Daniel San Jose;0;1.09861228867;0;0.0
+186;Quinn Kathleen;0;1.09861228867;0;0.0
+186;Castro Mary;0;2.56494935746;0;1.28247467873
+186;Burgess Cheryl;0;1.09861228867;0;0.0
+186;Hahn Michael;0;1.09861228867;0;0.0
+186;Evelyn San Jose;0;2.19722457734;0;0.0
+186;Smith Julie;0;3.66356164613;0;0.0
+186;Contos Thomas;0;1.09861228867;0;0.0
+186;Nash Teri;0;3.295836866;0;0.0
+186;Cynthia San Jose;0;2.19722457734;0;0.0
+186;Lupe San Jose;0;2.19722457734;0;0.0
+186;Beverly William;0;3.295836866;0;0.0
+186;Hugh;0;1.09861228867;0;0.0
+186;Lewis Carl;0;3.295836866;0;0.0
+186;Gary San Jose;0;3.66356164613;0;0.0
+186;Ambriz Alma;0;3.295836866;0;0.0
+186;Lalonde Guy;0;1.09861228867;0;0.0
+186;Manzi Joseph;0;2.19722457734;0;0.0
+186;Jerilyn San Jose;0;2.19722457734;0;0.0
+186;Michael San Jose;0;2.19722457734;0;0.0
+186;Heriberto;0;1.09861228867;0;0.0
+186;Umali Ramon San Jose;0;2.19722457734;0;0.0
+186;Richard San Jose;0;3.66356164613;0;0.0
+186;McClellan Jacqueline;0;4.7621739348;0;0.0
+186;Le Phuong;0;2.19722457734;0;0.0
+186;Villarreal Lisa San Jose;0;3.66356164613;0;0.0
+186;Thomas;0;3.295836866;0;0.0
+186;Rodriguez Terri;0;3.66356164613;0;0.0
+186;Edilberto;0;4.7621739348;0;0.0
+186;Wood Steven;0;3.295836866;0;0.0
+186;Kirk San Jose;0;3.66356164613;0;0.0
+186;Noe Charles San Jose;0;2.19722457734;0;0.0
+186;Zizzo Barbara;0;3.66356164613;0;0.0
+186;Aviles Diane;0;4.7621739348;0;0.0
+186;Olegario San Jose;0;3.66356164613;0;0.0
+186;Wilson Wendy;0;4.7621739348;0;0.0
+186;Munoz Hector San Jose;0;2.19722457734;0;0.0
+186;Cuen Felix San Jose;0;2.19722457734;0;0.0
+186;Galver Patricia;0;3.295836866;0;0.0
+186;Ian Morgan Hill;0;2.19722457734;0;0.0
+186;Marrufo Robert San Jose;0;2.19722457734;0;0.0
+186;Stephen;0;2.19722457734;0;0.0
+186;Janis Roark;0;2.19722457734;0;0.0
+186;Marquez Kathy;0;2.19722457734;0;0.0
+186;Brummett John;0;2.19722457734;0;0.0
+186;Spindler John;0;2.19722457734;0;0.0
+186;Hurley Lamont San Jose;0;3.66356164613;0;0.0
+186;Carlos;0;3.295836866;0;0.0
+186;Calson Christy;0;3.295836866;0;0.0
+186;Seema San Jose;0;2.19722457734;0;0.0
+186;Sarquis John;0;2.19722457734;0;0.0
+186;Ronald San Jose;0;3.66356164613;0;0.0
+186;Villareal Maria;0;2.19722457734;0;0.0
+186;Gupta Verna;0;4.7621739348;0;0.0
+186;Besser Cheryl;0;1.09861228867;0;0.0
+186;Richard San Jose;0;2.19722457734;0;0.0
+186;Carter Baraka San Jose;0;1.09861228867;0;0.0
+186;Bruton Rosalinda;0;1.09861228867;0;0.0
+186;Dinesh Asha;0;2.19722457734;0;0.0
+186;Kelly San Jose;0;2.19722457734;0;0.0
+186;Ward Scott;0;2.19722457734;0;0.0
+186;Bongolan Elizabeth;0;3.66356164613;0;0.0
+186;Millward Scott;0;2.19722457734;0;0.0
+186;Correa Diane;0;2.19722457734;0;0.0
+186;Walsh Barbara;0;1.09861228867;0;0.0
+186;Elizabeth San Jose;0;1.09861228867;0;0.0
+186;Steven;0;4.7621739348;0;0.0
+186;Shannon;0;4.7621739348;0;0.0
+186;Eldridge Charron;0;4.7621739348;0;0.0
+186;Winifred San Jose;0;2.19722457734;0;0.0
+186;Sutherland Andrea;0;4.7621739348;0;0.0
+186;Moniz MIchelle;0;2.19722457734;0;0.0
+186;Miramontes Michael San Jose;0;2.19722457734;0;0.0
+186;Dombovicova Laura Marie;0;1.09861228867;0;0.0
+186;Ruben;0;1.09861228867;0;0.0
+186;Anderson Theresa;0;3.295836866;0;0.0
+186;Rene San Jose;0;2.19722457734;0;0.0
+186;Rafael San Jose;0;2.19722457734;0;0.0
+186;John;0;3.295836866;0;0.0
+186;David;0;3.295836866;0;0.0
+186;Jonna San Jose;0;2.19722457734;0;0.0
+186;Kuwatani Danny;0;2.19722457734;0;0.0
+186;Singh Bahadur;0;2.19722457734;0;0.0
+186;Steven;0;1.09861228867;0;0.0
+186;Mann Vincent;0;2.19722457734;0;0.0
+186;Smith Laura Milpitas;0;2.19722457734;0;0.0
+186;Maria San Jose;0;2.19722457734;0;0.0
+186;Weiss Eric;0;2.19722457734;0;0.0
+186;Michael;0;3.295836866;0;0.0
+186;Chien;0;4.7621739348;0;0.0
+186;Alvarado Maria;0;1.09861228867;0;0.0
+186;Thompson Susanne;0;3.295836866;0;0.0
+186;Khalil;0;4.7621739348;0;0.0
+186;Olivo Elizabeth San Jose;0;2.19722457734;0;0.0
+186;Richard;0;3.295836866;0;0.0
+186;Barris Jill;0;2.19722457734;0;0.0
+186;Crawley Jeannette;0;2.19722457734;0;0.0
+186;Lisa San Jose;0;1.09861228867;0;0.0
+186;Elianson Jodi;0;3.66356164613;0;0.0
+186;Ruth San Jose;0;2.19722457734;0;0.0
+186;Sandesj;0;4.7621739348;0;0.0
+186;Gaxiola Alma;0;2.19722457734;0;0.0
+186;Rentie Alaina;0;2.19722457734;0;0.0
+186;Cisneros Delia;0;4.7621739348;0;0.0
+186;Dennis;0;1.09861228867;0;0.0
+186;Gallo Juan;0;3.295836866;0;0.0
+186;Jesus;0;4.7621739348;0;0.0
+186;Dale;0;2.56494935746;0;1.28247467873
+186;Thomas III San Jose;0;2.19722457734;0;0.0
+186;Quiroz Ana;0;3.295836866;0;0.0
+186;Kelly Michael;0;2.19722457734;0;0.0
+186;Howell Cynthia;0;3.66356164613;0;0.0
+186;Jon San Jose;0;3.66356164613;0;0.0
+186;Jeff;0;1.09861228867;0;0.0
+186;Cherie San Jose;0;2.19722457734;0;0.0
+186;Paz Marty San Jose;0;2.19722457734;0;0.0
+186;Kelle;0;2.19722457734;0;0.0
+186;Christensen JudyAnn;0;3.295836866;0;0.0
+186;Schroeder Douglas;0;2.19722457734;0;0.0
+186;Kaufman Gina;0;3.66356164613;0;0.0
+186;TERESA;0;2.19722457734;0;0.0
+186;Therese San Jose;0;2.19722457734;0;0.0
+186;Wightman Christina;0;4.7621739348;0;0.0
+186;Julie San Jose;0;2.19722457734;0;0.0
+186;Susan San Jose;0;2.19722457734;0;0.0
+186;Ward Kimberly;0;1.09861228867;0;0.0
+186;Sanchez Benjamin;0;2.19722457734;0;0.0
+186;Martinez Roberto;0;3.295836866;0;0.0
+186;Panduro Angelica;0;2.19722457734;0;0.0
+186;Laura;0;4.7621739348;0;0.0
+186;Coutant Michelle;0;4.7621739348;0;0.0
+186;Ayala Mary Lou;0;2.19722457734;0;0.0
+186;Lagueux Donna;0;3.66356164613;0;0.0
+186;Salazar Ramon San Jose;0;3.66356164613;0;0.0
+186;Stephen;0;3.295836866;0;0.0
+186;Clark Linda San Jose;0;1.09861228867;0;0.0
+186;Holstege Mary;0;2.19722457734;0;0.0
+186;Susan;0;2.19722457734;0;0.0
+186;Ashby Charmon;0;2.19722457734;0;0.0
+186;Owen;0;1.09861228867;0;0.0
+186;Farquhar Robitoy;0;1.09861228867;0;0.0
+186;Murphy Lisa;0;3.66356164613;0;0.0
+186;Garcia Angelica San Jose;0;3.66356164613;0;0.0
+186;Larry San Jose;0;3.66356164613;0;0.0
+186;Bipin;0;4.7621739348;0;0.0
+186;McCarroll Tracey;0;2.19722457734;0;0.0
+186;James San Jose;0;3.66356164613;0;0.0
+186;Salgoankar Atul;0;2.19722457734;0;0.0
+186;Carol;0;1.09861228867;0;0.0
+186;Salgado John;0;4.7621739348;0;0.0
+186;Maruca Jim;0;1.09861228867;0;0.0
+186;Rodriguez Gerald;0;2.19722457734;0;0.0
+186;Avamolifua Luisa;0;2.19722457734;0;0.0
+186;Masood Ahmed;0;1.09861228867;0;0.0
+186;Roger San Jose;0;2.19722457734;0;0.0
+186;Veronica Morgan Hill;0;2.19722457734;0;0.0
+186;Duhl Kathleen;0;3.295836866;0;0.0
+186;Bautista Dana San Jose;0;2.19722457734;0;0.0
+186;Randolf San Jose;0;3.66356164613;0;0.0
+186;Luis San Jose;0;3.66356164613;0;0.0
+186;Tice Veronique;0;3.66356164613;0;0.0
+186;Thomas;0;4.7621739348;0;0.0
+186;Castillo Barbara;0;2.19722457734;0;0.0
+186;Alfadda Bashir;0;2.19722457734;0;0.0
+186;Khan Anjun;0;4.7621739348;0;0.0
+186;Kallas Vicky;0;3.295836866;0;0.0
+186;Lisa;0;4.7621739348;0;0.0
+186;Tien Chieh;0;2.56494935746;0;1.28247467873
+186;Horyza Darla;0;1.09861228867;0;0.0
+186;Craig San Jose;0;3.66356164613;0;0.0
+186;Samuel;0;4.7621739348;0;0.0
+186;Alvarez Daniel;0;3.295836866;0;0.0
+186;Thomas Radeshia San Jose;0;3.66356164613;0;0.0
+186;Lappin Marilyn;0;3.295836866;0;0.0
+186;Capone Jodi;0;1.09861228867;0;0.0
+186;Garcia Rita San Jose;0;3.66356164613;0;0.0
+186;Betty San Jose;0;1.09861228867;0;0.0
+186;Barnes Tina;0;2.19722457734;0;0.0
+186;Okumura Sharon;0;2.19722457734;0;0.0
+186;Anthony San Jose;0;1.09861228867;0;0.0
+186;Ray;0;4.7621739348;0;0.0
+186;Steven San Jose;0;2.19722457734;0;0.0
+186;Lee Foon;0;2.56494935746;0;1.28247467873
+186;Shari San Jose;0;2.19722457734;0;0.0
+186;Jacobs Kimberly;0;4.7621739348;0;0.0
+186;Alan;0;3.295836866;0;0.0
+186;Kenneth Sr;0;1.09861228867;0;0.0
+186;Loesch Kiersten;0;1.09861228867;0;0.0
+186;Fergason Elizabeth;0;1.09861228867;0;0.0
+186;Carbajal John;0;2.19722457734;0;0.0
+186;Santiago Guadulupe;0;4.7621739348;0;0.0
+186;Powell Bob;0;2.19722457734;0;0.0
+186;Brice;0;3.295836866;0;0.0
+186;Lewis;0;3.295836866;0;0.0
+186;Yolanda San Jose;0;2.19722457734;0;0.0
+186;Edwards Caren;0;3.295836866;0;0.0
+186;Larry;0;4.7621739348;0;0.0
+186;Gaines Jamie;0;2.19722457734;0;0.0
+186;Varenkamp Liese;0;2.19722457734;0;0.0
+186;Edwards Glenn;0;3.295836866;0;0.0
+186;Chipman Ildico;0;2.19722457734;0;0.0
+186;Peterson Delores;0;2.19722457734;0;0.0
+186;Gause Melinda;0;2.19722457734;0;0.0
+186;Holliman Marie;0;2.19722457734;0;0.0
+186;Teano Elizabeth Milpitas;0;3.66356164613;0;0.0
+186;Theresa San Jose;0;2.19722457734;0;0.0
+186;Hollister;0;1.09861228867;0;0.0
+186;Shelly Gilroy;0;2.19722457734;0;0.0
+186;Paulino Ramon;0;2.19722457734;0;0.0
+186;Pedro;0;1.09861228867;0;0.0
+186;Gonzalez Hector San Jose;0;2.19722457734;0;0.0
+186;Kenneth;0;4.7621739348;0;0.0
+186;Joyce San Jose;0;2.19722457734;0;0.0
+186;Quintero Blanca;0;3.66356164613;0;0.0
+186;Heinrich Michael;0;4.7621739348;0;0.0
+186;Luis;0;3.295836866;0;0.0
+186;Ricky San Jose;0;3.66356164613;0;0.0
+186;Hansen Wendy;0;4.7621739348;0;0.0
+186;Teresa San Jose;0;2.19722457734;0;0.0
+186;Robert San Jose;0;2.19722457734;0;0.0
+186;Nicholas San Jose;0;2.19722457734;0;0.0
+186;Linda Milpitas;0;2.19722457734;0;0.0
+186;Moreno Samuel;0;2.19722457734;0;0.0
+186;Jeffrey;0;1.09861228867;0;0.0
+186;Hurtado Juan;0;2.19722457734;0;0.0
+186;Wyman Susan;0;1.09861228867;0;0.0
+186;Romero Jesse;0;2.19722457734;0;0.0
+186;Schact Leslie;0;1.09861228867;0;0.0
+186;Salcida Alice San Jose;0;3.66356164613;0;0.0
+186;Cortez Lawana;0;3.66356164613;0;0.0
+307;today;0;8.17863878859;3;0.0
+307;1788;1;9.67934350089;1;0.0
+307;Tuesday and the two later announced plans for the treaty and a number of other changes The famed Brandenburg Gate isolated in East Berlin since the Berlin Wall was built in 1961;0;8.17863878859;3;0.0
+307;200 years ago and opened the road to the region of Brandenburg in Prussia but its six battlescarred sandstone columns became a symbol of division after the wall was built in 1961;0;10.1710689533;1;4.18965474203
+307;28 years ago;0;8.87178596915;2;0.0
+307;1961;0;8.17863878859;3;0.0
+218;March;0;4.56434819147;1;0.0
+218;Australia;0;3.87120101091;1;0.0
+218;Amsterdam;0;4.96981329958;2;0.0
+218;Manhattan;0;4.56434819147;1;0.0
+218;Pulitzer Publishing;0;3.4657359028;0;0.0
+218;Knopf Inc;0;3.17805383035;1;0.0
+218;Rupert Murdochs;0;4.56434819147;1;0.0
+218;Manhattan;0;5.66296048014;2;0.0
+218;Tatum;0;3.87120101091;1;0.0
+218;Knopf Inc;0;5.66296048014;2;0.0
+161;Andre Icard;0;4.68213122712;2;0.0
+161;Taylor;0;4.68213122712;2;0.0
+161;Tietmeyer;0;4.96981329958;0;0.0
+161;Lamfalussy;0;4.96981329958;0;0.0
+242;Andrea Martin Andrea Martin;0;12.2702110866;1;0.0
+242;Hurtin Billy Joe Royal;0;12.0233510087;0;0.0
+242;Dana Carvey;0;12.2702110866;1;0.0
+242;Conway Twitty;0;12.0233510087;0;0.0
+242;Ronnie Milsap;0;12.0233510087;0;0.0
+242;Rhea Perlman;0;12.2702110866;1;0.0
+242;Elayne Boosler Top Tomata Carol Burnett Julie amp Carol;0;12.2702110866;1;0.0
+242;Charlie Daniels;0;12.0233510087;0;0.0
+242;Dana Carvey;0;14.9092684163;1;7.60732503291
+242;Joel Sonnier;0;12.0233510087;0;0.0
+242;Rhea Perlman;0;12.2702110866;1;0.0
+242;Jane Curtin;0;12.2702110866;1;0.0
+242;Whoopi Goldberg;0;12.2702110866;1;0.0
+242;Kathy Mattea;0;12.0233510087;0;0.0
+242;Ricky Van Shelton Columbia;0;12.0233510087;0;0.0
+242;Tracey Ullman;0;15.2146500658;1;7.45463420813
+242;Tanya Tucker;0;12.0233510087;0;0.0
+242;Derek Stevens Lord Christie;0;12.2702110866;1;0.0
+242;Graham Brown;0;12.0233510087;0;0.0
+242;Julie Kavner;0;15.2146500658;1;7.45463420813
+242;Peter Scolari Newhart;0;14.9092684163;1;7.60732503291
+242;Rosanne Cash Columbia;0;12.0233510087;0;0.0
+242;Alex Rocco;0;14.9092684163;1;7.60732503291
+242;Dana Carvey;0;12.2702110866;1;0.0
+242;Rhea Perlman Cheers;0;15.2146500658;1;7.45463420813
+242;Phil Collins;0;12.0233510087;0;0.0
+242;Dana Carvey;0;12.2702110866;1;0.0
+242;Reba McEntire;0;12.0233510087;0;0.0
+242;Dwight Yoakam;0;12.0233510087;0;0.0
+135;1979;0;5.78074351579;0;0.0
+135;Sunday;0;5.25749537203;0;0.0
+135;Friday;0;4.96981329958;0;0.0
+135;today;0;4.96981329958;1;0.0
+135;June;0;6.06842558824;1;0.0
+135;Wednesday;0;5.25749537203;0;0.0
+281;Lynwood;0;8.28677323113;0;0.0
+281;Santa Ana;0;8.27231514796;0;0.0
+281;San Pedro;0;5.34233425196;0;0.0
+281;Mexicali;0;5.88887795833;0;0.0
+281;West Covina;0;7.74022952476;0;0.0
+281;Van Nuys;0;7.74022952476;0;0.0
+281;California Youth;0;5.34233425196;0;0.0
+281;Los Angeles;0;5.88887795833;0;0.0
+281;Mariano;0;8.27231514796;0;0.0
+281;Los Angeles;0;5.88887795833;0;0.0
+95;Paul Keating;0;4.96981329958;2;0.0
+95;Li;0;5.37527840768;0;0.0
+95;Seun Phetsanghan;0;7.74240202182;2;0.0
+95;Paul Keating;0;4.27666611902;1;2.48490664979
+95;Paul Keating;0;4.96981329958;2;2.13833305951
+95;Khamtai Siphandon;0;6.06842558824;0;0.0
+95;Khamphoui Keoboualapha;0;6.06842558824;0;0.0
+95;Paul Keating;0;6.7615727688;2;0.0
+95;Chuan Likphai;0;6.06842558824;1;0.0
+95;Vang Lattanavong;0;7.74240202182;2;0.0
+95;Vo Van Kiet;0;4.96981329958;2;2.13833305951
+95;Khamtai Siphandon;0;6.7615727688;2;0.0
+95;Evans;0;5.37527840768;0;0.0
+95;Paul Keating;0;4.96981329958;2;0.0
+95;Nouhak Phomsavan;0;6.06842558824;1;0.0
+95;Vo Van Kiet;0;4.27666611902;1;2.48490664979
+95;Bouason Boupphavan;0;7.74240202182;2;0.0
+95;Chuan Likphai;0;6.7615727688;2;0.0
+95;Paul Keating;0;5.37527840768;0;0.0
+95;Khamtai Siphandon;0;6.06842558824;1;0.0
+95;Paul Keating;0;6.06842558824;1;0.0
+95;Vo Van Kiet;0;4.96981329958;2;0.0
+95;Brian Howe;0;5.37527840768;0;0.0
+95;Khamphoui Keoboualapha;0;7.74240202182;2;0.0
+95;Somsavat Lengsavat;0;6.06842558824;0;0.0
+258;Hayes;0;4.7957905456;0;0.0
+271;Paul Jo Carl Ja Cheese PutMon;0;9.43140175709;0;0.0
+271;Ed Zeppelin;0;9.43140175709;0;0.0
+271;Tortelvis;0;9.43140175709;0;0.0
+271;Nickolai Noskov;0;8.82526595352;0;0.0
+271;Clinton;0;12.0862074437;0;0.0
+271;Belov;0;9.26709870579;0;0.0
+271;Robert Plant;0;11.6443746914;0;0.0
+271;Elvis;0;8.6669915565;0;0.0
+271;Mikhail Gorbachevs;0;9.26709870579;0;0.0
+271;James Brown Prince Jimi Hendrix Frank Zappa;0;12.0862074437;0;0.0
+271;Bonham;0;11.0341151706;0;0.0
+262;Davis;1;7.39756153552;1;0.0
+262;Garfield;0;6.0112671744;1;3.69878076776
+262;Garfield;0;7.39756153552;2;0.0
+262;Dodd;0;7.99023818572;0;0.0
+262;Keane;0;6.3561076607;0;0.0
+262;Dallis;0;6.19847871649;0;0.0
+262;Marmaduke;0;6.0112671744;1;3.69878076776
+262;Marmaduke;0;7.39756153552;1;3.0056335872
+262;Mark Trail;0;7.99023818572;0;0.0
+262;Jim Davis;0;7.39756153552;2;0.0
+250;Yoga The;0;5.79301360838;0;0.0
+250;India;0;5.79301360838;0;0.0
+250;Wishing Well;0;6.23832462504;0;0.0
+250;India;0;5.79301360838;0;0.0
+156;9575;0;6.35957386867;1;0.0
+156;next year;0;4.48863636973;0;0.0
+156;1987;0;5.66642668811;0;0.0
+318;Frenchbased;0;5.17048399504;0;0.0
+318;Las Vegas;0;6.18208490672;0;0.0
+318;March;0;6.55677835616;0;0.0
+318;Buck March;0;6.55677835616;0;0.0
+318;Kentucky;0;5.17048399504;0;0.0
+318;Saturdays Blue;0;5.17048399504;0;0.0
+203;University;0;5.34710753072;0;0.0
+203;Namibias;0;5.34710753072;0;0.0
+203;Johannesburg;0;5.34710753072;0;0.0
+203;Namibia;0;5.34710753072;0;0.0
+203;Johannesburg;0;5.34710753072;0;0.0
+203;Johannesburg;0;5.34710753072;0;0.0
+203;Namibia;0;5.34710753072;0;0.0
+203;University;0;5.34710753072;0;0.0
+169;Englishlanguage;0;4.7621739348;0;0.0
+169;Ottawa;0;4.7621739348;0;0.0
+169;Canada;1;4.7621739348;0;0.0
+169;Iqaluit;1;4.7621739348;0;0.0
+169;Poncins;0;8.71341765338;0;0.0
+169;Siberia;1;4.7621739348;0;0.0
+169;Canada;1;4.7621739348;0;0.0
+169;Siberia;1;4.7621739348;0;0.0
+274;Hauptmann;0;10.3717396487;0;0.0
+274;Bruno Hauptmann;0;9.58328228838;1;0.0
+274;Lindbergh;0;9.58328228838;1;0.0
+274;Lindbergh;0;10.681894577;1;0.0
+274;Charles A Lindbergh Jr Fays;0;7.18538701558;0;0.0
+274;Charles Lindbergh;0;7.18538701558;1;0.0
+274;James W Lloyd;0;10.3717396487;0;0.0
+274;Bruno Richard Hauptmann;0;9.85261522216;2;0.0
+274;Charles Lindbergh Jr;0;9.58328228838;1;0.0
+274;Charles Lindbergh;0;9.85261522216;2;0.0
+274;Anna Hauptmann;0;9.58328228838;1;0.0
+274;Charles Lucky Lindy Lindbergh;0;10.3717396487;0;0.0
+274;Charles A Lindbergh;0;10.3717396487;0;0.0
+274;Scott Berg;0;10.3717396487;0;0.0
+274;Florio;0;9.58328228838;1;0.0
+274;Anne Spencer Morrow Lindbergh;1;10.681894577;1;0.0
+274;Charles Lindberghs;0;9.58328228838;1;0.0
+274;Bruno Richard Hauptmann;0;10.3717396487;0;0.0
+274;Charles Lindbergh;0;7.18538701558;1;0.0
+274;Mrs Lindberghs;0;10.3717396487;0;0.0
+274;Bruno Hauptmann;0;7.18538701558;0;0.0
+274;Lindbergh;0;10.3717396487;0;0.0
+274;Charles Lindbergh;0;7.18538701558;1;0.0
+274;Hauptmann;0;9.58328228838;1;0.0
+274;Anne Morrow Lindbergh;1;10.3717396487;0;0.0
+274;Chipowski;0;9.58328228838;1;0.0
+274;Anne Morrow Lindbergh;1;10.3717396487;0;0.0
+225;Jake;0;10.3532884745;3;0.0
+225;Penny;0;10.3532884745;3;8.05070338147
+225;Murphy Brown;0;10.3532884745;3;0.0
+225;William Cannon Conrad;0;10.3532884745;3;0.0
+225;Jake Styles;0;16.1014067629;5;5.17664423723
+225;Jake;0;8.05070338147;3;0.0
+225;Joe Penny;0;16.1014067629;5;5.17664423723
+225;Jake;0;16.1014067629;5;5.17664423723
+225;Jake;0;10.3532884745;3;0.0
+225;Viet Nam;0;10.3532884745;3;0.0
+225;William Conrad;0;16.1014067629;5;5.17664423723
+225;Jake;0;10.3532884745;3;0.0
+225;Silverman;0;8.05070338147;3;0.0
+225;Jake;0;10.3532884745;3;0.0
+225;Jake;0;10.3532884745;3;8.05070338147
+225;George Bush;0;10.3532884745;3;0.0
+310;Jim Henson;0;4.18965474203;0;0.0
+310;Kermit Miss Piggy;0;6.26909628371;0;0.0
+310;Kermit;0;8.34853782539;1;0.0
+310;Henson;1;6.26909628371;2;0.0
+310;Jim Henson;0;6.26909628371;1;0.0
+310;Kermit Scott;0;6.26909628371;0;0.0
+310;Jim Henson;0;4.18965474203;0;0.0
+310;Mickey Mouse;0;6.26909628371;2;0.0
+310;Jim Henson;0;6.26909628371;0;0.0
+310;Jim Henson;0;6.26909628371;0;0.0
+310;Frank Baum;0;4.18965474203;0;0.0
+310;Jim Henson;0;6.26909628371;2;0.0
+310;Mickey Mouse;0;6.26909628371;0;0.0
+310;Mickey Mouse;0;8.34853782539;1;0.0
+310;Jim Henson;0;8.34853782539;1;0.0
+222;1932;1;15.2005881792;1;0.0
+222;1920 adaptation of Evgenii Zamiatins We a dystopian novel that inspired both George Orwells 1984;0;15.2005881792;1;0.0
+222;1930;0;15.2005881792;1;0.0
+222;may;0;15.2005881792;1;0.0
+222;1000;0;18.3786420095;2;0.0
+119;Giza Plateau;0;12.829998357;2;0.0
+119;Zahi Hawass;0;9.6519445267;2;0.0
+119;Hawass;0;9.6519445267;1;0.0
+315;600 years ago is thought to have yielded at least as much molten rock half a cubic kilometer as Mount St Helens did when it erupted in 1980;0;14.880497119;0;0.0
+315;1980;1;10.9886768209;0;0.0
+315;Monday;0;10.3169208303;0;0.0
+315;Saturday;0;10.3169208303;0;0.0
+315;Monday;0;10.3169208303;0;0.0
+315;730000 years ago by one of Earths most powerful eruptions a blast that spewed 600 times more material than the May 1980;0;9.32366905728;0;0.0
+315;Thursday;0;9.60238245975;0;0.0
+234;Peter Butler;0;6.68959926918;0;0.0
+234;Henry E Hudson;0;5.30330490806;0;0.0
+234;EM Forster;0;4.89783979995;0;0.0
+234;Henry James;0;4.89783979995;0;0.0
+234;Catherine;0;4.89783979995;0;2.44891989998
+234;Aragon;0;4.89783979995;0;2.44891989998
+234;Johann;0;5.30330490806;0;0.0
+234;Henry VIII;0;4.89783979995;0;2.44891989998
+234;Butler;0;5.30330490806;0;0.0
+234;Michael Butler;0;5.30330490806;0;0.0
+234;Henry A Politz;0;6.68959926918;0;0.0
+234;Henry Kissinger;0;6.28413416107;0;0.0
+234;Joann Carlo;0;5.30330490806;0;0.0
+234;Henry Sidney Lord;0;5.59098698051;0;0.0
+234;Peter Butler;0;5.99645208862;0;0.0
+234;Mary;0;4.89783979995;0;2.44891989998
+234;Henry Stram;0;5.30330490806;0;0.0
+234;Henry;0;4.89783979995;0;2.44891989998
+234;Henry Butler;0;6.68959926918;1;0.0
+234;John Henry of EF Hutton;0;5.99645208862;0;0.0
+234;McCoy Tyner;0;6.68959926918;1;0.0
+234;Prince Arthur;0;4.89783979995;0;2.44891989998
+181;Winfield;0;4.7957905456;0;0.0
+181;Jankel Adler;0;4.7957905456;0;0.0
+181;Josef Herman;0;4.7957905456;0;0.0
+181;Colquhoun;0;4.7957905456;0;0.0
+181;Aubin;0;4.7957905456;0;0.0
+181;Rivera;0;4.7957905456;0;0.0
+181;Minton;0;4.7957905456;0;0.0
+181;Creme;0;4.7957905456;0;0.0
+213;Scrooge;0;5.83773044717;3;0.0
+213;Ebenezer Scrooge;0;5.73009978297;1;4.94560626083
+213;Francis Walters;0;5.83773044717;3;0.0
+213;Charles Dickens;0;9.89121252166;1;2.86504989149
+213;Marley;0;5.73009978297;1;0.0
+213;Fred;0;5.83773044717;3;0.0
+213;Ebeneezer;0;5.83773044717;3;0.0
+213;George Choppelas;0;9.89121252166;1;2.86504989149
+213;Carol;0;5.73009978297;1;4.94560626083
+213;Jack Bennys;0;5.73009978297;1;0.0
+213;Richard Soto;0;5.83773044717;3;0.0
+213;Frank Winston;0;5.73009978297;1;0.0
+213;Jack Benny;0;5.73009978297;1;4.94560626083
+213;Nicholas Nickleby;0;5.73009978297;1;0.0
+213;Tiny Tim;0;5.83773044717;3;0.0
+213;Stewart;0;5.73009978297;1;0.0
+213;Richard Stretchberry;0;5.73009978297;1;0.0
+213;Kory Abosada;0;5.83773044717;3;0.0
+213;John Fink;0;5.73009978297;1;0.0
+213;Jackson;0;5.73009978297;2;0.0
+213;KempRoth;0;8.0529330368;1;0.0
+213;Stewart;0;5.73009978297;1;0.0
+105;William D Coolidge;0;11.9575279494;3;0.0
+105;Farnsworth;1;4.26267987704;0;0.0
+105;Philo T Farnsworth;0;11.9575279494;3;0.0
+105;Vladimir Zworykin;0;11.9575279494;3;0.0
+105;Bruch;0;6.8276292345;1;0.0
+105;Nishizawa;0;4.26267987704;0;0.0
+105;Walter Bruch;0;6.8276292345;1;0.0
+206;Johnson;0;9.98044859367;2;0.0
+206;Indianapolis;1;6.04500531404;0;0.0
+206;United States;0;9.98044859367;2;0.0
+206;Vienna;0;6.04500531404;0;0.0
+206;Lillys;0;6.04500531404;0;0.0
+206;London;1;6.04500531404;0;0.0
+206;India;0;4.78749174278;1;0.0
+206;March;0;5.88610403145;1;0.0
+206;Indianapolis;1;4.78749174278;1;0.0
+206;Marion;0;9.98044859367;2;0.0
+206;India;0;6.04500531404;0;0.0
+206;European Union;0;6.04500531404;0;0.0
+189;two weeks ago portions of several tape recordings that were made by officials of the federal prison south of here where Noriega has been held on drug charges since he was seized during the US invasion of Panama 11 months ago;0;7.6998424074;2;0.0
+189;next month;0;5.62040086572;1;0.0
+189;tonight CNN will broadcast The World Today from 6 to 7 pm EDT weeknights and for the first time compete directly with the nightly news seen on ABC CBS and NBC except on the West Coast where The World Today;0;5.62040086572;1;0.0
+189;1979;0;7.62461898616;2;0.0
+189;today;0;5.25749537203;2;0.0
+189;Today;0;5.62040086572;1;0.0
+294;Solovyev;0;6.51025834052;0;0.0
+294;Balandin;0;6.51025834052;0;0.0
+294;Laveikin;0;8.43554920238;0;0.0
+294;Sergey Leskov;0;15.8141573593;0;0.0
+294;Vance D Brand;0;6.58755001482;0;0.0
+294;Romanenko;0;8.43554920238;0;0.0
+190;Terry Bienstock;0;1.38629436112;2;0.0
+143;Joe Pesci;0;12.0027317215;1;0.0
+143;Maurice Jarre;0;12.0027317215;1;0.0
+143;Francis Ford Coppola;0;12.0027317215;1;0.0
+143;Donald E Westlake;0;12.0027317215;1;0.0
+143;Robert De Niro Awakenings;0;12.0027317215;1;0.0
+143;Randy Newman Avalon;0;12.0027317215;1;0.0
+143;Anjelica Huston;0;12.0027317215;1;0.0
+143;Viv;0;7.84384863815;1;0.0
+143;Australias Peter Weir;0;8.53699581871;1;0.0
+143;John Williams;0;12.0027317215;1;0.0
+143;John Irvin Stalingrad;0;7.84384863815;1;0.0
+143;John Barry Dances;0;12.0027317215;1;0.0
+143;Cyrano de Bergerac;0;12.0027317215;1;0.0
+143;Peter Weir;0;7.84384863815;1;0.0
+143;Diane Ladd Wild;0;12.0027317215;1;0.0
+143;Lorraine Bracco;0;12.0027317215;1;0.0
+143;Andie McDowell;0;7.84384863815;1;0.0
+143;Stephen Frears;0;12.0027317215;1;0.0
+143;Julia Roberts;0;12.0027317215;1;0.0
+143;Joanne Woodward;0;12.0027317215;1;0.0
+143;Harry Met Sally;0;8.53699581871;1;0.0
+143;Brian Gilbert;0;7.84384863815;1;0.0
+143;Whit Stillman;0;12.0027317215;1;0.0
+143;Martin Scorsese GoodFellas;0;12.0027317215;1;0.0
+143;Gerard Depardieu;0;7.84384863815;1;0.0
+143;Oliver Stone Born;0;8.53699581871;1;0.0
+143;Steven Zaillian Awakenings;0;12.0027317215;1;0.0
+143;Rose Kennedy;0;12.0027317215;1;0.0
+143;Peter Weir;0;8.53699581871;1;0.0
+143;Annette Bening;0;12.0027317215;1;0.0
+143;Depardieu;0;7.84384863815;1;0.0
+143;Kelly McGillis;0;8.53699581871;1;0.0
+143;Rob Reiner;0;8.53699581871;1;0.0
+143;Peter Weir;0;7.84384863815;1;0.0
+143;Peter Weirs;0;7.84384863815;1;0.0
+143;Gerard Depardieu;0;7.84384863815;1;0.0
+143;Depardieu;0;11.309584541;1;0.0
+143;Harry Met Sally Phil Alden Robinson;0;7.84384863815;1;0.0
+143;Henry;0;12.0027317215;1;0.0
+143;Dick Tracy;0;12.0027317215;1;0.0
+143;Woody Allen Alice;0;12.0027317215;1;0.0
+143;Gerard Depardieu;0;8.53699581871;1;0.0
+143;Sam Cookes;0;8.53699581871;1;0.0
+143;Harrison Ford;0;8.53699581871;1;0.0
+143;Michael Blake;0;12.0027317215;1;0.0
+143;Woody Allen;0;7.84384863815;1;0.0
+143;Edward Scissorhands;0;12.0027317215;1;0.0
+143;Woody Allen Crimes;0;8.53699581871;1;0.0
+143;Nigel Andrews;0;7.84384863815;1;0.0
+143;Andy Garcia;0;12.0027317215;1;0.0
+143;Al Pacino Dick Tracy;0;12.0027317215;1;0.0
+143;Bruce Davison;0;12.0027317215;1;0.0
+143;Joesph Vilsmaier Fearless;0;7.84384863815;1;0.0
+143;Kevin Costner;0;12.0027317215;1;0.0
+143;Jeremy Irons;0;12.0027317215;1;0.0
+143;Nicholas Kazan;0;12.0027317215;1;0.0
+143;Gerard Depardieu Cyrano de Bergerac;0;12.0027317215;1;0.0
+143;Barry Levinson Avalon;0;12.0027317215;1;0.0
+143;Dear Rosie;0;12.0027317215;1;0.0
+143;Peter Weir;0;7.84384863815;1;0.0
+143;Vivienne HaighWood;0;7.84384863815;1;0.0
+143;David Grusin;0;12.0027317215;1;0.0
+143;Barbet Schroeder;0;12.0027317215;1;0.0
+143;Peter Weir;0;7.84384863815;1;0.0
+143;Graham Greene;0;12.0027317215;1;0.0
+143;Nicholas Pileggi;0;12.0027317215;1;0.0
+143;Kathy Bates;0;12.0027317215;1;0.0
+143;Bruce Joel Rubin Ghost;0;12.0027317215;1;0.0
+143;Whoopi Goldberg Ghost;0;12.0027317215;1;0.0
+143;Tom;0;7.84384863815;1;0.0
+143;Richard Harris;0;12.0027317215;1;0.0
+143;Waldo Salt;0;12.0027317215;1;0.0
+143;Peter Weir;0;11.309584541;1;0.0
+143;Rob Reiner;0;7.84384863815;1;0.0
+306;Nathan;0;11.3293871682;0;0.0
+306;Kane;0;11.3293871682;0;0.0
+306;Horner;0;12.833464565;2;0.0
+306;Brad Drexler;0;12.0796927626;1;0.0
+306;Maurice Seiderman;0;11.3293871682;0;0.0
+306;Binney amp Smith;0;15.7238363229;2;0.0
+306;Hodgsons;0;12.0796927626;1;0.0
+263;Isle;0;4.02535169074;3;0.0
+263;Man;0;6.66440902035;6;0.0
+263;Man;0;4.02535169074;3;0.0
+263;Man;0;4.7184988713;4;0.0
+263;Man;0;7.91717198885;6;0.0
+263;Man;0;4.02535169074;3;0.0
+263;Normandy;0;4.02535169074;3;0.0
+263;Mr Norman;0;4.02535169074;3;0.0
+263;Europe;0;4.02535169074;3;0.0
+263;European Union;0;4.02535169074;3;0.0
+263;Man;0;4.58496747867;2;0.0
+263;Europe;0;4.02535169074;3;0.0
+263;Abu Dhabi;0;6.66440902035;6;0.0
+263;Man;0;5.27811465923;4;0.0
+263;Normandy;0;4.02535169074;3;0.0
+263;Isle;0;4.02535169074;3;0.0
+263;European Union;0;4.02535169074;3;0.0
+263;Wales;0;4.58496747867;2;0.0
+263;Man;0;5.27811465923;3;0.0
+277;Oman;0;4.86753445046;1;0.0
+277;Tesla;0;7.69484807238;3;0.0
+277;Oman;0;4.86753445046;1;0.0
+277;Tesla Pardubice;0;4.86753445046;1;0.0
+277;Alameda;0;4.86753445046;1;0.0
+277;Sweden;0;5.12989871492;2;0.0
+277;Croatia;1;5.12989871492;2;0.0
+277;Livermore;0;4.86753445046;1;0.0
+277;Livermore;0;4.86753445046;1;0.0
+277;Tantalum Assembly;0;7.69484807238;3;0.0
+277;United States;0;4.86753445046;1;0.0
+277;Muscat;0;6.90775527898;0;0.0
+293;Neil A Armstrong;0;9.36426245425;2;0.0
+293;Yuri Romanenko;0;8.55333223803;2;0.0
+293;Manarov;0;8.55333223803;2;0.0
+293;Titov;0;8.55333223803;2;0.0
+293;John W Young;0;12.2546342121;3;0.0
+173;Showa;1;3.98898404656;1;0.0
+173;Michiko;0;2.8903717579;1;0.0
+173;Hirohito;1;2.8903717579;1;0.0
+173;Hirohito;1;2.8903717579;1;0.0
+173;Michiko;0;3.17805383035;3;0.0
+173;Akihito;1;2.8903717579;1;0.0
+173;Hirohito;1;3.98898404656;1;0.0
+173;Bill Clinton;0;2.8903717579;1;0.0
+173;Hirohito;1;3.98898404656;1;0.0
+173;Akihito;1;2.8903717579;1;0.0
+173;Akihito;1;2.8903717579;1;0.0
+173;Showa;1;2.8903717579;1;0.0
+173;Hirohito;1;2.8903717579;1;0.0
+173;Akihito;1;2.8903717579;1;0.0
+173;Takakazu Kuriyama;0;3.17805383035;3;0.0
+173;Hirohito;1;3.58351893846;3;0.0
+173;Kuriyama;0;2.8903717579;1;0.0
+173;Akihito;1;3.17805383035;3;0.0
+173;Showa;1;3.98898404656;1;0.0
+243;February;0;2.8903717579;0;0.0
+243;this week;0;2.8903717579;0;0.0
+243;Thursdays announcement was the first public disclosure that the Postal Service planned to wipe out 4700;0;2.8903717579;0;0.0
+243;1951;0;6.85329909319;0;0.0
+243;1982;0;2.8903717579;0;0.0
+202;today;0;7.45471994936;1;0.0
+202;1789;1;5.95064255259;1;0.0
+202;Thursday and Friday;0;7.45471994936;1;0.0
+202;Thursday more than 100000 people jammed into the large circular plaza for the beginning of the largest of about 30000 outdoor popular balls around the country to celebrate Bastille Day on Friday;0;7.45471994936;1;0.0
+202;July 14 or Bastille Day marks the day 200 years ago;1;7.74240202182;1;0.0
+202;Next years threeday gathering in Paris starting on Bastille Day July 14 the national holiday will be the start of another round of seven meetings running through 1995;0;7.45471994936;1;0.0
+202;today the second of three days of bicentennial celebrations that began with a human rights ceremony Thursday;0;7.45471994936;0;0.0
+202;Friday;1;9.53416149104;1;0.0
+202;July 14 the day in 1789;1;7.45471994936;1;0.0
+273;2000;0;5.68357976734;1;0.0
+273;Tuesday;0;5.68357976734;1;2.84178988367
+273;Friday and Monday;0;6.26909628371;0;0.0
+273;3928;0;6.26909628371;1;0.0
+273;4000 within a few months and some are even suggesting it will make 4500;0;5.68357976734;1;0.0
+273;Tuesday;0;5.68357976734;1;0.0
+273;5695 to close at 281015 surpassing its previous closing high of 2791;0;5.68357976734;1;2.84178988367
+286;Braverman;0;4.00733318523;0;0.0
+286;Braverman;0;4.00733318523;0;0.0
+286;Bushs;0;4.00733318523;0;0.0
+127;European Union;0;5.37527840768;3;0.0
+127;Australia;1;5.37527840768;3;0.0
+127;Australia;1;5.37527840768;1;0.0
+127;Mr Mick;0;5.37527840768;1;0.0
+127;Land Council;0;5.37527840768;1;0.0
+127;Most;0;5.37527840768;1;0.0
+275;Giesbert;0;4.15888308336;1;0.0
+275;Sergey Babkin;0;2.77258872224;0;0.0
+275;Peres;0;5.54517744448;2;0.0
+275;Andrey Kozyrev;0;5.54517744448;1;0.0
+275;Yuriy Tyssovskiy;0;5.54517744448;1;0.0
+275;Butrus ButrusGhali;0;5.54517744448;1;0.0
+276;Benson Brenda Fricker;0;15.0695253141;4;0.0
+276;Benson Oliver Stone Born;0;15.0695253141;4;0.0
+276;Peter Rainer Born;0;15.0695253141;4;0.0
+276;Rainer Jessica Tandy;0;15.0695253141;4;0.0
+276;Rainer Oliver Stone Born;0;15.0695253141;4;0.0
+276;Thomas Born;0;15.0695253141;4;0.0
+276;Wilmington Indiana Jones;0;15.0695253141;4;0.0
+276;John Keating;0;10.7536384819;2;0.0
+276;Benson Indiana Jones;0;15.0695253141;4;0.0
+276;Harry Met Sally;0;14.8645123461;2;0.0
+276;Robin Williams;0;13.2385451317;2;5.82281826061
+276;Benson Danny Aiello;0;15.0695253141;4;0.0
+276;Rainer Danny Aiello;0;15.0695253141;4;0.0
+276;Thomas Indiana Jones;0;15.0695253141;4;0.0
+276;Wilmington Marlon Brando;0;15.0695253141;4;0.0
+276;Benson;0;15.0695253141;4;0.0
+276;Christy Brown;0;14.8645123461;2;0.0
+276;Michael Wilmington Born;0;15.0695253141;4;0.0
+276;Shirley Valentine Wilmington;0;15.0695253141;4;0.0
+276;Peter Weirdirected;0;13.2385451317;2;5.82281826061
+276;Thomas Danny Aiello;0;15.0695253141;4;0.0
+276;Rainer Lena Olin Enemies;0;15.0695253141;4;0.0
+276;Wilmington Lena Olin Enemies;0;15.0695253141;4;0.0
+276;Rainer Indiana Jones;0;15.0695253141;4;0.0
+276;Pickering;0;14.8645123461;3;0.0
+276;Rainer Born;0;15.0695253141;4;0.0
+276;Kenneth Branagh;0;14.8645123461;2;0.0
+276;Baron Munchausen Rainer Batman Thomas Batman;0;15.0695253141;4;0.0
+276;Wilmington Jessica;0;15.0695253141;4;0.0
+276;Shirley Valentine;0;14.8645123461;2;0.0
+276;Freeman;0;14.8645123461;2;0.0
+276;John Keating;0;14.8645123461;3;0.0
+276;Thomas Daniel DayLewis;0;15.0695253141;4;0.0
+276;Henry V Daniel DayLewis;0;14.8645123461;2;0.0
+276;Robin Williams;0;14.8645123461;2;0.0
+276;Thomas Brenda Fricker;0;15.0695253141;4;0.0
+276;Thomas Oliver Stone Born;0;15.0695253141;4;0.0
+276;Sheila Benson Born;0;15.0695253141;4;0.0
+276;Benson Daniel DayLewis;0;15.0695253141;4;0.0
+276;Rainer Daniel DayLewis;0;15.0695253141;4;0.0
+276;Robin Williams;0;14.8645123461;2;0.0
+276;Robin Williams;0;14.8645123461;3;0.0
+276;Thomas Jessica Tandy;0;15.0695253141;4;0.0
+276;Pickering;0;10.7536384819;2;0.0
+276;Benson Born;0;15.0695253141;4;0.0
+276;Tom Schulman;0;10.7536384819;2;0.0
+276;Kevin Thomas Born;0;15.0695253141;4;0.0
+157;James Naismith;0;6.77992190747;1;0.0
+157;Ralph Miller;0;6.77992190747;1;0.0
+157;Paul Brown;0;8.95467362896;0;0.0
+157;Abraham Lincoln;0;6.77992190747;1;0.0
+157;George Washington;0;6.77992190747;1;0.0
+157;James Naismith;0;6.77992190747;1;0.0
+157;James Naismith;0;6.77992190747;1;0.0
+157;Murphy;0;4.60517018599;2;0.0
+157;Shaw;0;4.60517018599;2;0.0
+253;Baldwin;0;8.85651849702;0;0.0
+253;Riverside;0;10.4251344149;0;0.0
+253;Fairview Park;0;10.4251344149;0;0.0
+253;Los Angeles;0;10.4251344149;0;0.0
+253;Camden;0;9.93962659915;0;0.0
+253;Baldwin;0;7.74240202182;0;0.0
+253;Essex Conn;1;9.93962659915;0;0.0
+253;Costa Mesa;0;10.4251344149;0;0.0
+253;Chattanooga Tenn;1;7.74240202182;0;0.0
+253;Riverside County;0;10.4251344149;0;0.0
+319;Las Vegas;0;6.18208490672;0;0.0
+319;New York;0;5.27811465923;0;0.0
+319;Buck March;0;6.55677835616;0;0.0
+319;Pomona;0;5.41164605186;0;0.0
+319;Saturdays Blue;0;5.17048399504;0;0.0
+319;Kentucky;0;6.18208490672;0;3.09104245336
+319;Frenchbased;0;5.17048399504;0;0.0
+319;March;0;6.55677835616;0;0.0
+136;1519;0;9.14013247693;1;0.0
+168;England;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;England;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad and Tobago;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Tobago;0;3.21887582487;2;0.0
+168;Venezuela;0;3.21887582487;2;0.0
+168;United States;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Washington;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Trinidad;0;3.21887582487;2;0.0
+168;Venezuela;0;3.21887582487;2;0.0
+168;Wales;0;3.21887582487;2;0.0
+168;Tobago;0;3.21887582487;2;0.0
+168;Colombia;0;3.21887582487;2;0.0
+168;Venezuela;0;3.21887582487;2;0.0
+282;Pink Floyd;0;9.04428578765;0;0.0
+282;Miles Davis;0;9.32687818822;0;0.0
+282;Chris Gilbert;0;9.04428578765;0;0.0
+282;Chretien;0;13.0145777012;0;0.0
+282;Pink Floyd;0;11.0686675521;0;0.0
+282;David Bowie;0;9.40096073158;0;0.0
+282;Roger Waters;0;9.32687818822;0;0.0
+282;Pink Floyd;0;9.59158109119;0;0.0
+251;today paid solemn tribute to the millions of victims of World War II which started 50 years ago;0;7.75790620835;1;0.0
+251;Thursday;0;7.75790620835;1;0.0
+200;Copenhagen;0;5.99146454711;0;0.0
+200;Omaha Neb;0;11.512925465;0;0.0
+200;United States;0;5.99146454711;0;0.0
+200;Kansas;0;5.29831736655;0;0.0
+200;Amsterdam;0;5.99146454711;0;0.0
+200;European Union;0;5.99146454711;0;0.0
+200;Mc;0;9.12804512925;0;0.0
+200;Las Vegas;1;9.12804512925;0;0.0
+200;Kansas City;0;5.29831736655;0;0.0
+311;Bush;0;3.68887945411;1;0.0
+311;Dugan;0;4.38202663467;1;0.0
+311;Colin Powell;0;3.68887945411;1;0.0
+311;Ronald Reagans;0;4.38202663467;1;0.0
+311;Colin Powell;0;4.38202663467;1;0.0
+311;Gen Colin Powell;0;7.37775890823;2;0.0
+311;Marlin Fitzwater;0;4.38202663467;1;0.0
+311;Clinton;0;3.68887945411;1;0.0
+311;COLIN POWELL Washington Members;0;7.37775890823;2;0.0
+311;Bush;0;3.68887945411;0;0.0
+311;Powell;0;4.38202663467;1;0.0
+311;Gen Colin L Powell;0;3.68887945411;0;0.0
+311;Gen Colin L Powell;0;3.68887945411;0;0.0
+311;Gen Colin L Powell;0;3.68887945411;0;0.0
+311;Bush;0;4.38202663467;1;0.0
+311;Gen Colin L Powell;0;3.68887945411;0;0.0
+311;Bushs;0;3.68887945411;0;0.0
+311;Colin Powell;0;4.38202663467;1;0.0
+311;Powell;0;4.38202663467;1;0.0
+311;Colin Powell;0;3.68887945411;1;0.0
+311;Bush;0;3.68887945411;0;0.0
+311;Gen Colin Powell;0;4.38202663467;1;0.0
+94;Jim Martinez;0;9.37381884097;0;0.0
+94;Schirman;0;5.6058020663;0;0.0
+94;Anthony Sanchez;0;9.37381884097;0;0.0
+94;David O Selznick;0;6.23832462504;0;0.0
+94;Judson;0;9.37381884097;0;0.0
+94;Bill Judson;0;7.29437729929;0;0.0
+94;Whitcomb;0;5.6058020663;0;0.0
+94;Whitcomb;0;5.6058020663;0;0.0
+94;Erik Judson;0;9.37381884097;0;0.0
+94;Jerry Whitcomb;0;7.05272104923;0;0.0
+94;Ian Whitcomb;0;5.6058020663;0;0.0
+94;Murphy;0;9.37381884097;0;0.0
+94;Whitcomb;0;7.05272104923;0;0.0
+94;Philip Keeling;0;7.29437729929;0;0.0
+94;Quayle;0;6.23832462504;0;0.0
+94;Whitcomb;0;5.6058020663;0;0.0
+94;Chris Murphy;0;9.37381884097;0;0.0
+223;Solomon;0;8.73391617493;2;0.0
+223;Emmett;0;8.73391617493;2;0.0
+223;Solomon;0;8.73391617493;2;0.0
+223;Solomon Cutner;0;8.46821300919;2;0.0
+223;Jan Garber;0;7.90100705199;0;0.0
+223;Morrison;1;8.12415060331;0;0.0
+223;Lawrence Welk Sammy Kaye;0;7.90100705199;0;0.0
+223;Solomon;0;8.46821300919;2;0.0
+208;Glasgow;0;3.295836866;3;0.0
+208;City;0;4.39444915467;4;0.0
+208;Southampton;0;4.39444915467;4;0.0
+208;London;0;4.39444915467;4;0.0
+208;Inverness;0;3.295836866;3;1.647918433
+208;AIRPORTS;0;4.39444915467;4;0.0
+208;London;0;3.295836866;3;0.0
+208;Glasgow;0;3.295836866;3;0.0
+208;Scotland;1;3.295836866;3;0.0
+208;Aberdeen;0;4.39444915467;4;0.0
+208;Belfast;0;3.295836866;3;1.647918433
+208;Glasgow;0;3.295836866;3;1.647918433
+208;Glasgow;0;3.295836866;3;0.0
+208;Glasgow;0;3.295836866;3;1.647918433
+208;Workers;0;3.295836866;3;0.0
+208;Aberdeen;0;3.295836866;3;1.647918433
+208;GLASGOW;0;3.295836866;3;0.0
+208;Aberdeen;0;3.295836866;3;1.647918433
+208;Scotland;1;4.39444915467;4;0.0
+208;Glasgow;0;3.295836866;3;0.0
+208;Manchester;0;4.39444915467;4;0.0
+128;Hubert H Humphrey;0;9.21034037198;0;0.0
+128;Robert Fulton;0;7.86365126545;0;0.0
+128;Fuji;0;7.86365126545;0;0.0
+128;Richard Nixon;0;10.4829059678;0;4.87077834269
+128;Barbara Honegger;0;7.54433210805;0;0.0
+128;Daniel Arap Moi;0;9.10497985632;0;0.0
+128;Nixon;1;9.21034037198;0;0.0
+128;Nixon;1;8.99961934066;0;7.54433210805
+128;Jomo Kenyatta;0;9.10497985632;0;0.0
+128;Hubert Humphrey;0;8.99961934066;0;7.54433210805
+128;Fitch;0;7.86365126545;0;0.0
+128;George Wallace;0;8.99961934066;0;7.54433210805
+128;Spiro Agnew;0;9.74155668539;0;5.24145298388
+180;Sherilyn Fenn;0;3.97029191355;1;0.0
+180;Olympia;0;3.97029191355;1;0.0
+180;Olympia;0;3.97029191355;1;0.0
+180;Olympia;0;3.97029191355;1;0.0
+180;Luis Jimenez;0;7.86365126545;0;0.0
+180;Nilsen;0;3.97029191355;1;0.0
+180;Olympia;0;3.97029191355;1;1.98514595678
+180;Thomas Sharpe;0;3.97029191355;1;0.0
+180;Olympia;0;7.9405838271;2;0.0
+180;Paul Wunderlich;0;7.9405838271;2;0.0
+212;June by His Majesty the King of Cambodia This week;0;13.0701264801;0;0.0
+212;today;0;7.94022776515;0;0.0
+212;this year but failed to reach agreement on terms for ending the decadeold civil war which has claimed at least 7300;0;8.71341765338;0;0.0
+212;1954;0;8.92105701816;0;0.0
+212;Wednesday surrendered their weapons to President Violeta Barrios de Chamorro in a ceremony hailing the end of a nineyear civil war that left 3000;0;7.94022776515;0;0.0
+233;1840;0;19.6121904131;2;0.0
+233;1840;0;10.4992423871;1;0.0
+104;Vichy;0;8.74385056203;0;4.09211738705
+104;Vichys;0;6.79794041297;0;0.0
+104;Vichy;0;8.18423477409;0;4.37192528102
+104;Alfred Grosser Frances;0;8.74385056203;0;4.09211738705
+104;Philippe Petain;0;8.05070338147;0;0.0
+104;Rene Monory;0;9.0811424335;2;0.0
+104;Vichy;0;7.49108759353;0;0.0
+104;Hitler;0;8.05070338147;0;0.0
+104;Bousquet;0;8.05070338147;0;0.0
+104;Frances;0;7.49108759353;0;0.0
+104;Frances;0;8.05070338147;0;0.0
+104;Vichy;0;8.05070338147;0;0.0
+188;Cincinnati;1;7.55171221535;2;0.0
+188;March;0;6.3561076607;2;0.0
+188;Baby;0;7.33693691371;4;0.0
+188;Cincinnati;1;7.55171221535;2;0.0
+188;Cincinnati;1;6.3561076607;2;0.0
+188;European Union;0;7.55171221535;2;0.0
+305;Corpus Christi;0;6.02344759296;0;0.0
+297;Terry Bienstock;0;1.38629436112;2;0.0
+297;Ed Turner;0;6.04973345523;2;0.0
+297;Steven Korn;0;6.04973345523;2;0.0
+297;Ed Turner;0;6.04973345523;2;0.0
+260;1911;0;7.12929754893;0;2.66876903985
+260;Tomorrow;0;5.66642668811;2;0.0
+264;Geoffrey Chaucer;0;17.1510831042;3;0.0
+264;Oliver Goldsmith;0;17.1510831042;3;0.0
+264;Virgil;0;17.1510831042;3;0.0
+264;Jane Austen Jane Eyre;0;17.1510831042;3;0.0
+264;Richmond Lattimore Flowers;0;17.1510831042;3;0.0
+264;William Shakespeare Macbeth;0;17.1510831042;3;0.0
+264;Thomas Hardy Tess;0;17.1510831042;3;0.0
+264;William Gibson Myth;0;17.1510831042;3;0.0
+264;John Steinbeck;0;17.1510831042;3;0.0
+264;Robert Graves;0;17.1510831042;3;0.0
+264;Edmond Rostand;0;17.1510831042;3;0.0
+264;Claude Browns;0;7.79646924309;1;0.0
+264;David Grene;0;17.1510831042;3;0.0
+264;Robert Louis Stevenson Dracula;0;17.1510831042;3;0.0
+264;Charles Dickens Lord;0;17.1510831042;3;0.0
+264;Harper Lee Antigone;0;17.1510831042;3;0.0
+264;Tom Sawyer Huckleberry Finn;0;9.8601624278;1;0.0
+264;Romeo;0;17.1510831042;3;0.0
+264;Peter;0;17.1510831042;3;0.0
+264;Oscar Wilde;0;17.1510831042;3;0.0
+264;Huckleberry Finn;0;7.79646924309;1;0.0
+264;Joseph Conrad Hamlet Macbeth;0;17.1510831042;3;0.0
+264;John Osborne Hamlet;0;17.1510831042;3;0.0
+264;Donna Rosenberg;0;17.1510831042;3;0.0
+264;Huckleberry Finn;0;11.9553523264;1;0.0
+264;George Bernard Shaw Saint Joan;0;17.1510831042;3;0.0
+264;Juliet;0;17.1510831042;3;0.0
+264;Virgil Humphries;0;17.1510831042;3;0.0
+264;Glendon Swarthout Cyrano de Bergerac;0;17.1510831042;3;0.0
+264;Farley Mowat;0;17.1510831042;3;0.0
+264;Clemenss;1;9.8601624278;1;0.0
+264;Charles Dickens Wizard;0;17.1510831042;3;0.0
+264;Thomas Brandon She Stoops;0;17.1510831042;3;0.0
+264;Huckleberry Finn;0;11.9396039695;1;0.0
+264;Joseph Conrad Lord Jim;0;17.1510831042;3;0.0
+264;Mark Twain;0;11.9553523264;1;0.0
+264;Twain;1;7.79646924309;1;0.0
+264;John Nichols;0;17.1510831042;3;0.0
+264;Joseph Conrad;0;17.1510831042;3;0.0
+264;Thomas Malory Paradise;0;17.1510831042;3;0.0
+264;Scott Fitzgerald Death;0;17.1510831042;3;0.0
+264;William Shakespeare CAPISTRANO;0;17.1510831042;3;0.0
+264;Ursula K Le Guin Wizard;0;17.1510831042;3;0.0
+264;William Golding;0;17.1510831042;3;0.0
+264;Ernest Hemingway;0;11.9553523264;1;0.0
+264;Richard Bradford Romeo;0;17.1510831042;3;0.0
+264;Robert Bolt Charleys Aunt;0;17.1510831042;3;0.0
+264;Daniel Keyes;0;17.1510831042;3;0.0
+264;Shakespeare;0;9.8601624278;1;0.0
+264;Jonathan Swift Beowulf Le Morte;0;17.1510831042;3;0.0
+264;Richard Wright;0;17.1510831042;3;0.0
+264;Algernon;0;17.1510831042;3;0.0
+264;Mark Twain Ethan Frome;0;17.1510831042;3;0.0
+264;Thornton Wilder;0;17.1510831042;3;0.0
+264;William Shakespeare;0;17.1510831042;3;0.0
+264;Graham Greene;0;17.1510831042;3;0.0
+264;Bernard Pomerance;0;17.1510831042;3;0.0
+264;Brian Last;0;8.31776616672;0;0.0
+264;Arthur Miller;0;17.1510831042;3;0.0
+264;William Shakespeare King Lear;0;17.1510831042;3;0.0
+264;James;0;17.1510831042;3;0.0
+264;Edith Wharton;0;17.1510831042;3;0.0
+264;George Orwell;0;17.1510831042;3;0.0
+264;Lorraine Hansberry;0;17.1510831042;3;0.0
+264;Jerome Lawrence amp Robert E Lee;0;17.1510831042;3;0.0
+264;William Shakespeare Othello;0;17.1510831042;3;0.0
+264;Upton Sinclair;0;17.1510831042;3;0.0
+264;John Gunther Elephant Man;0;17.1510831042;3;0.0
+264;Tom Sawyer;0;7.79646924309;1;0.0
+264;Sharer;0;17.1510831042;3;0.0
+264;Paul Theroux;0;17.1510831042;3;0.0
+264;Charles Dickens;0;17.1510831042;3;0.0
+264;Carson McCullers;0;17.1510831042;3;0.0
+264;William Shakespeare Pygmalion;0;17.1510831042;3;0.0
+264;Hyde;0;17.1510831042;3;0.0
+264;Antoine de SaintExupery;0;17.1510831042;3;0.0
+264;George Orwell Ivanhoe;0;17.1510831042;3;0.0
+264;John Milton Sir Gawain;0;17.1510831042;3;0.0
+264;Mary Wollstonecraft Shelley Dr Jekyll;0;17.1510831042;3;0.0
+264;Margaret Craven;0;17.1510831042;3;0.0
+264;Mark Twain;0;9.8601624278;1;0.0
+264;Mark Twain;0;9.8601624278;1;0.0
+264;Charles Dickens David Copperfield;0;17.1510831042;3;0.0
+264;Walter Scott Frankenstein;0;17.1510831042;3;0.0
+264;Thomas Hardy Jude;0;17.1510831042;3;0.0
+264;Mark Twain;0;17.1510831042;3;0.0
+264;George Bernard Shaw;0;17.1510831042;3;0.0
+264;Charles Dickens Oliver Twist;0;17.1510831042;3;0.0
+264;Huckleberry Finn;0;7.79646924309;1;0.0
+264;Mark Twain;0;11.9396039695;1;0.0
+264;Jean Anouilh;0;17.1510831042;3;0.0
+264;Robert Anderson;0;17.1510831042;3;0.0
+249;Unions Edison;0;7.54960916515;0;0.0
+249;West Orange;1;6.91770560984;0;0.0
+249;Federal;0;6.91770560984;0;0.0
+249;Atlantic;0;7.54960916515;0;0.0
+249;Atlantic City;0;7.54960916515;0;0.0
+249;West Orange;1;7.54960916515;0;0.0
+249;Judaism;0;5.24702407216;0;0.0
+249;Century;0;5.88887795833;0;0.0
+249;Atlantic;0;7.54960916515;0;0.0
+249;Edison;0;7.54960916515;0;0.0
+249;Gauer Thomas;0;8.19146305133;0;0.0
+249;Edison;0;7.54960916515;0;0.0
+249;United States;0;5.88887795833;0;0.0
+249;Bell;0;7.54960916515;0;0.0
+249;Much;0;7.54960916515;0;0.0
+249;Edison National;0;7.54960916515;0;0.0
+249;Thomas Edisons;0;5.24702407216;0;0.0
+249;Edison;0;7.54960916515;0;0.0
+249;Atlantic City;0;7.54960916515;0;0.0
+272;Noel Fidel;0;5.91350300564;0;0.0
+272;Julia Esther Curry Rodriguez;0;5.91350300564;0;0.0
+272;Paul Richey;0;9.52442091828;0;0.0
+272;Ed Bruce;0;9.52442091828;0;0.0
+272;Lady Chiltern;0;8.894258825;0;0.0
+89;Guatemala;0;1.38629436112;2;0.0
+89;Belize;0;2.07944154168;3;0.0
+89;Guatemala;0;2.07944154168;3;0.0
+89;Dolores;0;5.39816270152;0;0.0
+89;Wales;0;1.38629436112;2;0.0
+89;Belize;0;6.09130988208;1;0.0
+89;Guatemala;0;6.09130988208;1;0.0
+89;Belize;0;2.77258872224;4;0.0
+89;Peten;0;5.39816270152;0;0.0
+89;Belize;0;2.07944154168;3;2.69908135076
+89;Belize;0;1.38629436112;2;0.0
+89;Belize;0;1.38629436112;2;0.0
+89;Text Guatemala;0;6.09130988208;1;0.0
+89;Guatemala;0;2.07944154168;3;2.69908135076
+89;Belize;0;2.07944154168;3;0.0
+89;Guatemala;0;5.39816270152;0;0.0
+89;Guatemala;0;5.39816270152;0;1.03972077084
+89;United States;0;6.09130988208;1;0.0
+89;Spain;0;6.09130988208;1;0.0
+89;Guatemala;0;2.07944154168;3;0.0
+287;Bush;0;9.7650871828;0;3.58119874868
+287;Bush;0;5.37527840768;0;0.0
+287;Robert Mugabe;0;6.1862086239;0;0.0
+287;Alfredo Cristiani El Salvadors;0;6.59167373201;0;0.0
+287;Bush;0;6.1862086239;0;0.0
+287;Mikhail S Gorbachev;0;7.97796809313;0;0.0
+287;Bush;0;5.37527840768;0;0.0
+287;Oscar Arias Sanchez;0;6.59167373201;0;0.0
+287;Bushs;0;7.97796809313;0;0.0
+287;Dukakis;0;5.37527840768;0;0.0
+287;Bush;0;7.16239749736;0;4.8825435914
+287;Gerasimov;0;5.37527840768;0;0.0
