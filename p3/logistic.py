@@ -518,6 +518,11 @@ def train_and_get_answers():
             tfidf_score = round(float(_split[-3]), 3)
             label = int(_split[3])
 
+            # question id;answer;label;tfidf score;chunk score;pre_post score
+            pre_post_score = round(float(_split[-1]), 3)
+            chunk_score = round(float(_split[-2]), 3)
+            tfidf_score = round(float(_split[-3]), 3)
+            label = int(_split[3])
 
             train_data.append([_split[0], _split[1], _split[2], label, tfidf_score, chunk_score, pre_post_score])
 
@@ -601,6 +606,7 @@ def train_and_get_answers():
     with open("logistic_answer_test.txt", "w") as f:
         for answer_str in answers:
             f.write(answer_str)
+
 
 compute_test_score()
 compute_train_score_and_label()
