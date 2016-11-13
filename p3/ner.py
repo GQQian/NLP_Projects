@@ -131,7 +131,7 @@ for _id, question in questions.items():
     print answers[_id]
 
 # write answer into file
-with open("part2_answer_{}.txt".format(test_or_dev), "w") as text_file:
+with open("ner_answer_{}.txt".format(test_or_dev), "w") as text_file:
     for question_id, tuples in answers.items():
         for _tuple in tuples:
             doc_id, answer = _tuple[0], _tuple[1]
