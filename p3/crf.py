@@ -498,32 +498,20 @@ def crf_model():
     train_data = []
     test_data = []
 
-    train_data.append([label, tfidf_score, chunk_score, pre_post_score])
 
-    trainer = pycrfsuite.Trainer(verbose=False)
+    fname = os.getcwd() + '/train_answer_labeled.txt'
+    with open(fname) as f:
+        lines = f.readlines()
+        for line in lines:
+            _split = line.split(';')
+            # answer format:
+            # question id;answer;label;tfidf score;chunk score;pre_post score
+            pre_post_score = round(float(_split[-1]), 3)
+            chunk_score = round(float(_split[-2]), 3)
+            tfidf_score = round(float(_split[-3]), 3)
+            label = int(_split[-4])
 
-    for xseq, yseq in zip(X_train, y_train):
-        trainer.append(xseq, yseq)
-
-
-    # Set training parameters. We will use L-BFGS training algorithm (it is default) with Elastic Net (L1 + L2) regularization.
-
-    trainer.set_params({
-        'c1': 1.0,   # coefficient for L1 penalty
-        'c2': 1e-3,  # coeff9icient for L2 penalty
-        'max_iterations': 50,  # stop earlier
-
-        # include transitions that are possible, but not observed
-        'feature.possible_transitions': True
-    })
-    # Possible parameters for the default training algorithm:
-    trainer.params()
-    trainer.train("training data")
-
-
-    tagger = pycrfsuite.Tagger()
-    tagger.open('training data')
-
+            train_data.append([label, tfidf_score, chunk_score, pre_post_score])
 
 
     fname = os.getcwd() + '/test_answer_unlabeled.txt'
@@ -539,8 +527,9 @@ def crf_model():
 
             test_data.append([_split[0], _split[1], _split[2], tfidf_score, chunk_score, pre_post_score])
 
+
     # TODO: Zili Xiang
-    labels = 
+
 
 
 
