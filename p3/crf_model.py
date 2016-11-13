@@ -27,14 +27,18 @@ for root, dirs, filenames in os.walk(dir_train):
 print "Test print input: {}".format(test_sents[0])
 print "Test print input: {}".format(train_sents[0])
 
+# i is the index of the sent in the list of sentences, sent 
+# ADD: more features: considering its tense, for word w, put w[-2] as features
+# ADD: 
+# REMOVE: some features not important here 
 def word2features(sent, i):
     word = sent[i][0]
     postag = sent[i][1]
     features = [
         'bias',
         'word.lower=' + word.lower(),
-        'word[-3:]=' + word[-3:],
-        'word[-2:]=' + word[-2:],
+        'word[-3:]=' + word[-3:], # related to some third person singular
+        'word[-2:]=' + word[-2:], # related to tense
         'word.isupper=%s' % word.isupper(),
         'word.istitle=%s' % word.istitle(),
         'word.isdigit=%s' % word.isdigit(),
@@ -74,7 +78,7 @@ def sent2features(sent):
     return [word2features(sent, i) for i in range(len(sent))]
 
 def sent2labels(sent):
-    return [label for token, postag, label in sent]
+    return [label for token, postag, label in sent] # need to be altered
 
 def sent2tokens(sent):
     return [token for token, postag, label in sent]    
